@@ -1,0 +1,170 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+  <body>
+<pre>
+
+<!-- ###TEMPLATE_LIST### begin -->
+<!-- ###LIST_TITLE### begin -->
+        ###MY_TITLE###
+<!-- ###LIST_TITLE### end -->
+<!-- ###SEARCHFORM### begin -->
+        <div class="searchbox searchbox-###VIEW###-###MODE###">
+          <form action="###ACTION###" method="post" >
+            <fieldset>
+              <legend>###MY_SEARCH_LEGEND###</legend>
+              <input type="hidden" name="no_cache" value="1" />
+              ###TX_QUICKSHOP_CATEGORIES.TITLE###
+              <input class="sword" type="text" name="tx_browser_pi1[sword]" onfocus="if(this.value =='###SWORD_DEFAULT###') this.value=''" 
+  value="###SWORD###" />
+              <input class="button" type="submit" value="###BUTTON###" />
+              <input class="reset" type="button" onclick="location='###MY_URL###'" value="###MY_RESET###" />
+              <!-- Add filter with the ###TABLE.FIELD### syntax and configure your filter with TypoScript --> 
+            </fieldset>
+          </form>
+          ###RESULTPHRASE###
+        </div><!-- ###SEARCHFORM### end -->
+        <div class="listarea">
+<!-- ###CATEGORY_MENU### begin -->
+          <!-- Add the category menu with the ###TABLE.FIELD### syntax and configure your category menu with TypoScript --> 
+          <!-- ###CATEGORY_MENU### end -->
+<!-- ###AZSELECTOR### begin -->
+          <div class="azSelector azSelector-###UL_VIEW###-###UL_MODE###">
+            <ul class="azSelector azSelector-###UL_VIEW###-###UL_MODE###"><!-- ###AZSELECTORTABS### begin -->
+              <li###LI_CLASS###>###TAB###</li><!-- ###AZSELECTORTABS### end -->
+            </ul>
+          </div><!-- ###AZSELECTOR### end -->
+<!-- ###PAGEBROWSER### begin -->
+          <div class="browsebox browsebox-###VIEW###-###MODE###">
+            ###RESULT_AND_ITEMS###
+          </div><!-- ###PAGEBROWSER### end -->
+<!-- ###MODESELECTOR### begin -->
+          <div class="modeSelector modeSelector-###VIEW###-###MODE###">
+            <ul class="modeSelector modeSelector-###VIEW###-###MODE###"><!-- ###MODESELECTORTABS### begin -->
+              <li###CLASS###>###TABS###</li><!-- ###MODESELECTORTABS### end -->
+            </ul>
+          </div><!-- ###MODESELECTOR### end -->
+<!-- ###LISTVIEW### begin -->
+          <div class="###VIEW###view ###VIEW###view-###MODE###">
+<!-- ###GROUPBY### begin -->
+<!-- ###GROUPBYHEAD### begin -->
+            ###GROUPBY_GROUPNAME###
+<!-- ###GROUPBYHEAD### end -->
+<!-- ###GROUPBYBODY### begin -->
+          <!-- ###LISTHEAD### begin --><!-- ###LISTHEADITEM### begin -->
+            ###ITEM###<!-- ###LISTHEADITEM### end --><!-- ###LISTHEAD### end -->
+          <!-- ###LISTBODY### begin --><!-- ###LISTBODYITEM### begin -->
+            <div>
+              <div style="float:right;padding:0 4em 0 1em;">
+                <span style="font-size:3em;">###TX_QUICKSHOP_PRODUCTS.PRICE###</span>
+                ###TX_QUICKSHOP_PRODUCTS.TAX### ###MY_SHIPPING_NOTE###
+              </div>
+              <div style="float:left;">
+                ###TX_QUICKSHOP_PRODUCTS.IMAGE###
+              </div>
+              <div style="padding-left:9em;">
+                <h2 style="font-size:2em;margin:0;">
+                  ###TX_QUICKSHOP_PRODUCTS.TITLE###
+                </h2>
+                <h3>
+                    ###TX_QUICKSHOP_PRODUCTS.SHORT### ###SOCIALMEDIA_BOOKMARKS###
+                </h3>
+              </div>
+              <div style="clear:both"></div>
+            </div><!-- ###LISTBODYITEM### end --><!-- ###LISTBODY### end -->
+<!-- ###GROUPBYBODY### end -->
+<!-- ###GROUPBY### end -->
+          </div>
+          <!-- ###LISTVIEW### end -->
+        </div> <!-- /listarea -->
+<!-- ###TEMPLATE_LIST### end -->
+
+
+
+
+
+<!-- ###TEMPLATE_SELECTBOX_VALID### begin -->
+          <form ###CLASS### action="###URL###" method="POST">
+            <fieldset>
+              <legend>###LEGEND###</legend>
+              ###HIDDEN###
+              ###SELECTBOX###
+              <input class="button" type="submit" value="###BUTTON###" />
+            </fieldset>
+          </form>
+<!-- ###TEMPLATE_SELECTBOX_VALID### end -->
+
+
+<!-- ###TEMPLATE_SELECTBOX### begin -->
+          <script type="text/javascript">
+            function Go (select) {
+              var str_url = select.options[select.options.selectedIndex].value;
+              if (str_url == "0") {
+                select.form.reset();
+                return;
+              } else {
+                window.location.href = str_url;
+              }
+            }
+          </script>
+          <form action="">
+            ###SELECTBOX###
+          </form>
+<!-- ###TEMPLATE_SELECTBOX### end -->
+
+
+
+
+
+<!-- ###TEMPLATE_SINGLE### begin -->
+<!-- ###AREA_FOR_AJAX_LIST_01### begin -->
+<!-- ###MODESELECTOR### begin -->
+        <div class="modeSelector modeSelector-###VIEW###-###MODE###">
+          <ul class="modeSelector modeSelector-###VIEW###-###MODE###"><!-- ###MODESELECTORTABS### begin -->
+            <li###CLASS###>###TABS###</li><!-- ###MODESELECTORTABS### end -->
+          </ul>
+        </div><!-- ###MODESELECTOR### end --><!-- ###SINGLEVIEW### begin -->
+        <div class="###VIEW###view ###VIEW###view-###MODE###">
+          <!-- ###SINGLEBODY### begin --><!-- ###SINGLEBODYROW### begin -->
+          <div>
+            <div style="float:right;padding-left:1em;">
+              <span style="font-size:2em;">
+                ###TX_QUICKSHOP_PRODUCTS.PRICE###
+              </span><br />
+              ###TX_QUICKSHOP_PRODUCTS.TAX### ###MY_SHIPPING_NOTE###
+            </div>
+            <div style="float:left;">
+              ###TX_QUICKSHOP_PRODUCTS.IMAGE###
+            </div>
+            <div style="padding-left:16em;">
+              <h1>
+                ###TX_QUICKSHOP_PRODUCTS.TITLE###
+              </h1>
+              <p style="font-size:1.2em;">
+                ###TX_QUICKSHOP_PRODUCTS.DESCRIPTION###
+                ###SOCIALMEDIA_BOOKMARKS###
+              </p>
+            </div>
+            <div style="clear:both"></div>
+          </div>
+          <!-- ###SINGLEBODYROW### end --><!-- ###SINGLEBODY### end -->
+          <form name="form_add_to_cart" id="form-order" action="###MY_CART_PAGE_URL###" method="post">
+            <fieldset id="add-to-cart">
+              <input type="hidden" name="tx_browser_pi1[showUid]"                     value="###SHOWUID###" />
+              <input type="text"   name="tx_quick_shop_qty" class="tx_quick_shop_qty" value="###MY_CART_QUANTITY###" />
+              <input type="submit" name="submit"                                      value="###MY_CART_BUTTON###" />
+            </fieldset>
+          </form>
+<!-- ###AREA_FOR_AJAX_LIST_01### end -->
+          <!-- ###BACKBUTTON### begin -->
+          <p class="backbutton">
+            ###BUTTON###
+          </p><!-- ###BACKBUTTON### end -->
+<!-- ###AREA_FOR_AJAX_LIST_02### begin -->
+        </div><!-- ###SINGLEVIEW### end -->
+<!-- ###AREA_FOR_AJAX_LIST_02### end -->
+<!-- ###TEMPLATE_SINGLE### end -->
+
+</pre>
+  </body>
+</html>
