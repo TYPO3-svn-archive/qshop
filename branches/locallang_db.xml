@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+  <meta type="array">
+    <type>database</type>
+    <description>Language labels for database tables/fields belonging to extension 'quick_shop'</description>
+  </meta>
+  <data type="array">
+    <languageKey index="default" type="array">
+      <label index="filter_phrase.category">Categorie</label>
+      <label index="palette.image_accessibility">Search engines and accessibility</label>
+      <label index="palette.startendtime">Available from ... to ...</label>
+      <label index="tca_phrase.seo_description">Description for Search Engine Optimisation</label>
+      <label index="tca_phrase.seo_keywords">Keywords for Search Engine Optimisation (CSV: comma separated values)</label>
+      <label index="tx_quickshop_categories">Quick Shop Category</label>
+      <label index="tx_quickshop_categories.title">Category</label>
+      <label index="tx_quickshop_categories.title_lang_ol">Translations (i.e. fr:Traduction|de:Übersetzung)</label>
+      <label index="tx_quickshop_products">Quick Shop Item</label>
+      <label index="tx_quickshop_products.div.product">Item</label>
+      <label index="tx_quickshop_products.div.price_quantity">Price <![CDATA[&]]> quantity</label>
+      <label index="tx_quickshop_products.div.image">Images</label>
+      <label index="tx_quickshop_products.div.control">Controlling</label>
+      <label index="tx_quickshop_products.div.seo">Search Engines</label>
+      <label index="tx_quickshop_products.sku">Item ID</label>
+      <label index="tx_quickshop_products.title">Item label</label>
+      <label index="tx_quickshop_products.short">Short</label>
+      <label index="tx_quickshop_products.description">Description</label>
+      <label index="tx_quickshop_products.category">Category</label>
+      <label index="tx_quickshop_products.price">Gross price</label>
+      <label index="tx_quickshop_products.tax.I.0">Reduced</label>
+      <label index="tx_quickshop_products.tax.I.1">Normal</label>
+      <label index="tx_quickshop_products.tax">Tax included</label>
+      <label index="tx_quickshop_products.in_stock">In Stock</label>
+      <label index="tx_quickshop_products.quantity_min">Minimum order quantity</label>
+      <label index="tx_quickshop_products.quantity_max">Maximum order quantity</label>
+      <label index="tx_quickshop_products.image">Image</label>
+      <label index="tx_quickshop_products.imageseo">Description for search engines (SEO)</label>
+      <label index="tx_quickshop_products.caption">Caption</label>
+    </languageKey>
+    <languageKey index="de" type="array">
+      <label index="filter_phrase.category">Artikelgruppe</label>
+      <label index="palette.image_accessibility">Suchmaschinen und Barrierefreiheit</label>
+      <label index="palette.startendtime">Verfügbar von ... bis ...</label>
+      <label index="tca_phrase.seo_description">Beschreibung für Suchmaschinen (bis etwa 200 Zeichen)</label>
+      <label index="tca_phrase.seo_keywords">Stichworte für Suchmaschinen (drei bis fünf, mit Komma trennen)</label>
+      <label index="tx_quickshop_categories.title">Kategorie</label>
+      <label index="tx_quickshop_categories.title_lang_ol">Übersetzungen (z.B. en:Translation|fr:Traduction)</label>
+      <label index="tx_quickshop_products">Quick Shop Artikel</label>
+      <label index="tx_quickshop_products.div.product">Artikel</label>
+      <label index="tx_quickshop_products.div.price_quantity">Preis <![CDATA[&]]> Mengen</label>
+      <label index="tx_quickshop_products.div.image">Abbildungen</label>
+      <label index="tx_quickshop_products.div.control">Steuerung</label>
+      <label index="tx_quickshop_products.div.seo">Suchmaschinen</label>
+      <label index="tx_quickshop_products.sku">Artikelnummer</label>
+      <label index="tx_quickshop_products.title">Artikelbezeichnung</label>
+      <label index="tx_quickshop_products.short">Kurzbeschreibung</label>
+      <label index="tx_quickshop_products.description">Beschreibung</label>
+      <label index="tx_quickshop_products.category">Kategorie</label>
+      <label index="tx_quickshop_products.price">Bruttopreis</label>
+      <label index="tx_quickshop_products.quantity_min">Mindestbestellmenge</label>
+      <label index="tx_quickshop_products.quantity_max">Höchstbestellmenge</label>
+      <label index="tx_quickshop_products.tax.I.0">Ermäßigt</label>
+      <label index="tx_quickshop_products.tax.I.1">Normal</label>
+      <label index="tx_quickshop_products.tax">inkl. MwSt.</label>
+      <label index="tx_quickshop_products.in_stock">Auf Lager</label>
+      <label index="tx_quickshop_products.image">Bild</label>
+      <label index="tx_quickshop_products.imageseo">Beschreibung für Suchmaschinen (SEO)</label>
+      <label index="tx_quickshop_products.caption">Bildunterschrift</label>
+    </languageKey>
+  </data>
+</T3locallang>

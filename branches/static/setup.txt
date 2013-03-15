@@ -1,0 +1,367 @@
+
+
+
+  //////////////////////////////////////
+  //
+  // INDEX
+  // =====
+  // page
+  // temp.tax
+  // plugin.tx_browser_pi1
+
+
+
+page {
+  includeCSS {
+    // add the quick shop default css
+    quick_shop = EXT:quick_shop/res/v1.4/default.css
+  }
+}
+
+
+
+temp.tax = CASE
+temp.tax {
+  key = ###TX_QUICKSHOP_PRODUCTS.TAX###
+  # reduced tax
+  1 = TEXT
+  1.value = 7
+  2 = TEXT
+  2.value = 19
+  stdWrap {
+    noTrimWrap = |inkl. | % MwSt.|
+  }
+}
+
+plugin.tx_browser_pi1 {
+  template {
+    file = EXT:quick_shop/res/v1.4/default.tmpl
+    extensions {
+      quick_shop {
+        default {
+          name      = Quick Shop
+          file      = EXT:quick_shop/res/v1.4/default.tmpl
+          csvViews  = 1
+        }
+      }
+    }
+  }
+  flexform {
+    socialmedia {
+      socialbookmarks {
+        wraps {
+          stdWrap_items.wrap = <div class="bookmark_items">|</div>
+        }
+      }
+    }
+  }
+  marker {
+    my_cart_button = TEXT
+    my_cart_button {
+      value = Into the cart
+      lang {
+        de = In den Warenkorb
+      }
+    }
+    my_cart_quantity = TEXT
+    my_cart_quantity {
+      value = 1
+    }
+    my_shipping_note = TEXT
+    my_shipping_note {
+      value = shipping
+      lang {
+        de = Versand
+      }
+      typolink.parameter = {$quick_shop.caddyUidShipping}
+      prepend = TEXT
+      prepend {
+        value = excl.
+        lang {
+          de = zzgl.
+        }
+      }
+    }
+    my_cart_page_url = TEXT
+    my_cart_page_url {
+      typolink {
+        parameter = {$quick_shop.caddyUidCart}
+        returnLast = url
+      }
+    }
+  }
+  views {
+    list {
+      1 = Quick Shop
+      1 {
+        name = Quick Shop
+        select (
+          tx_quickshop_products.title,
+          tx_quickshop_products.short,
+          tx_quickshop_products.image,
+          tx_quickshop_products.imageseo,
+          tx_quickshop_products.tax,
+          tx_quickshop_products.price
+        )
+        orderBy = tx_quickshop_products.price DESC, tx_quickshop_products.title, tx_quickshop_categories.title
+        csvLinkToSingleView = tx_quickshop_products.title
+        tx_quickshop_products {
+          title = TEXT
+          title {
+            value = ###TX_QUICKSHOP_PRODUCTS.TITLE###
+            wrap  = <h2 class="title">|</h2>
+          }
+          short = TEXT
+          short {
+            value = ###TX_QUICKSHOP_PRODUCTS.SHORT###
+            wrap  = <h3 class="short">|</h3>
+          }
+          image = COA
+          image {
+              // Handle with an image at least
+            10 = COA
+            10 {
+              if {
+                  // If we have an image, tx_quickshop_products.image will render the description
+                isTrue = ###TX_QUICKSHOP_PRODUCTS.IMAGE###
+              }
+              10 < tt_content.image.20
+              10 {
+                imgList.field >
+                imgList   = ###TX_QUICKSHOP_PRODUCTS.IMAGE###
+                imgPath   = uploads/tx_quickshop/
+                imgStart  = 0
+                imgMax    = 1
+                1 {
+                  file {
+                    width.field >
+                    width   = 80m;
+                    height  = 60m;
+                  }
+                  titleText.field >
+                  titleText       = ###TX_QUICKSHOP_PRODUCTS.IMAGESEO###
+                  imageLinkWrap {
+                    enable.field >
+                    enable = 1
+                    width   = 1000;
+                    height  = 800m;
+                    //JSwindow = 0
+                  }
+                }
+                layout {
+                  key.field >
+                    // above-left
+                  key = 2
+                  2.value = <div class="csc-textpic csc-textpic-left csc-textpic-above###CLASSES###">###IMAGES######TEXT###</div>
+                }
+                cols.field  >
+                cols        = 1
+                caption >
+                stdWrap {
+                  prefixComment >
+                  wrap          = <div class="image">|</div>
+                }
+              }
+            }
+              // Handle without any image 
+            20 < .10
+            20 {
+              if {
+                isTrue  >
+                isFalse = ###TX_QUICKSHOP_PRODUCTS.IMAGE###
+              }
+              10 {
+                imgList = alternate_image_400x300.gif
+                imgPath = EXT:quick_shop/res/images/
+              }
+            }
+          }
+          price = COA
+          price {
+            wrap = |&nbsp;{$quick_shop.currencySymbol}
+            10 = USER
+            10.userFunc = tx_browser_typoscript->numberFormat
+            10.userFunc {
+              number = TEXT
+              number {
+                value = ###TX_QUICKSHOP_PRODUCTS.PRICE###
+              }
+              decimal   = 2
+              dec_point = {$quick_shop.dec_point}
+              thousands_sep = {$quick_shop.thousands_sep}
+            }
+          }
+          tax < temp.tax
+          tax.stdWrap.noTrimWrap = |inkl. | % MwSt.|
+        }
+        filter {
+          tx_quickshop_categories {
+            title < plugin.tx_browser_pi1.displayList.master_templates.selectbox
+            title {
+              first_item {
+                cObject {
+                  20 {
+                    data = LLL:EXT:quick_shop/locallang_db.xml:filter_phrase.category
+                  }
+                }
+              }
+              wrap = <span class="selectbox">|</span>
+              wrap {
+                item {
+                  stdWrap {
+                    crop = 60 | ... | 1
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    single {
+      1 = Quick Shop
+      1 {
+        displaySingle < plugin.tx_browser_pi1.displaySingle
+        displaySingle {
+          image {
+              // We don't want an alternate image
+            file >
+          }
+        }
+        select (
+          tx_quickshop_products.title,
+          tx_quickshop_products.sku,
+          tx_quickshop_products.description,
+          tx_quickshop_products.image,
+          tx_quickshop_products.imageseo,
+          tx_quickshop_products.imagewidth,
+          tx_quickshop_products.imageheight,
+          tx_quickshop_products.imageorient,
+          tx_quickshop_products.imagecols,
+          tx_quickshop_products.imageborder,
+          tx_quickshop_products.image_frames,
+          tx_quickshop_products.image_link,
+          tx_quickshop_products.image_zoom,
+          tx_quickshop_products.image_noRows,
+          tx_quickshop_products.image_effects,
+          tx_quickshop_products.image_compression,
+
+          tx_quickshop_products.caption,
+          tx_quickshop_products.caption_position,
+          tx_quickshop_products.caption,
+          tx_quickshop_products.tax,
+          tx_quickshop_products.price,
+          tx_quickshop_categories.title
+        )
+        tx_quickshop_products {
+            // title
+          title = TEXT
+          title {
+            value = ###TX_QUICKSHOP_PRODUCTS.TITLE###
+            wrap  = <h1>|</h1>
+          }
+            // Handle with an image
+          image = COA
+          image {
+              // Handle with an image at least
+            if {
+                // If we have an image, tx_quickshop_products.image will render the description
+              isTrue = ###TX_QUICKSHOP_PRODUCTS.IMAGE###
+            }
+              // tt_content.image.20
+            10 < tt_content.image.20
+            10 {
+              imgList.field >
+              imgList = ###TX_QUICKSHOP_PRODUCTS.IMAGE###
+              imgPath = uploads/tx_quickshop/
+              1 {
+                file {
+                  width.field >
+                  width   = ###TX_QUICKSHOP_PRODUCTS.IMAGEWIDTH###
+                }
+                titleText.field               >
+                titleText                     = ###TX_QUICKSHOP_PRODUCTS.IMAGESEO###
+                imageLinkWrap {
+                  ifEmpty {
+                    typolink.parameter.field  >
+                    typolink.parameter        = ###TX_QUICKSHOP_PRODUCTS.IMAGE_LINK###
+                  }
+                  typolink.parameter.field    >
+                  typolink.parameter          = ###TX_QUICKSHOP_PRODUCTS.IMAGE_LINK###
+                  enable.field                >
+                  enable                      = ###TX_QUICKSHOP_PRODUCTS.IMAGE_ZOOM###
+                  width                       = 1000;
+                  height                      = 800m;
+                  //JSwindow = 0
+                }
+              }
+              textPos.field           >
+              textPos                 = ###TX_QUICKSHOP_PRODUCTS.IMAGEORIENT###
+              equalH.field            >
+              equalH                  = ###TX_QUICKSHOP_PRODUCTS.IMAGEHEIGHT###
+              image_compression.field >
+              image_compression       = ###TX_QUICKSHOP_PRODUCTS.IMAGE_COMPRESSION###
+              image_effects.field     >
+              image_effects           = ###TX_QUICKSHOP_PRODUCTS.IMAGE_EFFECTS###
+              noRows.field            >
+              noRows                  = ###TX_QUICKSHOP_PRODUCTS.IMAGE_NOROWS###
+              cols.field              >
+              cols                    = ###TX_QUICKSHOP_PRODUCTS.IMAGECOLS###
+              border.field            >
+              border                  = ###TX_QUICKSHOP_PRODUCTS.IMAGEBORDER###
+              caption.1.field         >
+              caption.1.value         = ###TX_QUICKSHOP_PRODUCTS.CAPTION###
+              captionAlign.field      >
+              captionAlign            = ###TX_QUICKSHOP_PRODUCTS.CAPTION_POSITION###
+              layout.key.field        >
+              layout.key              = ###TX_QUICKSHOP_PRODUCTS.IMAGEORIENT###
+              stdWrap {
+                prefixComment >
+                wrap          = <div class="image">|</div>
+              }
+              text {
+                20 = TEXT
+                20 {
+                  parseFunc < lib.parseFunc_RTE
+                  value     = ###TX_QUICKSHOP_PRODUCTS.DESCRIPTION### ###TX_QUICKSHOP_PRODUCTS.SKU###
+                  wrap      = <div class="csc-textpic-text"> | </div>
+                }
+              }
+            }
+          }
+            // Handle without any image 
+          description < .image
+          description {
+            if {
+              isTrue >
+              isFalse = ###TX_QUICKSHOP_PRODUCTS.IMAGE###
+            }
+            10 {
+              imgList = alternate_image_400x300.gif
+              imgPath = EXT:quick_shop/res/images/
+            }
+          }
+            // price
+          price = COA
+          price {
+            wrap = |&nbsp;{$quick_shop.currencySymbol}
+            10 = USER
+            10.userFunc = tx_browser_typoscript->numberFormat
+            10.userFunc {
+              number = TEXT
+              number {
+                value = ###TX_QUICKSHOP_PRODUCTS.PRICE###
+              }
+              decimal   = 2
+              dec_point = {$quick_shop.dec_point}
+              thousands_sep = {$quick_shop.thousands_sep}
+            }
+          }
+            // tax
+          tax < temp.tax
+          tax.stdWrap.noTrimWrap = |inkl. | % MwSt.|
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,143 @@
+
+  // VERSION 1.3 
+  //
+  //
+
+
+
+temp.tax = CASE
+temp.tax {
+  key = ###TX_QUICKSHOP_PRODUCTS.TAX###
+  # reduced tax
+  1 = TEXT
+  1.value = 7
+  2 = TEXT
+  2.value = 19
+  stdWrap {
+    noTrimWrap = |inkl. | % MwSt.|
+  }
+}
+
+plugin.tx_browser_pi1 {
+  template {
+    file = EXT:quick_shop/res/default.tmpl
+    extensions {
+      quick_shop {
+        default {
+          name      = Quick Shop v1.3
+          file      = EXT:quick_shop/res/default.tmpl
+          csvViews  = 1
+        }
+      }
+    }
+  }
+  marker {
+    my_cart_button = TEXT
+    my_cart_button {
+      value = Into the cart
+      lang {
+        de = In den Warenkorb
+      }
+    }
+    my_cart_quantity = TEXT
+    my_cart_quantity {
+      value = 1
+    }
+    my_shipping_note = TEXT
+    my_shipping_note {
+      value = shipping
+      lang {
+        de = Versand
+      }
+      typolink.parameter = {$myConst.pages.root.shipping}
+      prepend = TEXT
+      prepend {
+        value = excl.
+        lang {
+          de = zzgl.
+        }
+      }
+    }
+    my_cart_page_url = TEXT
+    my_cart_page_url {
+      typolink {
+        parameter = {$myConst.pages.root.cart}
+        returnLast = url
+      }
+    }
+  }
+  views {
+    list {
+      1 = Quick Shop v1.3
+      1 {
+        name = Quick Shop v1.3
+        select (
+          tx_quickshop_products.title,
+          tx_quickshop_products.short,
+          tx_quickshop_products.image,
+          tx_quickshop_products.imageseo,
+          tx_quickshop_products.tax,
+          tx_quickshop_products.price
+        )
+        orderBy = tx_quickshop_products.price DESC, tx_quickshop_products.title, tx_quickshop_categories.title
+        csvLinkToSingleView = tx_quickshop_products.title
+        tx_quickshop_products {
+          price = TEXT
+          price {
+            value = ###TX_QUICKSHOP_PRODUCTS.PRICE###
+            noTrimWrap = || EUR|
+          }
+          tax < temp.tax
+          tax.stdWrap.noTrimWrap = |<br />inkl. | % MwSt.|
+        }
+        filter {
+          tx_quickshop_categories {
+            title < plugin.tx_browser_pi1.displayList.master_templates.selectbox
+            title {
+              first_item {
+                stdWrap {
+                  data >
+                  value = Select a Category
+                  lang {
+                    de = Kategorie wählen
+                  }
+                }
+              }
+              wrap = <span class="selectbox">|</span>
+              wrap {
+                item {
+                  stdWrap {
+                    crop = 60 | ... | 1
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    single {
+      1 = Quick Shop v1.3
+      1 {
+        select (
+          tx_quickshop_products.title,
+          tx_quickshop_products.description,
+          tx_quickshop_products.image,
+          tx_quickshop_products.imageseo,
+          tx_quickshop_products.caption,
+          tx_quickshop_products.tax,
+          tx_quickshop_products.price,
+          tx_quickshop_categories.title
+        )
+        tx_quickshop_products {
+          price = TEXT
+          price {
+            value = ###TX_QUICKSHOP_PRODUCTS.PRICE###
+            noTrimWrap = || EUR|
+          }
+          tax < temp.tax
+        }
+      }
+    }
+  }
+}
