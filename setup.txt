@@ -1,6 +1,4 @@
 
-
-
   //////////////////////////////////////
   //
   // INDEX
@@ -319,12 +317,24 @@ plugin.tx_browser_pi1 {
                 prefixComment >
                 wrap          = <div class="image">|</div>
               }
+                // description, sku
               text {
-                20 = TEXT
+                  // description, sku
+                20 = COA
                 20 {
-                  parseFunc < lib.parseFunc_RTE
-                  value     = ###TX_QUICKSHOP_PRODUCTS.DESCRIPTION### ###TX_QUICKSHOP_PRODUCTS.SKU###
-                  wrap      = <div class="csc-textpic-text"> | </div>
+                    // description
+                  10 = TEXT
+                  10 {
+                    parseFunc < lib.parseFunc_RTE
+                    value     = ###TX_QUICKSHOP_PRODUCTS.DESCRIPTION###
+                  }
+                    // sku
+                  20 = TEXT
+                  20 {
+                    data        = LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_products.sku
+                    noTrimWrap  = |<br />|: ###TX_QUICKSHOP_PRODUCTS.SKU###|
+                  }
+                  wrap = <div class="csc-textpic-text"> | </div>
                 }
               }
             }
