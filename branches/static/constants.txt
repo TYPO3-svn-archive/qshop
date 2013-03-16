@@ -1,17 +1,18 @@
 plugin.quick_shop {
 
-  # cat=Quick Shop/dims/200; type=text; label= Currency symbol (e.g. &euro or $)
-  currencySymbol = &euro;
+  # cat=Quick Shop/dims/200; type=text; label= Currency symbol (e.g. &euro; or $)
+  base.currencySymbol = &euro;
   # cat=Quick Shop/dims/210; type=text; label= Decimal symbol: e.g. , (comma) or . (dot): 1.99 $, 1,99 EUR.
-  dec_point = ,
+  base.dec_point = ,
   # cat=Quick Shop/dims/220; type=text; label= Thousands separator: e.g. , (comma) or . (dot). 1,000 US-$ or 1.000 EUR
-  thousands_sep = .
-  # cat=Quick Shop/others/301; type=text; label= Caddy cart uid:Uid of the page with the caddy shopping cart
-  caddyUidCart = 
-  # cat=Quick Shop/others/302; type=text; label= Caddy shipping uid:Uid of the page with the caddy shipping terms
-  caddyUidShipping = 
+  base.thousands_sep = .
   # cat=Quick Shop/others/999;    type=user[EXT:quick_shop/lib/userfunc/class.tx_quickshop_userfunc.php:tx_quickshop_userfunc->promptExternalLinks]; label=Powered by:die-netzmacher.de
-  configuration.externalLinks = Click me!
+  base.externalLinks = Click me!
+
+  # cat=Quick Shop - Pages/others/301; type=text; label= Caddy:Uid of the page with the caddy - your shopping cart
+  pages.caddyUidCart = 
+  # cat=Quick Shop - Pages/others/302; type=text; label= Shipping:Uid of the page with the shipping terms
+  pages.caddyUidShipping = 
 
   # cat=Quick Shop - Powermail/others/100; type=+int; label= Form id:Uid of the powermail form (default language)
   powermail.ids.form.default = 0
