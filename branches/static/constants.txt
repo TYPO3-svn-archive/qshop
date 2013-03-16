@@ -15,6 +15,8 @@ plugin.quick_shop {
   pages.caddy = 
   # cat=Quick Shop - Pages/others/303; type=text; label= Shipping:Uid of the page with the shipping terms
   pages.shipping = 
+  # cat=Quick Shop - Pages/others/304; type=text; label= Terms & Conditions:Uid of the page with the terms & conditions (German: AGB)
+  pages.terms = 
 
   # cat=Quick Shop - Powermail/others/100; type=+int; label= Form id:Uid of the powermail form (default language)
   powermail.ids.form.default = 0
