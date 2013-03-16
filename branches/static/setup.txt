@@ -71,7 +71,7 @@ plugin.tx_browser_pi1 {
       lang {
         de = Versand
       }
-      typolink.parameter = {$plugin.quick_shop_shop.caddyUidShipping}
+      typolink.parameter = {$plugin.quick_shop.caddyUidShipping}
       prepend = TEXT
       prepend {
         value = excl.
@@ -83,7 +83,7 @@ plugin.tx_browser_pi1 {
     my_cart_page_url = TEXT
     my_cart_page_url {
       typolink {
-        parameter = {$plugin.quick_shop_shop.caddyUidCart}
+        parameter = {$plugin.quick_shop.caddyUidCart}
         returnLast = url
       }
     }
@@ -176,7 +176,7 @@ plugin.tx_browser_pi1 {
           }
           price = COA
           price {
-            wrap = |&nbsp;{$plugin.quick_shop_shop.currencySymbol}
+            wrap = |&nbsp;{$plugin.quick_shop.currencySymbol}
             10 = USER
             10.userFunc = tx_browser_typoscript->numberFormat
             10.userFunc {
@@ -185,8 +185,8 @@ plugin.tx_browser_pi1 {
                 value = ###TX_QUICKSHOP_PRODUCTS.PRICE###
               }
               decimal   = 2
-              dec_point = {$plugin.quick_shop_shop.dec_point}
-              thousands_sep = {$plugin.quick_shop_shop.thousands_sep}
+              dec_point = {$plugin.quick_shop.dec_point}
+              thousands_sep = {$plugin.quick_shop.thousands_sep}
             }
           }
           tax < temp.tax
@@ -354,7 +354,7 @@ plugin.tx_browser_pi1 {
             // price
           price = COA
           price {
-            wrap = |&nbsp;{$plugin.quick_shop_shop.currencySymbol}
+            wrap = |&nbsp;{$plugin.quick_shop.currencySymbol}
             10 = USER
             10.userFunc = tx_browser_typoscript->numberFormat
             10.userFunc {
@@ -363,8 +363,8 @@ plugin.tx_browser_pi1 {
                 value = ###TX_QUICKSHOP_PRODUCTS.PRICE###
               }
               decimal   = 2
-              dec_point = {$plugin.quick_shop_shop.dec_point}
-              thousands_sep = {$plugin.quick_shop_shop.thousands_sep}
+              dec_point = {$plugin.quick_shop.dec_point}
+              thousands_sep = {$plugin.quick_shop.thousands_sep}
             }
           }
             // tax
