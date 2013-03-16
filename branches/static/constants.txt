@@ -9,10 +9,12 @@ plugin.quick_shop {
   # cat=Quick Shop/others/999;    type=user[EXT:quick_shop/lib/userfunc/class.tx_quickshop_userfunc.php:tx_quickshop_userfunc->promptExternalLinks]; label=Powered by:die-netzmacher.de
   base.externalLinks = Click me!
 
-  # cat=Quick Shop - Pages/others/301; type=text; label= Caddy:Uid of the page with the caddy - your shopping cart
-  pages.caddyUidCart = 
-  # cat=Quick Shop - Pages/others/302; type=text; label= Shipping:Uid of the page with the shipping terms
-  pages.caddyUidShipping = 
+  # cat=Quick Shop - Pages/others/301; type=text; label= Shop / root page:Uid of the page which contains the quick shop items. Usually the root page.
+  pages.root = 
+  # cat=Quick Shop - Pages/others/302; type=text; label= Caddy:Uid of the page with the caddy - your shopping cart
+  pages.caddy = 
+  # cat=Quick Shop - Pages/others/303; type=text; label= Shipping:Uid of the page with the shipping terms
+  pages.shipping = 
 
   # cat=Quick Shop - Powermail/others/100; type=+int; label= Form id:Uid of the powermail form (default language)
   powermail.ids.form.default = 0
