@@ -1,20 +1,24 @@
 plugin.quick_shop {
 
-  # cat=Quick Shop/dims/200; type=string; label= Currency symbol (e.g. &euro; or $)
+  # cat=Quick Shop - Currency/dims/200; type=string; label= Currency symbol (e.g. &euro; or $)
   base.currencySymbol = &euro;
-  # cat=Quick Shop/dims/210; type=string; label= Decimal symbol: e.g. , (comma) or . (dot): 1.99 $, 1,99 EUR.
+  # cat=Quick Shop - Currency/dims/210; type=string; label= Decimal symbol: e.g. , (comma) or . (dot): 1.99 $, 1,99 EUR.
   base.dec_point = ,
-  # cat=Quick Shop/dims/220; type=string; label= Thousands separator: e.g. , (comma) or . (dot). 1,000 US-$ or 1.000 EUR
+  # cat=Quick Shop - Currency/dims/220; type=string; label= Thousands separator: e.g. , (comma) or . (dot). 1,000 US-$ or 1.000 EUR
   base.thousands_sep = .
-  # cat=Quick Shop/others/998;    type=user[EXT:quick_shop/lib/userfunc/class.tx_quickshop_userfunc.php:tx_quickshop_userfunc->promptExternalLinks]; label=Powered by:die-netzmacher.de
+  # cat=Quick Shop - Currency/others/998;    type=user[EXT:quick_shop/lib/userfunc/class.tx_quickshop_userfunc.php:tx_quickshop_userfunc->promptExternalLinks]; label=Powered by:die-netzmacher.de
   base.externalLinks = Click me!
-  # cat=Quick Shop/others/999;    type=user[EXT:quick_shop/lib/userfunc/class.tx_quickshop_userfunc.php:tx_quickshop_userfunc->promptSponsors]; label=Subsidise the Caddy project!
+  # cat=Quick Shop - Currency/others/999;    type=user[EXT:quick_shop/lib/userfunc/class.tx_quickshop_userfunc.php:tx_quickshop_userfunc->promptSponsors]; label=Subsidise the Caddy project!
   base.externalSponsors = Click me!
 
   # cat=Quick Shop - Images/dims/101; type=string; label= List view max height:Max height of the image in the list view
   images.list.maxH = 140m
   # cat=Quick Shop - Images/dims/102; type=string; label= List view max width:Max width of the image in the list view
   images.list.maxW = 140 
+  # cat=Quick Shop - Images/others/998;    type=user[EXT:quick_shop/lib/userfunc/class.tx_quickshop_userfunc.php:tx_quickshop_userfunc->promptExternalLinks]; label=Powered by:die-netzmacher.de
+  iamges.externalLinks = Click me!
+  # cat=Quick Shop - Images/others/999;    type=user[EXT:quick_shop/lib/userfunc/class.tx_quickshop_userfunc.php:tx_quickshop_userfunc->promptSponsors]; label=Subsidise the Caddy project!
+  iamges.externalSponsors = Click me!
 
   # cat=Quick Shop - Pages/others/301; type=integer; label= Shop / root page:Uid of the page which contains the quick shop items. Usually the root page.
   pages.root = 
@@ -24,6 +28,10 @@ plugin.quick_shop {
   pages.shipping = 
   # cat=Quick Shop - Pages/others/304; type=integer; label= Terms & Conditions:Uid of the page with the terms & conditions (German: AGB)
   pages.terms = 
+  # cat=Quick Shop - Pages/others/998;    type=user[EXT:quick_shop/lib/userfunc/class.tx_quickshop_userfunc.php:tx_quickshop_userfunc->promptExternalLinks]; label=Powered by:die-netzmacher.de
+  pages.externalLinks = Click me!
+  # cat=Quick Shop - Pages/others/999;    type=user[EXT:quick_shop/lib/userfunc/class.tx_quickshop_userfunc.php:tx_quickshop_userfunc->promptSponsors]; label=Subsidise the Caddy project!
+  pages.externalSponsors = Click me!
 
   # cat=Quick Shop - Powermail/others/100; type=+int; label= Form id:Uid of the powermail form (default language)
   powermail.ids.form.default = 0
@@ -55,5 +63,9 @@ plugin.quick_shop {
   powermail.ids.address_packing_slip.default.city = 0
   # cat=Quick Shop - Powermail/others/999;    type=user[EXT:quick_shop/lib/userfunc/class.tx_quickshop_userfunc.php:tx_quickshop_userfunc->promptExternalLinks]; label=Powered by:die-netzmacher.de
   powermail.externalLinks = Click me!
+  # cat=Quick Shop - Powermail/others/998;    type=user[EXT:quick_shop/lib/userfunc/class.tx_quickshop_userfunc.php:tx_quickshop_userfunc->promptExternalLinks]; label=Powered by:die-netzmacher.de
+  powermail.externalLinks = Click me!
+  # cat=Quick Shop - Powermail/others/999;    type=user[EXT:quick_shop/lib/userfunc/class.tx_quickshop_userfunc.php:tx_quickshop_userfunc->promptSponsors]; label=Subsidise the Caddy project!
+  powermail.externalSponsors = Click me!
 
 }
