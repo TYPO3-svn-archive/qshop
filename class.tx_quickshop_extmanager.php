@@ -38,7 +38,7 @@
  *
  *
  *
- *   49: class tx_quick_shop_extmanager
+ *   49: class tx_quickshop_extmanager
  *   67:     function promptCheckUpdate()
  *  102:     function promptCurrIP()
  *
