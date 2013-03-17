@@ -105,17 +105,36 @@ plugin.tx_browser_pi1 {
           tx_quickshop_products.uid
         )
         orderBy = tx_quickshop_products.price DESC, tx_quickshop_products.title, tx_quickshop_categories.title
-        csvLinkToSingleView = tx_quickshop_products.title
+        csvLinkToSingleView = tx_quickshop_products.title          
         tx_quickshop_products {
+            // tx_quickshop_products.title
           title = TEXT
           title {
             value = ###TX_QUICKSHOP_PRODUCTS.TITLE###
             wrap  = <h2 class="title">|</h2>
           }
-          short = TEXT
+            // tx_quickshop_products.short, detail
+          short = COA
           short {
-            value = ###TX_QUICKSHOP_PRODUCTS.SHORT###
-            wrap  = <h3 class="short">|</h3>
+              // tx_quickshop_products.short
+            10 = TEXT
+            10 {
+              value = ###TX_QUICKSHOP_PRODUCTS.SHORT###
+              wrap  = <h3 class="short">|</h3>
+            }
+              // detail
+            20 = TEXT
+            20 {
+              data = LLL:EXT:quick_shop/locallang_db.xml:linktosingleview
+              typolink {
+                parameter = ###TX_QUICKSHOP_PRODUCTS.UID###
+                link {
+                  data = LLL:EXT:quick_shop/locallang_db.xml:linktosingleview
+                }
+              }
+              noTrimWrap = | ||
+            }
+            wrap = <h3 class="short">|</h3>
           }
           image = COA
           image {
