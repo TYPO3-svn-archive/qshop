@@ -117,6 +117,11 @@ div.caddy_product {
 
 
 /* powermail */
+#quickshop fieldset.tx-powermail-pi1_fieldset {
+  border-radius: 0;
+  box-shadow: 0 0 .2em 0 #AAA;
+  margin-bottom:1em;
+}
 #quickshop fieldset.tx-powermail-pi1_fieldset legend {
   color: #F66800;
 }
@@ -128,6 +133,7 @@ div.caddy_product {
  }
 #quickshop fieldset.tx-powermail-pi1_fieldset input.powermail_submit {
   background: -moz-linear-gradient(center top , #1E5799 0%, #2989D8 50%, #207CCA 51%, #7DB9E8 100%) repeat scroll 0 0 transparent;
+  background: -moz-linear-gradient(center top , #E67100 0%, #FF9933 50%, #FF8800 51%, #FFB366 100%) repeat scroll 0 0 transparent;
   border: 0 none;
   border-radius: 2px 2px 2px 2px;
   color: white;
