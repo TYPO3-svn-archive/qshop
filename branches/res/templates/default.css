@@ -85,10 +85,10 @@
   border: 1px solid #000;
 }
 
-form.css {
+form.caddy {
   text-align: right;
 }
-form.css button.submit {
+form.caddy button.submit {
   background:yellow;
   text-align: right;
 }
