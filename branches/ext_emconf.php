@@ -12,7 +12,7 @@
 
 $EM_CONF[$_EXTKEY] = array(
 	'title' => 'Quick Shop',
-	'description' => 'Quick Shop is the quickest shop in the history of TYPO3: With the Quick Shop Installer (quickshop_installer) you will need only one click for installing the Quick Shop with sample products.',
+	'description' => 'Quick Shop - the fastest shop in the history of TYPO3. Install the complete shop with one mouse click! Quick Shop itself hasn\'t any line PHP code. You need only TypoScript for extending the shop with new database fields and tables. Quick Shop is a team play with the Browser - TYPO3 without PHP -, Caddy - your shopping cart - and Powermail.',
 	'category' => 'plugin',
 	'shy' => 0,
 	'version' => '3.0.0',

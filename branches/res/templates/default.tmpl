@@ -142,7 +142,7 @@ VERSION 3.7.0
           ###TX_QUICKSHOP_PRODUCTS.DESCRIPTION###
           <div style="clear:both"></div>
           <!-- ###SINGLEBODYROW### end --><!-- ###SINGLEBODY### end -->
-          <form name="form_add_to_cart" id="form-order" action="###MY_CART_PAGE_URL###" method="post">
+          <form name="form_add_to_cart" id="form-order" action="###MY_CADDYURL###" method="post">
             <fieldset id="add-to-cart">
               <input type="hidden" name="tx_quickshop_products[sku]" value="###TX_QUICKSHOP_PRODUCTS.SKU###" />
               <input type="hidden" name="tx_browser_pi1[showUid]" value="###SHOWUID###" />
@@ -168,10 +168,9 @@ VERSION 3.7.0
                 <option>19</option>
                 <option>20</option>
               </select>
-              <input type="submit" name="submit"                                   value="###MY_CART_BUTTON###" />
-    <button name="submit" type="submit">
-      In den Warenkorb <img src="typo3conf/ext/caddy/files/img/caddy_100_02.png" width="18" height="18" alt="In den Warenkorb">
-    </button>
+              <button class="submit" name="submit" type="submit">
+                ###MY_CADDYLABEL### <img src="###MY_CADDYIMGSRC###" width="18" height="18" alt="###MY_CADDYIMGALT###">
+              </button>
             </fieldset>
           </form>
 <!-- ###AREA_FOR_AJAX_LIST_01### end -->
