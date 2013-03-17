@@ -1,6 +1,9 @@
 3.0.0
   13-03-17
   Features
+  * #46386: Update CSS
+            * Powermail CSS basic is moved to fancy 
+
   * #46380: Introduce sponsors
             Effected files:
 
