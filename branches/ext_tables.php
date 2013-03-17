@@ -76,7 +76,7 @@ if (!defined ('TYPO3_MODE'))
     // Get extension configuration
 
   $confArr = unserialize($GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf']['quick_shop']);
-  if (empty ($confArr['products_manual_ordering'])) 
+  if (empty ($confArr['tcaProductOrdering'])) 
   {
     $TCA['tx_quickshop_categories']['ctrl']['default_sortby'] = 'ORDER BY title';
   }
