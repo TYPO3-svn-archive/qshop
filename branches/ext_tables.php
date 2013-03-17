@@ -97,7 +97,6 @@ if (!defined ('TYPO3_MODE'))
     //
     // Add static template
 
-t3lib_extMgm::addStaticFile($_EXTKEY,'static/quick_shop/', 'Quick Shop v1.3');
 t3lib_extMgm::addStaticFile($_EXTKEY,'static/', 'Quick Shop');
     // Add static template
 

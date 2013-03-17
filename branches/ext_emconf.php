@@ -16,7 +16,7 @@ $EM_CONF[$_EXTKEY] = array(
 	'category' => 'plugin',
 	'shy' => 0,
 	'version' => '3.0.0',
-	'dependencies' => 'browser,css_styled_content,powermail,wt_cart',
+	'dependencies' => 'browser,caddy,css_styled_content,powermail',
 	'conflicts' => '',
 	'priority' => '',
 	'loadOrder' => '',
@@ -35,9 +35,9 @@ $EM_CONF[$_EXTKEY] = array(
 	'constraints' => array(
 		'depends' => array(
 			'browser' => '',
+			'caddy' => '',
 			'css_styled_content' => '',
 			'powermail' => '',
-			'wt_cart' => '',
 		),
 		'conflicts' => array(
 		),

@@ -1,7 +1,13 @@
-2.3.0
-  13-02-24
-  FORK
-  * #45775: Fork from wt_cart to caddy
+3.0.0
+  13-03-17
+  Features
+  * #46380: Introduce sponsors
+            Effected files:
+
+  * #46377: Button Caddy with an Icon
+            Effected files:
+
+  * #45775: FORK from wt_cart to caddy
             Effected files:
             * lib
               * icons/die-netzmacher-logo-quadrat.png   ( new )
@@ -12,6 +18,19 @@
                 * $myConst.pages.quick_shop.cart      -> $quick_shop.caddyUidCart
                 * $myConst.pages.quick_shop.shipping  -> $quick_shop.caddyUidShipping 
   Improvement
+  * #46381: See #46379
+  * #46379: Clean up TypoScript files
+            Effected files:
+            * static/quick_shop   (removed)
+            * ext_tables.php
+  * #46378: Clean up *.tmpl files
+            * res/v1.4 -> res/templates
+            Effected files:
+            * static/quick_shop/setup.txt
+            * res
+              * default.css         (removed)
+              * default.tmpl        (removed)
+              * tmpl_fieldwrap.html (removed)
   * #i0001: Key for page tree icon moved from quick_shop to quickshop
 
 2.2.3
