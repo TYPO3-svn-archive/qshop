@@ -20,17 +20,17 @@ plugin.quick_shop {
   # cat=Quick Shop - Images/others/999;    type=user[EXT:quick_shop/lib/userfunc/class.tx_quickshop_userfunc.php:tx_quickshop_userfunc->promptSponsors]; label=Subsidise the Caddy project!
   iamges.externalSponsors = Click me!
 
-  # cat=Quick Shop - Pages/others/301; type=integer; label= Shop / root page:Uid of the page which contains the quick shop items. Usually the root page.
+  # cat=Quick Shop - Pages/enable/301; type=integer; label= Shop / root page:Uid of the page which contains the quick shop items. Usually the root page.
   pages.root = 
-  # cat=Quick Shop - Pages/others/302; type=integer; label= Caddy:Uid of the page with the caddy - your shopping cart
+  # cat=Quick Shop - Pages/enable/302; type=integer; label= Caddy:Uid of the page with the caddy - your shopping cart
   pages.caddy = 
-  # cat=Quick Shop - Pages/others/303; type=integer; label= Shipping:Uid of the page with the shipping terms
+  # cat=Quick Shop - Pages/enable/303; type=integer; label= Shipping:Uid of the page with the shipping terms
   pages.shipping = 
-  # cat=Quick Shop - Pages/others/304; type=integer; label= Terms & Conditions:Uid of the page with the terms & conditions (German: AGB)
+  # cat=Quick Shop - Pages/enable/304; type=integer; label= Terms & Conditions:Uid of the page with the terms & conditions (German: AGB)
   pages.terms = 
-  # cat=Quick Shop - Pages/others/998;    type=user[EXT:quick_shop/lib/userfunc/class.tx_quickshop_userfunc.php:tx_quickshop_userfunc->promptExternalLinks]; label=Powered by:die-netzmacher.de
+  # cat=Quick Shop - Pages/enable/998;    type=user[EXT:quick_shop/lib/userfunc/class.tx_quickshop_userfunc.php:tx_quickshop_userfunc->promptExternalLinks]; label=Powered by:die-netzmacher.de
   pages.externalLinks = Click me!
-  # cat=Quick Shop - Pages/others/999;    type=user[EXT:quick_shop/lib/userfunc/class.tx_quickshop_userfunc.php:tx_quickshop_userfunc->promptSponsors]; label=Subsidise the Caddy project!
+  # cat=Quick Shop - Pages/enable/999;    type=user[EXT:quick_shop/lib/userfunc/class.tx_quickshop_userfunc.php:tx_quickshop_userfunc->promptSponsors]; label=Subsidise the Caddy project!
   pages.externalSponsors = Click me!
 
 }
