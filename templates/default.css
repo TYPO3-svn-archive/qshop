@@ -1,4 +1,3 @@
-/* Version quick_shop 1.4, wt_cart 1.2.1 */
 
 /* QuickShop list and singel views */
 
@@ -86,7 +85,11 @@
   border: 1px solid #000;
 }
 
-#form-order {
+form.css {
+  text-align: right;
+}
+form.css button.submit {
+  background:yellow;
   text-align: right;
 }
 
