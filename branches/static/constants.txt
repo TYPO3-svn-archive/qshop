@@ -28,9 +28,9 @@ plugin.quick_shop {
   pages.shipping = 
   # cat=Quick Shop - Pages/enable/304; type=integer; label= Terms & Conditions:Uid of the page with the terms & conditions (German: AGB)
   pages.terms = 
-  # cat=Quick Shop - Pages/enable/998;    type=user[EXT:quick_shop/lib/userfunc/class.tx_quickshop_userfunc.php:tx_quickshop_userfunc->promptExternalLinks]; label=Powered by:die-netzmacher.de
+  # cat=Quick Shop - Pages/others/998;    type=user[EXT:quick_shop/lib/userfunc/class.tx_quickshop_userfunc.php:tx_quickshop_userfunc->promptExternalLinks]; label=Powered by:die-netzmacher.de
   pages.externalLinks = Click me!
-  # cat=Quick Shop - Pages/enable/999;    type=user[EXT:quick_shop/lib/userfunc/class.tx_quickshop_userfunc.php:tx_quickshop_userfunc->promptSponsors]; label=Subsidise the Caddy project!
+  # cat=Quick Shop - Pages/others/999;    type=user[EXT:quick_shop/lib/userfunc/class.tx_quickshop_userfunc.php:tx_quickshop_userfunc->promptSponsors]; label=Subsidise the Caddy project!
   pages.externalSponsors = Click me!
 
 }
