@@ -114,3 +114,21 @@ div.caddy_product {
   border-bottom: 1px solid #F66800;
   padding:.6em .5em .3em .5em;
 }
+
+
+/* powermail */
+fieldset.tx-powermail-pi1_fieldset legend {
+  color: #F66800;
+}
+fieldset.tx-powermail-pi1_fieldset label {
+  color: #F66800;
+}
+fieldset.tx-powermail-pi1_fieldset legend.tx_powermail_pi1_fieldwrap_html_checkbox_title {
+  color: #F66800;
+ }
+ fieldset.tx-powermail-pi1_fieldset input.powermail_submit {
+  background: -moz-linear-gradient(center top , #1E5799 0%, #2989D8 50%, #207CCA 51%, #7DB9E8 100%) repeat scroll 0 0 transparent;
+  border: 0 none;
+  border-radius: 2px 2px 2px 2px;
+  color: white;
+}
