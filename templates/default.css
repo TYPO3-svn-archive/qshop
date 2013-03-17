@@ -110,9 +110,8 @@ form.caddy button.submit img {
   color: #fff;
 }
 
-.caddy_footer {
-  background-color: #F66800;
-  color: #fff;
+.caddy_product {
+  border-bottom: 1px solid #F66800;
 }
 
 /* powermail form */
