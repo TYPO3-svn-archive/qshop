@@ -89,8 +89,8 @@ form.caddy {
   text-align: right;
 }
 form.caddy button.submit,
-form.tx_powermail_pi1_formconfirmation_back input.tx-powermail-pi1_confirmation_back,
-form.tx_powermail_pi1_formconfirmation_submit input.tx-powermail-pi1_confirmation_submit {
+#content form.tx_powermail_pi1_formconfirmation_back input.tx-powermail-pi1_confirmation_back,
+#content form.tx_powermail_pi1_formconfirmation_submit input.tx-powermail-pi1_confirmation_submit {
   background: -moz-linear-gradient(center top , #E67100 0%, #FF9933 50%, #FF8800 51%, #FFB366 100%) repeat scroll 0 0 transparent;
   border: 0 none;
   border-radius: .4em;
@@ -103,7 +103,7 @@ form.tx_powermail_pi1_formconfirmation_submit input.tx-powermail-pi1_confirmatio
   position:relative;
   top:.1em;
 }
-form.tx_powermail_pi1_formconfirmation_submit input.tx-powermail-pi1_confirmation_submit {
+form.tx_powermail_pi1_formconfirmation_back {
   float:right;
 }
 form.caddy button.submit img {
