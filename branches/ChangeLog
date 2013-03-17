@@ -17,6 +17,10 @@
               Effected files:
               * res/templates/default.tmpl
               * static/setup.txt
+            * CSS properties are moved 
+              * #form-order -> form.caddy
+                Effected files:
+                * res/templates/default.css
             Effected files in priciple
             * lib
               * icons/die-netzmacher-logo-quadrat.png   ( new )
