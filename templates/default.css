@@ -89,8 +89,14 @@ form.caddy {
   text-align: right;
 }
 form.caddy button.submit {
-  background:yellow;
-  text-align: right;
+  cursor:pointer;
+  font-family: Trebuchet MS,Geneva,Arial,Helvetica,Verdana,sans serif;
+  position:relative;
+  top:.1em;
+}
+form.caddy button.submit img {
+  position:relative;
+  top:.1em;
 }
 
 /* product detail page */
