@@ -14,7 +14,7 @@
 }
 
 /* product detail page */
-#add-to-cart input.tx_quick_shop_qty, .wtcart_cart_col input {
+#add-to-cart input.tx_quickshop_qty, .wtcart_cart_col input {
   width: 30px;
 }
 
