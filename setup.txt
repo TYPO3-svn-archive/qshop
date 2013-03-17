@@ -54,16 +54,24 @@ plugin.tx_browser_pi1 {
     }
   }
   marker {
-    my_cart_button = TEXT
-    my_cart_button {
-      value = Into the cart
-      lang {
-        de = In den Warenkorb
-      }
+    my_caddyimgsrc = TEXT
+    my_caddyimgsrc {
+      value = typo3conf/ext/caddy/files/img/caddy_100_02.png
     }
-    my_cart_quantity = TEXT
-    my_cart_quantity {
-      value = 1
+    my_caddyimgalt = TEXT
+    my_caddyimgalt {
+      data = LLL:EXT:quick_shop/locallang_db.xml:marker_my_caddyimgalt
+    }
+    my_caddylabel = TEXT
+    my_caddylabel {
+      data = LLL:EXT:quick_shop/locallang_db.xml:marker_my_caddylabel
+    }
+    my_caddyurl = TEXT
+    my_caddyurl {
+      typolink {
+        parameter = {$plugin.quick_shop.pages.caddy}
+        returnLast = url
+      }
     }
     my_shipping_note = TEXT
     my_shipping_note {
@@ -78,13 +86,6 @@ plugin.tx_browser_pi1 {
         lang {
           de = zzgl.
         }
-      }
-    }
-    my_cart_page_url = TEXT
-    my_cart_page_url {
-      typolink {
-        parameter = {$plugin.quick_shop.pages.caddy}
-        returnLast = url
       }
     }
   }
