@@ -12,7 +12,7 @@
 page {
   includeCSS {
     // add the quick shop default css
-    quick_shop = EXT:quick_shop/res/v1.4/default.css
+    quick_shop = EXT:quick_shop/res/templates/default.css
   }
 }
 
@@ -33,12 +33,12 @@ temp.tax {
 
 plugin.tx_browser_pi1 {
   template {
-    file = EXT:quick_shop/res/v1.4/default.tmpl
+    file = EXT:quick_shop/res/templates/default.tmpl
     extensions {
       quick_shop {
         default {
           name      = Quick Shop
-          file      = EXT:quick_shop/res/v1.4/default.tmpl
+          file      = EXT:quick_shop/res/templates/default.tmpl
           csvViews  = 1
         }
       }
