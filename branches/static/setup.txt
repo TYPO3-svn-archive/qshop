@@ -96,6 +96,7 @@ plugin.tx_browser_pi1 {
         name = Quick Shop
         select (
           tx_quickshop_products.title,
+          tx_quickshop_products.sku,
           tx_quickshop_products.short,
           tx_quickshop_products.image,
           tx_quickshop_products.imageseo,
@@ -250,6 +251,7 @@ plugin.tx_browser_pi1 {
           tx_quickshop_products.caption,
           tx_quickshop_products.tax,
           tx_quickshop_products.price,
+
           tx_quickshop_categories.title
         )
         tx_quickshop_products {
