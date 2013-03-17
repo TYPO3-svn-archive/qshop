@@ -100,12 +100,12 @@ form.caddy button.submit img {
 }
 
 /* caddy */
-.caddy {
+div.caddy {
   background-color: #fff;
   padding: 0 0 3em 0;
 }
 
-.caddy_header {
+div.caddy_header {
   background-color: #F66800;
   color: #fff;
 }
