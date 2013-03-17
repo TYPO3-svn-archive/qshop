@@ -6,8 +6,10 @@ plugin.quick_shop {
   base.dec_point = ,
   # cat=Quick Shop/dims/220; type=string; label= Thousands separator: e.g. , (comma) or . (dot). 1,000 US-$ or 1.000 EUR
   base.thousands_sep = .
-  # cat=Quick Shop/others/999;    type=user[EXT:quick_shop/lib/userfunc/class.tx_quickshop_userfunc.php:tx_quickshop_userfunc->promptExternalLinks]; label=Powered by:die-netzmacher.de
+  # cat=Quick Shop/others/998;    type=user[EXT:quick_shop/lib/userfunc/class.tx_quickshop_userfunc.php:tx_quickshop_userfunc->promptExternalLinks]; label=Powered by:die-netzmacher.de
   base.externalLinks = Click me!
+  # cat=Quick Shop/others/999;    type=user[EXT:quick_shop/lib/userfunc/class.tx_quickshop_userfunc.php:tx_quickshop_userfunc->promptSponsors]; label=Subsidise the Caddy project!
+  base.externalSponsors = Click me!
 
   # cat=Quick Shop - Images/dims/101; type=string; label= List view max height:Max height of the image in the list view
   images.list.maxH = 140m
