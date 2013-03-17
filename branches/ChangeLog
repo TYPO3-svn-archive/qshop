@@ -2,19 +2,30 @@
   13-03-17
   Features
   * #46387: Caddy for list view
-
+            Effected files:
+            * res/templates
+              * default.css
+              * default.tmpl
+            * static
+              * constants.txt
+              * setup.txt
   * #46386: Update CSS
             * Powermail CSS basic is moved to fancy 
-
+            Effected files:
+            * res/templates
+              * default.css
   * #46380: Introduce sponsors
             Effected files:
-
+            * lib/userfunc/
+              * class.tx_quickshop_userfunc.php
+              * locallang.xml
+            * ext_conf_template.txt
+            * ext_tables.php
   * #46377: Button Caddy with an Icon
             * marker is moved: ###MY_CART_BUTTON### -> ###MY_CADDYLABEL###
             Effected files:
             * res/templates/default.tmpl
             * static/setup.txt
-
   * #45775: FORK from wt_cart to caddy
             * marker are moved
               * ###MY_CART_PAGE_URL### -> ###MY_CADDYURL###
