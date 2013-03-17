@@ -127,8 +127,10 @@ plugin.tx_browser_pi1 {
             20 {
               data = LLL:EXT:quick_shop/locallang_db.xml:linktosingleview
               typolink {
-                parameter = ###TX_QUICKSHOP_PRODUCTS.UID###
-                link {
+                parameter         = {$plugin.quick_shop.pages.root} - linktosingle
+                additionalParams  = &tx_browser_pi1[showUid]=###TX_QUICKSHOP_PRODUCTS.UID###
+                useCacheHash = 1
+                title {
                   data = LLL:EXT:quick_shop/locallang_db.xml:linktosingleview
                 }
               }
