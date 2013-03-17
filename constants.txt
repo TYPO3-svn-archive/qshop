@@ -33,39 +33,4 @@ plugin.quick_shop {
   # cat=Quick Shop - Pages/others/999;    type=user[EXT:quick_shop/lib/userfunc/class.tx_quickshop_userfunc.php:tx_quickshop_userfunc->promptSponsors]; label=Subsidise the Caddy project!
   pages.externalSponsors = Click me!
 
-  # cat=Quick Shop - Powermail/others/100; type=+int; label= Form id:Uid of the powermail form (default language)
-  powermail.ids.form.default = 0
-  # cat=Quick Shop - Powermail/others/101; type=+int; label= Form id (de):Uid of the powermail form (german language)
-  powermail.ids.form.de = 0
-  # cat=Quick Shop - Powermail/others/200; type=+int; label= Company id:Uid of the powermail record for the company (ordering and default language)
-  powermail.ids.address_order.default.company = 0
-  # cat=Quick Shop - Powermail/others/201; type=+int; label= First name id:Uid of the powermail record for the first name (ordering and default language)
-  powermail.ids.address_order.default.first_name = 0
-  # cat=Quick Shop - Powermail/others/202; type=+int; label= Last name id:Uid of the powermail record for the last name (ordering and default language)
-  powermail.ids.address_order.default.last_name = 0
-  # cat=Quick Shop - Powermail/others/203; type=+int; label= Address id:Uid of the powermail record for the address (ordering and default language)
-  powermail.ids.address_order.default.address = 0
-  # cat=Quick Shop - Powermail/others/204; type=+int; label= Zip code id:Uid of the powermail record for the zip code (ordering and default language)
-  powermail.ids.address_order.default.zip = 0
-  # cat=Quick Shop - Powermail/others/205; type=+int; label= City id:Uid of the powermail record for the city (ordering and default language)
-  powermail.ids.address_order.default.city = 0
-  # cat=Quick Shop - Powermail/others/210; type=+int; label= Company id:Uid of the powermail record for the company (packing slip and default language)
-  powermail.ids.address_packing_slip.default.company = 0
-  # cat=Quick Shop - Powermail/others/211; type=+int; label= First name id:Uid of the powermail record for the first name (packing slip and default language)
-  powermail.ids.address_packing_slip.default.first_name = 0
-  # cat=Quick Shop - Powermail/others/212; type=+int; label= Last name id:Uid of the powermail record for the last name (packing slip and default language)
-  powermail.ids.address_packing_slip.default.last_name = 0
-  # cat=Quick Shop - Powermail/others/213; type=+int; label= Address id:Uid of the powermail record for the address (packing slip and default language)
-  powermail.ids.address_packing_slip.default.address = 0
-  # cat=Quick Shop - Powermail/others/214; type=+int; label= Zip code id:Uid of the powermail record for the zip code (packing slip and default language)
-  powermail.ids.address_packing_slip.default.zip = 0
-  # cat=Quick Shop - Powermail/others/215; type=+int; label= City id:Uid of the powermail record for the city (packing slip and default language)
-  powermail.ids.address_packing_slip.default.city = 0
-  # cat=Quick Shop - Powermail/others/999;    type=user[EXT:quick_shop/lib/userfunc/class.tx_quickshop_userfunc.php:tx_quickshop_userfunc->promptExternalLinks]; label=Powered by:die-netzmacher.de
-  powermail.externalLinks = Click me!
-  # cat=Quick Shop - Powermail/others/998;    type=user[EXT:quick_shop/lib/userfunc/class.tx_quickshop_userfunc.php:tx_quickshop_userfunc->promptExternalLinks]; label=Powered by:die-netzmacher.de
-  powermail.externalLinks = Click me!
-  # cat=Quick Shop - Powermail/others/999;    type=user[EXT:quick_shop/lib/userfunc/class.tx_quickshop_userfunc.php:tx_quickshop_userfunc->promptSponsors]; label=Subsidise the Caddy project!
-  powermail.externalSponsors = Click me!
-
 }
