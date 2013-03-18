@@ -304,7 +304,7 @@ class tx_quickshop_userfunc
 
       $prompt = $prompt . '
 <div class="message-body" style="max-width:600px;">
-  ' . $GLOBALS['LANG']->sL('LLL:EXT:caddy/lib/userfunc/locallang.xml:promptSponsors') . '
+  ' . $GLOBALS['LANG']->sL('LLL:EXT:quick-shop/lib/userfunc/locallang.xml:promptSponsors') . '
 </div>';
 
     return $prompt;
