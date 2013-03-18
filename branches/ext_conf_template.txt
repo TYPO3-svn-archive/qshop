@@ -1,4 +1,4 @@
-  # cat=evaluate//10;             type=user[EXT:quick_shop/lib/userfunc/class.tx_quickshop_userfunc.php:tx_quickshop_userfunc->promptCheckUpdate]; label=Update!
+  # cat=evaluate//10;             type=user[EXT:quick_shop/lib/userfunc/class.tx_quickshop_userfunc.php:tx_quickshop_userfunc->promptEvaluatorTYPO3version]; label=Evaluation
 update=0
   # cat=evaluate/others/998;      type=user[EXT:quick_shop/lib/userfunc/class.tx_quickshop_userfunc.php:tx_quickshop_userfunc->promptExternalLinks]; label=External Links
 updateExternalLinks=0
