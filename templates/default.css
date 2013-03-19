@@ -149,6 +149,7 @@ form.tx_powermail_pi1_formconfirmation_back {
 }
 #content fieldset.powermail_fieldset,
 #content div.tx-powermail div.powermail_confirmation,
+#content div.tx-powermail div.powermail_create,
 #content fieldset.tx-powermail-pi1_fieldset {
   border-radius: 0;
   box-shadow: 0 0 .2em 0 #AAA;
