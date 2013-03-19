@@ -126,7 +126,7 @@ div.caddy_product {
 /* powermail */
 #content form.powermail_form input.powermail_confirmation_form,
 #content form.tx_powermail_pi1_formconfirmation_back input.tx-powermail-pi1_confirmation_back,
-#content form.powermail_form input.powermail_confirmation_submit,
+#content form.powermail_form input.powermail_submit,
 #content form.tx_powermail_pi1_formconfirmation_submit input.tx-powermail-pi1_confirmation_submit {
   background: -moz-linear-gradient(center top , #E67100 0%, #FF9933 50%, #FF8800 51%, #FFB366 100%) repeat scroll 0 0 transparent;
   border: 0 none;
@@ -144,6 +144,7 @@ form.tx_powermail_pi1_formconfirmation_back {
   float:right;
 }
 #content fieldset.powermail_fieldset,
+#content div.tx-powermail div.powermail_confirmation,
 #content fieldset.tx-powermail-pi1_fieldset {
   border-radius: 0;
   box-shadow: 0 0 .2em 0 #AAA;
