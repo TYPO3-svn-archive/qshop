@@ -12,6 +12,9 @@
 .tx-browser-pi1 .listview .charges .tax_shipping {
   text-align:right;
 }
+.tx-browser-pi1 .listview .image {
+  float:left;
+}
 .tx-browser-pi1 .listview .short {
   font-weight:normal;
 }
