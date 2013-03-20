@@ -161,7 +161,8 @@ form.tx_powermail_pi1_formconfirmation_back {
 }
 #content div.tx-powermail ul.powermail_tabmenu li,
 #content fieldset.powermail_fieldset legend,
-#content fieldset.tx-powermail-pi1_fieldset legend {
+#content fieldset.tx-powermail-pi1_fieldset legend,
+#content ul.powermail_multiplejs_tabs li a {
   color: #F66800;
 }
 #content div.tx-powermail ul.powermail_tabmenu li.act {
