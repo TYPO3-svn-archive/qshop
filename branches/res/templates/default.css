@@ -150,6 +150,7 @@ form.tx_powermail_pi1_formconfirmation_back {
 #content fieldset.powermail_fieldset,
 #content div.tx-powermail div.powermail_confirmation,
 #content div.tx-powermail div.powermail_create,
+#content div.tx-powermail ul.powermail_tabmenu,
 #content fieldset.tx-powermail-pi1_fieldset {
   border-radius: 0;
   box-shadow: 0 0 .2em 0 #AAA;
@@ -158,6 +159,7 @@ form.tx_powermail_pi1_formconfirmation_back {
 #content div.tx-powermail div.powermail_confirmation {
   margin-top:1em;
 }
+#content div.tx-powermail ul.powermail_tabmenu li,
 #content fieldset.powermail_fieldset legend,
 #content fieldset.tx-powermail-pi1_fieldset legend {
   color: #F66800;
