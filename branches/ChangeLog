@@ -1,4 +1,9 @@
 3.0.0
+  13-03-21
+  Improvement
+  * #i0002: Configuring of caddy constants is moved from installer to quick_shop
+
+3.0.0
   13-03-17
   Features
   * #46387: Caddy for list view

@@ -32,5 +32,4 @@ plugin.quick_shop {
   pages.externalLinks = Click me!
   # cat=Quick Shop - Pages/others/999;    type=user[EXT:quick_shop/lib/userfunc/class.tx_quickshop_userfunc.php:tx_quickshop_userfunc->promptSponsors]; label=Subsidise the Caddy project!
   pages.externalSponsors = Click me!
-
 }
