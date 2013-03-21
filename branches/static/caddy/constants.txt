@@ -18,6 +18,7 @@ plugin.caddy {
       numberInvoice       = #FF9B00
       numberLine          = #333333
       numberOrder         = #FF9B00
+      revocation          = #FF9B00
       terms               = #FF9B00
     }
   }
