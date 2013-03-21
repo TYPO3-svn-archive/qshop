@@ -1,0 +1,24 @@
+plugin.caddy {
+  db {
+    table = tx_quickshop_products
+    sku   = sku
+    min   = quantity_min
+    max   = quantity_max
+  }
+  gpvar {
+    puid  = tx_browser_pi1|showUid
+    qty   = tx_quickshop_qty
+  }
+  pdf {
+    textColor {
+      address             = #333333
+      caddy               = #FF9B00
+      date                = #FF9B00
+      numberDeliveryorder = #FF9B00
+      numberInvoice       = #FF9B00
+      numberLine          = #333333
+      numberOrder         = #FF9B00
+      terms               = #FF9B00
+    }
+  }
+}
