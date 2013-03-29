@@ -1,10 +1,22 @@
 
+/* QuickShop Treeview */
+
+.tx-browser-pi1 .category_menu_treeview {
+  float: left;
+  padding-right: 1em;
+  position: relative;
+  width: 30em;
+}
+.tx-browser-pi1 .category_menu_treeview a {
+  font-weight:normal;
+}
+.tx-browser-pi1 .category_menu_treeview a.selected {
+  font-weight:bold;
+}
+
+
 /* QuickShop list and single views */
 
-.tx-browser-pi1 div.category_menu {
-  float:left;
-  padding: 0 1em 0 0;
-}
 
 .tx-browser-pi1 .listview .charges {
   float:right;
