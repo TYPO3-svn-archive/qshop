@@ -1,3 +1,14 @@
+3.0.1
+  13-03-29
+  Feature
+  * #42072: nested categories
+            Effected files:
+            * ext_emconf.php
+            * ext_tables.php
+            * ext_tables.sql
+            * locallang_db.xml
+            * tca.php
+
 3.0.0
   13-03-21
   Improvement

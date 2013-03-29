@@ -19,6 +19,7 @@ CREATE TABLE tx_quickshop_categories (
   hidden tinyint(4) DEFAULT '0' NOT NULL,
   title tinytext,
   title_lang_ol tinytext,
+  uid_parent int(11) DEFAULT '0' NOT NULL,
   
   PRIMARY KEY (uid),
   KEY parent (pid)

@@ -17,6 +17,7 @@
       <label index="tx_quickshop_categories">Quick Shop Category</label>
       <label index="tx_quickshop_categories.title">Category</label>
       <label index="tx_quickshop_categories.title_lang_ol">Translations (i.e. fr:Traduction|de:Übersetzung)</label>
+      <label index="tx_quickshop_categories.uid_parent">Superior Category</label>
       <label index="tx_quickshop_products">Quick Shop Item</label>
       <label index="tx_quickshop_products.div.product">Item</label>
       <label index="tx_quickshop_products.div.price_quantity">Price <![CDATA[&]]> quantity</label>
@@ -50,6 +51,7 @@
       <label index="tca_phrase.seo_keywords">Stichworte für Suchmaschinen (drei bis fünf, mit Komma trennen)</label>
       <label index="tx_quickshop_categories.title">Kategorie</label>
       <label index="tx_quickshop_categories.title_lang_ol">Übersetzungen (z.B. en:Translation|fr:Traduction)</label>
+      <label index="tx_quickshop_categories.uid_parent">Übergeordnete Kategorie</label>
       <label index="tx_quickshop_products">Quick Shop Artikel</label>
       <label index="tx_quickshop_products.div.product">Artikel</label>
       <label index="tx_quickshop_products.div.price_quantity">Preis <![CDATA[&]]> Mengen</label>

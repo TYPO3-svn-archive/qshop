@@ -23,7 +23,7 @@ if (strtolower(substr($confArr['LLsupport'], 0, strlen('yes'))) == 'yes')
 $TCA['tx_quickshop_categories'] = array (
   'ctrl' => $TCA['tx_quickshop_categories']['ctrl'],
   'interface' => array (
-    'showRecordFieldList' => 'hidden,title'
+    'showRecordFieldList' => 'hidden,title,uid_parent'
   ),
   'feInterface' => $TCA['tx_quickshop_categories']['feInterface'],
   'columns' => array (
@@ -44,9 +44,27 @@ $TCA['tx_quickshop_categories'] = array (
         'eval' => 'required',
       )
     ),
+    'uid_parent' => array (
+      'exclude'   => 0,
+      'label' => 'LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_categories.uid_parent',
+      'config'    => array (
+        'type'          => 'select',
+        'size'          => 1,
+        'minitems'      => 0,
+        'maxitems'      => 2,
+        'trueMaxItems'  => 1,
+        'form_type'     => 'user',
+        'userFunc'      => 'tx_cpstcatree->getTree',
+        'foreign_table' => 'tx_orgesab_cat',
+        'treeView'      => 1,
+        'expandable'    => 1,
+        'expandFirst'   => 0,
+        'expandAll'     => 0,
+      ),
+    ),
   ),
   'types' => array (
-    '0' => array('showitem' => 'hidden;;1;;1-1-1, title;;%2%;;2-2-2')
+    '0' => array('showitem' => 'hidden;;1;;1-1-1, title;;%2%;;2-2-2, uid_parent' )
   ),
   'palettes' => array (
     '1' => array('showitem' => ''),
@@ -172,11 +190,17 @@ $TCA['tx_quickshop_products'] = array (
       'label' => 'LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_products.category',
       'config' => array (
         'type' => 'select',  
-        'foreign_table' => 'tx_quickshop_categories',  
-        'foreign_table_where' => 'AND tx_quickshop_categories.pid=###CURRENT_PID### ORDER BY tx_quickshop_categories.uid',  
         'size' => 10,  
         'minitems' => 0,
         'maxitems' => 10,  
+        'foreign_table' => 'tx_quickshop_categories',  
+        'foreign_table_where' => 'AND tx_quickshop_categories.pid=###CURRENT_PID### ORDER BY tx_quickshop_categories.uid',  
+        'form_type'           => 'user',
+        'userFunc'            => 'tx_cpstcatree->getTree',
+        'treeView'            => 1,
+        'expandable'          => 1,
+        'expandFirst'         => 0,
+        'expandAll'           => 0,
         "MM" => "tx_quickshop_products_category_mm",  
         'wizards' => array(
           '_PADDING'  => 2,
