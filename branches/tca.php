@@ -56,6 +56,7 @@ $TCA['tx_quickshop_categories'] = array (
         'form_type'     => 'user',
         'userFunc'      => 'tx_cpstcatree->getTree',
         'foreign_table' => 'tx_quickshop_categories',
+        'foreign_table_where' => 'AND tx_quickshop_categories.pid=###CURRENT_PID### ORDER BY tx_quickshop_categories.title',  
         'treeView'      => 1,
         'expandable'    => 1,
         'expandFirst'   => 0,
