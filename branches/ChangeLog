@@ -8,6 +8,9 @@
             * ext_tables.sql
             * locallang_db.xml
             * tca.php
+            * res
+              * templates
+                * default.css
             * static
               * constants.txt
               * setup.txt
