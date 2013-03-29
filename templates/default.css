@@ -3,9 +3,7 @@
 
 .tx-browser-pi1 .category_menu_treeview {
   float: left;
-  padding-right: 1em;
-  position: relative;
-  width: 30em;
+  padding-right: 3em;
 }
 .tx-browser-pi1 .category_menu_treeview a {
   font-weight:normal;
