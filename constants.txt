@@ -1,3 +1,9 @@
+  // plugin.quick_shop
+  // plugin.tx_browser_pi1
+
+
+
+  // plugin.quick_shop
 plugin.quick_shop {
 
   # cat=Quick Shop - Currency/dims/200; type=string; label= Currency symbol (e.g. &euro; or $)
@@ -31,3 +37,12 @@ plugin.quick_shop {
   # cat=Quick Shop - Pages/others/999;    type=user[EXT:quick_shop/lib/userfunc/class.tx_quickshop_userfunc.php:tx_quickshop_userfunc->promptSponsors]; label=Subsidise the Caddy project!
   pages.externalSponsors = Click me!
 }
+  // plugin.quick_shop
+
+
+
+  // plugin.tx_browser_pi1
+plugin.tx_browser_pi1 {
+  jQuery.plugin.jstree.tablefield_01 = tx_quickshop_categories.title
+}
+  // plugin.tx_browser_pi1

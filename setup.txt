@@ -217,7 +217,9 @@ plugin.tx_browser_pi1 {
         }
         filter {
           tx_quickshop_categories {
-            title < plugin.tx_browser_pi1.displayList.master_templates.selectbox
+              // #42072, dwildt, 1-, 1+
+            //title < plugin.tx_browser_pi1.displayList.master_templates.selectbox
+            title < plugin.tx_browser_pi1.displayList.master_templates.treeview
             title {
               first_item {
                 cObject {
@@ -226,14 +228,9 @@ plugin.tx_browser_pi1 {
                   }
                 }
               }
-              wrap = <span class="selectbox">|</span>
-              wrap {
-                item {
-                  stdWrap {
-                    crop = 60 | ... | 1
-                  }
-                }
-              }
+                // #43641, dwildt, 1-, 1+
+              //wrap = <span class="selectbox">|</span>
+              wrap = <div class="category_menu category_menu_treeview">|</div>
             }
           }
         }
