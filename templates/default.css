@@ -1,6 +1,11 @@
 
 /* QuickShop list and single views */
 
+.tx-browser-pi1 div.category_menu {
+  float:left;
+  padding: 0 1em 0 0;
+}
+
 .tx-browser-pi1 .listview .charges {
   float:right;
   padding:0 0 0 1em;
@@ -36,10 +41,6 @@
   padding: .7em 0 0 0;
 }
 
-.tx-browser-pi1 .listview div.category_menu {
-  float:left;
-  padding: 0 1em 0 0;
-}
 
 
 
