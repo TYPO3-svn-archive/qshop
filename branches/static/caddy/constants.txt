@@ -5,7 +5,7 @@ plugin.caddy {
     min   = quantity_min
     max   = quantity_max
   }
-  gpvar {
+  getpost {
     puid  = tx_browser_pi1|showUid
     qty   = tx_quickshop_qty
   }
