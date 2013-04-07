@@ -402,3 +402,57 @@ plugin.tx_browser_pi1 {
     }
   }
 }
+
+
+
+
+  ////////////////////////////////////////////////////////////////////////////////
+  //
+  // plugin.tx_browser_pi1 - SEO
+
+plugin.tx_browser_pi1 {
+
+  general_stdWrap >
+
+  displayList {
+    seo {
+      htmlHead {
+      title = 1
+        meta {
+          description = 1
+          keywords    = 1
+        }
+      }
+    }
+  }
+  displaySingle {
+    seo {
+      htmlHead {
+      title = 1
+        meta {
+          description = 1
+          keywords    = 1
+        }
+      }
+    }
+  }
+  _LOCAL_LANG {
+    default {
+      list_mode_1_titleTag    = Items
+      list_mode_1_keywords    = TYPO3, Quick Shop, Items
+      list_mode_1_summary     = TYPO3 Quick Shop: Items
+      single_mode_1_titleTag  = ###TX_QUICKSHOP_PRODUCTS.TITLE###: ###TX_QUICKSHOP_PRODUCTS.SHORT###
+      single_mode_1_keywords  = Item, ###TX_QUICKSHOP_PRODUCTS.TITLE###, ###TX_QUICKSHOP_PRODUCTS.SHORT###
+      single_mode_1_summary   = ###TX_QUICKSHOP_PRODUCTS.TITLE### - ###TX_QUICKSHOP_PRODUCTS.SHORT###
+    }
+    default {
+      list_mode_1_titleTag    = Artikel
+      list_mode_1_keywords    = TYPO3, Quick Shop, Artikel
+      list_mode_1_summary     = TYPO3 Quick Shop: Artikel
+      single_mode_1_titleTag  = ###TX_QUICKSHOP_PRODUCTS.TITLE###: ###TX_QUICKSHOP_PRODUCTS.SHORT###
+      single_mode_1_keywords  = Artikel, ###TX_QUICKSHOP_PRODUCTS.TITLE###, ###TX_QUICKSHOP_PRODUCTS.SHORT###
+      single_mode_1_summary   = ###TX_QUICKSHOP_PRODUCTS.TITLE### - ###TX_QUICKSHOP_PRODUCTS.SHORT###
+    }
+  }
+}
+  // plugin.tx_browser_pi1 - SEO
