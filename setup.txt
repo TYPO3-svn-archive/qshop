@@ -43,6 +43,19 @@ plugin.tx_browser_pi1 {
         }
       }
     }
+    add_parameter {
+      extensions {
+        quick_shop = COA
+        quick_shop {
+            // showUid
+          10 = TEXT
+          10 {
+            dataWrap        = &tx_browser_pi1[showUid]={GPvar:tx_browser_pi1|showUid}&###CHASH###
+            if.isTrue.data  = GPvar:tx_browser_pi1|showUid
+          }
+        }
+      }
+    }
   }
   flexform {
     socialmedia {
