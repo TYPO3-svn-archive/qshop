@@ -445,7 +445,7 @@ plugin.tx_browser_pi1 {
       single_mode_1_keywords  = Item, ###TX_QUICKSHOP_PRODUCTS.TITLE###, ###TX_QUICKSHOP_PRODUCTS.SHORT###
       single_mode_1_summary   = ###TX_QUICKSHOP_PRODUCTS.TITLE### - ###TX_QUICKSHOP_PRODUCTS.SHORT###
     }
-    default {
+    de {
       list_mode_1_titleTag    = Artikel
       list_mode_1_keywords    = TYPO3, Quick Shop, Artikel
       list_mode_1_summary     = TYPO3 Quick Shop: Artikel
