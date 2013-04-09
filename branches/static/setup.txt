@@ -32,7 +32,7 @@ temp.tax {
 }
 
 plugin.tx_browser_pi1 {
-  template {
+  XXX_template {
     file = EXT:quick_shop/res/templates/default.tmpl
     extensions {
       quick_shop {
@@ -40,19 +40,6 @@ plugin.tx_browser_pi1 {
           name      = Quick Shop
           file      = EXT:quick_shop/res/templates/default.tmpl
           csvViews  = 1
-        }
-      }
-    }
-    add_parameter {
-      extensions {
-        quick_shop = COA
-        quick_shop {
-            // showUid
-          10 = TEXT
-          10 {
-            dataWrap        = &tx_browser_pi1[showUid]={GPvar:tx_browser_pi1|showUid}&###CHASH###
-            if.isTrue.data  = GPvar:tx_browser_pi1|showUid
-          }
         }
       }
     }
@@ -264,6 +251,76 @@ plugin.tx_browser_pi1 {
             }
           }
         }
+          // marker and subparts will replaced in the HTML template before data handling
+          // #47068, 130409, dwildt
+        htmlSnippets =
+        htmlSnippets {
+          marker {
+            filter = TEXT
+            filter {
+              value (
+              <div class="filter">
+                ###TX_QUICKSHOP_CATEGORIES.TITLE###
+              </div>
+)
+            }
+          }
+          subparts {
+            listview = TEXT
+            listview {
+              value (
+                <div id="c###TT_CONTENT.UID###-listview-###MODE###" class="###VIEW###view ###VIEW###view-content ###VIEW###view-###MODE### ###VIEW###view-content-###MODE###">
+                  <!-- ###LISTBODY### begin --><!-- ###LISTBODYITEM### begin -->
+                  <div class="charges">
+                    <div class="price">
+                      ###TX_QUICKSHOP_PRODUCTS.PRICE###
+                    </div>
+                    <div class="tax_shipping">
+                      ###TX_QUICKSHOP_PRODUCTS.TAX### ###MY_SHIPPING_NOTE###
+                    </div>
+                    <form class="caddy" name="caddy" action="###MY_CADDYURL###" method="post">
+                      <fieldset id="add-to-cart">
+                        <input type="hidden" name="tx_quickshop_products[sku]" value="###TX_QUICKSHOP_PRODUCTS.SKU###" />
+                        <input type="hidden" name="tx_browser_pi1[showUid]" value="###TX_QUICKSHOP_PRODUCTS.UID###" />
+                        <select name="tx_quickshop_qty">
+                          <option>1</option>
+                          <option>2</option>
+                          <option>3</option>
+                          <option>4</option>
+                          <option>5</option>
+                          <option>6</option>
+                          <option>7</option>
+                          <option>8</option>
+                          <option>9</option>
+                          <option>10</option>
+                          <option>11</option>
+                          <option>12</option>
+                          <option>13</option>
+                          <option>14</option>
+                          <option>15</option>
+                          <option>16</option>
+                          <option>17</option>
+                          <option>18</option>
+                          <option>19</option>
+                          <option>20</option>
+                        </select>
+                        <button class="submit" name="submit" type="submit" value="###MY_CADDYLABEL###">
+                          ###MY_CADDYLABEL### <img src="###MY_CADDYIMGSRC###" width="18" height="18" alt="###MY_CADDYIMGALT###">
+                        </button>
+                      </fieldset>
+                    </form>
+                  </div>
+                  ###SOCIALMEDIA_BOOKMARKS###
+                  ###TX_QUICKSHOP_PRODUCTS.IMAGE###
+                  ###TX_QUICKSHOP_PRODUCTS.TITLE###
+                  ###TX_QUICKSHOP_PRODUCTS.SHORT###
+                  <div style="clear:both"></div>
+                  <!-- ###LISTBODYITEM### end --><!-- ###LISTBODY### end -->
+                </div> <!-- /listview -->
+)
+            }
+          }
+        }
       }
     }
     single {
@@ -425,9 +482,81 @@ plugin.tx_browser_pi1 {
           tax < temp.tax
           tax.stdWrap.noTrimWrap = |inkl. | % MwSt.|
         }
+          // marker and subparts will replaced in the HTML template before data handling
+          // #47068, 130409, dwildt
+        htmlSnippets =
+        htmlSnippets {
+          subparts {
+            singleview = TEXT
+            singleview {
+              value (
+<!-- ###AREA_FOR_AJAX_LIST_01### begin -->
+        <div id="c###TT_CONTENT.UID###-singleview-###MODE###" class="singleview singleview-###MODE###">
+          ###RECORD_BROWSER###
+          <!-- ###SINGLEBODY### begin --><!-- ###SINGLEBODYROW### begin -->
+          <div class="charges">
+            <div class="price">
+              ###TX_QUICKSHOP_PRODUCTS.PRICE###
+            </div>
+            <div class="tax_shipping">
+              ###TX_QUICKSHOP_PRODUCTS.TAX### ###MY_SHIPPING_NOTE###
+            </div>
+          </div>
+          ###SOCIALMEDIA_BOOKMARKS###
+          ###TX_QUICKSHOP_PRODUCTS.TITLE###
+          ###TX_QUICKSHOP_PRODUCTS.IMAGE###
+          ###TX_QUICKSHOP_PRODUCTS.DESCRIPTION###
+          <div style="clear:both"></div>
+          <!-- ###SINGLEBODYROW### end --><!-- ###SINGLEBODY### end -->
+          <form class="caddy" name="caddy" action="###MY_CADDYURL###" method="post">
+            <fieldset id="add-to-cart">
+              <input type="hidden" name="tx_quickshop_products[sku]" value="###TX_QUICKSHOP_PRODUCTS.SKU###" />
+              <input type="hidden" name="tx_browser_pi1[showUid]" value="###SHOWUID###" />
+              <select name="tx_quickshop_qty">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+                <option>8</option>
+                <option>9</option>
+                <option>10</option>
+                <option>11</option>
+                <option>12</option>
+                <option>13</option>
+                <option>14</option>
+                <option>15</option>
+                <option>16</option>
+                <option>17</option>
+                <option>18</option>
+                <option>19</option>
+                <option>20</option>
+              </select>
+              <button class="submit" name="submit" type="submit" value="###MY_CADDYLABEL###">
+                ###MY_CADDYLABEL### <img src="###MY_CADDYIMGSRC###" width="18" height="18" alt="###MY_CADDYIMGALT###">
+              </button>
+            </fieldset>
+          </form>
+<!-- ###AREA_FOR_AJAX_LIST_01### end -->
+            <!-- ###BACKBUTTON### begin -->
+            <p class="backbutton">
+              ###BUTTON###
+            </p>
+          <!-- ###BACKBUTTON### end -->
+<!-- ###AREA_FOR_AJAX_LIST_02### begin -->
+          </div>
+        </div>
+<!-- ###AREA_FOR_AJAX_LIST_02### end -->
+)
+            }
+          }
+        }
       }
     }
   }
+
   _LOCAL_LANG {
     default {
       list_mode_1_summary     = TYPO3 Quick Shop: Items
