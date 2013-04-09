@@ -487,6 +487,10 @@ plugin.tx_browser_pi1 {
         htmlSnippets =
         htmlSnippets {
           subparts {
+            searchform = TEXT
+            searchform {
+              value = searchform
+            }
             singleview = TEXT
             singleview {
               value (
