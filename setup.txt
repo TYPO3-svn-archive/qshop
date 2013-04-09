@@ -266,6 +266,10 @@ plugin.tx_browser_pi1 {
             }
           }
           subparts {
+            searchform = TEXT
+            searchform {
+              value = searchform
+            }
             listview = TEXT
             listview {
               value (
@@ -487,10 +491,6 @@ plugin.tx_browser_pi1 {
         htmlSnippets =
         htmlSnippets {
           subparts {
-            searchform = TEXT
-            searchform {
-              value = searchform
-            }
             singleview = TEXT
             singleview {
               value (
