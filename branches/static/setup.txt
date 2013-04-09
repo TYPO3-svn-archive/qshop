@@ -282,7 +282,9 @@ plugin.tx_browser_pi1 {
                         <input id="c###TT_CONTENT.UID###-list-submit-csv-export-###MODE###" class="button hidesubmit"  type="submit"  value="###MY_CSV_EXPORT###" />
                       <!-- ###BUTTON_CSV-EXPORT### end -->
                       <input class="button reset" type="button" onclick="location='###MY_URL###'" value="###MY_RESET###" />
-                      <!-- Add filters with the ###TABLE.FIELD### syntax and configure your filters with TypoScript -->
+                      <div class="filter">
+                        ###TX_QUICKSHOP_CATEGORIES.TITLE###
+                      </div>
                     </fieldset>
                   </form>
                   ###RESULTPHRASE###
