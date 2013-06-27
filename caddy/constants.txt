@@ -9,6 +9,9 @@ plugin.caddy {
     uid = tx_browser_pi1|showUid
     qty = tx_quickshop_qty
   }
+  html {
+    bordercolor = #FF9B00
+  }
   pdf {
     textColor {
       address             = #333333
