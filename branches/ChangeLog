@@ -1,8 +1,16 @@
+3.0.5
+  13-06-27
+  Improvement
+  * #i0003: Improved caddy table structur
+            Effected files:
+            * static/caddy/constants.txt
+
 3.0.4
   13-04-09
   Feature
   * #47068: Remove HTML template
             Effected files:
+
 3.0.3
   13-04-07
   Feature
