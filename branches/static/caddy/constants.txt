@@ -12,6 +12,9 @@ plugin.caddy {
   html {
     bordercolor = #FF9B00
   }
+  main {
+    dueDateFormat = %d. %b. %Y
+  }
   pdf {
     textColor {
       address             = #333333
