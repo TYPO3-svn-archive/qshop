@@ -22,6 +22,7 @@ plugin.caddy {
       numberLine          = #333333
       numberOrder         = #FF9B00
       revocation          = #FF9B00
+      termOfCredit        = #333333
       terms               = #FF9B00
     }
   }
