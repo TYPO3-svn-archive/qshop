@@ -11,6 +11,10 @@
 .tx-browser-pi1 .category_menu_treeview a.selected {
   font-weight:bold;
 }
+.tx-browser-pi1 .tx-powermail a,
+.tx-browser-pi1 .tx-powermail-pi1 a {
+  text-decoration: underline;
+}
 
 
 /* QuickShop list and single views */
