@@ -268,7 +268,6 @@ plugin.tx_browser_pi1 {
                     </div>
                     <form class="caddy" name="caddy" action="###MY_CADDYURL###" method="post">
                       <fieldset id="add-to-cart">
-                        <input type="hidden" name="tx_quickshop_products[sku]" value="###TX_QUICKSHOP_PRODUCTS.SKU###" />
                         <input type="hidden" name="tx_browser_pi1[showUid]" value="###TX_QUICKSHOP_PRODUCTS.UID###" />
                         <select name="tx_quickshop_qty">
                           <option>1</option>
@@ -498,7 +497,6 @@ plugin.tx_browser_pi1 {
           <!-- ###SINGLEBODYROW### end --><!-- ###SINGLEBODY### end -->
           <form class="caddy" name="caddy" action="###MY_CADDYURL###" method="post">
             <fieldset id="add-to-cart">
-              <input type="hidden" name="tx_quickshop_products[sku]" value="###TX_QUICKSHOP_PRODUCTS.SKU###" />
               <input type="hidden" name="tx_browser_pi1[showUid]" value="###SHOWUID###" />
               <select name="tx_quickshop_qty">
                 <option>1</option>
