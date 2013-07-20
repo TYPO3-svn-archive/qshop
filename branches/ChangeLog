@@ -1,7 +1,14 @@
+3.0.7
+  13-07-20
+  Bugfix
+  # *i0005: double div-tag in single view
+            Effected files:
+            * static/setup.txt
+
 3.0.6
   13-06-28
   Improvements
-  # *i0004: * Update for Caddy 2.0.8
+  # *i0004: Update for Caddy 2.0.8
 
 3.0.5
   13-06-27
