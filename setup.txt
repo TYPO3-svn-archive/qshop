@@ -532,7 +532,6 @@ plugin.tx_browser_pi1 {
             </p>
           <!-- ###BACKBUTTON### end -->
 <!-- ###AREA_FOR_AJAX_LIST_02### begin -->
-          </div>
         </div>
 <!-- ###AREA_FOR_AJAX_LIST_02### end -->
 )
