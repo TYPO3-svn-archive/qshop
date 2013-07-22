@@ -96,14 +96,3 @@
 .tx-browser-pi1 .csc-textpic-intext-right-nowrap .csc-textpic-imagewrap {
   clear:none;
 }
-
-
-
-/* general form css */
-#content input, #content select, #content textarea {
-  margin-bottom: 10px;
-  padding: 2px 5px;
-  font-family: Trebuchet MS,Geneva,Arial,Helvetica,Verdana,sans serif;
-  color: #000;
-  border: 1px solid #000;
-}
