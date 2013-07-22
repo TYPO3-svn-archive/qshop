@@ -19,6 +19,7 @@ plugin.caddy {
       button.text           = #FFF
       icon.caddy            = EXT:caddy/files/img/caddy_100_02.png
       icon.delete           = EXT:caddy/files/img/delete_100_02.png
+      powermail.text        = #FFF
       table.head.background = #FF8800
       table.head.text       = #FFF
     }
