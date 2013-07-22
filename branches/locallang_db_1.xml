@@ -42,9 +42,37 @@
     </languageKey>
     <languageKey index="de" type="array">
       <label index="filter_phrase.category">Artikelgruppe</label>
-      <label index="linktosingleview">Mehr </label>
+      <label index="linktosingleview">Mehr <![CDATA[&raquo;]]></label>
       <label index="marker_my_caddyimgalt">Caddy - Dein TYPO3 Warenkorb</label>
       <label index="marker_my_caddylabel">In den Warenkorb</label>
+      <label index="palette.image_accessibility">Suchmaschinen und Barrierefreiheit</label>
+      <label index="palette.startendtime">Verfügbar von ... bis ...</label>
+      <label index="tca_phrase.seo_description">Beschreibung für Suchmaschinen (bis etwa 200 Zeichen)</label>
+      <label index="tca_phrase.seo_keywords">Stichworte für Suchmaschinen (drei bis fünf, mit Komma trennen)</label>
+      <label index="tx_quickshop_categories.title">Kategorie</label>
+      <label index="tx_quickshop_categories.title_lang_ol">Übersetzungen (z.B. en:Translation|fr:Traduction)</label>
+      <label index="tx_quickshop_categories.uid_parent">Übergeordnete Kategorie</label>
+      <label index="tx_quickshop_products">Quick Shop Artikel</label>
+      <label index="tx_quickshop_products.div.product">Artikel</label>
+      <label index="tx_quickshop_products.div.price_quantity">Preis <![CDATA[&]]> Mengen</label>
+      <label index="tx_quickshop_products.div.image">Abbildungen</label>
+      <label index="tx_quickshop_products.div.control">Steuerung</label>
+      <label index="tx_quickshop_products.div.seo">Suchmaschinen</label>
+      <label index="tx_quickshop_products.sku">Artikelnummer</label>
+      <label index="tx_quickshop_products.title">Artikelbezeichnung</label>
+      <label index="tx_quickshop_products.short">Kurzbeschreibung</label>
+      <label index="tx_quickshop_products.description">Beschreibung</label>
+      <label index="tx_quickshop_products.category">Kategorie</label>
+      <label index="tx_quickshop_products.price">Bruttopreis</label>
+      <label index="tx_quickshop_products.quantity_min">Mindestbestellmenge</label>
+      <label index="tx_quickshop_products.quantity_max">Höchstbestellmenge</label>
+      <label index="tx_quickshop_products.tax.I.0">Ermäßigt</label>
+      <label index="tx_quickshop_products.tax.I.1">Normal</label>
+      <label index="tx_quickshop_products.tax">inkl. MwSt.</label>
+      <label index="tx_quickshop_products.in_stock">Auf Lager</label>
+      <label index="tx_quickshop_products.image">Bild</label>
+      <label index="tx_quickshop_products.imageseo">Beschreibung für Suchmaschinen (SEO)</label>
+      <label index="tx_quickshop_products.caption">Bildunterschrift</label>
     </languageKey>
   </data>
 </T3locallang>
