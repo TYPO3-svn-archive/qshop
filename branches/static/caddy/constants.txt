@@ -10,7 +10,18 @@ plugin.caddy {
     qty = tx_quickshop_qty
   }
   html {
-    bordercolor = #FF9B00
+    color {
+      border                = #FF9B00
+      button.gradient1      = #E67100
+      button.gradient2      = #FF9933
+      button.gradient3      = #FF8800
+      button.gradient4      = #FFB366
+      button.text           = #FFF
+      icon.caddy            = EXT:caddy/files/img/caddy_100_02.png
+      icon.delete           = EXT:caddy/files/img/delete_100_02.png
+      table.head.background = #FF8800
+      table.head.text       = #FFF
+    }
   }
   main {
     dueDateFormat = %d. %b. %Y
