@@ -319,9 +319,7 @@ plugin.tx_browser_pi1 {
                           <option>19</option>
                           <option>20</option>
                         </select>
-                        <button class="submit" name="submit" type="submit" value="###MY_CADDYLABEL###">
-                          ###MY_CADDYLABEL### <img src="###MY_CADDYIMGSRC###" width="18" height="18" alt="###MY_CADDYIMGALT###">
-                        </button>
+                        ###MY_CADDYBUTTON###
                       </fieldset>
                     </form>
                   </div>
