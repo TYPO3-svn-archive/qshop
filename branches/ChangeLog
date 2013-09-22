@@ -1,7 +1,12 @@
 3.0.8
   13-09-22
-  Improvemnet
+  Improvement
   # *i0006: caddy icon is controlled by Caddy constant
+  # *i0007: caddy button is simplified
+            * my_caddybutton substitutes
+              * my_caddyimgsrc
+              * my_caddyimgalt
+              * my_caddylabel
 
 3.0.7
   13-07-20
