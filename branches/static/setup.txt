@@ -81,18 +81,6 @@ plugin.tx_browser_pi1 {
         value = </button>
       }
     }
-    XXX_my_caddyimgsrc = TEXT
-    XXX_my_caddyimgsrc {
-      value = {$plugin.caddy.html.color.icon.caddy}
-    }
-    XXX_my_caddyimgalt = TEXT
-    XXX_my_caddyimgalt {
-      data = LLL:EXT:quick_shop/locallang_db.xml:marker_my_caddyimgalt
-    }
-    XXX_my_caddylabel = TEXT
-    XXX_my_caddylabel {
-      data = LLL:EXT:quick_shop/locallang_db.xml:marker_my_caddylabel
-    }
     my_caddyurl = TEXT
     my_caddyurl {
       typolink {
@@ -265,7 +253,7 @@ plugin.tx_browser_pi1 {
               //wrap = <span class="selectbox">|</span>
               wrap = <div class="category_menu category_menu_treeview">|</div>
             }
-          }
+            wrap = <div class="selectbox caddy">|</div>          }
         }
           // marker and subparts will replaced in the HTML template before data handling
           // #47068, 130409, dwildt
