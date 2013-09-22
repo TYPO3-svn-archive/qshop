@@ -253,7 +253,8 @@ plugin.tx_browser_pi1 {
               //wrap = <span class="selectbox">|</span>
               wrap = <div class="category_menu category_menu_treeview">|</div>
             }
-            wrap = <div class="selectbox caddy">|</div>          }
+            wrap = <div class="selectbox caddy">|</div>          
+          }
         }
           // marker and subparts will replaced in the HTML template before data handling
           // #47068, 130409, dwildt
