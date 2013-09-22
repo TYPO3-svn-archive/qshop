@@ -55,7 +55,7 @@ plugin.tx_browser_pi1 {
   marker {
     my_caddyimgsrc = TEXT
     my_caddyimgsrc {
-      value = typo3conf/ext/caddy/files/img/caddy_100_02.png
+      value = {$plugin.caddy.html.color.icon.caddy}
     }
     my_caddyimgalt = TEXT
     my_caddyimgalt {
