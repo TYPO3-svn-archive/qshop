@@ -1,0 +1,253 @@
+3.0.8
+  13-09-22
+  Improvement
+  # *i0006: caddy icon is controlled by Caddy constant
+  # *i0007: caddy button is simplified
+            * my_caddybutton substitutes
+              * my_caddyimgsrc
+              * my_caddyimgalt
+              * my_caddylabel
+
+3.0.7
+  13-07-20
+  Bugfix
+  # *i0005: double div-tag in single view
+            Effected files:
+            * static/setup.txt
+
+3.0.6
+  13-06-28
+  Improvements
+  # *i0004: Update for Caddy 2.0.8
+
+3.0.5
+  13-06-27
+  Improvement
+  * #i0003: Improved caddy table structur
+            Effected files:
+            * static/caddy/constants.txt
+
+3.0.4
+  13-04-09
+  Feature
+  * #47068: Remove HTML template
+            Effected files:
+
+3.0.3
+  13-04-07
+  Feature
+  * #47017: Ready TypoScript SEO configuration
+            Effected files:
+            * static/setup.txt
+
+3.0.2
+  13-03-29
+  Feature
+  * #42072: nested categories
+            Effected files:
+            * ext_emconf.php
+            * ext_tables.php
+            * ext_tables.sql
+            * locallang_db.xml
+            * tca.php
+            * res
+              * templates
+                * default.css
+            * static
+              * constants.txt
+              * setup.txt
+
+3.0.0
+  13-03-21
+  Improvement
+  * #i0002: Configuring of caddy constants is moved from installer to quick_shop
+
+3.0.0
+  13-03-17
+  Features
+  * #46387: Caddy for list view
+            Effected files:
+            * res/templates
+              * default.css
+              * default.tmpl
+            * static
+              * constants.txt
+              * setup.txt
+  * #46386: Update CSS
+            * Powermail CSS basic is moved to fancy 
+            Effected files:
+            * res/templates
+              * default.css
+  * #46380: Introduce sponsors
+            Effected files:
+            * lib/userfunc/
+              * class.tx_quickshop_userfunc.php
+              * locallang.xml
+            * ext_conf_template.txt
+            * ext_tables.php
+  * #46377: Button Caddy with an Icon
+            * marker is moved: ###MY_CART_BUTTON### -> ###MY_CADDYLABEL###
+            Effected files:
+            * res/templates/default.tmpl
+            * static/setup.txt
+  * #45775: FORK from wt_cart to caddy
+            * marker are moved
+              * ###MY_CART_PAGE_URL### -> ###MY_CADDYURL###
+              * my_cart_quantity (removed)
+              Effected files:
+              * res/templates/default.tmpl
+              * static/setup.txt
+            * CSS properties are moved 
+              * #form-order -> form.caddy
+                Effected files:
+                * res/templates/default.css
+            Effected files in priciple
+            * lib
+              * icons/die-netzmacher-logo-quadrat.png   ( new )
+              * userfunc/*                              ( new )
+            * static
+              * constants.txt
+              * setup.txt
+                * $myConst.pages.quick_shop.cart      -> $quick_shop.caddyUidCart
+                * $myConst.pages.quick_shop.shipping  -> $quick_shop.caddyUidShipping 
+  Improvement
+  * #46381: See #46379
+  * #46379: Clean up TypoScript files
+            Effected files:
+            * static/quick_shop   (removed)
+            * ext_tables.php
+  * #46378: Clean up *.tmpl files
+            * res/v1.4 -> res/templates
+            Effected files:
+            * static/quick_shop/setup.txt
+            * res
+              * templates
+                * default_select_30.tmpl  (removed)
+              * default.css               (removed)
+              * default.tmpl              (removed)
+              * tmpl_fieldwrap.html       (removed)
+  * #i0001: Key for page tree icon moved from quick_shop to quickshop
+
+2.2.3
+  12-09-20
+  New Feature
+  * #00000: RealUrl configuration file
+            Effected file
+            * res/samples/realurl/realurl_conf.php
+
+2.2.2
+  12-06-13
+  Update TYPO3 4.7
+  * #00000: $ICON_TYPES -> t3lib_SpriteManager::addTcaTypeIcon
+  12-05-14
+  Update
+  * #00000: Update to Browser version 3.9.14
+            filter.table.field.first_item.value_stdWrap is moved to cObject
+            Effected files:
+            * static/setup.txt
+
+2.2.1
+  12-04-06
+  Improvements
+  * #00000: Update for wt_cart_orderpdf 0.0.9
+            * New fields for the constant editor: Quick Shop (Powermail)
+
+2.2.0
+  12-03-21
+  Improvements
+  * #00000: New fields
+            * sku - stock keeping unit
+            * quantity_min - minimum of order quantity
+            * quantity_max - maximum of order quantity
+            * starttime
+            * endtime
+            * fe_group
+            * seo_keywords
+            * seo_description
+            * Effected files
+              * ext_tables.php
+              * ext_tables.sql
+              * locallang_db.xml
+              * tca.php
+              * res/v1.4/default.css
+              * static/setup.txt
+  * #00000: Additional template res/v1.4/default_select_30.tmpl
+            * Select box for quantity instead of an input field
+  Update for
+  * wt_cart 1.4.3
+    * #00000: field quantity_min - minimum of order quantity
+              field quantity_max - maximum of order quantity
+  * wt_cart 1.4.2
+    * #00000: field sku - stock keeping unit
+  * Browser version 4.0 - step 1
+    * #00000: a-z-browser is renamed as index browser
+              Effects
+              * CSS  : azSelector -> indexBrowser
+              * HTML : AZSELECTOR -> INDEXBROWSER
+
+2.1.0
+  11-08-10
+  New Feature
+  * #27041: Record browser for the single view / Prev-next Switcher in the single view
+
+2.0.1
+  2011-02-17
+  New Feature
+  - 13145: Number formats: userfunc
+
+2.0.0
+  2011-02-07
+  Improvement
+  - Individual layout for each product
+
+1.3.3
+  2011-01-14
+  Bugfixes
+  - 12236: Possible conflict with TypoScript constant
+    myConst.pages.root is moved to myConst.pages.quick_shop
+
+1.3.2
+  2011-01-03
+  Improvement
+  - CSS is extended for wt_cart 1.2.1
+  - quick_shop provides the quick_shop_header_image_210px.jpg
+  - static template was extended for browser 3.6.0
+
+1.3.1
+  2010-11-28
+  Improvement
+  - 11114: Make Javascript Backbutton invisible
+
+1.3.0
+  2010-11-26
+  New Features
+  - 11054: Make quick_shop multilingual
+
+1.2.0
+  2010-10-31
+  New Features
+  -  9659: AJAX
+  - 00000: default.tmpl
+    - reset button got the class reset
+    - listarea is wrapped with <div class="listarea">...</div>
+  - 10224: Integration of templates into the Browser plugin/flexform
+  - 00000: RSS/XML tutorial
+
+1.1.1
+  2010-08-25
+  Manual
+  - New section: Integration in Facebook
+
+1.1.0
+  2010-07-21
+  New Feature: Optional manual ordering of records added
+  Ulfried Herrmann  <http://herrmann.at.die-netzmacher.de>
+
+1.0.1
+  2010-07-01
+  Pulishing
+
+0.0.1
+  2010-06-09
+  Dirk Wildt  <http://wildt.at.die-netzmacher.de>
+  Initial Release
