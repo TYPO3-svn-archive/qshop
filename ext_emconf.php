@@ -19,7 +19,7 @@ $EM_CONF[$_EXTKEY] = array(
                           'Quick Shop itself hasn\'t any line PHP code.',
 	'category' => 'plugin',
 	'shy' => 0,
-	'version' => '3.0.8',
+	'version' => '4.0.0',
 	'dependencies' => 'browser,caddy,cps_tcatree,css_styled_content,powermail',
 	'conflicts' => '',
 	'priority' => '',
@@ -43,7 +43,7 @@ $EM_CONF[$_EXTKEY] = array(
 			'cps_tcatree' => '',
 			'css_styled_content' => '',
 			'powermail' => '',
-			'typo3' => '4.5.0-4.7.99',
+			'typo3' => '4.5.0-6.1.99',
 		),
 		'conflicts' => array(
 		),
