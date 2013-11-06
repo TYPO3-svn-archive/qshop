@@ -1009,6 +1009,10 @@ $TCA['tx_quickshop_products'] = array (
 
 $TCA['tx_quickshop_products']['columns']['cols']            = $TCA['tt_content']['columns']['cols'];
 $TCA['tx_quickshop_products']['columns']['pi_flexform']     = $TCA['tt_content']['columns']['pi_flexform'];
+unset($TCA['tx_quickshop_products']['columns']['pi_flexform']['ds']);
+unset($TCA['tx_quickshop_products']['columns']['pi_flexform']['ds_pointerfield']);
+$TCA['tx_quickshop_products']['columns']['pi_flexform']['ds']['default'] = 'FILE:EXT:css_styled_content/flexform_ds.xml';
+$TCA['tx_quickshop_products']['columns']['pi_flexform']['ds_pointerfield'] = 'title';
 $TCA['tx_quickshop_products']['columns']['text_properties'] = $TCA['tt_content']['columns']['text_properties'];
 
   // Localization support
