@@ -383,6 +383,12 @@ plugin.tx_browser_pi1 {
           tx_quickshop_products.title,
           tx_quickshop_products.sku,
           tx_quickshop_products.description,
+
+          tx_quickshop_products.datasheet,
+          tx_quickshop_products.cols,
+          tx_quickshop_products.pi_flexform,
+          tx_quickshop_products.text_properties,
+
           tx_quickshop_products.image,
           tx_quickshop_products.imageseo,
           tx_quickshop_products.imagewidth,
@@ -485,9 +491,24 @@ plugin.tx_browser_pi1 {
                     parseFunc < lib.parseFunc_RTE
                     value     = ###TX_QUICKSHOP_PRODUCTS.DESCRIPTION###
                   }
-                    // sku
-                  20 = TEXT
+                    // datasheet
+                  20 < tt_content.table.20
                   20 {
+                    userFunc = tx_browser_cssstyledcontent->render_table
+                    userFunc {
+                        // add the value of a field to another field in cObj->data
+                      cObjDataFieldWrapper =
+                      cObjDataFieldWrapper {
+                        cols            = tx_quickshop_products.cols
+                        pi_flexform     = tx_quickshop_products.pi_flexform
+                        text_properties = tx_quickshop_products.text_properties
+                      }
+                    }
+                    field = tx_quickshop_products.datasheet
+                  }
+                    // sku
+                  30 = TEXT
+                  30 {
                     data        = LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_products.sku
                     noTrimWrap  = |<br />|: ###TX_QUICKSHOP_PRODUCTS.SKU###|
                   }
