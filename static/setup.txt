@@ -254,6 +254,34 @@ plugin.tx_browser_pi1 {
               wrap = <div class="category_menu category_menu_treeview caddy">|</div>
             }
           }
+          tx_quickshop_dimension {
+            title < plugin.tx_browser_pi1.displayList.master_templates.selectbox
+            title {
+              count_hits = 0
+              first_item {
+                cObject {
+                  20 {
+                    data = LLL:EXT:quick_shop/locallang_db.xml:filter_phrase.dimension
+                  }
+                }
+              }
+              wrap = <span class="selectbox dimension selectbox-dimension">|</span>
+            }
+          }
+          tx_quickshop_material {
+            title < plugin.tx_browser_pi1.displayList.master_templates.selectbox
+            title {
+              count_hits = 0
+              first_item {
+                cObject {
+                  20 {
+                    data = LLL:EXT:quick_shop/locallang_db.xml:filter_phrase.material
+                  }
+                }
+              }
+              wrap = <span class="selectbox material selectbox-material">|</span>
+            }
+          }
         }
           // marker and subparts will replaced in the HTML template before data handling
           // #47068, 130409, dwildt
@@ -265,6 +293,8 @@ plugin.tx_browser_pi1 {
               value (
               <div class="filter">
                 ###TX_QUICKSHOP_CATEGORIES.TITLE###
+                ###TX_QUICKSHOP_DIMENSION.TITLE###
+                ###TX_QUICKSHOP_MATERIAL.TITLE###
               </div>
 )
             }
