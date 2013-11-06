@@ -3,9 +3,22 @@
   //
   // INDEX
   // =====
+  // lib
   // page
   // temp.tax
   // plugin.tx_browser_pi1
+
+
+lib {
+  parseFunc {
+      // #53362, 131106, dwildt, 1+
+    allowTags := addToList( figure )
+  }
+  parseFunc_RTE {
+      // #53362, 131106, dwildt, 1+
+    allowTags := addToList( figure )
+  }
+}
 
 
 
