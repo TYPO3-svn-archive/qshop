@@ -18,6 +18,14 @@
       <label index="tx_quickshop_categories.title">Category</label>
       <label index="tx_quickshop_categories.title_lang_ol">Translations (i.e. fr:Traduction|de:Übersetzung)</label>
       <label index="tx_quickshop_categories.uid_parent">Superior Category</label>
+      <label index="tx_quickshop_dimension">Quick Shop Dimension</label>
+      <label index="tx_quickshop_dimension.title">Dimension</label>
+      <label index="tx_quickshop_dimension.title_lang_ol">Translations (i.e. fr:Traduction|de:Übersetzung)</label>
+      <label index="tx_quickshop_dimension.uid_parent">Superior Category</label>
+      <label index="tx_quickshop_material">Quick Shop Material</label>
+      <label index="tx_quickshop_material.title">Material</label>
+      <label index="tx_quickshop_material.title_lang_ol">Translations (i.e. fr:Traduction|de:Übersetzung)</label>
+      <label index="tx_quickshop_material.uid_parent">Superior Category</label>
       <label index="tx_quickshop_products">Quick Shop Item</label>
       <label index="tx_quickshop_products.div.control">Controlling</label>
       <label index="tx_quickshop_products.div.datasheet">Data sheet</label>
