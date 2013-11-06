@@ -41,7 +41,7 @@
       <label index="tx_quickshop_products.description">Description</label>
       <label index="tx_quickshop_products.category">Category</label>
       <label index="tx_quickshop_products.categoryEnable">Enabled</label>
-      <label index="tx_quickshop_products.dimension">Size</label>
+      <label index="tx_quickshop_products.dimension">Dimension</label>
       <label index="tx_quickshop_products.dimensionEnable">Enabled</label>
       <label index="tx_quickshop_products.material">Material</label>
       <label index="tx_quickshop_products.materialEnable">Enabled</label>
@@ -65,9 +65,18 @@
       <label index="palette.startendtime">Verfügbar von ... bis ...</label>
       <label index="tca_phrase.seo_description">Beschreibung für Suchmaschinen (bis etwa 200 Zeichen)</label>
       <label index="tca_phrase.seo_keywords">Stichworte für Suchmaschinen (drei bis fünf, mit Komma trennen)</label>
+      <label index="tx_quickshop_categories">Quick Shop Kategorie</label>
       <label index="tx_quickshop_categories.title">Kategorie</label>
       <label index="tx_quickshop_categories.title_lang_ol">Übersetzungen (z.B. en:Translation|fr:Traduction)</label>
       <label index="tx_quickshop_categories.uid_parent">Übergeordnete Kategorie</label>
+      <label index="tx_quickshop_dimension">Quick Shop Abmessungen</label>
+      <label index="tx_quickshop_dimension.title">Abmessungen</label>
+      <label index="tx_quickshop_dimension.title_lang_ol">Übersetzungen (z.B. en:Translation|fr:Traduction)</label>
+      <label index="tx_quickshop_dimension.uid_parent">Übergeordnete Kategorie</label>
+      <label index="tx_quickshop_material">Quick Shop Material</label>
+      <label index="tx_quickshop_material.title">Material</label>
+      <label index="tx_quickshop_material.title_lang_ol">Übersetzungen (z.B. en:Translation|fr:Traduction)</label>
+      <label index="tx_quickshop_material.uid_parent">Übergeordnete Kategorie</label>
       <label index="tx_quickshop_products">Quick Shop Artikel</label>
       <label index="tx_quickshop_products.div.control">Steuerung</label>
       <label index="tx_quickshop_products.div.datasheet">Datenblatt</label>
@@ -83,7 +92,7 @@
       <label index="tx_quickshop_products.description">Beschreibung</label>
       <label index="tx_quickshop_products.category">Kategorie</label>
       <label index="tx_quickshop_products.categoryEnable">Aktivieren</label>
-      <label index="tx_quickshop_products.dimension">Gr<![CDATA[&oouml;&szlig;]]>e</label>
+      <label index="tx_quickshop_products.dimension">Abmessung</label>
       <label index="tx_quickshop_products.dimensionEnable">Aktivieren</label>
       <label index="tx_quickshop_products.material">Material</label>
       <label index="tx_quickshop_products.materialEnable">Aktivieren</label>
