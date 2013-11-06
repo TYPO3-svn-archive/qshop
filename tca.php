@@ -396,6 +396,7 @@ $TCA['tx_quickshop_products'] = array (
             'icon'          => 'wizard_rte2.gif',
             'script'        => 'wizard_rte.php',
           ),
+          'table' => $TCA['tt_content']['columns']['bodytext']['config']['wizards']['table'],
         ),
       )
     ),
@@ -956,7 +957,7 @@ $TCA['tx_quickshop_products'] = array (
         '--div--;LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_products.div.product,' .
           'sku,title;;;;2-2-2, short;;;;3-3-3, description;;;richtext[]:rte_transform[mode=ts],' .
         '--div--;LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_products.div.datasheet,' .
-          'datasheet;;;richtext[]:rte_transform[mode=ts],' .
+          'layout;;10;;3-3-3, cols, datasheet;;9;nowrap:wizards[table], text_properties, pi_flexform,' . 
         '--div--;LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_products.div.filter,' .
           'category,categoryEnable,dimension,categoryEnable,material,categoryEnable,' .
         '--div--;LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_products.div.price_quantity,' .
@@ -1005,6 +1006,10 @@ $TCA['tx_quickshop_products'] = array (
     ),
   )
 );
+
+$TCA['tx_quickshop_products']['columns']['cols']            = $TCA['tt_content']['columns']['cols'];
+$TCA['tx_quickshop_products']['columns']['pi_flexform']     = $TCA['tt_content']['columns']['pi_flexform'];
+$TCA['tx_quickshop_products']['columns']['text_properties'] = $TCA['tt_content']['columns']['text_properties'];
 
   // Localization support
 if($bool_LL)
