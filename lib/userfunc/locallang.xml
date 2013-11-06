@@ -85,10 +85,9 @@
           You can control the filter by the Constant Editor
         </h1>
         <p style="">
-          You can enable and disable the filter in the frontend by the Constant Editor.<br />
-          See:
+          To enable and disable the filter in the frontend:
         </p>
-        <ul style="list-style:outside;">
+        <ul style="list-style:outside;padding:1em 0;">
           <li style="margin-left:2em;">
             Web > Template
           </li>          
@@ -191,12 +190,12 @@
         <p style="">
           So blendest Du die Filter im Frontend ein- oder aus:
         </p>
-        <ul style="list-style:outside;">
+        <ul style="list-style:outside;padding:1em 0;">
           <li style="margin-left:2em;">
             Web > Template
           </li>          
           <li style="margin-left:2em;">
-            Seitenbaum: die Seite mit dem Browser-Plugin, mit dem Du Deine Shop Artikel darstellst.
+            Seitenbaum: W&auml;hle die Seite mit dem Browser-Plugin aus, mit dem Du Deine Shop Artikel darstellst.
           </li>
           <li style="margin-left:2em;">
             Bearbeitungsbereich
