@@ -45,6 +45,7 @@
       <label index="tx_quickshop_products.categoryEnable">Enabled</label>
       <label index="tx_quickshop_products.dimension">Dimension</label>
       <label index="tx_quickshop_products.dimensionEnable">Enabled</label>
+      <label index="tx_quickshop_products.filterPrompt">Note</label>
       <label index="tx_quickshop_products.material">Material</label>
       <label index="tx_quickshop_products.materialEnable">Enabled</label>
       <label index="tx_quickshop_products.price">Gross price</label>
@@ -98,6 +99,7 @@
       <label index="tx_quickshop_products.categoryEnable">Aktivieren</label>
       <label index="tx_quickshop_products.dimension">Abmessung</label>
       <label index="tx_quickshop_products.dimensionEnable">Aktivieren</label>
+      <label index="tx_quickshop_products.filterPrompt">Hinweis</label>
       <label index="tx_quickshop_products.material">Material</label>
       <label index="tx_quickshop_products.materialEnable">Aktivieren</label>
       <label index="tx_quickshop_products.price">Bruttopreis</label>

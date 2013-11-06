@@ -7,14 +7,24 @@ if (!defined ('TYPO3_MODE'))
 
 
 
-    ///////////////////////////////////////////////////////////
-    //
-    // INDEX
+  ///////////////////////////////////////////////////////////
+  //
+  // INDEX
 
-    // TCA for tables
-    // Get extension configuration
-    // Add static template
-    // Add pagetree icons
+  // Methods for backend workflows
+  // TCA for tables
+  // Get extension configuration
+  // Add static template
+  // Add pagetree icons
+
+
+
+  ///////////////////////////////////////////////////////////
+  //
+  // Methods for backend workflows
+
+require_once(t3lib_extMgm::extPath( $_EXTKEY ) . 'lib/userfunc/class.tx_quickshop_userfunc.php' );
+  // Methods for backend workflows
 
 
 
