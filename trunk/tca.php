@@ -275,7 +275,8 @@ $TCA['tx_quickshop_material'] = array (
     ),
   ),
   'types' => array (
-    '0' => array('showitem' => 'hidden;;1;;1-1-1, title;;%2%;;2-2-2, uid_parent' )
+    //'0' => array('showitem' => 'hidden;;1;;1-1-1, title;;%2%;;2-2-2, uid_parent' )
+    '0' => array('showitem' => 'hidden;;1;;1-1-1, title;;%2%;;2-2-2' )
   ),
   'palettes' => array (
     '1' => array('showitem' => ''),
