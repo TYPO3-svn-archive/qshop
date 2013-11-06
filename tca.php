@@ -967,7 +967,7 @@ $TCA['tx_quickshop_products'] = array (
         '--div--;LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_products.div.datasheet,' .
           'layout;;10;;3-3-3, cols, datasheet;;9;nowrap:wizards[table], text_properties, pi_flexform,' . 
         '--div--;LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_products.div.filter,' .
-          'category,categoryEnable,dimension,categoryEnable,material,categoryEnable,' .
+          'filterPrompt,category,dimension,material,' .
         '--div--;LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_products.div.price_quantity,' .
           'price, tax, in_stock, quantity_min, quantity_max,' .
         '--div--;LLL:EXT:cms/locallang_ttc.xml:tabs.images,' .
