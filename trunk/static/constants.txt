@@ -17,14 +17,25 @@ plugin.quick_shop {
   # cat=Quick Shop - Currency/others/999;    type=user[EXT:quick_shop/lib/userfunc/class.tx_quickshop_userfunc.php:tx_quickshop_userfunc->promptSponsors]; label=Subsidise the Caddy project!
   base.externalSponsors = Click me!
 
+  # cat=Quick Shop - Filter/enable/101;     type=boolean; label=Category:Enable the category filter in the frontend.
+  filter.category         = 1
+  # cat=Quick Shop - Filter/enable/102;     type=boolean; label=Dimensions:Enable the filter for dimensions in the frontend.
+  filter.dimension        = 0 
+  # cat=Quick Shop - Filter/enable/103;     type=boolean; label=Material:Enable the filter for materials in the frontend.
+  filter.material         = 0
+  # cat=Quick Shop - Filter/others/998;     type=user[EXT:quick_shop/lib/userfunc/class.tx_quickshop_userfunc.php:tx_quickshop_userfunc->promptExternalLinks]; label=Powered by:die-netzmacher.de
+  filter.externalLinks    = Click me!
+  # cat=Quick Shop - Filter/others/999;     type=user[EXT:quick_shop/lib/userfunc/class.tx_quickshop_userfunc.php:tx_quickshop_userfunc->promptSponsors]; label=Subsidise the Caddy project!
+  filter.externalSponsors = Click me!
+
   # cat=Quick Shop - Images/dims/101; type=string; label= List view max height:Max height of the image in the list view
   images.list.maxH = 140m
   # cat=Quick Shop - Images/dims/102; type=string; label= List view max width:Max width of the image in the list view
   images.list.maxW = 140 
   # cat=Quick Shop - Images/others/998;    type=user[EXT:quick_shop/lib/userfunc/class.tx_quickshop_userfunc.php:tx_quickshop_userfunc->promptExternalLinks]; label=Powered by:die-netzmacher.de
-  iamges.externalLinks = Click me!
+  images.externalLinks = Click me!
   # cat=Quick Shop - Images/others/999;    type=user[EXT:quick_shop/lib/userfunc/class.tx_quickshop_userfunc.php:tx_quickshop_userfunc->promptSponsors]; label=Subsidise the Caddy project!
-  iamges.externalSponsors = Click me!
+  images.externalSponsors = Click me!
 
   # cat=Quick Shop - Pages/enable/301; type=integer; label= Shop / root page:Uid of the page which contains the quick shop items. Usually the root page.
   pages.shop = 
