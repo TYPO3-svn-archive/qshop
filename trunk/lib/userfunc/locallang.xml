@@ -82,7 +82,7 @@
       ]]></label>
       <label index="tcaFilterPrompt"><![CDATA[
         <h1 style="text-align:left;">
-          Control the filter by the Constant Editor!
+          You can control the filter by the Constant Editor
         </h1>
         <p style="">
           You can enable and disable the filter in the frontend by the Constant Editor.<br />
@@ -183,6 +183,33 @@
             width="120" 
             height="90" 
             alt="Dein Logo mit Deiner URL. 120 x 90 Pixel." /></a>
+      ]]></label>
+      <label index="tcaFilterPrompt"><![CDATA[
+        <h1 style="text-align:left;">
+          Du kannst die Filter mit dem Constant Editor steuern
+        </h1>
+        <p style="">
+          So blendest Du die Filter im Frontend ein- oder aus:
+        </p>
+        <ul style="list-style:outside;">
+          <li style="margin-left:2em;">
+            Web > Template
+          </li>          
+          <li style="margin-left:2em;">
+            Seitenbaum: die Seite mit dem Browser-Plugin, mit dem Du Deine Shop Artikel darstellst.
+          </li>
+          <li style="margin-left:2em;">
+            Bearbeitungsbereich
+            <ul style="list-style:outside;">
+              <li style="margin-left:3em;">
+                [Constant Editor]
+              </li>          
+              <li style="margin-left:3em;">
+                Kategorie: [QUICK SHOP - FILTER]
+              </li>          
+            </ul>
+          </li>
+        </ul>
       ]]></label>
     </languageKey>
   </data>
