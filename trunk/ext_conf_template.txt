@@ -5,13 +5,6 @@ LLsupportExternalLinks=0
   # cat=localisation/others/999;  type=user[EXT:quick_shop/lib/userfunc/class.tx_quickshop_userfunc.php:tx_quickshop_userfunc->promptSponsors]; label=Subsidise the Caddy project!
 LLsupportExternalSponsors=0
 
-  # cat=evaluate//10;             type=user[EXT:quick_shop/lib/userfunc/class.tx_quickshop_userfunc.php:tx_quickshop_userfunc->promptEvaluatorTYPO3version]; label=Evaluation
-update=0
-  # cat=evaluate/others/998;      type=user[EXT:quick_shop/lib/userfunc/class.tx_quickshop_userfunc.php:tx_quickshop_userfunc->promptExternalLinks]; label=External Links
-updateExternalLinks=0
-  # cat=evaluate/others/999;      type=user[EXT:quick_shop/lib/userfunc/class.tx_quickshop_userfunc.php:tx_quickshop_userfunc->promptSponsors]; label=Subsidise the Caddy project!
-updateExternalSponsors=0
-
   # cat=tca//10;                  type=boolean; label= Manual ordering of products: Enable this option and you can order product records manually. Otherwise these records will be sorted by title.
 tcaProductOrdering = 0
   # cat=tca//10;                  type=boolean; label= Allow records on standard pages: Enabling this option you can insert product and category records on standard pages. Otherwise these records can only be located on sys folders.
@@ -20,3 +13,11 @@ tcaRecordsOnStandardPages = 0
 tcaExternalLinks=0
   # cat=tca/others/999;           type=user[EXT:quick_shop/lib/userfunc/class.tx_quickshop_userfunc.php:tx_quickshop_userfunc->promptSponsors]; label=Subsidise the Caddy project!
 tcaExternalSponsors=0
+
+  # cat=evaluate//10;             type=user[EXT:quick_shop/lib/userfunc/class.tx_quickshop_userfunc.php:tx_quickshop_userfunc->promptEvaluatorTYPO3version]; label=Evaluation
+update=0
+  # cat=evaluate/others/998;      type=user[EXT:quick_shop/lib/userfunc/class.tx_quickshop_userfunc.php:tx_quickshop_userfunc->promptExternalLinks]; label=External Links
+updateExternalLinks=0
+  # cat=evaluate/others/999;      type=user[EXT:quick_shop/lib/userfunc/class.tx_quickshop_userfunc.php:tx_quickshop_userfunc->promptSponsors]; label=Subsidise the Caddy project!
+updateExternalSponsors=0
+
