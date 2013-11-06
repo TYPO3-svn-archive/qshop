@@ -8,6 +8,9 @@
             * ext_tables.sql
             * locallang_db.xml
             * tca.php
+            * lib/userfunc
+              * class.tx_quickshop_userfunc.php
+              * locallang.xml
             * static
               * constants.txt
               * setup.txt

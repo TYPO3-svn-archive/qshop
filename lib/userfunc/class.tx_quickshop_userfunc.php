@@ -284,6 +284,7 @@ class tx_quickshop_userfunc
       die ( $prompt );
     }
   }
+  
   /**
    * promptSponsors( ): Displays the quick start message.
    *
@@ -305,6 +306,32 @@ class tx_quickshop_userfunc
       $prompt = $prompt . '
 <div class="message-body" style="max-width:600px;">
   ' . $GLOBALS['LANG']->sL('LLL:EXT:quick_shop/lib/userfunc/locallang.xml:promptSponsors') . '
+</div>';
+
+    return $prompt;
+  }
+
+  /**
+   * tcaFilterPrompt( ): Displays the quick start message.
+   *
+   * @return  string    message wrapped in HTML
+   * @access  public
+   * @version 4.0.0
+   * @since   4.0.0
+   */
+  public function tcaFilterPrompt()
+  {
+//.message-notice
+//.message-information
+//.message-ok
+//.message-warning
+//.message-error
+
+      $prompt = null;
+
+      $prompt = $prompt . '
+<div class="message-body" style="max-width:600px;">
+  ' . $GLOBALS['LANG']->sL('LLL:EXT:quick_shop/lib/userfunc/locallang.xml:tcaFilterPrompt') . '
 </div>';
 
     return $prompt;

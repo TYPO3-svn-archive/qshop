@@ -341,7 +341,7 @@ $TCA['tx_quickshop_products'] = array (
   'interface' => array (
     'showRecordFieldList' =>  'sku,title,short,description,' . 
                               'datasheet,' .
-                              'category,categoryEnable,dimension,categoryEnable,material,categoryEnable,' .
+                              'filterPrompt,category,dimension,material,' .
                               'price,tax,in_stock,quantity_min,quantity_max,' .
                               'image,imagewidth,imageheight,imageorient,imagecols,' .
                               'imageborder,image_frames,image_link,image_zoom,' .
@@ -419,6 +419,14 @@ $TCA['tx_quickshop_products'] = array (
           ),
         ),
       )
+    ),
+    'filterPrompt' => array (
+      'exclude' => 0,
+      'label'   => 'LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_products.filterPrompt',
+      'config'  => array (
+        'type'      => 'user',
+        'userFunc'  => 'tx_quickshop_userfunc->tcaFilterPrompt',
+      ),
     ),
     'category' => array (
       'l10n_mode' => 'exclude',
