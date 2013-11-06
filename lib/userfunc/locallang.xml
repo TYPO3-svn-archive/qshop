@@ -93,13 +93,13 @@
             Web > Template
           </li>          
           <li style="margin-left:2em;">
-            Pagetree: page with the Browser plugin, which display your shop items.
+            Pagetree: page with the Browser plugin, which displays your shop items.
           </li>
           <li style="margin-left:2em;">
             Edit area
             <ul style="list-style:outside;">
               <li style="margin-left:3em;">
-                Constant Editor
+                [Constant Editor]
               </li>          
               <li style="margin-left:3em;">
                 Category: [QUICK SHOP - FILTER]
