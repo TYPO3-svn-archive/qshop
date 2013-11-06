@@ -121,13 +121,223 @@ if(!$bool_LL)
 
   ///////////////////////////////////////
   // 
+  // tx_quickshop_dimension
+  
+  // Non localized
+$TCA['tx_quickshop_dimension'] = array (
+  'ctrl' => $TCA['tx_quickshop_dimension']['ctrl'],
+  'interface' => array (
+    'showRecordFieldList' => 'hidden,title,uid_parent'
+  ),
+  'feInterface' => $TCA['tx_quickshop_dimension']['feInterface'],
+  'columns' => array (
+    'hidden' => array (    
+      'exclude' => 1,
+      'label'   => 'LLL:EXT:lang/locallang_general.xml:LGL.hidden',
+      'config'  => array (
+        'type'    => 'check',
+        'default' => '0'
+      )
+    ),
+    'title' => array (    
+      'exclude' => 0,    
+      'label' => 'LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_dimension.title',
+      'config' => array (
+        'type' => 'input',  
+        'size' => '30',  
+        'eval' => 'required',
+      )
+    ),
+    'uid_parent' => array (
+      'exclude'   => 0,
+      'label' => 'LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_dimension.uid_parent',
+      'config'    => array (
+        'type'                => 'select',
+        'size'                => 1,
+        'minitems'            => 0,
+        'maxitems'            => 2,
+        'trueMaxItems'        => 1,
+        'foreign_table'       => 'tx_quickshop_dimension',
+        'foreign_table_where' => 'AND tx_quickshop_dimension.pid=###CURRENT_PID### ORDER BY tx_quickshop_dimension.title',  
+        'form_type'           => 'user',
+        'userFunc'            => 'tx_cpstcatree->getTree',
+        'treeView'            => 1,
+        'expandable'          => 1,
+        'expandFirst'         => 0,
+        'expandAll'           => 0,
+      ),
+    ),
+  ),
+  'types' => array (
+    '0' => array('showitem' => 'hidden;;1;;1-1-1, title;;%2%;;2-2-2, uid_parent' )
+  ),
+  'palettes' => array (
+    '1' => array('showitem' => ''),
+    '2' => array('showitem' => '%title_lang_ol%'),
+  )
+);
+  // Non localized
+
+  // Localization support
+if($bool_LL)
+{
+  // Add language overlay fields to showRecordFieldList
+  $showRecordFieldList = $TCA['tx_quickshop_dimension']['interface']['showRecordFieldList'];
+  $TCA['tx_quickshop_dimension']['interface']['showRecordFieldList'] = $showRecordFieldList.',title_lang_ol';
+  // Add language overlay fields to showRecordFieldList
+  // Add language overlay fields to type
+  $showitem = $TCA['tx_quickshop_dimension']['types']['0']['showitem'];
+  $showitem = str_replace('%2%', '2', $showitem);
+  $TCA['tx_quickshop_dimension']['types']['0']['showitem'] = $showitem;
+  // Add language overlay fields to type
+  // Add language overlay fields to palettes
+  $showitem = $TCA['tx_quickshop_dimension']['palettes']['2']['showitem'];
+  $TCA['tx_quickshop_dimension']['palettes']['2']['showitem'] = str_replace('%title_lang_ol%', 'title_lang_ol', $showitem);
+  // Add language overlay fields to palettes
+  // Add language overlay fields to columns array
+  $TCA['tx_quickshop_dimension']['columns']['title_lang_ol'] = array
+  (
+    'exclude' => 0,
+    'label' => 'LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_dimension.title_lang_ol',
+    'config' => array (
+      'type' => 'input',
+      'size' => '30',
+    )
+  );
+  // Add language overlay fields to columns array
+}
+if(!$bool_LL)
+{
+  // Remove language overlay fields from type
+  $showitem = $TCA['tx_quickshop_dimension']['types']['0']['showitem'];
+  $showitem = str_replace('%2%', '', $showitem);
+  $TCA['tx_quickshop_dimension']['types']['0']['showitem'] = $showitem;
+  // Remove language overlay fields from type
+  // Remove language overlay fields from palettes
+  $showitem = $TCA['tx_quickshop_dimension']['palettes']['2']['showitem'];
+  $TCA['tx_quickshop_dimension']['palettes']['2']['showitem'] = str_replace('%title_lang_ol%', '', $showitem);
+  // Remove language overlay fields from palettes
+}
+  // Localization support
+  // tx_quickshop_dimension
+
+
+
+  ///////////////////////////////////////
+  // 
+  // tx_quickshop_material
+  
+  // Non localized
+$TCA['tx_quickshop_material'] = array (
+  'ctrl' => $TCA['tx_quickshop_material']['ctrl'],
+  'interface' => array (
+    'showRecordFieldList' => 'hidden,title,uid_parent'
+  ),
+  'feInterface' => $TCA['tx_quickshop_material']['feInterface'],
+  'columns' => array (
+    'hidden' => array (    
+      'exclude' => 1,
+      'label'   => 'LLL:EXT:lang/locallang_general.xml:LGL.hidden',
+      'config'  => array (
+        'type'    => 'check',
+        'default' => '0'
+      )
+    ),
+    'title' => array (    
+      'exclude' => 0,    
+      'label' => 'LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_material.title',
+      'config' => array (
+        'type' => 'input',  
+        'size' => '30',  
+        'eval' => 'required',
+      )
+    ),
+    'uid_parent' => array (
+      'exclude'   => 0,
+      'label' => 'LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_material.uid_parent',
+      'config'    => array (
+        'type'                => 'select',
+        'size'                => 1,
+        'minitems'            => 0,
+        'maxitems'            => 2,
+        'trueMaxItems'        => 1,
+        'foreign_table'       => 'tx_quickshop_material',
+        'foreign_table_where' => 'AND tx_quickshop_material.pid=###CURRENT_PID### ORDER BY tx_quickshop_material.title',  
+        'form_type'           => 'user',
+        'userFunc'            => 'tx_cpstcatree->getTree',
+        'treeView'            => 1,
+        'expandable'          => 1,
+        'expandFirst'         => 0,
+        'expandAll'           => 0,
+      ),
+    ),
+  ),
+  'types' => array (
+    '0' => array('showitem' => 'hidden;;1;;1-1-1, title;;%2%;;2-2-2, uid_parent' )
+  ),
+  'palettes' => array (
+    '1' => array('showitem' => ''),
+    '2' => array('showitem' => '%title_lang_ol%'),
+  )
+);
+  // Non localized
+
+  // Localization support
+if($bool_LL)
+{
+  // Add language overlay fields to showRecordFieldList
+  $showRecordFieldList = $TCA['tx_quickshop_material']['interface']['showRecordFieldList'];
+  $TCA['tx_quickshop_material']['interface']['showRecordFieldList'] = $showRecordFieldList.',title_lang_ol';
+  // Add language overlay fields to showRecordFieldList
+  // Add language overlay fields to type
+  $showitem = $TCA['tx_quickshop_material']['types']['0']['showitem'];
+  $showitem = str_replace('%2%', '2', $showitem);
+  $TCA['tx_quickshop_material']['types']['0']['showitem'] = $showitem;
+  // Add language overlay fields to type
+  // Add language overlay fields to palettes
+  $showitem = $TCA['tx_quickshop_material']['palettes']['2']['showitem'];
+  $TCA['tx_quickshop_material']['palettes']['2']['showitem'] = str_replace('%title_lang_ol%', 'title_lang_ol', $showitem);
+  // Add language overlay fields to palettes
+  // Add language overlay fields to columns array
+  $TCA['tx_quickshop_material']['columns']['title_lang_ol'] = array
+  (
+    'exclude' => 0,
+    'label' => 'LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_material.title_lang_ol',
+    'config' => array (
+      'type' => 'input',
+      'size' => '30',
+    )
+  );
+  // Add language overlay fields to columns array
+}
+if(!$bool_LL)
+{
+  // Remove language overlay fields from type
+  $showitem = $TCA['tx_quickshop_material']['types']['0']['showitem'];
+  $showitem = str_replace('%2%', '', $showitem);
+  $TCA['tx_quickshop_material']['types']['0']['showitem'] = $showitem;
+  // Remove language overlay fields from type
+  // Remove language overlay fields from palettes
+  $showitem = $TCA['tx_quickshop_material']['palettes']['2']['showitem'];
+  $TCA['tx_quickshop_material']['palettes']['2']['showitem'] = str_replace('%title_lang_ol%', '', $showitem);
+  // Remove language overlay fields from palettes
+}
+  // Localization support
+  // tx_quickshop_material
+
+
+
+  ///////////////////////////////////////
+  // 
   // tx_quickshop_products
   
   // Non localized
 $TCA['tx_quickshop_products'] = array (
   'ctrl' => $TCA['tx_quickshop_products']['ctrl'],
   'interface' => array (
-    'showRecordFieldList' =>  'sku,title,short,description,category,' .
+    'showRecordFieldList' =>  'sku,title,short,description,' . 
+                              'datasheet,' .
+                              'category,categoryEnable,dimension,categoryEnable,material,categoryEnable,' .
                               'price,tax,in_stock,quantity_min,quantity_max,' .
                               'image,imagewidth,imageheight,imageorient,imagecols,' .
                               'imageborder,image_frames,image_link,image_zoom,' .
@@ -163,6 +373,26 @@ $TCA['tx_quickshop_products'] = array (
         'type' => 'text',
         'cols' => '30',  
         'rows' => '5',
+      )
+    ),
+    'datasheet' => array (
+      'exclude' => 0,
+      'label' => 'LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_products.datasheet',
+      'config' => array (
+        'type' => 'text',
+        'cols' => '30',
+        'rows' => '5',
+        'wizards' => array(
+          '_PADDING' => 2,
+          'RTE' => array(
+            'notNewRecords' => 1,
+            'RTEonly'       => 1,
+            'type'          => 'script',
+            'title'         => 'Full screen Rich Text Editing|Formatteret redigering i hele vinduet',
+            'icon'          => 'wizard_rte2.gif',
+            'script'        => 'wizard_rte.php',
+          ),
+        ),
       )
     ),
     'description' => array (
@@ -236,6 +466,136 @@ $TCA['tx_quickshop_products'] = array (
             'JSopenParams'             => 'height=350,width=580,status=0,menubar=0,scrollbars=1',
           ),
         ),
+      )
+    ),
+    'categoryEnable' => array (
+      'exclude' => 0,
+      'label' => 'LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_products.categoryEnable',
+      'config' => array (
+        'type' => 'check',
+        'default' => 1,
+      )
+    ),
+    'dimension' => array (
+      'l10n_mode' => 'exclude',
+      'exclude' => 0,
+      'label' => 'LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_products.dimension',
+      'config' => array (
+        'type' => 'select',  
+        'size' => 10,  
+        'minitems' => 0,
+        'maxitems' => 10,  
+        'foreign_table' => 'tx_quickshop_dimension',  
+        'foreign_table_where' => 'AND tx_quickshop_dimension.pid=###CURRENT_PID### ORDER BY tx_quickshop_dimension.uid',  
+        'form_type'           => 'user',
+        'userFunc'            => 'tx_cpstcatree->getTree',
+        'treeView'            => 1,
+        'expandable'          => 1,
+        'expandFirst'         => 0,
+        'expandAll'           => 0,
+        "MM" => "tx_quickshop_products_dimension_mm",  
+        'wizards' => array(
+          '_PADDING'  => 2,
+          '_VERTICAL' => 1,
+          'add' => array(
+            'type'   => 'script',
+            'title'  => 'Create new record',
+            'icon'   => 'add.gif',
+            'params' => array(
+              'table'    => 'tx_quickshop_dimension',
+              'pid'      => '###CURRENT_PID###',
+              'setValue' => 'prepend'
+            ),
+            'script' => 'wizard_add.php',
+          ),
+          'list' => array(
+            'type'   => 'script',
+            'title'  => 'List',
+            'icon'   => 'list.gif',
+            'params' => array(
+              'table' => 'tx_quickshop_dimension',
+              'pid'   => '###CURRENT_PID###',
+            ),
+            'script' => 'wizard_list.php',
+          ),
+          'edit' => array(
+            'type'                     => 'popup',
+            'title'                    => 'Edit',
+            'script'                   => 'wizard_edit.php',
+            'popup_onlyOpenIfSelected' => 1,
+            'icon'                     => 'edit2.gif',
+            'JSopenParams'             => 'height=350,width=580,status=0,menubar=0,scrollbars=1',
+          ),
+        ),
+      )
+    ),
+    'dimensionEnable' => array (
+      'exclude' => 0,
+      'label' => 'LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_products.dimensionEnable',
+      'config' => array (
+        'type' => 'check',
+        'default' => 1,
+      )
+    ),
+    'material' => array (
+      'l10n_mode' => 'exclude',
+      'exclude' => 0,
+      'label' => 'LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_products.material',
+      'config' => array (
+        'type' => 'select',  
+        'size' => 10,  
+        'minitems' => 0,
+        'maxitems' => 10,  
+        'foreign_table' => 'tx_quickshop_material',  
+        'foreign_table_where' => 'AND tx_quickshop_material.pid=###CURRENT_PID### ORDER BY tx_quickshop_material.uid',  
+        'form_type'           => 'user',
+        'userFunc'            => 'tx_cpstcatree->getTree',
+        'treeView'            => 1,
+        'expandable'          => 1,
+        'expandFirst'         => 0,
+        'expandAll'           => 0,
+        "MM" => "tx_quickshop_products_material_mm",  
+        'wizards' => array(
+          '_PADDING'  => 2,
+          '_VERTICAL' => 1,
+          'add' => array(
+            'type'   => 'script',
+            'title'  => 'Create new record',
+            'icon'   => 'add.gif',
+            'params' => array(
+              'table'    => 'tx_quickshop_material',
+              'pid'      => '###CURRENT_PID###',
+              'setValue' => 'prepend'
+            ),
+            'script' => 'wizard_add.php',
+          ),
+          'list' => array(
+            'type'   => 'script',
+            'title'  => 'List',
+            'icon'   => 'list.gif',
+            'params' => array(
+              'table' => 'tx_quickshop_material',
+              'pid'   => '###CURRENT_PID###',
+            ),
+            'script' => 'wizard_list.php',
+          ),
+          'edit' => array(
+            'type'                     => 'popup',
+            'title'                    => 'Edit',
+            'script'                   => 'wizard_edit.php',
+            'popup_onlyOpenIfSelected' => 1,
+            'icon'                     => 'edit2.gif',
+            'JSopenParams'             => 'height=350,width=580,status=0,menubar=0,scrollbars=1',
+          ),
+        ),
+      )
+    ),
+    'materialEnable' => array (
+      'exclude' => 0,
+      'label' => 'LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_products.materialEnable',
+      'config' => array (
+        'type' => 'check',
+        'default' => 1,
       )
     ),
     'price' => array (
@@ -590,7 +950,11 @@ $TCA['tx_quickshop_products'] = array (
     '0' => array(
       'showitem' => 
         '--div--;LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_products.div.product,' .
-          'sku,title;;;;2-2-2, short;;;;3-3-3, description;;;richtext[]:rte_transform[mode=ts], category,' .
+          'sku,title;;;;2-2-2, short;;;;3-3-3, description;;;richtext[]:rte_transform[mode=ts],' .
+        '--div--;LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_products.div.datasheet,' .
+          'datasheet;;;richtext[]:rte_transform[mode=ts],' .
+        '--div--;LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_products.div.filter,' .
+          'category,categoryEnable,dimension,categoryEnable,material,categoryEnable,' .
         '--div--;LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_products.div.price_quantity,' .
           'price, tax, in_stock, quantity_min, quantity_max,' .
         '--div--;LLL:EXT:cms/locallang_ttc.xml:tabs.images,' .
