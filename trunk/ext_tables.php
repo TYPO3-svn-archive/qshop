@@ -41,6 +41,44 @@ if (!defined ('TYPO3_MODE'))
   );
     // Categories
 
+    // Dimension
+  $TCA['tx_quickshop_dimension'] = array (
+    'ctrl' => array (
+      'title'     => 'LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_dimension',
+      'label'     => 'title',  
+      'tstamp'    => 'tstamp',
+      'crdate'    => 'crdate',
+      'cruser_id' => 'cruser_id',
+      'delete'    => 'deleted',
+      'enablecolumns' => array (
+        'disabled' => 'hidden',
+      ),
+      'dynamicConfigFile' => t3lib_extMgm::extPath($_EXTKEY).'tca.php',
+      'iconfile'          => t3lib_extMgm::extRelPath($_EXTKEY).'ext_icon.gif',
+     'treeParentField'   => 'uid_parent',
+    ),
+  );
+    // Dimension
+
+    // Material
+  $TCA['tx_quickshop_material'] = array (
+    'ctrl' => array (
+      'title'     => 'LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_material',
+      'label'     => 'title',  
+      'tstamp'    => 'tstamp',
+      'crdate'    => 'crdate',
+      'cruser_id' => 'cruser_id',
+      'delete'    => 'deleted',
+      'enablecolumns' => array (
+        'disabled' => 'hidden',
+      ),
+      'dynamicConfigFile' => t3lib_extMgm::extPath($_EXTKEY).'tca.php',
+      'iconfile'          => t3lib_extMgm::extRelPath($_EXTKEY).'ext_icon.gif',
+     'treeParentField'   => 'uid_parent',
+    ),
+  );
+    // Material
+
     // Products
   $TCA['tx_quickshop_products'] = array (
     'ctrl' => array (
@@ -88,6 +126,8 @@ if (!defined ('TYPO3_MODE'))
   if (!empty ($confArr['products_on_standardpages'])) 
   {
     t3lib_extMgm::allowTableOnStandardPages('tx_quickshop_categories');
+    t3lib_extMgm::allowTableOnStandardPages('tx_quickshop_dimension');
+    t3lib_extMgm::allowTableOnStandardPages('tx_quickshop_material');
     t3lib_extMgm::allowTableOnStandardPages('tx_quickshop_products');
   }
     // get extension configuration

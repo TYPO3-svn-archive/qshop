@@ -1,6 +1,13 @@
 4.0.0
   2013-11-05
-  Feature
+  Features
+  * #53378: Table field for data
+  * #53377: Filter for size and material
+            Effected files:
+            * ext_tables.php
+            * ext_tables.sql
+            * locallang_db.xml
+            * tca.php
   * #53362: Fit it into TYPO3 6.x
 
 3.0.8

@@ -2,8 +2,13 @@
 # INDEX
 #
 # 'tx_quickshop_categories'
-# 'tx_quickshop_products_category_mm'
+# 'tx_quickshop_dimension'
+# 'tx_quickshop_material'
 # 'tx_quickshop_products'
+# 'tx_quickshop_products_category_mm'
+# 'tx_quickshop_products_dimension_mm'
+# 'tx_quickshop_products_material_mm'
+
 
 
 #
@@ -26,17 +31,44 @@ CREATE TABLE tx_quickshop_categories (
 );
 
 
+#
+# Table structure for table 'tx_quickshop_dimension'
+#
+CREATE TABLE tx_quickshop_dimension (
+  uid int(11) NOT NULL auto_increment,
+  pid int(11) DEFAULT '0' NOT NULL,
+  tstamp int(11) DEFAULT '0' NOT NULL,
+  crdate int(11) DEFAULT '0' NOT NULL,
+  cruser_id int(11) DEFAULT '0' NOT NULL,
+  deleted tinyint(4) DEFAULT '0' NOT NULL,
+  hidden tinyint(4) DEFAULT '0' NOT NULL,
+  title tinytext,
+  title_lang_ol tinytext,
+  uid_parent int(11) DEFAULT '0' NOT NULL,
+  
+  PRIMARY KEY (uid),
+  KEY parent (pid)
+);
+
+
 
 #
-# Table structure for table 'tx_quickshop_products_category_mm'
-# 
-CREATE TABLE tx_quickshop_products_category_mm (
-  uid_local int(11) DEFAULT '0' NOT NULL,
-  uid_foreign int(11) DEFAULT '0' NOT NULL,
-  tablenames varchar(30) DEFAULT '' NOT NULL,
-  sorting int(11) DEFAULT '0' NOT NULL,
-  KEY uid_local (uid_local),
-  KEY uid_foreign (uid_foreign)
+# Table structure for table 'tx_quickshop_material'
+#
+CREATE TABLE tx_quickshop_material (
+  uid int(11) NOT NULL auto_increment,
+  pid int(11) DEFAULT '0' NOT NULL,
+  tstamp int(11) DEFAULT '0' NOT NULL,
+  crdate int(11) DEFAULT '0' NOT NULL,
+  cruser_id int(11) DEFAULT '0' NOT NULL,
+  deleted tinyint(4) DEFAULT '0' NOT NULL,
+  hidden tinyint(4) DEFAULT '0' NOT NULL,
+  title tinytext,
+  title_lang_ol tinytext,
+  uid_parent int(11) DEFAULT '0' NOT NULL,
+  
+  PRIMARY KEY (uid),
+  KEY parent (pid)
 );
 
 
@@ -60,12 +92,20 @@ CREATE TABLE tx_quickshop_products (
   title tinytext,
   short text,
   description text,
-  category int(11) DEFAULT '0' NOT NULL,
   price double(11,2) DEFAULT '0.00' NOT NULL,
   tax int(11) DEFAULT '0' NOT NULL,
   in_stock tinyint(3) DEFAULT '0' NOT NULL,
   quantity_min int(11) DEFAULT '0' NOT NULL,
   quantity_max int(11) DEFAULT '0' NOT NULL,
+
+  datatable text,
+
+  category int(11) DEFAULT '0' NOT NULL,
+  categoryEnable tinyint(3) DEFAULT '0' NOT NULL,
+  dimension int(11) DEFAULT '0' NOT NULL,
+  dimensionEnable tinyint(3) DEFAULT '0' NOT NULL,
+  material int(11) DEFAULT '0' NOT NULL,
+  materialEnable tinyint(3) DEFAULT '0' NOT NULL,
 
   image text,
   imagewidth mediumint(11) unsigned NOT NULL default '0',
@@ -92,4 +132,46 @@ CREATE TABLE tx_quickshop_products (
   
   PRIMARY KEY (uid),
   KEY parent (pid)
+);
+
+
+
+#
+# Table structure for table 'tx_quickshop_products_category_mm'
+# 
+CREATE TABLE tx_quickshop_products_category_mm (
+  uid_local int(11) DEFAULT '0' NOT NULL,
+  uid_foreign int(11) DEFAULT '0' NOT NULL,
+  tablenames varchar(30) DEFAULT '' NOT NULL,
+  sorting int(11) DEFAULT '0' NOT NULL,
+  KEY uid_local (uid_local),
+  KEY uid_foreign (uid_foreign)
+);
+
+
+
+#
+# Table structure for table 'tx_quickshop_products_dimension_mm'
+# 
+CREATE TABLE tx_quickshop_products_dimension_mm (
+  uid_local int(11) DEFAULT '0' NOT NULL,
+  uid_foreign int(11) DEFAULT '0' NOT NULL,
+  tablenames varchar(30) DEFAULT '' NOT NULL,
+  sorting int(11) DEFAULT '0' NOT NULL,
+  KEY uid_local (uid_local),
+  KEY uid_foreign (uid_foreign)
+);
+
+
+
+#
+# Table structure for table 'tx_quickshop_products_material_mm'
+# 
+CREATE TABLE tx_quickshop_products_material_mm (
+  uid_local int(11) DEFAULT '0' NOT NULL,
+  uid_foreign int(11) DEFAULT '0' NOT NULL,
+  tablenames varchar(30) DEFAULT '' NOT NULL,
+  sorting int(11) DEFAULT '0' NOT NULL,
+  KEY uid_local (uid_local),
+  KEY uid_foreign (uid_foreign)
 );
