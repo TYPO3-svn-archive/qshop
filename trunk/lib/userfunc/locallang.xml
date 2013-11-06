@@ -82,54 +82,33 @@
       ]]></label>
       <label index="tcaFilterPrompt"><![CDATA[
         <h1 style="text-align:left;">
-          Thanks!
+          Control the filter by the Constant Editor!
         </h1>
-        <p style="font-weight:bold;padding:1em 0;">
-          The TYPO3-Quick-Shop project is sponsored by:
+        <p style="">
+          You can enable and disable the filter in the frontend by the Constant Editor.<br />
+          See:
         </p>
-        <a href="http://www.made-in-nature.de/"
-          alt="made in nature, Germany, sponsors the TYPO3-Quick-Shop project"
-          title="made in nature, Germany, sponsors the TYPO3-Quick-Shop project"
-          target="_blank">
-          <img src="../../../../typo3conf/ext/quick_shop/lib/icons/made-in-nature.de_120x90.gif"
-            width="120"
-            height="90"
-            alt="made in nature, Germany, sponsors the TYPO3-Quick-Shop project" /></a>
-        <p style="padding:0 0 1em 0;">
-          You like to subsidise the TYPO3-Quick-Shop project?
-          <a href="http://typo3-quick-shop.de/en/sponsoring/"
-            style="text-decoration:underline;"
-            alt="Your logo with your URL. 120 x 90 pixel."
-            title="Your logo with your URL. 120 x 90 pixel."
-            target="_blank">
-            Further information</a>.
-        </p>
-        <a href="http://typo3-quick-shop.de/en/sponsoring/"
-          alt="Your logo with your URL. 120 x 90 pixel."
-          title="Your logo with your URL. 120 x 90 pixel."
-          target="_blank">
-          <img src="../../../../typo3conf/ext/quick_shop/lib/icons/your-logo_default-blue.gif" 
-            width="120" 
-            height="90" 
-            alt="Your logo with your URL. 120 x 90 pixel." /></a>
-        &nbsp;&nbsp;
-        <a href="http://typo3-quick-shop.de/en/sponsoring/"
-          alt="Your logo with your URL. 120 x 90 pixel."
-          title="Your logo with your URL. 120 x 90 pixel."
-          target="_blank">
-          <img src="../../../../typo3conf/ext/quick_shop/lib/icons/your-logo_default-grey.gif" 
-            width="120" 
-            height="90" 
-            alt="Your logo with your URL. 120 x 90 pixel." /></a>
-        &nbsp;&nbsp;
-        <a href="http://typo3-quick-shop.de/en/sponsoring/"
-          alt="Your logo with your URL. 120 x 90 pixel."
-          title="Your logo with your URL. 120 x 90 pixel."
-          target="_blank">
-          <img src="../../../../typo3conf/ext/quick_shop/lib/icons/your-logo_default-grey.gif" 
-            width="120" 
-            height="90" 
-            alt="Your logo with your URL. 120 x 90 pixel." /></a>
+        <ul>
+          <li>
+            Web > Template
+          </li>          
+          <li>
+            Pagetree: page with the Browser plugin, which display your shop items.
+          </li>
+          <li>
+          </li>
+          <li>
+            Edit area
+            <ul>
+              <li>
+                Constant Editor
+              </li>          
+              <li>
+                Category: [QUICK SHOP - FILTER]
+              </li>          
+            </ul>
+          </li>
+        </ul>
       ]]></label>
     </languageKey>
     <languageKey index="de" type="array">
