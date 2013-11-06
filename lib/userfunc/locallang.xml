@@ -88,7 +88,7 @@
           You can enable and disable the filter in the frontend by the Constant Editor.<br />
           See:
         </p>
-        <ul>
+        <ul style="list-style:outside;">
           <li>
             Web > Template
           </li>          
@@ -99,7 +99,7 @@
           </li>
           <li>
             Edit area
-            <ul>
+            <ul style="list-style:outside;">
               <li>
                 Constant Editor
               </li>          
