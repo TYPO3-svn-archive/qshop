@@ -81,13 +81,14 @@ require_once(t3lib_extMgm::extPath( $_EXTKEY ) . 'lib/userfunc/class.tx_quicksho
     // Dimension
   $TCA['tx_quickshop_dimension'] = array (
     'ctrl' => array (
-      'title'     => 'LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_dimension',
-      'label'     => 'title',  
-      'tstamp'    => 'tstamp',
-      'crdate'    => 'crdate',
-      'cruser_id' => 'cruser_id',
-      'delete'    => 'deleted',
-      'enablecolumns' => array (
+      'title'             => 'LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_dimension',
+      'label'             => 'title',  
+      'tstamp'            => 'tstamp',
+      'crdate'            => 'crdate',
+      'cruser_id'         => 'cruser_id',
+      'default_sortby'    => 'ORDER BY title',  
+      'delete'            => 'deleted',
+      'enablecolumns'     => array (
         'disabled' => 'hidden',
       ),
       'dynamicConfigFile' => t3lib_extMgm::extPath($_EXTKEY).'tca.php',
@@ -100,13 +101,14 @@ require_once(t3lib_extMgm::extPath( $_EXTKEY ) . 'lib/userfunc/class.tx_quicksho
     // Material
   $TCA['tx_quickshop_material'] = array (
     'ctrl' => array (
-      'title'     => 'LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_material',
-      'label'     => 'title',  
-      'tstamp'    => 'tstamp',
-      'crdate'    => 'crdate',
-      'cruser_id' => 'cruser_id',
-      'delete'    => 'deleted',
-      'enablecolumns' => array (
+      'title'             => 'LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_material',
+      'label'             => 'title',  
+      'tstamp'            => 'tstamp',
+      'crdate'            => 'crdate',
+      'cruser_id'         => 'cruser_id',
+      'default_sortby'    => 'ORDER BY title',  
+      'delete'            => 'deleted',
+      'enablecolumns'     => array (
         'disabled' => 'hidden',
       ),
       'dynamicConfigFile' => t3lib_extMgm::extPath($_EXTKEY).'tca.php',
