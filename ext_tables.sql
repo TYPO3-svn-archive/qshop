@@ -104,11 +104,11 @@ CREATE TABLE tx_quickshop_products (
   text_properties tinyint(3) DEFAULT '0' NOT NULL,
 
   category int(11) DEFAULT '0' NOT NULL,
-  categoryEnable tinyint(3) DEFAULT '0' NOT NULL,
+  categoryEnable tinyint(3) DEFAULT '1' NOT NULL,
   dimension int(11) DEFAULT '0' NOT NULL,
-  dimensionEnable tinyint(3) DEFAULT '0' NOT NULL,
+  dimensionEnable tinyint(3) DEFAULT '1' NOT NULL,
   material int(11) DEFAULT '0' NOT NULL,
-  materialEnable tinyint(3) DEFAULT '0' NOT NULL,
+  materialEnable tinyint(3) DEFAULT '1' NOT NULL,
 
   image text,
   imagewidth mediumint(11) unsigned NOT NULL default '0',
