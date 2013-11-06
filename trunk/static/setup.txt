@@ -117,6 +117,9 @@ plugin.tx_browser_pi1 {
           tx_quickshop_products.imageseo,
           tx_quickshop_products.tax,
           tx_quickshop_products.price,
+          tx_quickshop_products.categoryEnable,
+          tx_quickshop_products.dimensionEnable,
+          tx_quickshop_products.materialEnable,
           tx_quickshop_products.uid
         )
         orderBy = tx_quickshop_products.price DESC, tx_quickshop_products.title, tx_quickshop_categories.title
@@ -257,6 +260,11 @@ plugin.tx_browser_pi1 {
           tx_quickshop_dimension {
             title < plugin.tx_browser_pi1.displayList.master_templates.selectbox
             title {
+              condition >
+              condition = TEXT
+              condition {
+                field = tx_quickshop_products.dimensionEnable
+              }
               //count_hits = 0
               first_item {
                 cObject {
