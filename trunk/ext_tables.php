@@ -37,6 +37,8 @@ require_once(t3lib_extMgm::extPath( $_EXTKEY ) . 'lib/userfunc/class.tx_quicksho
     'ctrl' => array (
       'title'                     => 'LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_products',
       'label'                     => 'title',  
+      'label_alt'                 => 'price',
+      'label_alt_force'           => true,
       'tstamp'                    => 'tstamp',
       'crdate'                    => 'crdate',
       'cruser_id'                 => 'cruser_id',
@@ -55,6 +57,7 @@ require_once(t3lib_extMgm::extPath( $_EXTKEY ) . 'lib/userfunc/class.tx_quicksho
       'hideAtCopy'        => true,
       'dividers2tabs'     => true,
       'dynamicConfigFile' => t3lib_extMgm::extPath($_EXTKEY).'tca.php',
+      'thumbnail'         => 'image',
       'iconfile'          => t3lib_extMgm::extRelPath($_EXTKEY).'ext_icon.gif',
     ),
   );
