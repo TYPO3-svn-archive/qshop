@@ -127,7 +127,8 @@ if(!$bool_LL)
 $TCA['tx_quickshop_dimension'] = array (
   'ctrl' => $TCA['tx_quickshop_dimension']['ctrl'],
   'interface' => array (
-    'showRecordFieldList' => 'hidden,title,uid_parent'
+    //'showRecordFieldList' => 'hidden,title,uid_parent'
+    'showRecordFieldList' => 'hidden,title'
   ),
   'feInterface' => $TCA['tx_quickshop_dimension']['feInterface'],
   'columns' => array (
@@ -231,7 +232,8 @@ if(!$bool_LL)
 $TCA['tx_quickshop_material'] = array (
   'ctrl' => $TCA['tx_quickshop_material']['ctrl'],
   'interface' => array (
-    'showRecordFieldList' => 'hidden,title,uid_parent'
+    //'showRecordFieldList' => 'hidden,title,uid_parent'
+    'showRecordFieldList' => 'hidden,title'
   ),
   'feInterface' => $TCA['tx_quickshop_material']['feInterface'],
   'columns' => array (
