@@ -99,6 +99,9 @@ CREATE TABLE tx_quickshop_products (
   quantity_max int(11) DEFAULT '0' NOT NULL,
 
   datasheet text,
+  cols int(11) DEFAULT '0' NOT NULL,
+  pi_flexform mediumtext, 
+  text_properties tinyint(3) DEFAULT '0' NOT NULL,
 
   category int(11) DEFAULT '0' NOT NULL,
   categoryEnable tinyint(3) DEFAULT '0' NOT NULL,
