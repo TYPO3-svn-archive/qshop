@@ -257,7 +257,7 @@ plugin.tx_browser_pi1 {
           tx_quickshop_dimension {
             title < plugin.tx_browser_pi1.displayList.master_templates.selectbox
             title {
-              count_hits = 0
+              //count_hits = 0
               first_item {
                 cObject {
                   20 {
@@ -271,7 +271,7 @@ plugin.tx_browser_pi1 {
           tx_quickshop_material {
             title < plugin.tx_browser_pi1.displayList.master_templates.selectbox
             title {
-              count_hits = 0
+              //count_hits = 0
               first_item {
                 cObject {
                   20 {
