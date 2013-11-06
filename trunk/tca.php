@@ -481,14 +481,6 @@ $TCA['tx_quickshop_products'] = array (
         ),
       )
     ),
-    'categoryEnable' => array (
-      'exclude' => 0,
-      'label' => 'LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_products.categoryEnable',
-      'config' => array (
-        'type' => 'check',
-        'default' => 1,
-      )
-    ),
     'dimension' => array (
       'l10n_mode' => 'exclude',
       'exclude' => 0,
@@ -542,14 +534,6 @@ $TCA['tx_quickshop_products'] = array (
         ),
       )
     ),
-    'dimensionEnable' => array (
-      'exclude' => 0,
-      'label' => 'LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_products.dimensionEnable',
-      'config' => array (
-        'type' => 'check',
-        'default' => 1,
-      )
-    ),
     'material' => array (
       'l10n_mode' => 'exclude',
       'exclude' => 0,
@@ -601,14 +585,6 @@ $TCA['tx_quickshop_products'] = array (
             'JSopenParams'             => 'height=350,width=580,status=0,menubar=0,scrollbars=1',
           ),
         ),
-      )
-    ),
-    'materialEnable' => array (
-      'exclude' => 0,
-      'label' => 'LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_products.materialEnable',
-      'config' => array (
-        'type' => 'check',
-        'default' => 1,
       )
     ),
     'price' => array (
