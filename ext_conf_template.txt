@@ -1,10 +1,3 @@
-  # cat=evaluate/enable/10;             type=user[EXT:quick_shop/lib/userfunc/class.tx_quickshop_userfunc.php:tx_quickshop_userfunc->promptEvaluatorTYPO3version]; label=Evaluation
-update=0
-  # cat=evaluate/enable/998;      type=user[EXT:quick_shop/lib/userfunc/class.tx_quickshop_userfunc.php:tx_quickshop_userfunc->promptExternalLinks]; label=External Links
-updateExternalLinks=0
-  # cat=evaluate/enable/999;      type=user[EXT:quick_shop/lib/userfunc/class.tx_quickshop_userfunc.php:tx_quickshop_userfunc->promptSponsors]; label=Subsidise the Caddy project!
-updateExternalSponsors=0
-
   # cat=localisation/others/10;         type=options[No. I use one language only.,Yes. I use more than one language.]; label=Localisation Support: Do you want to extend the backend with fields for translation?
 LLsupport = No. I use one language only.
   # cat=localisation/others/998;  type=user[EXT:quick_shop/lib/userfunc/class.tx_quickshop_userfunc.php:tx_quickshop_userfunc->promptExternalLinks]; label=External Links
@@ -20,3 +13,10 @@ tcaRecordsOnStandardPages = 0
 tcaExternalLinks=0
   # cat=tca/others/999;           type=user[EXT:quick_shop/lib/userfunc/class.tx_quickshop_userfunc.php:tx_quickshop_userfunc->promptSponsors]; label=Subsidise the Caddy project!
 tcaExternalSponsors=0
+
+  # cat=evaluate/enable/10;             type=user[EXT:quick_shop/lib/userfunc/class.tx_quickshop_userfunc.php:tx_quickshop_userfunc->promptEvaluatorTYPO3version]; label=Evaluation
+update=0
+  # cat=evaluate/enable/998;      type=user[EXT:quick_shop/lib/userfunc/class.tx_quickshop_userfunc.php:tx_quickshop_userfunc->promptExternalLinks]; label=External Links
+updateExternalLinks=0
+  # cat=evaluate/enable/999;      type=user[EXT:quick_shop/lib/userfunc/class.tx_quickshop_userfunc.php:tx_quickshop_userfunc->promptSponsors]; label=Subsidise the Caddy project!
+updateExternalSponsors=0
