@@ -7,6 +7,8 @@
   <data type="array">
     <languageKey index="default" type="array">
       <label index="filter_phrase.category">Categorie</label>
+      <label index="filter_phrase.dimension">Dimension</label>
+      <label index="filter_phrase.material">Material</label>
       <label index="linktosingleview">Details <![CDATA[&raquo;]]></label>
       <label index="marker_my_caddyimgalt">Caddy - your TYPO3 shopping cart</label>
       <label index="marker_my_caddylabel">Into the caddy</label>
@@ -58,6 +60,8 @@
     </languageKey>
     <languageKey index="de" type="array">
       <label index="filter_phrase.category">Artikelgruppe</label>
+      <label index="filter_phrase.dimension">Gr<![CDATA[&ouml;&szlig;]]>e</label>
+      <label index="filter_phrase.material">Material</label>
       <label index="linktosingleview">Mehr <![CDATA[&raquo;]]></label>
       <label index="marker_my_caddyimgalt">Caddy - Dein TYPO3 Warenkorb</label>
       <label index="marker_my_caddylabel">In den Warenkorb</label>
