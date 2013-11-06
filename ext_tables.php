@@ -22,6 +22,33 @@ if (!defined ('TYPO3_MODE'))
     //
     // TCA for tables
 
+    // Products
+  $TCA['tx_quickshop_products'] = array (
+    'ctrl' => array (
+      'title'                     => 'LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_products',
+      'label'                     => 'title',  
+      'tstamp'                    => 'tstamp',
+      'crdate'                    => 'crdate',
+      'cruser_id'                 => 'cruser_id',
+      'cruser_id'                 => 'cruser_id',
+      'languageField'             => 'sys_language_uid', 
+      'transOrigPointerField'     => 'l10n_parent',
+      'transOrigDiffSourceField'  => 'l10n_diffsource',
+      'default_sortby'            => 'ORDER BY title',  
+      'delete'                    => 'deleted',  
+      'enablecolumns'             => array (
+        'disabled'  => 'hidden',
+        'starttime' => 'starttime',
+        'endtime'   => 'endtime',
+        'fe_group'  => 'fe_group',
+      ),
+      'hideAtCopy'        => true,
+      'dividers2tabs'     => true,
+      'dynamicConfigFile' => t3lib_extMgm::extPath($_EXTKEY).'tca.php',
+      'iconfile'          => t3lib_extMgm::extRelPath($_EXTKEY).'ext_icon.gif',
+    ),
+  );
+    // Products
     // Categories
   $TCA['tx_quickshop_categories'] = array (
     'ctrl' => array (
@@ -78,34 +105,6 @@ if (!defined ('TYPO3_MODE'))
     ),
   );
     // Material
-
-    // Products
-  $TCA['tx_quickshop_products'] = array (
-    'ctrl' => array (
-      'title'                     => 'LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_products',
-      'label'                     => 'title',  
-      'tstamp'                    => 'tstamp',
-      'crdate'                    => 'crdate',
-      'cruser_id'                 => 'cruser_id',
-      'cruser_id'                 => 'cruser_id',
-      'languageField'             => 'sys_language_uid', 
-      'transOrigPointerField'     => 'l10n_parent',
-      'transOrigDiffSourceField'  => 'l10n_diffsource',
-      'default_sortby'            => 'ORDER BY title',  
-      'delete'                    => 'deleted',  
-      'enablecolumns'             => array (
-        'disabled'  => 'hidden',
-        'starttime' => 'starttime',
-        'endtime'   => 'endtime',
-        'fe_group'  => 'fe_group',
-      ),
-      'hideAtCopy'        => true,
-      'dividers2tabs'     => true,
-      'dynamicConfigFile' => t3lib_extMgm::extPath($_EXTKEY).'tca.php',
-      'iconfile'          => t3lib_extMgm::extRelPath($_EXTKEY).'ext_icon.gif',
-    ),
-  );
-    // Products
     // TCA for tables
 
 
