@@ -103,9 +103,11 @@
 .tx-browser-pi1 table.contenttable tr.tr-even {
   background:#EEE;
 }
-.tx-browser-pi1 table.contenttable td {
+.tx-browser-pi1 table.contenttable td,
+.tx-browser-pi1 table.contenttable th {
   padding:0 1em 0 0;
 }
-.tx-browser-pi1 table.contenttable td.td-last {
+.tx-browser-pi1 table.contenttable td.td-last,
+.tx-browser-pi1 table.contenttable th.td-last {
   padding:0;
 }
