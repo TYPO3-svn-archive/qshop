@@ -506,7 +506,7 @@ plugin.tx_browser_pi1 {
                     field = tx_quickshop_products.datasheet
                     stdWrap {
                         // With a prefix comment there won't be any output!
-                      prefixComment >
+//                      prefixComment >
                     }
                   }
                     // sku
@@ -530,25 +530,6 @@ plugin.tx_browser_pi1 {
             10 {
               imgList = alternate_image_400x300.gif
               imgPath = EXT:quick_shop/res/images/
-            }
-          }
-            // datasheet
-          datasheet < tt_content.table.20
-          datasheet {
-            userFunc = tx_browser_cssstyledcontent->render_table
-            userFunc {
-                // add the value of a field to another field in cObj->data
-              cObjDataFieldWrapper =
-              cObjDataFieldWrapper {
-                cols            = tx_quickshop_products.cols
-                pi_flexform     = tx_quickshop_products.pi_flexform
-                uid             = tx_quickshop_products.uid
-              }
-            }
-            field = tx_quickshop_products.datasheet
-            stdWrap {
-                // With a prefix comment there won't be any output!
-              prefixComment >
             }
           }
             // price
@@ -595,7 +576,6 @@ plugin.tx_browser_pi1 {
           ###TX_QUICKSHOP_PRODUCTS.TITLE###
           ###TX_QUICKSHOP_PRODUCTS.IMAGE###
           ###TX_QUICKSHOP_PRODUCTS.DESCRIPTION###
-          ###TX_QUICKSHOP_PRODUCTS.DATASHEET###
           <div style="clear:both"></div>
           <!-- ###SINGLEBODYROW### end --><!-- ###SINGLEBODY### end -->
           <form class="caddy" name="caddy" action="###MY_CADDYURL###" method="post">
