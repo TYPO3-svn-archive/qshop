@@ -4,10 +4,15 @@
   // INDEX
   // =====
   // page
+  // temp.caddyForm
   // temp.tax
   // plugin.tx_browser_pi1
 
 
+
+  //////////////////////////////////////
+  //
+  // page
 
 page {
   includeCSS {
@@ -15,8 +20,123 @@ page {
     quick_shop = EXT:quick_shop/res/templates/default.css
   }
 }
+  // page
 
 
+
+  //////////////////////////////////////
+  //
+  // temp.caddyform
+
+temp.caddyform = COA
+temp.caddyform {
+    // <form ...>
+  10 = COA
+  10 {
+    wrap = <form class="caddy" name="caddy" action="|" method="post">
+      // ... action ...
+    10 = TEXT
+    10 {
+      typolink {
+        parameter = {$plugin.quick_shop.pages.caddy}
+        returnLast = url
+      }
+    }
+  }
+    // <fieldset> ... </fieldset>
+  20 = COA
+  20 {
+      // <fieldset ...>
+    10 = TEXT
+    10 {
+      value = <fieldset id="add-to-cart">
+    }
+      // <input ...>
+    20 = TEXT
+    20 {
+      field = tx_quickshop_products.uid
+      wrap  = <input type="hidden" name="tx_browser_pi1[showUid]" value="|" />
+    }
+      // <select> ... </select>
+    30 = TEXT
+    30 {
+      value (
+                        <select name="tx_quickshop_qty">
+                          <option>1</option>
+                          <option>2</option>
+                          <option>3</option>
+                          <option>4</option>
+                          <option>5</option>
+                          <option>6</option>
+                          <option>7</option>
+                          <option>8</option>
+                          <option>9</option>
+                          <option>10</option>
+                          <option>11</option>
+                          <option>12</option>
+                          <option>13</option>
+                          <option>14</option>
+                          <option>15</option>
+                          <option>16</option>
+                          <option>17</option>
+                          <option>18</option>
+                          <option>19</option>
+                          <option>20</option>
+                        </select>
+)
+    }
+      // <button> ... </button>
+    40 = COA
+    40 {
+        // <button ...>
+      10 = TEXT
+      10 {
+        data = LLL:EXT:quick_shop/locallang_db.xml:marker_my_caddylabel
+        wrap = <button class="submit" name="submit" type="submit" value="|">
+      }
+        // label
+      20 = TEXT
+      20 {
+        data        = LLL:EXT:quick_shop/locallang_db.xml:marker_my_caddylabel
+        noTrimWrap  = || |
+      }
+        // icon
+      30 = IMAGE
+      30 {
+        file = {$plugin.caddy.html.color.icon.caddy}
+        altText {
+          data = LLL:EXT:quick_shop/locallang_db.xml:marker_my_caddyimgalt
+        }
+        titleText {
+          data = LLL:EXT:quick_shop/locallang_db.xml:marker_my_caddyimgalt
+        }
+        params = class="linktocaddy"
+      }
+        // </button>
+      40 = TEXT
+      40 {
+        value = </button>
+      }
+    }
+      // </fieldset>
+    50 = TEXT
+    50 {
+      value = </fieldset>
+    }
+  }
+    // </form>
+  30 = TEXT
+  30 {
+    value = </form>
+  }
+}
+  // temp.caddyform
+
+
+
+  //////////////////////////////////////
+  //
+  // temp.tax
 
 temp.tax = CASE
 temp.tax {
@@ -30,6 +150,13 @@ temp.tax {
     noTrimWrap = |inkl. | % MwSt.|
   }
 }
+  // temp.tax
+
+
+
+  //////////////////////////////////////
+  //
+  // plugin.tx_browser_pi1
 
 plugin.tx_browser_pi1 {
   
@@ -57,41 +184,6 @@ plugin.tx_browser_pi1 {
     }
   }
   marker {
-    my_caddybutton = COA
-    my_caddybutton {
-      10 = TEXT
-      10 {
-        data = LLL:EXT:quick_shop/locallang_db.xml:marker_my_caddylabel
-        wrap = <button class="submit" name="submit" type="submit" value="|">
-      }
-      20 = TEXT
-      20 {
-        data        = LLL:EXT:quick_shop/locallang_db.xml:marker_my_caddylabel
-        noTrimWrap  = || |
-      }
-      30 = IMAGE
-      30 {
-        file = {$plugin.caddy.html.color.icon.caddy}
-        altText {
-          data = LLL:EXT:quick_shop/locallang_db.xml:marker_my_caddyimgalt
-        }
-        titleText {
-          data = LLL:EXT:quick_shop/locallang_db.xml:marker_my_caddyimgalt
-        }
-        params = class="linktocaddy"
-      }
-      40 = TEXT
-      40 {
-        value = </button>
-      }
-    }
-    my_caddyurl = TEXT
-    my_caddyurl {
-      typolink {
-        parameter = {$plugin.quick_shop.pages.caddy}
-        returnLast = url
-      }
-    }
     my_shipping_note = TEXT
     my_shipping_note {
       value = shipping
@@ -121,6 +213,7 @@ plugin.tx_browser_pi1 {
           tx_quickshop_products.imageseo,
           tx_quickshop_products.tax,
           tx_quickshop_products.price,
+          tx_quickshop_products.tstamp,
           tx_quickshop_products.uid
         )
         orderBy = tx_quickshop_products.price DESC, tx_quickshop_products.title, tx_quickshop_categories.title
@@ -233,6 +326,8 @@ plugin.tx_browser_pi1 {
           }
           tax < temp.tax
           tax.stdWrap.noTrimWrap = |inkl. | % MwSt.|
+            // placeholder for the form
+          tstamp < temp.caddyForm
         }
         filter {
           tx_quickshop_categories {
@@ -331,34 +426,7 @@ plugin.tx_browser_pi1 {
                     <div class="tax_shipping">
                       ###TX_QUICKSHOP_PRODUCTS.TAX### ###MY_SHIPPING_NOTE###
                     </div>
-                    <form class="caddy" name="caddy" action="###MY_CADDYURL###" method="post">
-                      <fieldset id="add-to-cart">
-                        <input type="hidden" name="tx_browser_pi1[showUid]" value="###TX_QUICKSHOP_PRODUCTS.UID###" />
-                        <select name="tx_quickshop_qty">
-                          <option>1</option>
-                          <option>2</option>
-                          <option>3</option>
-                          <option>4</option>
-                          <option>5</option>
-                          <option>6</option>
-                          <option>7</option>
-                          <option>8</option>
-                          <option>9</option>
-                          <option>10</option>
-                          <option>11</option>
-                          <option>12</option>
-                          <option>13</option>
-                          <option>14</option>
-                          <option>15</option>
-                          <option>16</option>
-                          <option>17</option>
-                          <option>18</option>
-                          <option>19</option>
-                          <option>20</option>
-                        </select>
-                        ###MY_CADDYBUTTON###
-                      </fieldset>
-                    </form>
+                    ###TX_QUICKSHOP_PRODUCTS.TSTAMP###
                   </div>
                   ###SOCIALMEDIA_BOOKMARKS###
                   ###TX_QUICKSHOP_PRODUCTS.IMAGE###
@@ -414,6 +482,8 @@ plugin.tx_browser_pi1 {
 
           tx_quickshop_products.seo_description,
           tx_quickshop_products.seo_keywords,
+
+          tx_quickshop_products.tstamp,
 
           tx_quickshop_categories.title
         )
@@ -555,6 +625,8 @@ plugin.tx_browser_pi1 {
             // tax
           tax < temp.tax
           tax.stdWrap.noTrimWrap = |inkl. | % MwSt.|
+            // placeholder for the form
+          tstamp < temp.caddyForm
         }
           // marker and subparts will replaced in the HTML template before data handling
           // #47068, 130409, dwildt
@@ -581,34 +653,7 @@ plugin.tx_browser_pi1 {
           ###TX_QUICKSHOP_PRODUCTS.IMAGE###
           ###TX_QUICKSHOP_PRODUCTS.DESCRIPTION###
           <div style="clear:both"></div>
-          <form class="caddy" name="caddy" action="###MY_CADDYURL###" method="post">
-            <fieldset id="add-to-cart">
-              <input type="hidden" name="tx_browser_pi1[showUid]" value="###SHOWUID###" />
-              <select name="tx_quickshop_qty">
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-                <option>6</option>
-                <option>7</option>
-                <option>8</option>
-                <option>9</option>
-                <option>10</option>
-                <option>11</option>
-                <option>12</option>
-                <option>13</option>
-                <option>14</option>
-                <option>15</option>
-                <option>16</option>
-                <option>17</option>
-                <option>18</option>
-                <option>19</option>
-                <option>20</option>
-              </select>
-              ###MY_CADDYBUTTON###
-            </fieldset>
-          </form>
+          ###TX_QUICKSHOP_PRODUCTS.TSTAMP###
           <!-- ###SINGLEBODYROW### end --><!-- ###SINGLEBODY### end -->
 <!-- ###AREA_FOR_AJAX_LIST_01### end -->
             <!-- ###BACKBUTTON### begin -->
@@ -642,3 +687,4 @@ plugin.tx_browser_pi1 {
     }
   }
 }
+  // plugin.tx_browser_pi1
