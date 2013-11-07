@@ -92,9 +92,11 @@ CREATE TABLE tx_quickshop_products (
   title tinytext,
   short text,
   description text,
+
   price double(11,2) DEFAULT '0.00' NOT NULL,
   tax int(11) DEFAULT '0' NOT NULL,
   in_stock tinyint(3) DEFAULT '0' NOT NULL,
+  stock tinyint(3) DEFAULT '0' NOT NULL,
   quantity_min int(11) DEFAULT '0' NOT NULL,
   quantity_max int(11) DEFAULT '0' NOT NULL,
 
