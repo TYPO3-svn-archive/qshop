@@ -482,7 +482,7 @@ plugin.tx_browser_pi1 {
               }
                 // description, sku
               text {
-                  // description, sku
+                  // description, datasheet, sku
                 20 = COA
                 20 {
                     // description
@@ -502,6 +502,7 @@ plugin.tx_browser_pi1 {
                         cols            = tx_quickshop_products.cols
                         pi_flexform     = tx_quickshop_products.pi_flexform
                         text_properties = tx_quickshop_products.text_properties
+                        uid             = tx_quickshop_products.uid
                       }
                     }
                     field = tx_quickshop_products.datasheet
