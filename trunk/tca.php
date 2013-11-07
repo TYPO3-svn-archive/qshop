@@ -941,7 +941,7 @@ $TCA['tx_quickshop_products'] = array (
         '--div--;LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_products.div.product,' .
           'sku,title;;;;2-2-2, short;;;;3-3-3, description;;;richtext[]:rte_transform[mode=ts],' .
         '--div--;LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_products.div.datasheet,' .
-          'layout;;10;;3-3-3, cols, datasheet;;9;nowrap:wizards[table], text_properties, pi_flexform,' . 
+          'layout;;10;;3-3-3, cols, datasheet;;9;nowrap:wizards[table], pi_flexform,' . 
         '--div--;LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_products.div.filter,' .
           'filterPrompt,category,dimension,material,' .
         '--div--;LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_products.div.price_quantity,' .
@@ -998,7 +998,6 @@ unset($TCA['tx_quickshop_products']['columns']['pi_flexform']['config']['ds_poin
 unset($TCA['tx_quickshop_products']['columns']['pi_flexform']['config']['search']);
 $TCA['tx_quickshop_products']['columns']['pi_flexform']['config']['ds']['default'] = 'FILE:EXT:css_styled_content/flexform_ds.xml';
 $TCA['tx_quickshop_products']['columns']['pi_flexform']['config']['ds_pointerField'] = 'title';
-$TCA['tx_quickshop_products']['columns']['text_properties'] = $TCA['tt_content']['columns']['text_properties'];
 
   // Localization support
 if($bool_LL)
