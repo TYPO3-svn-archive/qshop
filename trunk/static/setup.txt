@@ -5,6 +5,7 @@
   // =====
   // page
   // temp.caddyform
+  // temp.form
   // temp.tax
   // plugin.tx_browser_pi1
 
@@ -136,6 +137,48 @@ temp.caddyform {
 
   //////////////////////////////////////
   //
+  // temp.form
+
+temp.form = COA
+temp.form {
+    // if: even in stock
+  10 = COA
+  10 {
+    if {
+      isTrue {
+        field = tx_quickshop_products.in_stock
+      }
+    }
+    10 < temp.caddyform
+  }
+    // if: not even in stock
+  20 = COA
+  20 {
+    if {
+      isFalse {
+        field = tx_quickshop_products.in_stock
+      }
+    }
+      // if: amount in stock is >= 1
+    10 = COA
+    10 {
+    }
+      // if: amount in stock is < 1
+    20 = COA
+    20 {
+    }
+    30 = TEXT
+    30 {
+      value = xyz
+    }
+  }
+}
+  // temp.form
+
+
+
+  //////////////////////////////////////
+  //
   // temp.tax
 
 temp.tax = CASE
@@ -213,6 +256,8 @@ plugin.tx_browser_pi1 {
           tx_quickshop_products.imageseo,
           tx_quickshop_products.tax,
           tx_quickshop_products.price,
+          tx_quickshop_products.in_stock,
+          tx_quickshop_products.stock,
           tx_quickshop_products.tstamp,
           tx_quickshop_products.uid
         )
@@ -327,7 +372,7 @@ plugin.tx_browser_pi1 {
           tax < temp.tax
           tax.stdWrap.noTrimWrap = |inkl. | % MwSt.|
             // placeholder for the form
-          tstamp < temp.caddyform
+          tstamp < temp.form
         }
         filter {
           tx_quickshop_categories {
@@ -483,6 +528,8 @@ plugin.tx_browser_pi1 {
           tx_quickshop_products.seo_description,
           tx_quickshop_products.seo_keywords,
 
+          tx_quickshop_products.in_stock,
+          tx_quickshop_products.stock,
           tx_quickshop_products.tstamp,
 
           tx_quickshop_categories.title
@@ -626,7 +673,7 @@ plugin.tx_browser_pi1 {
           tax < temp.tax
           tax.stdWrap.noTrimWrap = |inkl. | % MwSt.|
             // placeholder for the form
-          tstamp < temp.caddyform
+          tstamp < temp.form
         }
           // marker and subparts will replaced in the HTML template before data handling
           // #47068, 130409, dwildt
