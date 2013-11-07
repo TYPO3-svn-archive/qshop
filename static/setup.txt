@@ -4,7 +4,7 @@
   // INDEX
   // =====
   // page
-  // tmp.caddyform
+  // temp.caddyform
   // temp.tax
   // plugin.tx_browser_pi1
 
@@ -26,10 +26,10 @@ page {
 
   //////////////////////////////////////
   //
-  // tmp.caddyform
+  // temp.caddyform
 
-tmp.caddyform = COA
-tmp.caddyform {
+temp.caddyform = COA
+temp.caddyform {
     // <form ...>
   10 = COA
   10 {
@@ -130,7 +130,7 @@ tmp.caddyform {
     value = </form>
   }
 }
-  // tmp.caddyform
+  // temp.caddyform
 
 
 
@@ -327,7 +327,7 @@ plugin.tx_browser_pi1 {
           tax < temp.tax
           tax.stdWrap.noTrimWrap = |inkl. | % MwSt.|
             // placeholder for the form
-          tstamp < tmp.caddyform
+          tstamp < temp.caddyform
         }
         filter {
           tx_quickshop_categories {
@@ -626,7 +626,7 @@ plugin.tx_browser_pi1 {
           tax < temp.tax
           tax.stdWrap.noTrimWrap = |inkl. | % MwSt.|
             // placeholder for the form
-          tstamp < tmp.caddyform
+          tstamp < temp.caddyform
         }
           // marker and subparts will replaced in the HTML template before data handling
           // #47068, 130409, dwildt
