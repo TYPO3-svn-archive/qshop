@@ -330,9 +330,11 @@ class tx_quickshop_userfunc
       $prompt = null;
 
       $prompt = $prompt . '
-<div class="message-body" style="background:#EEE; border:0.4em solid #DDD;border-radius:0.4em;max-width:600px;padding:1em;">
-  ' . $GLOBALS['LANG']->sL('LLL:EXT:quick_shop/lib/userfunc/locallang.xml:tcaFilterPrompt') . '
-</div>';
+        <div class="typo3-message message-information" style="max-width:' . $this->maxWidth . ';">
+          <div class="message-body">
+            ' . $GLOBALS['LANG']->sL('LLL:EXT:quick_shop/lib/userfunc/locallang.xml:tcaFilterPrompt') . '
+          </div>
+        </div>';
 
     return $prompt;
   }
