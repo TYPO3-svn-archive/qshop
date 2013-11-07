@@ -510,7 +510,7 @@ plugin.tx_browser_pi1 {
                     field = tx_quickshop_products.datasheet
                     stdWrap {
                         // With a prefix comment there won't be any output!
-//                      prefixComment >
+                      prefixComment >
                     }
                   }
                     // sku
