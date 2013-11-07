@@ -32,6 +32,10 @@ temp.tax {
 }
 
 plugin.tx_browser_pi1 {
+  
+    // #53378, 131107, dwildt, 1-
+  general_stdWrap >
+
   flexform {
     socialmedia {
       socialbookmarks {
