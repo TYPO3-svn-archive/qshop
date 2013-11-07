@@ -387,7 +387,6 @@ plugin.tx_browser_pi1 {
           tx_quickshop_products.datasheet,
           tx_quickshop_products.cols,
           tx_quickshop_products.pi_flexform,
-          tx_quickshop_products.text_properties,
 
           tx_quickshop_products.image,
           tx_quickshop_products.imageseo,
@@ -501,7 +500,6 @@ plugin.tx_browser_pi1 {
                       cObjDataFieldWrapper {
                         cols            = tx_quickshop_products.cols
                         pi_flexform     = tx_quickshop_products.pi_flexform
-                        text_properties = tx_quickshop_products.text_properties
                         uid             = tx_quickshop_products.uid
                       }
                     }
