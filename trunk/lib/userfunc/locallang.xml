@@ -85,19 +85,19 @@
           To enable and disable the filter in the frontend:
         </p>
         <ul style="list-style:outside;">
-          <li>
+          <li style="margin:0;">
             Web > Template
           </li>          
-          <li>
+          <li style="margin:0;">
             Pagetree: page with the Browser plugin, which displays your shop items.
           </li>
-          <li>
+          <li style="margin:0;">
             Edit area
             <ul style="list-style:outside;">
-              <li>
+              <li style="margin:0;">
                 [Constant Editor]
               </li>          
-              <li>
+              <li style="margin:0;">
                 Category: [QUICK SHOP - FILTER]
               </li>          
             </ul>
@@ -185,19 +185,19 @@
           So blendest Du die Filter im Frontend ein- oder aus:
         </p>
         <ul style="list-style:outside;">
-          <li>
+          <li style="margin:0;">
             Web > Template
           </li>          
-          <li>
+          <li style="margin:0;">
             Seitenbaum: W&auml;hle die Seite mit dem Browser-Plugin aus, mit dem Du Deine Shop Artikel darstellst.
           </li>
-          <li>
+          <li style="margin:0;">
             Bearbeitungsbereich
             <ul style="list-style:outside;">
-              <li>
+              <li style="margin:0;">
                 [Constant Editor]
               </li>          
-              <li>
+              <li style="margin:0;">
                 Kategorie: [QUICK SHOP - FILTER]
               </li>          
             </ul>
