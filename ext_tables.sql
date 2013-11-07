@@ -101,7 +101,6 @@ CREATE TABLE tx_quickshop_products (
   datasheet text,
   cols int(11) DEFAULT '0' NOT NULL,
   pi_flexform mediumtext, 
-  text_properties tinyint(3) DEFAULT '0' NOT NULL,
 
   filterPrompt tinytext,
   category int(11) DEFAULT '0' NOT NULL,
