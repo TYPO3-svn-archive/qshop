@@ -342,7 +342,7 @@ $TCA['tx_quickshop_products'] = array (
     'showRecordFieldList' =>  'sku,title,short,description,' . 
                               'datasheet,' .
                               'filterPrompt,category,dimension,material,' .
-                              'price,tax,in_stock,quantity_min,quantity_max,' .
+                              'price,tax,in_stock,stock,quantity_min,quantity_max,' .
                               'image,imagewidth,imageheight,imageorient,imagecols,' .
                               'imageborder,image_frames,image_link,image_zoom,' .
                               'image_noRows,image_effects,image_compression,imageseo' .
@@ -615,6 +615,15 @@ $TCA['tx_quickshop_products'] = array (
       'config' => array (
         'type' => 'check',
         'default' => 1,
+      )
+    ),
+    'stock' => array (
+      'exclude' => 0,
+      'label' => 'LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_products.stock',
+      'config' => array (
+        'type' => 'input',  
+        'size' => '10',  
+        'eval' => 'int',
       )
     ),
     'quantity_min' => array (
@@ -945,7 +954,7 @@ $TCA['tx_quickshop_products'] = array (
         '--div--;LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_products.div.filter,' .
           'filterPrompt,category,dimension,material,' .
         '--div--;LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_products.div.price_quantity,' .
-          'price, tax, in_stock, quantity_min, quantity_max,' .
+          'price, tax, in_stock, stock, quantity_min, quantity_max,' .
         '--div--;LLL:EXT:cms/locallang_ttc.xml:tabs.images,' .
           '--palette--;LLL:EXT:cms/locallang_ttc.xml:palette.imagefiles;imagefiles,' .
           '--palette--;LLL:EXT:quick_shop/locallang_db.xml:palette.image_accessibility;image_accessibility,' .
