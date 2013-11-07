@@ -14,6 +14,7 @@
       <label index="marker_my_caddylabel">Into the caddy</label>
       <label index="palette.image_accessibility">Search engines and accessibility</label>
       <label index="palette.startendtime">Available from ... to ...</label>
+      <label index="phrase_notInStock">Not available at the time</label>
       <label index="tca_phrase.seo_description">Description for Search Engine Optimisation</label>
       <label index="tca_phrase.seo_keywords">Keywords for Search Engine Optimisation (CSV: comma separated values)</label>
       <label index="tx_quickshop_categories">Quick Shop Category</label>
@@ -69,6 +70,7 @@
       <label index="marker_my_caddylabel">In den Warenkorb</label>
       <label index="palette.image_accessibility">Suchmaschinen und Barrierefreiheit</label>
       <label index="palette.startendtime">Verfügbar von ... bis ...</label>
+      <label index="phrase_notInStock">Zur Zeit nicht verfügbar</label>
       <label index="tca_phrase.seo_description">Beschreibung für Suchmaschinen (bis etwa 200 Zeichen)</label>
       <label index="tca_phrase.seo_keywords">Stichworte für Suchmaschinen (drei bis fünf, mit Komma trennen)</label>
       <label index="tx_quickshop_categories">Quick Shop Kategorie</label>
