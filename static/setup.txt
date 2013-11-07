@@ -513,7 +513,7 @@ plugin.tx_browser_pi1 {
                   30 = TEXT
                   30 {
                     data        = LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_products.sku
-                    noTrimWrap  = |<br />|: ###TX_QUICKSHOP_PRODUCTS.SKU###|
+                    noTrimWrap  = |<p>|: ###TX_QUICKSHOP_PRODUCTS.SKU###</p>|
                   }
                   wrap = <div class="csc-textpic-text"> | </div>
                 }
