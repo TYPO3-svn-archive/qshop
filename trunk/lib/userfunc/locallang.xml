@@ -81,26 +81,23 @@
             alt="Your logo with your URL. 120 x 90 pixel." /></a>
       ]]></label>
       <label index="tcaFilterPrompt"><![CDATA[
-        <h1 style="text-align:left;">
-          You can control the filter by the Constant Editor
-        </h1>
-        <p style="">
+        <p style="font-weight:bold;">
           To enable and disable the filter in the frontend:
         </p>
-        <ul style="list-style:outside;padding:1em 0;">
-          <li style="margin-left:2em;">
+        <ul style="list-style:outside;">
+          <li>
             Web > Template
           </li>          
-          <li style="margin-left:2em;">
+          <li>
             Pagetree: page with the Browser plugin, which displays your shop items.
           </li>
-          <li style="margin-left:2em;">
+          <li>
             Edit area
             <ul style="list-style:outside;">
-              <li style="margin-left:3em;">
+              <li>
                 [Constant Editor]
               </li>          
-              <li style="margin-left:3em;">
+              <li>
                 Category: [QUICK SHOP - FILTER]
               </li>          
             </ul>
@@ -184,26 +181,23 @@
             alt="Dein Logo mit Deiner URL. 120 x 90 Pixel." /></a>
       ]]></label>
       <label index="tcaFilterPrompt"><![CDATA[
-        <h1 style="text-align:left;">
-          Du kannst die Filter mit dem Constant Editor steuern
-        </h1>
-        <p style="">
+        <p style="font-weight:bold;">
           So blendest Du die Filter im Frontend ein- oder aus:
         </p>
-        <ul style="list-style:outside;padding:1em 0;">
-          <li style="margin-left:2em;">
+        <ul style="list-style:outside;">
+          <li>
             Web > Template
           </li>          
-          <li style="margin-left:2em;">
+          <li>
             Seitenbaum: W&auml;hle die Seite mit dem Browser-Plugin aus, mit dem Du Deine Shop Artikel darstellst.
           </li>
-          <li style="margin-left:2em;">
+          <li>
             Bearbeitungsbereich
             <ul style="list-style:outside;">
-              <li style="margin-left:3em;">
+              <li>
                 [Constant Editor]
               </li>          
-              <li style="margin-left:3em;">
+              <li>
                 Kategorie: [QUICK SHOP - FILTER]
               </li>          
             </ul>
