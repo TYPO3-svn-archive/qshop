@@ -105,9 +105,11 @@
 }
 .tx-browser-pi1 table.contenttable td,
 .tx-browser-pi1 table.contenttable th {
-  padding:0 1em 0 0;
+  border-right: .1em solid #CCC;
+  padding:0.2 1em;
 }
 .tx-browser-pi1 table.contenttable td.td-last,
 .tx-browser-pi1 table.contenttable th.td-last {
-  padding:0;
+  border-right: 0;
+/*  padding:0;*/
 }
