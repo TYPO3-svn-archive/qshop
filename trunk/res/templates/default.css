@@ -96,3 +96,16 @@
 .tx-browser-pi1 .csc-textpic-intext-right-nowrap .csc-textpic-imagewrap {
   clear:none;
 }
+
+.tx-browser-pi1 table.contenttable {
+  font-size:1em;
+}
+.tx-browser-pi1 table.contenttable tr.tr-even {
+  background:#EEE;
+}
+.tx-browser-pi1 table.contenttable td {
+  padding:0 1em 0 0;
+}
+.tx-browser-pi1 table.contenttable td.td-last {
+  padding:0;
+}
