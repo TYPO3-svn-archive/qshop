@@ -170,7 +170,7 @@ temp.form {
     30 = TEXT
     30 {
       data = LLL:EXT:quick_shop/locallang_db.xml:phrase_notInStock
-      wrap = <div class"notInStock">|</div>
+      wrap = <div class="notInStock">|</div>
     }
   }
 }
