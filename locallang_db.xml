@@ -53,7 +53,7 @@
       <label index="tx_quickshop_products.tax.I.1">Normal</label>
       <label index="tx_quickshop_products.tax">Tax included</label>
       <label index="tx_quickshop_products.in_stock">Available at all times (in stock will ignored!)</label>
-      <label index="tx_quickshop_products.stock">In stock</label>
+      <label index="tx_quickshop_products.stock">In stock (amount)</label>
       <label index="tx_quickshop_products.quantity_min">Minimum order quantity</label>
       <label index="tx_quickshop_products.quantity_max">Maximum order quantity</label>
       <label index="tx_quickshop_products.image">Image</label>
@@ -110,7 +110,7 @@
       <label index="tx_quickshop_products.tax.I.1">Normal</label>
       <label index="tx_quickshop_products.tax">inkl. MwSt.</label>
       <label index="tx_quickshop_products.in_stock">Immer verfügbar (auf Lager wird ignoriert!)</label>
-      <label index="tx_quickshop_products.stock">Auf Lager</label>
+      <label index="tx_quickshop_products.stock">Auf Lager (Menge)</label>
       <label index="tx_quickshop_products.image">Bild</label>
       <label index="tx_quickshop_products.imageseo">Beschreibung für Suchmaschinen (SEO)</label>
       <label index="tx_quickshop_products.caption">Bildunterschrift</label>

@@ -581,7 +581,6 @@ plugin.tx_browser_pi1 {
           ###TX_QUICKSHOP_PRODUCTS.IMAGE###
           ###TX_QUICKSHOP_PRODUCTS.DESCRIPTION###
           <div style="clear:both"></div>
-          <!-- ###SINGLEBODYROW### end --><!-- ###SINGLEBODY### end -->
           <form class="caddy" name="caddy" action="###MY_CADDYURL###" method="post">
             <fieldset id="add-to-cart">
               <input type="hidden" name="tx_browser_pi1[showUid]" value="###SHOWUID###" />
@@ -610,6 +609,7 @@ plugin.tx_browser_pi1 {
               ###MY_CADDYBUTTON###
             </fieldset>
           </form>
+          <!-- ###SINGLEBODYROW### end --><!-- ###SINGLEBODY### end -->
 <!-- ###AREA_FOR_AJAX_LIST_01### end -->
             <!-- ###BACKBUTTON### begin -->
             <p class="backbutton">

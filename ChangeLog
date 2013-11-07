@@ -1,6 +1,7 @@
 4.0.0
   2013-11-05
   Features
+  * #53422: In stock amount
   * #i0009: Filter can enable and disable by the constant editor
   * #i0008: Backend thumbnails 
   * #53378: Table field for data
