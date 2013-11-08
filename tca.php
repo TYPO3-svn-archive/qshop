@@ -421,6 +421,7 @@ $TCA['tx_quickshop_products'] = array (
       )
     ),
     'filterPrompt' => array (
+      'l10n_mode' => 'exclude',
       'exclude' => 0,
       'label'   => 'LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_products.filterPrompt',
       'config'  => array (
