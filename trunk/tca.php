@@ -626,9 +626,10 @@ $TCA['tx_quickshop_products'] = array (
       'exclude'   => 0,
       'label'     => 'LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_products.stock',
       'config'    => array (
-        'type'  => 'input',  
-        'size'  => '10',  
-        'eval'  => 'int',
+        'type'    => 'input',  
+        'size'    => '10',  
+        'eval'    => 'int',
+        'default' => 1
       )
     ),
     'quantity_min' => array (
