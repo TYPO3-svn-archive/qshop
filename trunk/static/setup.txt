@@ -175,6 +175,7 @@ temp.form {
           field = tx_quickshop_products.stock
         }
         isGreaterThan = 0
+        negate        = 1
       }
         // order form
       10 < temp.caddyform
@@ -189,7 +190,6 @@ temp.form {
           field = tx_quickshop_products.stock
         }
         isGreaterThan = 0
-        negate = 1
       }
         // prompt: not available
       10 = TEXT
