@@ -610,20 +610,22 @@ $TCA['tx_quickshop_products'] = array (
       )
     ),
     'in_stock' => array (
-      'exclude' => 0,
-      'label' => 'LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_products.in_stock',
-      'config' => array (
-        'type' => 'check',
+      'l10n_mode' => 'exclude',
+      'exclude'   => 0,
+      'label'     => 'LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_products.in_stock',
+      'config'    => array (
+        'type'    => 'check',
         'default' => 1,
       )
     ),
     'stock' => array (
-      'exclude' => 0,
-      'label' => 'LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_products.stock',
-      'config' => array (
-        'type' => 'input',  
-        'size' => '10',  
-        'eval' => 'int',
+      'l10n_mode' => 'exclude',
+      'exclude'   => 0,
+      'label'     => 'LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_products.stock',
+      'config'    => array (
+        'type'  => 'input',  
+        'size'  => '10',  
+        'eval'  => 'int',
       )
     ),
     'quantity_min' => array (
