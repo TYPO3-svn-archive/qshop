@@ -144,33 +144,59 @@ temp.form {
     // if: even in stock
   10 = COA
   10 {
+      // if: even in stock
+    if =
     if {
       isTrue {
         field = tx_quickshop_products.in_stock
       }
     }
+      // order form
     10 < temp.caddyform
   }
     // if: not even in stock
   20 = COA
   20 {
+      // if: even in stock is false
+    if =
     if {
-      isFalse {
+      isTrue {
         field = tx_quickshop_products.in_stock
       }
+      negate = 1
     }
       // if: amount in stock is >= 1
     10 = COA
     10 {
+        // if: amount in stock is >= 1
+      if =
+      if {
+        value {
+          field = tx_quickshop_products.stock
+        }
+        isGreaterThan = 0
+      }
+        // order form
+      10 < temp.caddyform
     }
       // if: amount in stock is < 1
     20 = COA
     20 {
-    }
-    30 = TEXT
-    30 {
-      data = LLL:EXT:quick_shop/locallang_db.xml:phrase_notInStock
-      wrap = <div class="notInStock">|</div>
+        // if: amount in stock is < 1
+      if =
+      if {
+        value {
+          field = tx_quickshop_products.stock
+        }
+        isGreaterThan = 0
+        negate
+      }
+        // prompt: not available
+      10 = TEXT
+      10 {
+        data = LLL:EXT:quick_shop/locallang_db.xml:phrase_notInStock
+        wrap = <div class="notInStock">|</div>
+      }
     }
   }
 }
