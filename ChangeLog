@@ -1,5 +1,5 @@
 4.0.0
-  2013-11-05
+  2013-12-28
   Features
   * #53422: In stock amount
   * #i0009: Filter can enable and disable by the constant editor
@@ -18,6 +18,7 @@
               * constants.txt
               * setup.txt
   * #53362: Fit it into TYPO3 6.x
+  * #i0008: TCA search fields
 
 3.0.8
   13-09-22

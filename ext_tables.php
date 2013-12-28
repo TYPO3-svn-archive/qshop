@@ -59,6 +59,11 @@ require_once(t3lib_extMgm::extPath( $_EXTKEY ) . 'lib/userfunc/class.tx_quicksho
       'dynamicConfigFile' => t3lib_extMgm::extPath($_EXTKEY).'tca.php',
       'thumbnail'         => 'image',
       'iconfile'          => t3lib_extMgm::extRelPath($_EXTKEY).'ext_icon.gif',
+      'searchFields'      =>  'sku,title,short,description,' . 
+                              'datasheet,' .
+                              'category,dimension,material,' .
+                              'price,tax,' .
+                              'seo_keywords,seo_description'
     ),
   );
     // Products
@@ -76,6 +81,7 @@ require_once(t3lib_extMgm::extPath( $_EXTKEY ) . 'lib/userfunc/class.tx_quicksho
       ),
       'dynamicConfigFile' => t3lib_extMgm::extPath($_EXTKEY).'tca.php',
       'iconfile'          => t3lib_extMgm::extRelPath($_EXTKEY).'ext_icon.gif',
+      'searchFields'      => 'title',
       'treeParentField'   => 'uid_parent',
     ),
   );
@@ -96,6 +102,7 @@ require_once(t3lib_extMgm::extPath( $_EXTKEY ) . 'lib/userfunc/class.tx_quicksho
       ),
       'dynamicConfigFile' => t3lib_extMgm::extPath($_EXTKEY).'tca.php',
       'iconfile'          => t3lib_extMgm::extRelPath($_EXTKEY).'ext_icon.gif',
+      'searchFields'      => 'title',
       //'treeParentField'   => 'uid_parent',
     ),
   );
@@ -116,6 +123,7 @@ require_once(t3lib_extMgm::extPath( $_EXTKEY ) . 'lib/userfunc/class.tx_quicksho
       ),
       'dynamicConfigFile' => t3lib_extMgm::extPath($_EXTKEY).'tca.php',
       'iconfile'          => t3lib_extMgm::extRelPath($_EXTKEY).'ext_icon.gif',
+      'searchFields'      => 'title',
       //'treeParentField'   => 'uid_parent',
     ),
   );
