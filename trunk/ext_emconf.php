@@ -19,7 +19,7 @@ $EM_CONF[$_EXTKEY] = array(
                           'Quick Shop itself hasn\'t any line PHP code.',
 	'category' => 'plugin',
 	'shy' => 0,
-	'version' => '4.0.1',
+	'version' => '4.0.2',
 	'dependencies' => 'browser,caddy,cps_tcatree,css_styled_content,powermail',
 	'conflicts' => '',
 	'priority' => '',
