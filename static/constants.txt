@@ -96,11 +96,11 @@ plugin.tx_seodynamictag {
   }
 
   default {
-    description = Description is empty! Please maintain the current record of the TYPO3 Organiser News. See tab [Search Engine] field [Description] 
+    description = Description is empty! Please maintain the current product record of the TYPO3 Quick Shop. See tab [Search Engine] field [Description] 
   }
 
   keywords {
-    default         = Keywords are empty! Please maintain the current record of the TYPO3 Organiser News. See tab [Search Engine] field [Keywords] 
+    default         = Keywords are empty! Please maintain the current product record of the TYPO3 Quick Shop. See tab [Search Engine] field [Keywords] 
     moveToKeywords  = 0
   }
 }
