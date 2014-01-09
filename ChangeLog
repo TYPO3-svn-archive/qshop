@@ -1,6 +1,11 @@
 4.0.2
-  2014-01-07
-  Feature
+  2014-01-09
+  Features
+  * #54872: SEO: move support from Browser - TYPO3 without PHP - to SEO Dynamic 2
+            Effected files:
+            * static
+              * constants.txt
+              * setup.txt
   * #54793: RealURL: Template
             Effected files:
             * res/realurl/realurl_conf.php
