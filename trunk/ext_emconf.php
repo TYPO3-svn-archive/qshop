@@ -20,7 +20,7 @@ $EM_CONF[$_EXTKEY] = array(
 	'category' => 'plugin',
 	'shy' => 0,
 	'version' => '4.0.2',
-	'dependencies' => 'browser,caddy,cps_tcatree,css_styled_content,powermail,seodynamictag',
+	'dependencies' => 'browser,caddy,cps_tcatree,css_styled_content,powermail,seo_dynamic_tag',
 	'conflicts' => '',
 	'priority' => '',
 	'loadOrder' => '',
@@ -43,7 +43,7 @@ $EM_CONF[$_EXTKEY] = array(
 			'cps_tcatree' => '',
 			'css_styled_content' => '',
 			'powermail' => '',
-			'seodynamictag' => '',
+			'seo_dynamic_tag' => '',
 			'typo3' => '4.5.0-6.1.99',
 		),
 		'conflicts' => array(
