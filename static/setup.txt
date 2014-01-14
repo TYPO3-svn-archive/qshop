@@ -281,7 +281,8 @@ plugin.tx_browser_pi1 {
             // tx_quickshop_products.title
           title = TEXT
           title {
-            value = ###TX_QUICKSHOP_PRODUCTS.TITLE###
+            //value = ###TX_QUICKSHOP_PRODUCTS.TITLE###
+            field = tx_quickshop_products.title
             wrap  = <h2 class="title">|</h2>
           }
             // tx_quickshop_products.short, detail
