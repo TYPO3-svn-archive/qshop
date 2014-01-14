@@ -318,7 +318,9 @@ plugin.tx_browser_pi1 {
             10 {
               if {
                   // If we have an image, tx_quickshop_products.image will render the description
-                isTrue = ###TX_QUICKSHOP_PRODUCTS.IMAGE###
+                isTrue {
+                  field = tx_quickshop_products.image
+                }
               }
               10 < tt_content.image.20
               10 {
