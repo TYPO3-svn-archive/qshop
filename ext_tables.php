@@ -160,8 +160,9 @@ require_once(t3lib_extMgm::extPath( $_EXTKEY ) . 'lib/userfunc/class.tx_quicksho
     //
     // Add static template
 
-t3lib_extMgm::addStaticFile( $_EXTKEY, 'static/', 'Quick Shop' );
-t3lib_extMgm::addStaticFile( $_EXTKEY, 'static/caddy/', '+Quick Shop +Caddy' );
+t3lib_extMgm::addStaticFile( $_EXTKEY, 'static/',             'Quick Shop (1)' );
+t3lib_extMgm::addStaticFile( $_EXTKEY, 'static/caddy/',       'Quick Shop (2) Caddy' );
+t3lib_extMgm::addStaticFile( $_EXTKEY, 'static/imagecycle/',  'Quick Shop (3) ImageCycle: no conflict' );
     // Add static template
 
 
