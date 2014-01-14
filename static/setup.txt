@@ -208,7 +208,9 @@ temp.form {
 
 temp.tax = CASE
 temp.tax {
-  key = ###TX_QUICKSHOP_PRODUCTS.TAX###
+  key {
+    field = tx_quickshop_products.tax
+  }
   # reduced tax
   1 = TEXT
   1.value = 7
@@ -316,6 +318,8 @@ plugin.tx_browser_pi1 {
               // Handle with an image at least
             10 = COA
             10 {
+                // If there is an image
+              if =
               if {
                   // If we have an image, tx_quickshop_products.image will render the description
                 isTrue {
@@ -324,8 +328,9 @@ plugin.tx_browser_pi1 {
               }
               10 < tt_content.image.20
               10 {
-                imgList.field >
-                imgList   = ###TX_QUICKSHOP_PRODUCTS.IMAGE###
+                imgList {
+                  field = tx_quickshop_products.image
+                }
                 imgPath   = uploads/tx_quickshop/
                 imgStart  = 0
                 imgMax    = 1
@@ -335,14 +340,22 @@ plugin.tx_browser_pi1 {
                     width   = {$plugin.quick_shop.images.list.maxW}
                     height  = {$plugin.quick_shop.images.list.maxH}
                   }
-                  titleText.field >
-                  titleText       = ###TX_QUICKSHOP_PRODUCTS.IMAGESEO###
+                  titleText {
+                    field = tx_quickshop_products.imageseo
+                  }
                   imageLinkWrap {
                     enable.field >
                     enable = 1
-                    width   = 1000;
-                    height  = 800m;
-                    //JSwindow = 0
+                    typolink >
+                    typolink {
+                      parameter = {$plugin.quick_shop.pages.shop} - linktosingle
+                      additionalParams {
+                        wrap  = &tx_browser_pi1[showUid]=|
+                        field = tx_quickshop_products.uid
+                      }
+                      useCacheHash  = 1
+                      returnLast    = URL
+                    }
                   }
                 }
                 layout {
@@ -363,9 +376,13 @@ plugin.tx_browser_pi1 {
               // Handle without any image 
             20 < .10
             20 {
+                // If there isn't any image
+              if =
               if {
                 isTrue  >
-                isFalse = ###TX_QUICKSHOP_PRODUCTS.IMAGE###
+                isFalse {
+                  field = tx_quickshop_products.image
+                } 
               }
               10 {
                 imgList = alternate_image_400x300.gif
@@ -381,7 +398,7 @@ plugin.tx_browser_pi1 {
             10.userFunc {
               number = TEXT
               number {
-                value = ###TX_QUICKSHOP_PRODUCTS.PRICE###
+                field = tx_quickshop_products.price
               }
               decimal   = 2
               dec_point = {$plugin.quick_shop.base.dec_point}
@@ -557,7 +574,7 @@ plugin.tx_browser_pi1 {
             // title
           title = TEXT
           title {
-            value = ###TX_QUICKSHOP_PRODUCTS.TITLE###
+            field = tx_quickshop_products.title
             wrap  = <h1>|</h1>
           }
             // Handle with an image
@@ -566,55 +583,73 @@ plugin.tx_browser_pi1 {
               // Handle with an image at least
             if {
                 // If we have an image, tx_quickshop_products.image will render the description
-              isTrue = ###TX_QUICKSHOP_PRODUCTS.IMAGE###
+              isTrue {
+                field = tx_quickshop_products.image
+              }
             }
               // tt_content.image.20
             10 < tt_content.image.20
             10 {
-              imgList.field >
-              imgList = ###TX_QUICKSHOP_PRODUCTS.IMAGE###
+              imgList {
+                field = tx_quickshop_products.image
+              }
               imgPath = uploads/tx_quickshop/
               1 {
                 file {
-                  width.field >
-                  width   = ###TX_QUICKSHOP_PRODUCTS.IMAGEWIDTH###
+                  width {
+                    field = tx_quickshop_products.imagewidth
+                  }
                 }
-                titleText.field               >
-                titleText                     = ###TX_QUICKSHOP_PRODUCTS.IMAGESEO###
+                titleText {
+                  field = tx_quickshop_products.imageseo
+                }
                 imageLinkWrap {
                   ifEmpty {
-                    typolink.parameter.field  >
-                    typolink.parameter        = ###TX_QUICKSHOP_PRODUCTS.IMAGE_LINK###
+                    typolink.parameter {
+                      field = tx_quickshop_products.image_link
+                    }
                   }
-                  typolink.parameter.field    >
-                  typolink.parameter          = ###TX_QUICKSHOP_PRODUCTS.IMAGE_LINK###
-                  enable.field                >
-                  enable                      = ###TX_QUICKSHOP_PRODUCTS.IMAGE_ZOOM###
+                  typolink.parameter {
+                    field = tx_quickshop_products.image_link
+                  }
+                  enable {
+                    field = tx_quickshop_products.image_zoom
+                  }
                   width                       = 1000;
                   height                      = 800m;
                   //JSwindow = 0
                 }
               }
-              textPos.field           >
-              textPos                 = ###TX_QUICKSHOP_PRODUCTS.IMAGEORIENT###
-              equalH.field            >
-              equalH                  = ###TX_QUICKSHOP_PRODUCTS.IMAGEHEIGHT###
-              image_compression.field >
-              image_compression       = ###TX_QUICKSHOP_PRODUCTS.IMAGE_COMPRESSION###
-              image_effects.field     >
-              image_effects           = ###TX_QUICKSHOP_PRODUCTS.IMAGE_EFFECTS###
-              noRows.field            >
-              noRows                  = ###TX_QUICKSHOP_PRODUCTS.IMAGE_NOROWS###
-              cols.field              >
-              cols                    = ###TX_QUICKSHOP_PRODUCTS.IMAGECOLS###
-              border.field            >
-              border                  = ###TX_QUICKSHOP_PRODUCTS.IMAGEBORDER###
-              caption.1.field         >
-              caption.1.value         = ###TX_QUICKSHOP_PRODUCTS.CAPTION###
-              captionAlign.field      >
-              captionAlign            = ###TX_QUICKSHOP_PRODUCTS.CAPTION_POSITION###
-              layout.key.field        >
-              layout.key              = ###TX_QUICKSHOP_PRODUCTS.IMAGEORIENT###
+              textPos {
+                field = tx_quickshop_products.imageorient
+              }
+              equalH {
+                field = tx_quickshop_products.imageheight
+              }
+              image_compression {
+                field = tx_quickshop_products.image_compression
+              }
+              image_effects {
+                field = tx_quickshop_products.image_effects
+              }
+              noRows {
+                field = tx_quickshop_products.image_norows
+              }
+              cols {
+                field = tx_quickshop_products.imagecols
+              }
+              border {
+                field = tx_quickshop_products.imageborder
+              }
+              caption.1 {
+                field = tx_quickshop_products.caption
+              }
+              captionAlign {
+                field = tx_quickshop_products.caption_position
+              }
+              layout.key {
+                field = tx_quickshop_products.imageorient
+              }
               stdWrap {
                 prefixComment >
                 wrap          = <div class="image">|</div>
@@ -627,8 +662,8 @@ plugin.tx_browser_pi1 {
                     // description
                   10 = TEXT
                   10 {
+                    field = tx_quickshop_products.description
                     parseFunc < lib.parseFunc_RTE
-                    value     = ###TX_QUICKSHOP_PRODUCTS.DESCRIPTION###
                   }
                     // datasheet
                   20 < tt_content.table.20
@@ -650,12 +685,21 @@ plugin.tx_browser_pi1 {
                     }
                   }
                     // sku
-                  30 = TEXT
+                  30 = COA
                   30 {
-                    data        = LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_products.sku
-                    noTrimWrap  = |<p>|: ###TX_QUICKSHOP_PRODUCTS.SKU###</p>|
+                      // label
+                    10 = TEXT
+                    10 {
+                      data        = LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_products.sku
+                      noTrimWrap  = ||: |
+                    }
+                      // value
+                    20 = TEXT
+                    20 {
+                      field = tx_quickshop_products.sku
+                    }
                   }
-                  wrap = <div class="csc-textpic-text"> | </div>
+                  wrap = <div class="csc-textpic-text"><p>|</p></div>
                 }
               }
             }
@@ -665,7 +709,9 @@ plugin.tx_browser_pi1 {
           description {
             if {
               isTrue >
-              isFalse = ###TX_QUICKSHOP_PRODUCTS.IMAGE###
+              isFalse {
+                field = tx_quickshop_products.image
+              }
             }
             10 {
               imgList = alternate_image_400x300.gif
@@ -681,7 +727,7 @@ plugin.tx_browser_pi1 {
             10.userFunc {
               number = TEXT
               number {
-                value = ###TX_QUICKSHOP_PRODUCTS.PRICE###
+                field = tx_quickshop_products.price
               }
               decimal   = 2
               dec_point = {$plugin.quick_shop.base.dec_point}
