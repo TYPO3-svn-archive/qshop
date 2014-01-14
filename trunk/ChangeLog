@@ -1,6 +1,11 @@
 4.0.3
   2014-01-14
   Feature
+  * #55001: Template for Imagecycle nop conflict
+            Effected files:
+            * static/imagecycle
+              * setup.txt         ( new )
+            * ext_tables.php
   * #i0009: List view: thumbnail links to single view (former: image popup)
   * #54992: Replace marker
             Effected files:
