@@ -1,6 +1,7 @@
 4.0.3
   2014-01-14
   Feature
+  * #i0009: List view: thumbnail links to single view (former: image popup)
   * #54992: Replace marker
             Effected files:
             * static
