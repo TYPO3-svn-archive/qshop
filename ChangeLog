@@ -2,6 +2,9 @@
   2014-01-14
   Feature
   * #54992: Replace marker
+            Effected files:
+            * static
+              * setup.txt
 
 4.0.2
   2014-01-09
