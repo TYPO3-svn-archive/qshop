@@ -298,7 +298,6 @@ plugin.tx_browser_pi1 {
               data = LLL:EXT:quick_shop/locallang_db.xml:linktosingleview
               typolink {
                 parameter         = {$plugin.quick_shop.pages.shop} - linktosingle
-                additionalParams  = 
                 additionalParams {
                   wrap  = &tx_browser_pi1[showUid]=|
                   field = tx_quickshop_products.uid
