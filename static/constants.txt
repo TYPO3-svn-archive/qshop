@@ -79,7 +79,7 @@ plugin.tx_seodynamictag {
     single {
         // Please replace xxx with the uid of the page with the news plugin for the single view
         // Please use the Constant Editor
-      begin = globalVar = GP:tx_browser_pi1|newsUid > 0] && [globalVar = TSFE:id = xxx
+      begin = globalVar = GP:tx_browser_pi1|showUid > 0] && [globalVar = TSFE:id = xxx
     }
   }
 
@@ -87,7 +87,7 @@ plugin.tx_seodynamictag {
     table = tx_quickshop_products
     var.1 = tx_browser_pi1[showUid]
     field {
-      author        = TYPO3 Quick Shop 
+      author        = "TYPO3 Quick Shop"
       description   = seo_description
       keywords      = seo_keywords 
       title         = title 
