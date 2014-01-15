@@ -179,4 +179,12 @@ t3lib_extMgm::addStaticFile( $_EXTKEY, 'static/imagecycle/',  'Quick Shop (3) Im
   t3lib_SpriteManager::addTcaTypeIcon('pages', 'contains-quickshop', '../typo3conf/ext/quick_shop/ext_icon.gif');
     // Add pagetree icons
 
+
+
+  /////////////////////////////////////////////////
+  //
+  // Add default page and user TSconfig
+
+require_once( PATH_typo3conf . 'ext/quick_shop/ext_tables/default/TSconfig.php' );
+  // Add default page and user TSconfig
 ?>

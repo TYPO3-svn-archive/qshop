@@ -1,7 +1,15 @@
 4.0.3
   2014-01-14
   Feature
-  * #55001: Template for Imagecycle nop conflict
+  * #55002: LinkHandlerConfiguration
+            ! without effect: linkhandler 0.3.1 has an error in TYPO3 6.x
+            Effected files:
+            * ext_tables.php
+            * ext_conf_template.txt
+            * ext_tables/*          ( new )
+            * static/base/*         ( new )
+            * tsConfig/page/*       ( new )
+  * #55001: Template for Imagecycle no conflict
             Effected files:
             * static/imagecycle
               * setup.txt         ( new )
