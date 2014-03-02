@@ -149,8 +149,9 @@ temp.form {
     if =
     if {
       isTrue {
-        field = tx_quickshop_products.in_stock
+        field = tx_quickshop_products.stockmanagement
       }
+      negate = 1
     }
       // order form
     10 < temp.caddyform
@@ -162,9 +163,8 @@ temp.form {
     if =
     if {
       isTrue {
-        field = tx_quickshop_products.in_stock
+        field = tx_quickshop_products.stockmanagement
       }
-      negate = 1
     }
       // if: amount in stock is >= 1
     10 = COA
@@ -172,8 +172,9 @@ temp.form {
         // if: amount in stock is >= 1
       if =
       if {
-        isTrue {
-          field = tx_quickshop_products.stock
+        value = 0
+        isGreaterThan {
+          field = tx_quickshop_products.stockquantity
         }
       }
         // order form
@@ -185,10 +186,10 @@ temp.form {
         // if: amount in stock is < 1
       if =
       if {
-        isTrue {
-          field = tx_quickshop_products.stock
+        value = 1
+        isLessThan {
+          field = tx_quickshop_products.stockquantity
         }
-        negate = 1
       }
         // prompt: not available
       10 = TEXT
@@ -230,7 +231,7 @@ temp.tax {
   // plugin.tx_browser_pi1
 
 plugin.tx_browser_pi1 {
-  
+
     // #53378, 131107, dwildt, 1-
   general_stdWrap >
 
@@ -273,13 +274,13 @@ plugin.tx_browser_pi1 {
           tx_quickshop_products.imageseo,
           tx_quickshop_products.tax,
           tx_quickshop_products.price,
-          tx_quickshop_products.in_stock,
-          tx_quickshop_products.stock,
+          tx_quickshop_products.stockmanagement,
+          tx_quickshop_products.stockquantity,
           tx_quickshop_products.tstamp,
           tx_quickshop_products.uid
         )
         orderBy = tx_quickshop_products.price DESC, tx_quickshop_products.title, tx_quickshop_categories.title
-        csvLinkToSingleView = tx_quickshop_products.title          
+        csvLinkToSingleView = tx_quickshop_products.title
         tx_quickshop_products {
             // tx_quickshop_products.title
           title = TEXT
@@ -374,7 +375,7 @@ plugin.tx_browser_pi1 {
                 }
               }
             }
-              // Handle without any image 
+              // Handle without any image
             20 < .10
             20 {
                 // If there isn't any image
@@ -383,7 +384,7 @@ plugin.tx_browser_pi1 {
                 isTrue  >
                 isFalse {
                   field = tx_quickshop_products.image
-                } 
+                }
               }
               10 {
                 imgList = alternate_image_400x300.gif
@@ -565,8 +566,8 @@ plugin.tx_browser_pi1 {
           tx_quickshop_products.seo_description,
           tx_quickshop_products.seo_keywords,
 
-          tx_quickshop_products.in_stock,
-          tx_quickshop_products.stock,
+          tx_quickshop_products.stockmanagement,
+          tx_quickshop_products.stockquantity,
           tx_quickshop_products.tstamp,
 
           tx_quickshop_categories.title
@@ -705,7 +706,7 @@ plugin.tx_browser_pi1 {
               }
             }
           }
-            // Handle without any image 
+            // Handle without any image
           description < .image
           description {
             if {
@@ -802,6 +803,6 @@ plugin.tx_linkhandler {
     additionalParams = &tx_browser_pi1[showUid]={field:uid}
     additionalParams {
       insertData = 1
-    } 
+    }
   }
 }
