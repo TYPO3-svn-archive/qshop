@@ -25,7 +25,7 @@ CREATE TABLE tx_quickshop_categories (
   title tinytext,
   title_lang_ol tinytext,
   uid_parent int(11) DEFAULT '0' NOT NULL,
-  
+
   PRIMARY KEY (uid),
   KEY parent (pid)
 );
@@ -45,7 +45,7 @@ CREATE TABLE tx_quickshop_dimension (
   title tinytext,
   title_lang_ol tinytext,
   uid_parent int(11) DEFAULT '0' NOT NULL,
-  
+
   PRIMARY KEY (uid),
   KEY parent (pid)
 );
@@ -66,7 +66,7 @@ CREATE TABLE tx_quickshop_material (
   title tinytext,
   title_lang_ol tinytext,
   uid_parent int(11) DEFAULT '0' NOT NULL,
-  
+
   PRIMARY KEY (uid),
   KEY parent (pid)
 );
@@ -95,14 +95,14 @@ CREATE TABLE tx_quickshop_products (
 
   price double(11,2) DEFAULT '0.00' NOT NULL,
   tax int(11) DEFAULT '0' NOT NULL,
-  in_stock tinyint(3) DEFAULT '0' NOT NULL,
-  stock tinyint(3) DEFAULT '1' NOT NULL,
+  stockquantity tinyint(3) DEFAULT '0' NOT NULL,
+  stockmanagement tinyint(3) DEFAULT '1' NOT NULL,
   quantity_min int(11) DEFAULT '0' NOT NULL,
   quantity_max int(11) DEFAULT '0' NOT NULL,
 
   datasheet text,
   cols int(11) DEFAULT '0' NOT NULL,
-  pi_flexform mediumtext, 
+  pi_flexform mediumtext,
 
   filterPrompt tinytext,
   category int(11) DEFAULT '0' NOT NULL,
@@ -124,14 +124,14 @@ CREATE TABLE tx_quickshop_products (
   imageseo text,
   caption text,
   caption_position varchar(12) default '',
-  
+
   hidden tinyint(4) DEFAULT '0' NOT NULL,
   starttime int(11) DEFAULT '0' NOT NULL,
   endtime int(11) DEFAULT '0' NOT NULL,
   fe_group int(11) DEFAULT '0' NOT NULL,
   seo_keywords text,
   seo_description text,
-  
+
   PRIMARY KEY (uid),
   KEY parent (pid)
 );
@@ -140,7 +140,7 @@ CREATE TABLE tx_quickshop_products (
 
 #
 # Table structure for table 'tx_quickshop_products_category_mm'
-# 
+#
 CREATE TABLE tx_quickshop_products_category_mm (
   uid_local int(11) DEFAULT '0' NOT NULL,
   uid_foreign int(11) DEFAULT '0' NOT NULL,
@@ -154,7 +154,7 @@ CREATE TABLE tx_quickshop_products_category_mm (
 
 #
 # Table structure for table 'tx_quickshop_products_dimension_mm'
-# 
+#
 CREATE TABLE tx_quickshop_products_dimension_mm (
   uid_local int(11) DEFAULT '0' NOT NULL,
   uid_foreign int(11) DEFAULT '0' NOT NULL,
@@ -168,7 +168,7 @@ CREATE TABLE tx_quickshop_products_dimension_mm (
 
 #
 # Table structure for table 'tx_quickshop_products_material_mm'
-# 
+#
 CREATE TABLE tx_quickshop_products_material_mm (
   uid_local int(11) DEFAULT '0' NOT NULL,
   uid_foreign int(11) DEFAULT '0' NOT NULL,

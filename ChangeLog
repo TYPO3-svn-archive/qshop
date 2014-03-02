@@ -1,3 +1,20 @@
+4.0.5
+  2014-02-20
+  Improvement
+  * #i0010: SKU is required
+
+4.0.4
+  2014-02-06
+  Feature
+  * #55726: (Caddy) Stock management: decrease item quantity after ordering
+            * Moving SQL fields:
+              * in_stock -> stockquantity 
+              * stock    -> stockManagement
+            Effected files:
+            * static/caddy
+              * constants.txt
+
+
 4.0.3
   2014-01-14
   Feature
