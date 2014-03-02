@@ -1,5 +1,5 @@
 <?php
-    
+
     //echo 'GET';
     //var_export( $_GET, false);
 
@@ -604,7 +604,7 @@ $TCA['tx_quickshop_products'] = array(
       'label' => 'LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_products.stockmanagement',
       'config' => array(
         'type' => 'check',
-        'default' => 1,
+        'default' => 0,
       )
     ),
     'stockquantity' => array(
