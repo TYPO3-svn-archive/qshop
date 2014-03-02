@@ -1,4 +1,7 @@
 <?php
+    
+    //echo 'GET';
+    //var_export( $_GET, false);
 
 if (!defined('TYPO3_MODE'))
   die('Access denied.');
