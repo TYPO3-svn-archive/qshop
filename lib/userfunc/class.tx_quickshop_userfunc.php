@@ -48,7 +48,7 @@
  */
 class tx_quickshop_userfunc
 {
-  
+
  /**
   * Extension key
   *
@@ -62,14 +62,14 @@ class tx_quickshop_userfunc
   * @var array
   */
   private $arr_extConf = null;
-  
+
  /**
   * Max width of div tags
   *
   * @var string
   */
   private $maxWidth = "600px";
-  
+
  /**
   * Version of TYPO3 (sample: 4.7.7 -> 4007007)
   *
@@ -85,7 +85,7 @@ class tx_quickshop_userfunc
  * @param    object        The parent object
  * @return    void
  */
-  function __construct( $pObj )
+  function __construct( $pObj=null )
   {
     $this->pObj = $pObj;
   }
@@ -104,7 +104,7 @@ class tx_quickshop_userfunc
 //    /* Pull the current fieldname and value from constants */
 //    $fieldName  = $params['fieldName'];
 //    $fieldValue = $params['fieldValue'];
-//    
+//
 //    $input = '<input style="margin-right: 3px;" name="'. $fieldName .'" value="'. $fieldValue .'" />';
 //
 //    /* @todo     Don't hardcode the inclusion of the wizard this way.  Use more backend APIs. */
@@ -113,8 +113,8 @@ class tx_quickshop_userfunc
 //    return $input.$wizard;
 //  }
 
-  
-  
+
+
   /**
    * promptEvaluatorTYPO3version(): Displays the quick start message.
    *
@@ -133,7 +133,7 @@ class tx_quickshop_userfunc
     $prompt = null;
 
     $this->set_TYPO3Version( );
-    
+
     switch( true )
     {
       case( $this->typo3Version < 4005000 ):
@@ -208,12 +208,12 @@ class tx_quickshop_userfunc
           ';
         break;
     }
-        
+
     return $prompt;
   }
 
-  
-  
+
+
   /**
    * promptExternalLinks(): Displays the quick start message.
    *
@@ -239,8 +239,8 @@ class tx_quickshop_userfunc
     return $prompt;
   }
 
-  
-  
+
+
 /**
  * set_TYPO3Version( ):
  *
@@ -256,7 +256,7 @@ class tx_quickshop_userfunc
       return;
     }
       // RETURN : typo3Version is set
-    
+
       // Set TYPO3 version as integer (sample: 4.7.7 -> 4007007)
     list( $main, $sub, $bugfix ) = explode( '.', TYPO3_version );
     $version = ( ( int ) $main ) * 1000000;
@@ -284,7 +284,7 @@ class tx_quickshop_userfunc
       die ( $prompt );
     }
   }
-  
+
   /**
    * promptSponsors( ): Displays the quick start message.
    *
@@ -339,8 +339,8 @@ class tx_quickshop_userfunc
     return $prompt;
   }
 
-  
-  
+
+
 }
 
 

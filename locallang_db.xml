@@ -116,7 +116,7 @@
       <label index="tx_quickshop_products.quantity_max">Höchstbestellmenge</label>
       <label index="tx_quickshop_products.short">Kurzbeschreibung</label>
       <label index="tx_quickshop_products.sku">Lagerhaltungsnummer (SKU)</label>
-      <label index="tx_quickshop_products.stockmanagement">Eingeschlatet</label>
+      <label index="tx_quickshop_products.stockmanagement">Aktiv</label>
       <label index="tx_quickshop_products.stockquantity">Menge im Lager</label>
       <label index="tx_quickshop_products.tax.I.0">Ermäßigt</label>
       <label index="tx_quickshop_products.tax.I.1">Normal</label>
