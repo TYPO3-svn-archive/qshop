@@ -215,11 +215,20 @@ temp.tax {
   }
   # reduced tax
   1 = TEXT
-  1.value = 7
+  1 {
+    value = 7% VAT included
+    lang {
+      de = inkl. 7% MwSt.
+      en = 7% VAT included
+    }
+  }
   2 = TEXT
-  2.value = 19
-  stdWrap {
-    noTrimWrap = |inkl. | % MwSt.|
+  2 {
+    value = 19% VAT included
+    lang {
+      de = inkl. 19% MwSt.
+      en = 19% VAT included
+    }
   }
 }
   // temp.tax
@@ -250,13 +259,15 @@ plugin.tx_browser_pi1 {
       value = shipping
       lang {
         de = Versand
+        en = shipping
       }
       typolink.parameter = {$plugin.quick_shop.pages.shipping}
       prepend = TEXT
       prepend {
-        value = excl.
+        value = plus
         lang {
           de = zzgl.
+          en = plus
         }
       }
     }
@@ -408,7 +419,6 @@ plugin.tx_browser_pi1 {
             }
           }
           tax < temp.tax
-          tax.stdWrap.noTrimWrap = |inkl. | % MwSt.|
             // placeholder for the form
           tstamp < temp.form
         }
@@ -738,7 +748,6 @@ plugin.tx_browser_pi1 {
           }
             // tax
           tax < temp.tax
-          tax.stdWrap.noTrimWrap = |inkl. | % MwSt.|
             // placeholder for the form
           tstamp < temp.form
         }

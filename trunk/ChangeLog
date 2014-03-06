@@ -1,14 +1,16 @@
 4.0.5
-  2014-02-20
+  2014-03-03
   Improvement
   * #i0010: SKU is required
+  Bugfix
+  * #i0011: inkl. MwSt. wasn't localised
 
 4.0.4
   2014-02-06
   Feature
   * #55726: (Caddy) Stock management: decrease item quantity after ordering
             * Moving SQL fields:
-              * in_stock -> stockquantity 
+              * in_stock -> stockquantity
               * stock    -> stockManagement
             Effected files:
             * static/caddy
@@ -59,7 +61,7 @@
   Features
   * #53422: In stock amount
   * #i0009: Filter can enable and disable by the constant editor
-  * #i0008: Backend thumbnails 
+  * #i0008: Backend thumbnails
   * #53378: Table field for data
   * #53377: Filter for size and material
             Effected files:
@@ -147,7 +149,7 @@
               * constants.txt
               * setup.txt
   * #46386: Update CSS
-            * Powermail CSS basic is moved to fancy 
+            * Powermail CSS basic is moved to fancy
             Effected files:
             * res/templates
               * default.css
@@ -170,7 +172,7 @@
               Effected files:
               * res/templates/default.tmpl
               * static/setup.txt
-            * CSS properties are moved 
+            * CSS properties are moved
               * #form-order -> form.caddy
                 Effected files:
                 * res/templates/default.css
@@ -182,7 +184,7 @@
               * constants.txt
               * setup.txt
                 * $myConst.pages.quick_shop.cart      -> $quick_shop.caddyUidCart
-                * $myConst.pages.quick_shop.shipping  -> $quick_shop.caddyUidShipping 
+                * $myConst.pages.quick_shop.shipping  -> $quick_shop.caddyUidShipping
   Improvement
   * #i0002: Configuring of caddy constants is moved from installer to quick_shop
   * #46381: See #46379
