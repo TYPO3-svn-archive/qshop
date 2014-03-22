@@ -88,7 +88,8 @@ CREATE TABLE tx_quickshop_products (
   sorting int(10) DEFAULT '0' NOT NULL,
   deleted tinyint(4) DEFAULT '0' NOT NULL,
 
-  sku  tinytext,
+  sku tinytext,
+  ean tinytext,
   title tinytext,
   short text,
   description text,

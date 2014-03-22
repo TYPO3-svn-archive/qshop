@@ -15,6 +15,7 @@
       <label index="palette.image_accessibility">Search engines and accessibility</label>
       <label index="palette.price">Price and Tax</label>
       <label index="palette.quantity">Purchase Order Quantity</label>
+      <label index="palette.skuean">Item numbers</label>
       <label index="palette.startendtime">Available from ... to ...</label>
       <label index="palette.stockmanagement">Inventory Control</label>
       <label index="phrase_notInStock">Not available at the time</label>
@@ -47,6 +48,7 @@
       <label index="tx_quickshop_products.description">Description</label>
       <label index="tx_quickshop_products.dimension">Dimension</label>
       <label index="tx_quickshop_products.dimensionEnable">Enabled</label>
+      <label index="tx_quickshop_products.ean">EAN (European Article Number)</label>
       <label index="tx_quickshop_products.filterPrompt">Note</label>
       <label index="tx_quickshop_products.image">Image</label>
       <label index="tx_quickshop_products.imageseo">Description for search engines (SEO)</label>
@@ -74,6 +76,7 @@
       <label index="palette.image_accessibility">Suchmaschinen und Barrierefreiheit</label>
       <label index="palette.price">Preis und MWSt.</label>
       <label index="palette.quantity">Bestellmenge</label>
+      <label index="palette.skuean">Artikelnummern</label>
       <label index="palette.startendtime">Verfügbar von ... bis ...</label>
       <label index="palette.stockmanagement">Lagerverwaltung</label>
       <label index="phrase_notInStock">Zur Zeit nicht verfügbar</label>
@@ -100,12 +103,13 @@
       <label index="tx_quickshop_products.div.product">Artikel</label>
       <label index="tx_quickshop_products.div.seo">Suchmaschinen</label>
       <label index="tx_quickshop_products.caption">Bildunterschrift</label>
-      <label index="tx_quickshop_products.datasheet">Datenblatt</label>
-      <label index="tx_quickshop_products.description">Beschreibung</label>
       <label index="tx_quickshop_products.category">Kategorie</label>
       <label index="tx_quickshop_products.categoryEnable">Aktivieren</label>
+      <label index="tx_quickshop_products.datasheet">Datenblatt</label>
+      <label index="tx_quickshop_products.description">Beschreibung</label>
       <label index="tx_quickshop_products.dimension">Abmessung</label>
       <label index="tx_quickshop_products.dimensionEnable">Aktivieren</label>
+      <label index="tx_quickshop_products.ean">EAN (Europäische Artikel Nummer)</label>
       <label index="tx_quickshop_products.filterPrompt">Hinweis</label>
       <label index="tx_quickshop_products.image">Bild</label>
       <label index="tx_quickshop_products.imageseo">Beschreibung für Suchmaschinen (SEO)</label>
