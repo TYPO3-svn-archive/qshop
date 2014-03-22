@@ -1,6 +1,9 @@
 4.0.5
   2014-03-03
   Improvement
+  * #i0013: tca.php: exclude fields are maintained
+  * #i0012: ean (new)
+  * #i0011: SKU isn't required
   * #i0010: SKU is required
   Bugfix
   * #i0011: inkl. MwSt. wasn't localised
