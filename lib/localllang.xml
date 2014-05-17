@@ -17,7 +17,7 @@
           </li>
         </ul>
         <br />
-        To-do in case of an update: 
+        To-do in case of an update:
         <ul>
           <li>
             Please load the include static template "Quick Shop".
@@ -36,7 +36,7 @@
         Update information:
         <ul>
           <li>
-            <a href="http://typo3.org/extensions/repository/view/quick_shop/current/" 
+            <a href="http://typo3.org/extensions/repository/view/quick_shop/current/"
               style="text-decoration:underline;"
               alt="Quick Shop manual online"
               title="Quick Shop manual online"
@@ -52,7 +52,7 @@
             title="Quick Shop online"
             target="_blank">
             <img src="../../../../typo3conf/ext/quick_shop/lib/icons/typo3_quick_shop.gif"
-              width="90"
+              width="80"
               height="80"
               alt="Quick Shop online" /></a>
           <a href="http://die-netzmacher.de/"
@@ -67,7 +67,7 @@
         <ul>
           <li>
             TYPO3-Quick-Shop website<br />
-            <a href="http://typo3-quick-shop.de/" 
+            <a href="http://typo3-quick-shop.de/"
               style="text-decoration:underline;"
               alt="Quick Shop - die TYPO3-Frontend-Engine"
               title="Quick Shop - die TYPO3-Frontend-Engine"
@@ -75,7 +75,7 @@
           </li>
           <li>
             TYPO3-Quick-Shop forum<br />
-            <a href="http://typo3-quick-shop.de/forum/" 
+            <a href="http://typo3-quick-shop.de/forum/"
               style="text-decoration:underline;"
               alt="TYPO3-Quick-Shop - Forum"
               title="TYPO3-Quick-Shop - Forum"
@@ -83,7 +83,7 @@
           </li>
           <li>
             TYPO3-Quick-Shop developer<br />
-            <a href="http://die-netzmacher.de/" 
+            <a href="http://die-netzmacher.de/"
               style="text-decoration:underline;"
               alt="Die Netzmacher - Internet ist Handwerk"
               title="Die Netzmacher - Internet ist Handwerk"
@@ -96,36 +96,36 @@
         </p>
         <p style="padding:0 0 1em 0;">
           You like to subsidise the TYPO3-Quick-Shop?
-          <a href="http://typo3-quick-shop.de/sponsoring/" 
+          <a href="http://typo3-quick-shop.de/sponsoring/"
             style="text-decoration:underline;"
             alt="Your logo with your URL. 120 x 90 pixel."
             title="Your logo with your URL. 120 x 90 pixel."
             target="_blank">
             Further information</a>.
         </p>
-        <a href="http://typo3-quick-shop.de/sponsoring/" 
+        <a href="http://typo3-quick-shop.de/sponsoring/"
           alt="Your logo with your URL. 120 x 90 pixel."
           title="Your logo with your URL. 120 x 90 pixel."
           target="_blank">
-          <img src="../../../../typo3conf/ext/quick_shop/lib/icons/your-logo_default-blue.gif" 
-            width="120" 
-            height="90" 
+          <img src="../../../../typo3conf/ext/quick_shop/lib/icons/your-logo_default-blue.gif"
+            width="120"
+            height="90"
             alt="Your logo with your URL. 120 x 90 pixel." /></a>
-        <a href="http://typo3-quick-shop.de/sponsoring/" 
+        <a href="http://typo3-quick-shop.de/sponsoring/"
           alt="Your logo with your URL. 120 x 90 pixel."
           title="Your logo with your URL. 120 x 90 pixel."
           target="_blank">
-          <img src="../../../../typo3conf/ext/quick_shop/lib/icons/your-logo_default-grey.gif" 
-            width="120" 
-            height="90" 
+          <img src="../../../../typo3conf/ext/quick_shop/lib/icons/your-logo_default-grey.gif"
+            width="120"
+            height="90"
             alt="Your logo with your URL. 120 x 90 pixel." /></a>
-        <a href="http://typo3-quick-shop.de/sponsoring/" 
+        <a href="http://typo3-quick-shop.de/sponsoring/"
           alt="Your logo with your URL. 120 x 90 pixel."
           title="Your logo with your URL. 120 x 90 pixel."
           target="_blank">
-          <img src="../../../../typo3conf/ext/quick_shop/lib/icons/your-logo_default-grey.gif" 
-            width="120" 
-            height="90" 
+          <img src="../../../../typo3conf/ext/quick_shop/lib/icons/your-logo_default-grey.gif"
+            width="120"
+            height="90"
             alt="Your logo with your URL. 120 x 90 pixel." /></a>
       ]]></label>
     </languageKey>
@@ -161,11 +161,11 @@
         Update Information
         <ul>
           <li>
-            <a href="http://typo3.org/extensions/repository/view/quick_shop/current/" 
+            <a href="http://typo3.org/extensions/repository/view/quick_shop/current/"
               style="text-decoration:underline;"
               alt="Quick Shop Handbuch online"
               title="Quick Shop Handbuch online"
-              target="_blank">Quick Shop Handbuch</a>, 
+              target="_blank">Quick Shop Handbuch</a>,
             bitte lese den Bereich "Update".
           </li>
         </ul>
@@ -177,22 +177,22 @@
             title="Quick Shop online"
             target="_blank">
             <img src="../../../../typo3conf/ext/quick_shop/lib/icons/typo3_quick_shop.gif"
-              width="90"
+              width="80"
               height="80"
               alt="Quick Shop online" /></a>
-          <a href="http://die-netzmacher.de/" 
+          <a href="http://die-netzmacher.de/"
             alt="Die Netzmacher - die Entwickler von Quick Shop"
             title="Die Netzmacher - die Entwickler von Quick Shop"
             target="_blank">
-            <img src="../../../../typo3conf/ext/quick_shop/lib/icons/die-netzmacher.de_200px.gif" 
-              width="200" 
-              height="80" 
+            <img src="../../../../typo3conf/ext/quick_shop/lib/icons/die-netzmacher.de_200px.gif"
+              width="200"
+              height="80"
               alt="Die Netzmacher - die Entwickler von Quick Shop" /></a>
         </div>
         <ul>
           <li>
             TYPO3-Quick-Shop Homepage<br />
-            <a href="http://typo3-quick-shop.de/" 
+            <a href="http://typo3-quick-shop.de/"
               style="text-decoration:underline;"
               alt="Quick Shop online"
               title="Quick Shop online"
@@ -200,7 +200,7 @@
           </li>
           <li>
             TYPO3-Quick-Shop Forum<br />
-            <a href="http://typo3-quick-shop.de/forum/" 
+            <a href="http://typo3-quick-shop.de/forum/"
               style="text-decoration:underline;"
               alt="Quick Shop: Forum"
               title="Quick Shop: Forum"
@@ -208,7 +208,7 @@
           </li>
           <li>
             TYPO3-Quick-Shop Entwickler<br />
-            <a href="http://die-netzmacher.de/" 
+            <a href="http://die-netzmacher.de/"
               style="text-decoration:underline;"
               alt="Die Netzmacher - Internet ist Handwerk"
               title="Die Netzmacher - Internet ist Handwerk"
@@ -220,36 +220,36 @@
         </p>
         <p style="padding:0 0 1em 0;">
           Du m&ouml;chtest den TYPO3-Quick-Shop finanziell unterst&uuml;tzen?
-          <a href="http://typo3-quick-shop.de/sponsoring/" 
+          <a href="http://typo3-quick-shop.de/sponsoring/"
             style="text-decoration:underline;"
             alt="Dein Logo mit Deiner URL. 120 x 90 Pixel."
             title="Dein Logo mit Deiner URL. 120 x 90 Pixel."
             target="_blank">
             Mehr Informationen</a>.
         </p>
-        <a href="http://typo3-quick-shop.de/sponsoring/" 
+        <a href="http://typo3-quick-shop.de/sponsoring/"
           alt="Dein Logo mit Deiner URL. 120 x 90 Pixel."
           title="Dein Logo mit Deiner URL. 120 x 90 Pixel."
           target="_blank">
-          <img src="../../../../typo3conf/ext/quick_shop/lib/icons/your-logo_de-blue.gif" 
-            width="120" 
-            height="90" 
+          <img src="../../../../typo3conf/ext/quick_shop/lib/icons/your-logo_de-blue.gif"
+            width="120"
+            height="90"
             alt="Dein Logo mit Deiner URL. 120 x 90 Pixel." /></a>
-        <a href="http://typo3-quick-shop.de/sponsoring/" 
+        <a href="http://typo3-quick-shop.de/sponsoring/"
           alt="Dein Logo mit Deiner URL. 120 x 90 Pixel."
           title="Dein Logo mit Deiner URL. 120 x 90 Pixel."
           target="_blank">
-          <img src="../../../../typo3conf/ext/quick_shop/lib/icons/your-logo_de-grey.gif" 
-            width="120" 
-            height="90" 
+          <img src="../../../../typo3conf/ext/quick_shop/lib/icons/your-logo_de-grey.gif"
+            width="120"
+            height="90"
             alt="Dein Logo mit Deiner URL. 120 x 90 Pixel." /></a>
-        <a href="http://typo3-quick-shop.de/sponsoring/" 
+        <a href="http://typo3-quick-shop.de/sponsoring/"
           alt="Dein Logo mit Deiner URL. 120 x 90 Pixel."
           title="Dein Logo mit Deiner URL. 120 x 90 Pixel."
           target="_blank">
-          <img src="../../../../typo3conf/ext/quick_shop/lib/icons/your-logo_de-grey.gif" 
-            width="120" 
-            height="90" 
+          <img src="../../../../typo3conf/ext/quick_shop/lib/icons/your-logo_de-grey.gif"
+            width="120"
+            height="90"
             alt="Dein Logo mit Deiner URL. 120 x 90 Pixel." /></a>
       ]]></label>
     </languageKey>
