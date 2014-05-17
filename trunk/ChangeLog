@@ -27,7 +27,7 @@
 
 4.0.3
   2014-01-14
-  Feature
+  Features
   * #55002: LinkHandlerConfiguration
             ! without effect: linkhandler 0.3.1 has an error in TYPO3 6.x
             Effected files:
@@ -50,7 +50,7 @@
 4.0.2
   2014-01-09
   Features
-  * #54872: SEO: move support from Browser - TYPO3 without PHP - to SEO Dynamic 2
+  * #54872: SEO: move support from Browser - TYPO3 without PHP - to SEO Dynamic Tag 2
             Effected files:
             * static
               * constants.txt
