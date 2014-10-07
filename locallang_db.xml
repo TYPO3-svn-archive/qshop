@@ -41,6 +41,7 @@
       <label index="tx_quickshop_products.div.price_quantity">Price, inventory, quantity</label>
       <label index="tx_quickshop_products.div.product">Item</label>
       <label index="tx_quickshop_products.div.seo">Search Engines</label>
+      <label index="tx_quickshop_products.div_teaser">List view</label>
       <label index="tx_quickshop_products.caption">Caption</label>
       <label index="tx_quickshop_products.category">Category</label>
       <label index="tx_quickshop_products.categoryEnable">Enabled</label>
@@ -64,6 +65,9 @@
       <label index="tx_quickshop_products.tax.I.0">Reduced</label>
       <label index="tx_quickshop_products.tax.I.1">Normal</label>
       <label index="tx_quickshop_products.tax">Tax included</label>
+      <label index="tx_quickshop_products.teaser_description">Description (in list views)</label>
+      <label index="tx_quickshop_products.teaser_short">Short (in list views)</label>
+      <label index="tx_quickshop_products.teaser_title">Item label (in list views)</label>
       <label index="tx_quickshop_products.title">Item label</label>
     </languageKey>
     <languageKey index="de" type="array">
@@ -102,6 +106,7 @@
       <label index="tx_quickshop_products.div.price_quantity">Preis, Lager, Menge</label>
       <label index="tx_quickshop_products.div.product">Artikel</label>
       <label index="tx_quickshop_products.div.seo">Suchmaschinen</label>
+      <label index="tx_quickshop_products.div_teaser">Listenansicht</label>
       <label index="tx_quickshop_products.caption">Bildunterschrift</label>
       <label index="tx_quickshop_products.category">Kategorie</label>
       <label index="tx_quickshop_products.categoryEnable">Aktivieren</label>
@@ -125,6 +130,9 @@
       <label index="tx_quickshop_products.tax.I.0">Ermäßigt</label>
       <label index="tx_quickshop_products.tax.I.1">Normal</label>
       <label index="tx_quickshop_products.tax">inkl. MwSt.</label>
+      <label index="tx_quickshop_products.teaser_description">Beschreibung (in list views)</label>
+      <label index="tx_quickshop_products.teaser_short">Kurzbeschreibung (in list views)</label>
+      <label index="tx_quickshop_products.teaser_title">Artikelbezeichnung (in list views)</label>
       <label index="tx_quickshop_products.title">Artikelbezeichnung</label>
     </languageKey>
   </data>

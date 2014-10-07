@@ -1,0 +1,5 @@
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:quick_shop/Configuration/TypoScript/62037/page/setup.ts">
+// 141004, dwildt: tx_quickshop must be before tx_browser_pi1
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:quick_shop/Configuration/TypoScript/62037/tx_quickshop/setup.ts">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:quick_shop/Configuration/TypoScript/62037/tx_browser_pi1/_setup.ts">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:quick_shop/Configuration/TypoScript/62037/tx_linkhandler/setup.ts">

@@ -1,0 +1,3 @@
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:quick_shop/Configuration/TypoScript/62037/tx_browser_pi1/constants.ts">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:quick_shop/Configuration/TypoScript/62037/tx_quickshop/constants.ts">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:quick_shop/Configuration/TypoScript/62037/tx_seodynamictag/constants.ts">
