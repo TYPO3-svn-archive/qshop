@@ -1,3 +1,24 @@
+6.0.0
+  2014-10-04
+  Major Features
+  * #62059: teaser fields
+  * #62036: Manage all relations in one table
+            Will replaced
+            * tx_quickshop_products_category_mm
+            * tx_quickshop_products_dimension_mm
+            * tx_quickshop_products_material_mm
+            by
+            * tx_quickshop_mm
+  * #62029: Upgrade TYPO3 6.2
+            * Browser 6.0
+            * Foundation 5.4
+            * TYPO3 6.2
+              * #i0016: linkhandler fixed for TYPO3 6.2
+              * #i0015: cps_tcatree fixed for TYPO3 6.2
+  Improvement
+  * #62037: unique uid for the view: 62037
+  * #i0015: showUid is moved to itemUid
+
 4.0.6
   2014-05-17
   Improvement

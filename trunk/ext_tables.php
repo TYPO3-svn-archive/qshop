@@ -1,6 +1,6 @@
 <?php
 
-if (!defined ('TYPO3_MODE')) 
+if (!defined ('TYPO3_MODE'))
 {
   die ('Access denied.');
 }
@@ -36,18 +36,18 @@ require_once(t3lib_extMgm::extPath( $_EXTKEY ) . 'lib/userfunc/class.tx_quicksho
   $TCA['tx_quickshop_products'] = array (
     'ctrl' => array (
       'title'                     => 'LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_products',
-      'label'                     => 'title',  
+      'label'                     => 'title',
       'label_alt'                 => 'price',
       'label_alt_force'           => true,
       'tstamp'                    => 'tstamp',
       'crdate'                    => 'crdate',
       'cruser_id'                 => 'cruser_id',
       'cruser_id'                 => 'cruser_id',
-      'languageField'             => 'sys_language_uid', 
+      'languageField'             => 'sys_language_uid',
       'transOrigPointerField'     => 'l10n_parent',
       'transOrigDiffSourceField'  => 'l10n_diffsource',
-      'default_sortby'            => 'ORDER BY title',  
-      'delete'                    => 'deleted',  
+      'default_sortby'            => 'ORDER BY title',
+      'delete'                    => 'deleted',
       'enablecolumns'             => array (
         'disabled'  => 'hidden',
         'starttime' => 'starttime',
@@ -59,7 +59,7 @@ require_once(t3lib_extMgm::extPath( $_EXTKEY ) . 'lib/userfunc/class.tx_quicksho
       'dynamicConfigFile' => t3lib_extMgm::extPath($_EXTKEY).'tca.php',
       'thumbnail'         => 'image',
       'iconfile'          => t3lib_extMgm::extRelPath($_EXTKEY).'ext_icon.gif',
-      'searchFields'      =>  'sku,title,short,description,' . 
+      'searchFields'      =>  'sku,title,short,description,' .
                               'datasheet,' .
                               'category,dimension,material,' .
                               'price,tax,' .
@@ -71,7 +71,7 @@ require_once(t3lib_extMgm::extPath( $_EXTKEY ) . 'lib/userfunc/class.tx_quicksho
   $TCA['tx_quickshop_categories'] = array (
     'ctrl' => array (
       'title'     => 'LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_categories',
-      'label'     => 'title',  
+      'label'     => 'title',
       'tstamp'    => 'tstamp',
       'crdate'    => 'crdate',
       'cruser_id' => 'cruser_id',
@@ -91,11 +91,11 @@ require_once(t3lib_extMgm::extPath( $_EXTKEY ) . 'lib/userfunc/class.tx_quicksho
   $TCA['tx_quickshop_dimension'] = array (
     'ctrl' => array (
       'title'             => 'LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_dimension',
-      'label'             => 'title',  
+      'label'             => 'title',
       'tstamp'            => 'tstamp',
       'crdate'            => 'crdate',
       'cruser_id'         => 'cruser_id',
-      'default_sortby'    => 'ORDER BY title',  
+      'default_sortby'    => 'ORDER BY title',
       'delete'            => 'deleted',
       'enablecolumns'     => array (
         'disabled' => 'hidden',
@@ -112,11 +112,11 @@ require_once(t3lib_extMgm::extPath( $_EXTKEY ) . 'lib/userfunc/class.tx_quicksho
   $TCA['tx_quickshop_material'] = array (
     'ctrl' => array (
       'title'             => 'LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_material',
-      'label'             => 'title',  
+      'label'             => 'title',
       'tstamp'            => 'tstamp',
       'crdate'            => 'crdate',
       'cruser_id'         => 'cruser_id',
-      'default_sortby'    => 'ORDER BY title',  
+      'default_sortby'    => 'ORDER BY title',
       'delete'            => 'deleted',
       'enablecolumns'     => array (
         'disabled' => 'hidden',
@@ -137,7 +137,7 @@ require_once(t3lib_extMgm::extPath( $_EXTKEY ) . 'lib/userfunc/class.tx_quicksho
     // Get extension configuration
 
   $confArr = unserialize($GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf']['quick_shop']);
-  if (empty ($confArr['tcaProductOrdering'])) 
+  if (empty ($confArr['tcaProductOrdering']))
   {
     $TCA['tx_quickshop_categories']['ctrl']['default_sortby'] = 'ORDER BY title';
   }
@@ -145,7 +145,7 @@ require_once(t3lib_extMgm::extPath( $_EXTKEY ) . 'lib/userfunc/class.tx_quicksho
   {
       $TCA['tx_quickshop_products']['ctrl']['sortby'] = 'sorting';
   }
-  if (!empty ($confArr['products_on_standardpages'])) 
+  if (!empty ($confArr['products_on_standardpages']))
   {
     t3lib_extMgm::allowTableOnStandardPages('tx_quickshop_categories');
     t3lib_extMgm::allowTableOnStandardPages('tx_quickshop_dimension');
@@ -160,9 +160,9 @@ require_once(t3lib_extMgm::extPath( $_EXTKEY ) . 'lib/userfunc/class.tx_quicksho
     //
     // Add static template
 
-t3lib_extMgm::addStaticFile( $_EXTKEY, 'static/',             'Quick Shop (1)' );
-t3lib_extMgm::addStaticFile( $_EXTKEY, 'static/caddy/',       'Quick Shop (2) Caddy' );
-t3lib_extMgm::addStaticFile( $_EXTKEY, 'static/imagecycle/',  'Quick Shop (3) ImageCycle: no conflict' );
+t3lib_extMgm::addStaticFile( $_EXTKEY, 'Configuration/TypoScript/62037/',       'Quick Shop [1] Basis' );
+t3lib_extMgm::addStaticFile( $_EXTKEY, 'Configuration/TypoScript/Caddy/',       'Quick Shop [2] + Caddy' );
+t3lib_extMgm::addStaticFile( $_EXTKEY, 'Configuration/TypoScript/Imagecycle/',  'Quick Shop [9] + ImageCycle: no conflict' );
     // Add static template
 
 
@@ -185,6 +185,6 @@ t3lib_extMgm::addStaticFile( $_EXTKEY, 'static/imagecycle/',  'Quick Shop (3) Im
   //
   // Add default page and user TSconfig
 
-require_once( PATH_typo3conf . 'ext/quick_shop/ext_tables/default/TSconfig.php' );
+require_once( PATH_typo3conf . 'ext/quick_shop/Configuration/PageTS/TxLinkhandler/Default/tx_quickshop_products.php' );
   // Add default page and user TSconfig
 ?>
