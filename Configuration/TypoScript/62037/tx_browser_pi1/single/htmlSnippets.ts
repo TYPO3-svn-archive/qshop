@@ -16,7 +16,7 @@ plugin.tx_browser_pi1 {
                   ###TX_QUICKSHOP_PRODUCTS.TITLE###
                   <!-- ###AREA_FOR_AJAX_LIST_01### end -->
                   <!-- ###BACKBUTTON### begin -->
-                  <p class="backbutton">
+                  <p class="columns large-12 backbutton">
                     ###MY_SINGLEVIEWBACKBUTTON###
                   </p>
                   <!-- ###BACKBUTTON### end -->

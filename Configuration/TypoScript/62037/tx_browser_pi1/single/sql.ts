@@ -28,7 +28,6 @@ plugin.tx_browser_pi1 {
 
           tx_quickshop_products.caption,
           tx_quickshop_products.caption_position,
-          tx_quickshop_products.caption,
           tx_quickshop_products.tax,
           tx_quickshop_products.price,
 

@@ -64,11 +64,14 @@ plugin.tx_browser_pi1 {
     singleview {
       image {
         0 {
-          file    = tx_quickshop_products.image
-          height  =
-          path    = uploads/tx_quickshop/
-          seo     = tx_quickshop_products.imageseo
-          width   = 
+          caption     = tx_quickshop_products.caption
+          file        = tx_quickshop_products.image
+          height      = tx_quickshop_products.imageheight
+          imagecols   = tx_quickshop_products.imagecols
+          imageorient = tx_quickshop_products.imageorient
+          path        = uploads/tx_quickshop/
+          seo         = tx_quickshop_products.imageseo
+          width       = tx_quickshop_products.imagewidth
         }
       }
     }

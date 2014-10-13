@@ -731,14 +731,10 @@ $TCA[ 'tx_quickshop_products' ] = array(
       'label' => 'LLL:EXT:cms/locallang_ttc.php:imagewidth',
       'config' => array(
         'type' => 'input',
-        'size' => '4',
-        'max' => '4',
-        'eval' => 'int',
+        'size' => '6',
+        'max' => '6',
+        'eval' => 'trim',
         'checkbox' => '0',
-        'range' => array(
-          'upper' => '999',
-          'lower' => '25'
-        ),
         'default' => 0
       )
     ),
@@ -747,14 +743,10 @@ $TCA[ 'tx_quickshop_products' ] = array(
       'label' => 'LLL:EXT:cms/locallang_ttc.php:imageheight',
       'config' => array(
         'type' => 'input',
-        'size' => '4',
-        'max' => '4',
-        'eval' => 'int',
+        'size' => '6',
+        'max' => '6',
+        'eval' => 'trim',
         'checkbox' => '0',
-        'range' => array(
-          'upper' => '700',
-          'lower' => '25'
-        ),
         'default' => 0
       )
     ),
@@ -1043,11 +1035,11 @@ $TCA[ 'tx_quickshop_products' ] = array(
     ),
     'imageblock' => array(
       'showitem' => 'imageorient;LLL:EXT:cms/locallang_ttc.xml:imageorient_formlabel, imagecols;LLL:EXT:cms/locallang_ttc.xml:imagecols_formlabel, --linebreak--,' .
-      'image_noRows;LLL:EXT:cms/locallang_ttc.xml:image_noRows_formlabel, imagecaption_position;LLL:EXT:cms/locallang_ttc.xml:imagecaption_position_formlabel',
+      'image_noRows;LLL:EXT:cms/locallang_ttc.xml:image_noRows_formlabel,caption_position;LLL:EXT:cms/locallang_ttc.xml:imagecaption_position_formlabel',
       'canNotCollapse' => 1,
     ),
     'imagefiles' => array(
-      'showitem' => 'image;LLL:EXT:cms/locallang_ttc.xml:image_formlabel, imagecaption;LLL:EXT:cms/locallang_ttc.xml:imagecaption_formlabel,',
+      'showitem' => 'image;LLL:EXT:cms/locallang_ttc.xml:image_formlabel,caption;LLL:EXT:cms/locallang_ttc.xml:imagecaption_formlabel,',
       'canNotCollapse' => 1,
     ),
     'imagelinks' => array(
