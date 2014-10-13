@@ -109,8 +109,8 @@ CREATE TABLE tx_quickshop_products (
   material int(11) DEFAULT '0' NOT NULL,
 
   image text,
-  imagewidth mediumint(11) unsigned NOT NULL default '0',
-  imageheight mediumint(8) unsigned NOT NULL default '0',
+  imagewidth tinytext,
+  imageheight tinytext,
   imageorient tinyint(4) unsigned NOT NULL default '0',
   imagecols tinyint(4) unsigned NOT NULL default '0',
   imageborder tinyint(4) unsigned NOT NULL default '0',

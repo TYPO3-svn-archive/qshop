@@ -16,8 +16,11 @@
               * #i0016: linkhandler fixed for TYPO3 6.2
               * #i0015: cps_tcatree fixed for TYPO3 6.2
   Improvement
+  * #i0017: imagewidth and imageheight can be strings like 140c: Update databse!
   * #62037: unique uid for the view: 62037
   * #i0015: showUid is moved to itemUid
+  Bug
+  * #i0016: caption was missing in TCA
 
 4.0.6
   2014-05-17
