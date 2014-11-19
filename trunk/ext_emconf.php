@@ -1,15 +1,5 @@
 <?php
 
-/***************************************************************
- * Extension Manager/Repository config file for ext "quick_shop".
- *
- * Auto generated 28-12-2013 23:17
- *
- * Manual updates:
- * Only the data in the array - everything else is removed by next
- * writing. "version" and "dependencies" must not be touched!
- ***************************************************************/
-
 $EM_CONF[$_EXTKEY] = array(
 	'title' => 'Quick Shop – responsive, ready-to-use, one-click-installation',
 	'description' => ''
@@ -19,7 +9,7 @@ $EM_CONF[$_EXTKEY] = array(
   . 'Manual: http://typo3-quick-shop.de/typo3conf/ext/quick_shop/doc/manual.pdf',
 	'category' => 'plugin',
 	'shy' => 0,
-	'version' => '6.0.0',
+	'version' => '6.0.2',
 	'dependencies' => 'browser,caddy,cps_devlib,cps_tcatree,css_styled_content,powermail,seo_dynamic_tag',
 	'conflicts' => '',
 	'priority' => '',
