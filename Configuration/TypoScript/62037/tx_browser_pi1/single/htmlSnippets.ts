@@ -3,7 +3,7 @@ plugin.tx_browser_pi1 {
   views {
     single {
       62037 {
-       htmlSnippets =
+        htmlSnippets =
         htmlSnippets {
           subparts {
             singleview = TEXT

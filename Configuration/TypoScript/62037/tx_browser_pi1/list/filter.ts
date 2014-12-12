@@ -29,6 +29,9 @@ plugin.tx_browser_pi1 {
               }
                 // #43641, dwildt, 1-, 1+
               //wrap = <span class="selectbox">|</span>
+              // wrap for all filters in one row
+              wrap = <div class="columns small-12 medium-4 category_menu category_menu_treeview">|</div>
+              // wrap for all filters in one column
               wrap = <div class="category_menu category_menu_treeview">|</div>
             }
           }
@@ -48,7 +51,10 @@ plugin.tx_browser_pi1 {
                   }
                 }
               }
-              wrap = <span class="selectbox dimension selectbox-dimension">|</span>
+              // wrap for all filters in one row
+              wrap = <div class="columns small-12 medium-4 selectbox dimension selectbox-dimension">|</div>
+              // wrap for all filters in one column
+              wrap = <div class="selectbox dimension selectbox-dimension">|</div>
             }
           }
           tx_quickshop_material {
@@ -67,7 +73,10 @@ plugin.tx_browser_pi1 {
                   }
                 }
               }
-              wrap = <span class="selectbox material selectbox-material">|</span>
+              // wrap for all filters in one row
+              wrap = <div class="columns small-12 medium-4 selectbox material selectbox-material">|</div>
+              // wrap for all filters in one column
+              wrap = <div class="selectbox material selectbox-material">|</div>
             }
           }
         }

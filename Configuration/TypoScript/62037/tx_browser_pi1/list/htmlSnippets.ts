@@ -9,7 +9,7 @@ plugin.tx_browser_pi1 {
             filter = TEXT
             filter {
               value (
-                <div class="filter">
+                <div class="row filter">
                   ###TX_QUICKSHOP_CATEGORIES.TITLE###
                   ###TX_QUICKSHOP_DIMENSION.TITLE###
                   ###TX_QUICKSHOP_MATERIAL.TITLE###
@@ -21,7 +21,7 @@ plugin.tx_browser_pi1 {
               // For foundation main_02.html
             //searchform < plugin.tx_browser_pi1.displayList.master_templates.subparts.listview.searchform.simpleMapOrderFilter
               // For foundation main_01.html
-            searchform < plugin.tx_browser_pi1.displayList.master_templates.subparts.listview.searchform.simple
+            //searchform < plugin.tx_browser_pi1.displayList.master_templates.subparts.listview.searchform.simple
             listview = TEXT
             listview {
               value (
