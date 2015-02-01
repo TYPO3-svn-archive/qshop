@@ -100,6 +100,7 @@ plugin.tx_browser_pi1 {
                     en = plus
                   }
                 }
+                noTrimWrap = | ||
               }
               wrap  = <li class="shipping">|</li>
             }

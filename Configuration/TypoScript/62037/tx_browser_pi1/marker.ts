@@ -33,6 +33,7 @@ plugin.tx_browser_pi1 {
           de = zzgl.
           en = plus
         }
+        noTrimWrap = | ||
       }
       noTrimWrap = | ||
     }
