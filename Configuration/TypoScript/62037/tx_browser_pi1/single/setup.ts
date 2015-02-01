@@ -18,5 +18,5 @@ plugin.tx_browser_pi1 {
 
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:quick_shop/Configuration/TypoScript/62037/tx_browser_pi1/single/marker.ts">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:quick_shop/Configuration/TypoScript/62037/tx_browser_pi1/single/sql.ts">
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:quick_shop/Configuration/TypoScript/62037/tx_browser_pi1/single/tableFields.ts">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:quick_shop/Configuration/TypoScript/62037/tx_browser_pi1/single/tableFields/_setup.ts">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:quick_shop/Configuration/TypoScript/62037/tx_browser_pi1/single/htmlSnippets.ts">

@@ -31,6 +31,13 @@ plugin.quick_shop {
   # cat=Quick Shop - Images/others/999;    type=user[EXT:quick_shop/lib/userfunc/class.tx_quickshop_userfunc.php:tx_quickshop_userfunc->promptSponsors]; label=Subsidise the Caddy project!
   images.externalSponsors = Click me!
 
+  # cat=Quick Shop - Layout/enable/301;     type=options[in text right,at the bottom]; label= Caddy position:Position of the caddy in single views
+  layout.caddy.position = at the bottom
+  # cat=Quick Shop - Layout/others/998;     type=user[EXT:quick_shop/lib/userfunc/class.tx_quickshop_userfunc.php:tx_quickshop_userfunc->promptExternalLinks]; label=Powered by:die-netzmacher.de
+  layout.externalLinks = Click me!
+  # cat=Quick Shop - Layout/others/999;     type=user[EXT:quick_shop/lib/userfunc/class.tx_quickshop_userfunc.php:tx_quickshop_userfunc->promptSponsors]; label=Subsidise the Caddy project!
+  layout.externalSponsors = Click me!
+
   # cat=Quick Shop - Pages/enable/301; type=integer; label= Shop / root page:Uid of the page which contains the browser plugin for the quick shop.
   pages.shop =
   # cat=Quick Shop - Pages/enable/302; type=integer; label= Caddy:Uid of the page with the caddy - your shopping cart

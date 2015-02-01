@@ -1,0 +1,9 @@
+[globalVar = GP:tx_browser_pi1|itemUid > 0]
+  lib.content {
+    10 {
+      select{
+        where = colPos=0 AND list_type = "browser_pi1"
+      }
+    }
+  }
+[end]

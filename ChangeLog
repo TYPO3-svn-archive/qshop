@@ -1,3 +1,18 @@
+6.0.8
+  150201
+  Improvements
+  * #i0021: Quick Shop displays in the single view the Browser plugin only: it hides other content elements
+            This is the default, if you have installed Quick Shop with the whole website.
+            See sample configuration at:
+            * Configuration/TypoScript/62037/page/setup.ts
+            * Ressources/Private/Samples/TypoScript/displayShopOnly
+              * extension
+                * automaketemplate/setup.txt
+                * fluid/setup.txt
+  * #i0020: Caddy position can be [right in text] or [at the bottom]
+            * New property in the Constant Editor
+              plugin.quick_shop.layout.caddy.position
+
 6.0.7
   14-12-12
   Improvements
