@@ -82,6 +82,27 @@ plugin.tx_browser_pi1 {
               }
               wrap  = <li class="price">|</li>
             }
+            51 = COA
+            51 {
+              10 = TEXT
+              10 {
+                value = shipping
+                lang {
+                  de = Versand
+                  en = shipping
+                }
+                typolink.parameter = {$plugin.quick_shop.pages.shipping}
+                prepend = TEXT
+                prepend {
+                  value = plus
+                  lang {
+                    de = zzgl.
+                    en = plus
+                  }
+                }
+              }
+              wrap  = <li class="shipping">|</li>
+            }
             60 < plugin.tx_quickshop.templates.form
             60 {
               wrap = <li class="caddyWoMargin">|</li>
