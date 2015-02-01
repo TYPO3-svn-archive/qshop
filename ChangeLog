@@ -2,6 +2,9 @@
   150201
   Improvements
   * #i0022:       Display link to shipping details in the list view
+                  Link to shipping details can be disabled by
+                  * New property in the Constant Editor
+                    plugin.quick_shop.layout.caddy.shippingnote
   * #i0021/#163:  Quick Shop displays in the single view the Browser plugin only: it hides other content elements
                   This is the default, if you have installed Quick Shop with the whole website.
                   See sample configuration at:

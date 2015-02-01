@@ -31,8 +31,10 @@ plugin.quick_shop {
   # cat=Quick Shop - Images/others/999;    type=user[EXT:quick_shop/lib/userfunc/class.tx_quickshop_userfunc.php:tx_quickshop_userfunc->promptSponsors]; label=Subsidise the Caddy project!
   images.externalSponsors = Click me!
 
-  # cat=Quick Shop - Layout/enable/301;     type=options[in text right,at the bottom]; label= Caddy position:Position of the caddy in single views
+  # cat=Quick Shop - Layout/enable/101;     type=options[in text right,at the bottom]; label= Caddy position:Position of the caddy in single views
   layout.caddy.position = at the bottom
+  # cat=Quick Shop - Layout/enable/102;     type=boolean; label= Link to shipping costs:Recommended: Link to shipping costs in list and single views. Disable it, if you sell your items without any shipping costs.
+  layout.caddy.shippingnote = 1
   # cat=Quick Shop - Layout/others/998;     type=user[EXT:quick_shop/lib/userfunc/class.tx_quickshop_userfunc.php:tx_quickshop_userfunc->promptExternalLinks]; label=Powered by:die-netzmacher.de
   layout.externalLinks = Click me!
   # cat=Quick Shop - Layout/others/999;     type=user[EXT:quick_shop/lib/userfunc/class.tx_quickshop_userfunc.php:tx_quickshop_userfunc->promptSponsors]; label=Subsidise the Caddy project!

@@ -82,8 +82,12 @@ plugin.tx_browser_pi1 {
               }
               wrap  = <li class="price">|</li>
             }
-            51 = COA
-            51 {
+              // Link to shipping costs
+            60 = COA
+            60 {
+              if {
+                isTrue = {$plugin.quick_shop.layout.caddy.shippingnote}
+              }
               10 = TEXT
               10 {
                 value = shipping
@@ -104,8 +108,8 @@ plugin.tx_browser_pi1 {
               }
               wrap  = <li class="shipping">|</li>
             }
-            60 < plugin.tx_quickshop.templates.form
-            60 {
+            70 < plugin.tx_quickshop.templates.form
+            70 {
               wrap = <li class="caddyWoMargin">|</li>
             }
           }

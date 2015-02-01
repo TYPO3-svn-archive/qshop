@@ -51,6 +51,9 @@ tmp.intoTheCaddy {
       }
       20 = TEXT
       20 {
+        if {
+          isTrue = {$plugin.quick_shop.layout.caddy.shippingnote}
+        }
         value = shipping
         lang {
           de = Versand
@@ -151,6 +154,9 @@ tmp.intoTheCaddy {
           // my_shipping_note
         20 = TEXT
         20 {
+          if {
+            isTrue = {$plugin.quick_shop.layout.caddy.shippingnote}
+          }
           value = shipping
           lang {
             de = Versand
