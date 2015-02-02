@@ -5,7 +5,7 @@ page {
   }
 }
 
-[globalVar = GP:tx_browser_pi1|itemUid > 0]
+[globalVar = GP:tx_browser_pi1|itemUid > 0] && [globalVar = TSFE:id = {$plugin.quick_shop.pages.shop}]
   page.10 {
     subparts {
       columnscontent {
