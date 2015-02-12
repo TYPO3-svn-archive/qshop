@@ -126,6 +126,28 @@ require_once(t3lib_extMgm::extPath( $_EXTKEY ) . 'lib/userfunc/class.tx_quicksho
     ),
   );
     // Material
+    // Shippingcosts
+  $TCA['tx_quickshop_shippingcosts'] = array (
+    'ctrl' => array (
+      'title'             => 'LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_shippingcosts',
+      'label'             => 'value',
+      'label_alt'         => 'title',
+      'label_alt_force'   => true,
+      'tstamp'            => 'tstamp',
+      'crdate'            => 'crdate',
+      'cruser_id'         => 'cruser_id',
+      'default_sortby'    => 'ORDER BY value',
+      'delete'            => 'deleted',
+      'enablecolumns'     => array (
+        'disabled' => 'hidden',
+      ),
+      'dynamicConfigFile' => t3lib_extMgm::extPath($_EXTKEY).'tca.php',
+      'iconfile'          => t3lib_extMgm::extRelPath($_EXTKEY).'ext_icon.gif',
+      'searchFields'      => 'title',
+    ),
+  );
+    // Shippingcosts
+
     // TCA for tables
 
 
@@ -149,6 +171,7 @@ require_once(t3lib_extMgm::extPath( $_EXTKEY ) . 'lib/userfunc/class.tx_quicksho
     t3lib_extMgm::allowTableOnStandardPages('tx_quickshop_dimension');
     t3lib_extMgm::allowTableOnStandardPages('tx_quickshop_material');
     t3lib_extMgm::allowTableOnStandardPages('tx_quickshop_products');
+    t3lib_extMgm::allowTableOnStandardPages('tx_quickshop_shippingcosts');
   }
     // get extension configuration
 

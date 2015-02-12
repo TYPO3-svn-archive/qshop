@@ -1,5 +1,10 @@
+6.0.9
+  15-02-10
+  New Feature
+  * #i0023: Table tx_quickshop_shippingcosts
+
 6.0.8
-  150201
+  15-02-01
   Improvements
   * #i0022:       Display link to shipping details in the list view
                   Link to shipping details can be disabled by

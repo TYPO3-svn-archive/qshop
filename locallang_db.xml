@@ -69,6 +69,11 @@
       <label index="tx_quickshop_products.teaser_short">Short (in list views)</label>
       <label index="tx_quickshop_products.teaser_title">Item label (in list views)</label>
       <label index="tx_quickshop_products.title">Item label</label>
+      <label index="tx_quickshop_products.tx_quickshop_shippingcosts">Shipping costs</label>
+      <label index="tx_quickshop_shippingcosts">Quick Shop Shipping costs</label>
+      <label index="tx_quickshop_shippingcosts.title">Label</label>
+      <label index="tx_quickshop_shippingcosts.title_lang_ol">Translations (i.e. fr:Traduction|de:Übersetzung)</label>
+      <label index="tx_quickshop_shippingcosts.value">Order</label>
     </languageKey>
     <languageKey index="de" type="array">
       <label index="filter_phrase.category">Artikelgruppe</label>
@@ -134,6 +139,11 @@
       <label index="tx_quickshop_products.teaser_short">Kurzbeschreibung (in list views)</label>
       <label index="tx_quickshop_products.teaser_title">Artikelbezeichnung (in list views)</label>
       <label index="tx_quickshop_products.title">Artikelbezeichnung</label>
+      <label index="tx_quickshop_products.tx_quickshop_shippingcosts">Versandkosten</label>
+      <label index="tx_quickshop_shippingcosts">Quick Shop Versandkosten</label>
+      <label index="tx_quickshop_shippingcosts.title">Bezeichnung</label>
+      <label index="tx_quickshop_shippingcosts.title_lang_ol">Übersetzungen (z.B. en:Translation|fr:Traduction)</label>
+      <label index="tx_quickshop_shippingcosts.value">Rangfolge</label>
     </languageKey>
   </data>
 </T3locallang>

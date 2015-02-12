@@ -19,7 +19,10 @@ plugin.tx_browser_pi1 {
           tx_quickshop_products.teaser_title,
           tx_quickshop_products.tstamp,
           tx_quickshop_products.uid,
-          tx_quickshop_categories.uid
+          tx_quickshop_products.uid,
+          tx_quickshop_categories.uid,
+          tx_quickshop_shippingcosts.title,
+          tx_quickshop_shippingcosts.value
         )
         orderBy = tx_quickshop_products.price DESC, tx_quickshop_products.title, tx_quickshop_categories.title
         csvLinkToSingleView = tx_quickshop_products.title

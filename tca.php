@@ -330,7 +330,7 @@ $TCA[ 'tx_quickshop_products' ] = array(
     . 'teaser_description,teaser_short,teaser_title,'
     . 'datasheet,'
     . 'filterPrompt,category,dimension,material,'
-    . 'price,tax,stockquantity,stockmanagement,quantity_min,quantity_max,'
+    . 'price,tax,stockquantity,stockmanagement,quantity_min,quantity_max,tx_quickshop_shippingcosts,'
     . 'image,imagewidth,imageheight,imageorient,imagecols,'
     . 'imageborder,image_frames,image_link,image_zoom,'
     . 'image_noRows,image_effects,image_compression,imageseo,'
@@ -702,6 +702,61 @@ $TCA[ 'tx_quickshop_products' ] = array(
         'eval' => 'int',
       )
     ),
+    'tx_quickshop_shippingcosts' => array(
+      'l10n_mode' => 'exclude',
+      'exclude' => 1,
+      'label' => 'LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_products.tx_quickshop_shippingcosts',
+      'config' => array(
+        'type' => 'select',
+        'size' => 10,
+        'minitems' => 0,
+        'maxitems' => 1,
+        'MM' => 'tx_quickshop_mm',
+        "MM_match_fields" => array(
+          'table_local' => 'tx_quickshop_products',
+          'table_foreign' => 'tx_quickshop_shippingcosts'
+        ),
+        "MM_insert_fields" => array(
+          'table_local' => 'tx_quickshop_products',
+          'table_foreign' => 'tx_quickshop_shippingcosts'
+        ),
+        'foreign_table' => 'tx_quickshop_shippingcosts',
+        'foreign_table_where' => 'AND tx_quickshop_shippingcosts.pid=###CURRENT_PID### ORDER BY tx_quickshop_shippingcosts.value',
+        'wizards' => array(
+          '_PADDING' => 2,
+          '_VERTICAL' => 1,
+          'add' => array(
+            'type' => 'script',
+            'title' => 'Create new record',
+            'icon' => 'add.gif',
+            'params' => array(
+              'table' => 'tx_quickshop_shippingcosts',
+              'pid' => '###CURRENT_PID###',
+              'setValue' => 'prepend'
+            ),
+            'script' => 'wizard_add.php',
+          ),
+          'list' => array(
+            'type' => 'script',
+            'title' => 'List',
+            'icon' => 'list.gif',
+            'params' => array(
+              'table' => 'tx_quickshop_shippingcosts',
+              'pid' => '###CURRENT_PID###',
+            ),
+            'script' => 'wizard_list.php',
+          ),
+          'edit' => array(
+            'type' => 'popup',
+            'title' => 'Edit',
+            'script' => 'wizard_edit.php',
+            'popup_onlyOpenIfSelected' => 1,
+            'icon' => 'edit2.gif',
+            'JSopenParams' => 'height=350,width=580,status=0,menubar=0,scrollbars=1',
+          ),
+        ),
+      )
+    ),
     'image' => array(
       'exclude' => 1,
       'label' => 'LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_products.image',
@@ -1012,6 +1067,7 @@ $TCA[ 'tx_quickshop_products' ] = array(
       . '--palette--;LLL:EXT:quick_shop/locallang_db.xml:palette.price;price,'
       . '--palette--;LLL:EXT:quick_shop/locallang_db.xml:palette.stockmanagement;stockmanagement,'
       . '--palette--;LLL:EXT:quick_shop/locallang_db.xml:palette.quantity;quantity,'
+      . 'tx_quickshop_shippingcosts,'
       . '--div--;LLL:EXT:cms/locallang_ttc.xml:tabs.images,'
       . '--palette--;LLL:EXT:cms/locallang_ttc.xml:palette.imagefiles;imagefiles,'
       . '--palette--;LLL:EXT:quick_shop/locallang_db.xml:palette.image_accessibility;image_accessibility,'
@@ -1130,4 +1186,94 @@ if ( $bool_LL )
 }
 // Localization support
 // tx_quickshop_products
-?>
+///////////////////////////////////////
+//
+// tx_quickshop_shippingcosts
+// Non localized
+$TCA[ 'tx_quickshop_shippingcosts' ] = array(
+  'ctrl' => $TCA[ 'tx_quickshop_shippingcosts' ][ 'ctrl' ],
+  'interface' => array(
+    //'showRecordFieldList' => 'hidden,title,uid_parent'
+    'showRecordFieldList' => 'hidden,title,value'
+  ),
+  'feInterface' => $TCA[ 'tx_quickshop_shippingcosts' ][ 'feInterface' ],
+  'columns' => array(
+    'hidden' => array(
+      'exclude' => 1,
+      'label' => 'LLL:EXT:lang/locallang_general.xml:LGL.hidden',
+      'config' => array(
+        'type' => 'check',
+        'default' => '0'
+      )
+    ),
+    'title' => array(
+      'exclude' => 0,
+      'label' => 'LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_shippingcosts.title',
+      'config' => array(
+        'type' => 'input',
+        'size' => '30',
+        'eval' => 'required',
+      )
+    ),
+    'value' => array(
+      'exclude' => 0,
+      'label' => 'LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_shippingcosts.value',
+      'config' => array(
+        'type' => 'input',
+        'size' => '30',
+        'eval' => 'required',
+      )
+    ),
+  ),
+  'types' => array(
+    //'0' => array('showitem' => 'hidden;;1;;1-1-1, title;;%2%;;2-2-2, uid_parent' )
+    '0' => array( 'showitem' => 'hidden;;1;;1-1-1, title;;%2%;;2-2-2, value' )
+  ),
+  'palettes' => array(
+    '1' => array( 'showitem' => '' ),
+    '2' => array( 'showitem' => '%title_lang_ol%' ),
+  )
+);
+// Non localized
+// Localization support
+if ( $bool_LL )
+{
+  // Add language overlay fields to showRecordFieldList
+  $showRecordFieldList = $TCA[ 'tx_quickshop_shippingcosts' ][ 'interface' ][ 'showRecordFieldList' ];
+  $TCA[ 'tx_quickshop_shippingcosts' ][ 'interface' ][ 'showRecordFieldList' ] = $showRecordFieldList . ',title_lang_ol';
+  // Add language overlay fields to showRecordFieldList
+  // Add language overlay fields to type
+  $showitem = $TCA[ 'tx_quickshop_shippingcosts' ][ 'types' ][ '0' ][ 'showitem' ];
+  $showitem = str_replace( '%2%', '2', $showitem );
+  $TCA[ 'tx_quickshop_shippingcosts' ][ 'types' ][ '0' ][ 'showitem' ] = $showitem;
+  // Add language overlay fields to type
+  // Add language overlay fields to palettes
+  $showitem = $TCA[ 'tx_quickshop_shippingcosts' ][ 'palettes' ][ '2' ][ 'showitem' ];
+  $TCA[ 'tx_quickshop_shippingcosts' ][ 'palettes' ][ '2' ][ 'showitem' ] = str_replace( '%title_lang_ol%', 'title_lang_ol', $showitem );
+  // Add language overlay fields to palettes
+  // Add language overlay fields to columns array
+  $TCA[ 'tx_quickshop_shippingcosts' ][ 'columns' ][ 'title_lang_ol' ] = array
+    (
+    'exclude' => 0,
+    'label' => 'LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_shippingcosts.title_lang_ol',
+    'config' => array(
+      'type' => 'input',
+      'size' => '30',
+    )
+  );
+  // Add language overlay fields to columns array
+}
+if ( !$bool_LL )
+{
+  // Remove language overlay fields from type
+  $showitem = $TCA[ 'tx_quickshop_shippingcosts' ][ 'types' ][ '0' ][ 'showitem' ];
+  $showitem = str_replace( '%2%', '', $showitem );
+  $TCA[ 'tx_quickshop_shippingcosts' ][ 'types' ][ '0' ][ 'showitem' ] = $showitem;
+  // Remove language overlay fields from type
+  // Remove language overlay fields from palettes
+  $showitem = $TCA[ 'tx_quickshop_shippingcosts' ][ 'palettes' ][ '2' ][ 'showitem' ];
+  $TCA[ 'tx_quickshop_shippingcosts' ][ 'palettes' ][ '2' ][ 'showitem' ] = str_replace( '%title_lang_ol%', '', $showitem );
+  // Remove language overlay fields from palettes
+}
+// Localization support
+// tx_quickshop_shippingcosts

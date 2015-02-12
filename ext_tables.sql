@@ -5,6 +5,7 @@
 # 'tx_quickshop_dimension'
 # 'tx_quickshop_material'
 # 'tx_quickshop_products'
+# 'tx_quickshop_shippingcosts'
 # 'tx_quickshop_mm'
 
 
@@ -98,6 +99,7 @@ CREATE TABLE tx_quickshop_products (
   stockmanagement tinyint(3) DEFAULT '0' NOT NULL,
   quantity_min int(11) DEFAULT '0' NOT NULL,
   quantity_max int(11) DEFAULT '0' NOT NULL,
+  tx_quickshop_shippingcosts int(11) DEFAULT '0' NOT NULL,
 
   datasheet text,
   cols int(11) DEFAULT '0' NOT NULL,
@@ -134,6 +136,27 @@ CREATE TABLE tx_quickshop_products (
   teaser_description text,
   teaser_short text,
   teaser_title tinytext,
+
+  PRIMARY KEY (uid),
+  KEY parent (pid)
+);
+
+
+
+#
+# Table structure for table 'tx_quickshop_shippingcosts'
+#
+CREATE TABLE tx_quickshop_shippingcosts (
+  uid int(11) NOT NULL auto_increment,
+  pid int(11) DEFAULT '0' NOT NULL,
+  tstamp int(11) DEFAULT '0' NOT NULL,
+  crdate int(11) DEFAULT '0' NOT NULL,
+  cruser_id int(11) DEFAULT '0' NOT NULL,
+  deleted tinyint(4) DEFAULT '0' NOT NULL,
+  hidden tinyint(4) DEFAULT '0' NOT NULL,
+  title tinytext,
+  title_lang_ol tinytext,
+  value int(11) DEFAULT '0' NOT NULL,
 
   PRIMARY KEY (uid),
   KEY parent (pid)
