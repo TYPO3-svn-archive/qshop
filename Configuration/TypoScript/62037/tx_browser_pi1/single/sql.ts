@@ -38,7 +38,10 @@ plugin.tx_browser_pi1 {
           tx_quickshop_products.stockquantity,
           tx_quickshop_products.tstamp,
 
-          tx_quickshop_categories.title
+          tx_quickshop_categories.title,
+
+          tx_quickshop_shippingcosts.title,
+          tx_quickshop_shippingcosts.value
 )
       }
     }
