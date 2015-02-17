@@ -34,10 +34,10 @@ tmp.intoTheCaddy {
       }
       wrap  = <li class="price" style="font-weight:bold">|</li>
     }
-      // tax
-      // my_shipping_note
+      // tax, my_shipping_note
     30 = COA
     30 {
+        // tax
       10 < plugin.tx_quickshop.templates.tax
       10 {
         1 {
@@ -49,6 +49,7 @@ tmp.intoTheCaddy {
           wrap  = |<br />
         }
       }
+        // my_shipping_note
       20 = TEXT
       20 {
         if {

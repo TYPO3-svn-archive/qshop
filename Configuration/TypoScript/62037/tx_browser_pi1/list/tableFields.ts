@@ -82,9 +82,19 @@ plugin.tx_browser_pi1 {
               }
               wrap  = <li class="price">|</li>
             }
-              // Link to shipping costs
-            60 = COA
+              // tax
+            60 < plugin.tx_quickshop.templates.tax
             60 {
+              1 {
+                wrap  = <li class="tax">|</li>
+              }
+              2 {
+                wrap  = <li class="tax">|</li>
+              }
+            }
+              // Link to shipping costs
+            70 = COA
+            70 {
               if {
                 isTrue = {$plugin.quick_shop.layout.caddy.shippingnote}
               }
@@ -108,8 +118,8 @@ plugin.tx_browser_pi1 {
               }
               wrap  = <li class="shipping">|</li>
             }
-            70 < plugin.tx_quickshop.templates.form
-            70 {
+            80 < plugin.tx_quickshop.templates.form
+            80 {
               wrap = <li class="caddyWoMargin">|</li>
             }
           }
