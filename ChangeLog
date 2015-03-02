@@ -3,7 +3,6 @@
   Improvements
   * #i0024: Quick Shop hides all content elements but the Browser plugin
             * in the single view,
-            * or if a sword is given
             * or if a pointer is given
             See #i0021/#163
 
