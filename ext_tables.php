@@ -59,7 +59,7 @@ require_once(t3lib_extMgm::extPath( $_EXTKEY ) . 'lib/userfunc/class.tx_quicksho
       'iconfile'          => t3lib_extMgm::extRelPath($_EXTKEY).'ext_icon.gif',
       'searchFields'      =>  'sku,title,short,description,' .
                               'datasheet,' .
-                              'category,dimension,material,' .
+                              'tx_quickshop_categories,tx_quickshop_dimension,tx_quickshop_material,' .
                               'price,tax,' .
                               'seo_keywords,seo_description'
     ),

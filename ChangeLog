@@ -1,7 +1,18 @@
+6.0.12
+  15-04-02
+  Improvements
+  * #i0026: Fields are moved
+            table tx_quickshop_products
+            * category  > tx_quickshop_categories
+            * dimension > tx_quickshop_dimension
+            * material  > tx_quickshop_material
+            Update: Please use SQL statement from
+            * Ressources/Private/Upgrades/4x_6x/migration.sql
+
 6.0.11
   15-03-02
   Improvements
-  * #i0024: Quick Shop hides all content elements but the Browser plugin
+  * #i0025: Quick Shop hides all content elements but the Browser plugin
             * in the single view,
             * or if a pointer is given
             See #i0021/#163

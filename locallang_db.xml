@@ -6,9 +6,9 @@
   </meta>
   <data type="array">
     <languageKey index="default" type="array">
-      <label index="filter_phrase.category">Categorie</label>
-      <label index="filter_phrase.dimension">Dimension</label>
-      <label index="filter_phrase.material">Material</label>
+      <label index="filter_phrase.tx_quickshop_categories">Categorie</label>
+      <label index="filter_phrase.tx_quickshop_dimension">Dimension</label>
+      <label index="filter_phrase.tx_quickshop_material">Material</label>
       <label index="linktosingleview">Details <![CDATA[&raquo;]]></label>
       <label index="marker_my_caddyimgalt">Caddy - your TYPO3 shopping cart</label>
       <label index="marker_my_caddylabel">Into the caddy</label>
@@ -43,18 +43,12 @@
       <label index="tx_quickshop_products.div.seo">Search Engines</label>
       <label index="tx_quickshop_products.div_teaser">List view</label>
       <label index="tx_quickshop_products.caption">Caption</label>
-      <label index="tx_quickshop_products.category">Category</label>
-      <label index="tx_quickshop_products.categoryEnable">Enabled</label>
       <label index="tx_quickshop_products.datasheet">Data sheet</label>
       <label index="tx_quickshop_products.description">Description</label>
-      <label index="tx_quickshop_products.dimension">Dimension</label>
-      <label index="tx_quickshop_products.dimensionEnable">Enabled</label>
       <label index="tx_quickshop_products.ean">EAN (European Article Number)</label>
       <label index="tx_quickshop_products.filterPrompt">Note</label>
       <label index="tx_quickshop_products.image">Image</label>
       <label index="tx_quickshop_products.imageseo">Description for search engines (SEO)</label>
-      <label index="tx_quickshop_products.material">Material</label>
-      <label index="tx_quickshop_products.materialEnable">Enabled</label>
       <label index="tx_quickshop_products.price">Gross price</label>
       <label index="tx_quickshop_products.quantity_min">Minimum order quantity</label>
       <label index="tx_quickshop_products.quantity_max">Maximum order quantity</label>
@@ -69,6 +63,12 @@
       <label index="tx_quickshop_products.teaser_short">Short (in list views)</label>
       <label index="tx_quickshop_products.teaser_title">Item label (in list views)</label>
       <label index="tx_quickshop_products.title">Item label</label>
+      <label index="tx_quickshop_products.tx_quickshop_categories">Category</label>
+      <label index="tx_quickshop_products.tx_quickshop_categoriesEnable">Enabled</label>
+      <label index="tx_quickshop_products.tx_quickshop_dimension">Dimension</label>
+      <label index="tx_quickshop_products.tx_quickshop_dimensionEnable">Enabled</label>
+      <label index="tx_quickshop_products.tx_quickshop_material">Material</label>
+      <label index="tx_quickshop_products.tx_quickshop_materialEnable">Enabled</label>
       <label index="tx_quickshop_products.tx_quickshop_shippingcosts">Shipping costs</label>
       <label index="tx_quickshop_shippingcosts">Quick Shop Shipping costs</label>
       <label index="tx_quickshop_shippingcosts.title">Label</label>
@@ -76,9 +76,9 @@
       <label index="tx_quickshop_shippingcosts.value">Order</label>
     </languageKey>
     <languageKey index="de" type="array">
-      <label index="filter_phrase.category">Artikelgruppe</label>
-      <label index="filter_phrase.dimension">Gr<![CDATA[&ouml;&szlig;]]>e</label>
-      <label index="filter_phrase.material">Material</label>
+      <label index="filter_phrase.tx_quickshop_categories">Artikelgruppe</label>
+      <label index="filter_phrase.tx_quickshop_dimension">Gr<![CDATA[&ouml;&szlig;]]>e</label>
+      <label index="filter_phrase.tx_quickshop_material">Material</label>
       <label index="linktosingleview">Mehr <![CDATA[&raquo;]]></label>
       <label index="marker_my_caddyimgalt">Caddy - Dein TYPO3 Warenkorb</label>
       <label index="marker_my_caddylabel">In den Warenkorb</label>
@@ -113,18 +113,12 @@
       <label index="tx_quickshop_products.div.seo">Suchmaschinen</label>
       <label index="tx_quickshop_products.div_teaser">Listenansicht</label>
       <label index="tx_quickshop_products.caption">Bildunterschrift</label>
-      <label index="tx_quickshop_products.category">Kategorie</label>
-      <label index="tx_quickshop_products.categoryEnable">Aktivieren</label>
       <label index="tx_quickshop_products.datasheet">Datenblatt</label>
       <label index="tx_quickshop_products.description">Beschreibung</label>
-      <label index="tx_quickshop_products.dimension">Abmessung</label>
-      <label index="tx_quickshop_products.dimensionEnable">Aktivieren</label>
       <label index="tx_quickshop_products.ean">EAN (Europäische Artikel Nummer)</label>
       <label index="tx_quickshop_products.filterPrompt">Hinweis</label>
       <label index="tx_quickshop_products.image">Bild</label>
       <label index="tx_quickshop_products.imageseo">Beschreibung für Suchmaschinen (SEO)</label>
-      <label index="tx_quickshop_products.material">Material</label>
-      <label index="tx_quickshop_products.materialEnable">Aktivieren</label>
       <label index="tx_quickshop_products.price">Bruttopreis</label>
       <label index="tx_quickshop_products.quantity_min">Mindestbestellmenge</label>
       <label index="tx_quickshop_products.quantity_max">Höchstbestellmenge</label>
@@ -139,6 +133,12 @@
       <label index="tx_quickshop_products.teaser_short">Kurzbeschreibung (in list views)</label>
       <label index="tx_quickshop_products.teaser_title">Artikelbezeichnung (in list views)</label>
       <label index="tx_quickshop_products.title">Artikelbezeichnung</label>
+      <label index="tx_quickshop_products.tx_quickshop_categories">Kategorie</label>
+      <label index="tx_quickshop_products.tx_quickshop_categoriesEnable">Aktivieren</label>
+      <label index="tx_quickshop_products.tx_quickshop_dimension">Abmessung</label>
+      <label index="tx_quickshop_products.tx_quickshop_dimensionEnable">Aktivieren</label>
+      <label index="tx_quickshop_products.tx_quickshop_material">Material</label>
+      <label index="tx_quickshop_products.tx_quickshop_materialEnable">Aktivieren</label>
       <label index="tx_quickshop_products.tx_quickshop_shippingcosts">Versandkosten</label>
       <label index="tx_quickshop_shippingcosts">Quick Shop Versandkosten</label>
       <label index="tx_quickshop_shippingcosts.title">Bezeichnung</label>

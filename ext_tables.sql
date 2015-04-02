@@ -99,16 +99,12 @@ CREATE TABLE tx_quickshop_products (
   stockmanagement tinyint(3) DEFAULT '0' NOT NULL,
   quantity_min int(11) DEFAULT '0' NOT NULL,
   quantity_max int(11) DEFAULT '0' NOT NULL,
-  tx_quickshop_shippingcosts int(11) DEFAULT '0' NOT NULL,
 
   datasheet text,
   cols int(11) DEFAULT '0' NOT NULL,
   pi_flexform mediumtext,
 
   filterPrompt tinytext,
-  category int(11) DEFAULT '0' NOT NULL,
-  dimension int(11) DEFAULT '0' NOT NULL,
-  material int(11) DEFAULT '0' NOT NULL,
 
   image text,
   imagewidth tinytext,
@@ -136,6 +132,11 @@ CREATE TABLE tx_quickshop_products (
   teaser_description text,
   teaser_short text,
   teaser_title tinytext,
+
+  tx_quickshop_categories int(11) DEFAULT '0' NOT NULL,
+  tx_quickshop_dimension int(11) DEFAULT '0' NOT NULL,
+  tx_quickshop_material int(11) DEFAULT '0' NOT NULL,
+  tx_quickshop_shippingcosts int(11) DEFAULT '0' NOT NULL,
 
   PRIMARY KEY (uid),
   KEY parent (pid)

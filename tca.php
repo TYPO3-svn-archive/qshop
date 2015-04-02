@@ -329,7 +329,7 @@ $TCA[ 'tx_quickshop_products' ] = array(
     . 'sku,ean,title,short,description,'
     . 'teaser_description,teaser_short,teaser_title,'
     . 'datasheet,'
-    . 'filterPrompt,category,dimension,material,'
+    . 'filterPrompt,tx_quickshop_categories,tx_quickshop_dimension,tx_quickshop_material,'
     . 'price,tax,stockquantity,stockmanagement,quantity_min,quantity_max,tx_quickshop_shippingcosts,'
     . 'image,imagewidth,imageheight,imageorient,imagecols,'
     . 'imageborder,image_frames,image_link,image_zoom,'
@@ -454,10 +454,10 @@ $TCA[ 'tx_quickshop_products' ] = array(
         'userFunc' => 'tx_quickshop_userfunc->tcaFilterPrompt',
       ),
     ),
-    'category' => array(
+    'tx_quickshop_categories' => array(
       'l10n_mode' => 'exclude',
       'exclude' => 1,
-      'label' => 'LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_products.category',
+      'label' => 'LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_products.tx_quickshop_categories',
       'config' => array(
         'type' => 'select',
         'size' => 10,
@@ -515,10 +515,10 @@ $TCA[ 'tx_quickshop_products' ] = array(
         ),
       )
     ),
-    'dimension' => array(
+    'tx_quickshop_dimension' => array(
       'l10n_mode' => 'exclude',
       'exclude' => 1,
-      'label' => 'LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_products.dimension',
+      'label' => 'LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_products.tx_quickshop_dimension',
       'config' => array(
         'type' => 'select',
         'size' => 10,
@@ -576,10 +576,10 @@ $TCA[ 'tx_quickshop_products' ] = array(
         ),
       )
     ),
-    'material' => array(
+    'tx_quickshop_material' => array(
       'l10n_mode' => 'exclude',
       'exclude' => 1,
-      'label' => 'LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_products.material',
+      'label' => 'LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_products.tx_quickshop_material',
       'config' => array(
         'type' => 'select',
         'size' => 10,
@@ -1062,7 +1062,7 @@ $TCA[ 'tx_quickshop_products' ] = array(
       . '--div--;LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_products.div.datasheet,'
       . 'layout;;10;;3-3-3, cols, datasheet;;9;nowrap:wizards[table], pi_flexform,'
       . '--div--;LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_products.div.filter,'
-      . 'filterPrompt,category,dimension,material,'
+      . 'filterPrompt,tx_quickshop_categories,tx_quickshop_dimension,tx_quickshop_material,'
       . '--div--;LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_products.div.price_quantity,'
       . '--palette--;LLL:EXT:quick_shop/locallang_db.xml:palette.price;price,'
       . '--palette--;LLL:EXT:quick_shop/locallang_db.xml:palette.stockmanagement;stockmanagement,'

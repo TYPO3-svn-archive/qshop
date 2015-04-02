@@ -23,7 +23,7 @@ plugin.tx_browser_pi1 {
               first_item {
                 cObject {
                   20 {
-                    data = LLL:EXT:quick_shop/locallang_db.xml:filter_phrase.category
+                    data = LLL:EXT:quick_shop/locallang_db.xml:filter_phrase.tx_quickshop_categories
                   }
                 }
               }
@@ -44,7 +44,7 @@ plugin.tx_browser_pi1 {
               first_item {
                 cObject {
                   20 {
-                    data = LLL:EXT:quick_shop/locallang_db.xml:filter_phrase.dimension
+                    data = LLL:EXT:quick_shop/locallang_db.xml:filter_phrase.tx_quickshop_dimension
                   }
                 }
               }
@@ -63,7 +63,7 @@ plugin.tx_browser_pi1 {
               first_item {
                 cObject {
                   20 {
-                    data = LLL:EXT:quick_shop/locallang_db.xml:filter_phrase.material
+                    data = LLL:EXT:quick_shop/locallang_db.xml:filter_phrase.tx_quickshop_material
                   }
                 }
               }

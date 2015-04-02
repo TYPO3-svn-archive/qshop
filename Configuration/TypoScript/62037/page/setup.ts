@@ -18,7 +18,7 @@ page {
   }
 [end]
 
-// #i0024
+// #i0025
 [globalVar = GP:tx_browser_pi1|pointer > 0] && [globalVar = TSFE:id = {$plugin.quick_shop.pages.shop}]
   page.10 {
     subparts {
