@@ -1,6 +1,7 @@
 6.0.12
-  15-04-02
+  15-04-11
   Improvements
+  * #i0027: Updated manual
   * #i0026: Fields are moved
             table tx_quickshop_products
             * category  > tx_quickshop_categories

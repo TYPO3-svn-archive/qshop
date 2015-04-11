@@ -1,5 +1,4 @@
 plugin.tx_browser_pi1 {
-
   views {
     list {
       62037 {
