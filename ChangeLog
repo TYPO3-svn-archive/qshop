@@ -1,5 +1,9 @@
 6.0.13
   15-04-16
+  Improvement
+  * #i0030: Quick Shop hides all content elements but the Browser plugin and but the HTML CType (is needed for CS for example)
+            See: #i0025
+
   Bugfix
   * #i0029: Remove row class. See: #i0028.
   * #i0028: List view must wrapped with a row class.

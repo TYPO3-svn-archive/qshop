@@ -11,7 +11,7 @@ page {
     subparts {
       columnscontent {
         select {
-          where = colPos=0 AND list_type = "browser_pi1"
+          where = colPos=0 AND (list_type = "browser_pi1" OR CType = "html")
         }
       }
     }
@@ -24,7 +24,7 @@ page {
     subparts {
       columnscontent {
         select {
-          where = colPos=0 AND list_type = "browser_pi1"
+          where = colPos=0 AND (list_type = "browser_pi1" OR CType = "html")
         }
       }
     }
