@@ -6,6 +6,9 @@ plugin.tx_browser_pi1 {
       }
     }
   }
+  navigation {
+    showUid = itemUid
+  }
   templates {
     listview {
       header {
@@ -42,22 +45,6 @@ plugin.tx_browser_pi1 {
           showUid   = itemUid
           #singlePid =
           url       = tx_quickshop_products.url
-        }
-        1 {
-          key       = tx_org_staff.type
-          page      = tx_org_staff.page
-          record    = tx_org_staff.uid
-          showUid   = staffUid
-          #singlePid =
-          url       = tx_org_staff.url
-        }
-        2 {
-          key       = type
-          page      = page
-          record    = uid
-          showUid   = headquartersUid
-          #singlePid =
-          url       = url
         }
       }
     }

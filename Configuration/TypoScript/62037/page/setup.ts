@@ -6,7 +6,7 @@ page {
 }
 
 // #i0021/#163
-[globalVar = GP:tx_browser_pi1|{$plugin.tx_browser_pi1.templates.listview.url.0.itemUid} > 0] && [globalVar = TSFE:id = {$plugin.quick_shop.pages.shop}]
+[globalVar = GP:tx_browser_pi1|{$plugin.tx_browser_pi1.templates.listview.url.0.showUid} > 0] && [globalVar = TSFE:id = {$plugin.quick_shop.pages.shop}]
   page.10 {
     subparts {
       columnscontent {
