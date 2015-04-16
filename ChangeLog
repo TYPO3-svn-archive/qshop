@@ -1,3 +1,8 @@
+6.0.13
+  15-04-16
+  Bugfix
+  * #i0028: List view must wrapped with a row class.
+
 6.0.12
   15-04-11
   Improvements
@@ -9,6 +14,7 @@
             * material  > tx_quickshop_material
             Update: Please use SQL statement from
             * Ressources/Private/Upgrades/4x_6x/migration.sql
+            BE AWARE: Quick Shop template in DEAL! must adapated. See: Deal! #i0027
 
 6.0.11
   15-03-02
