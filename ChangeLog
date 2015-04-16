@@ -1,6 +1,7 @@
 6.0.13
   15-04-16
   Bugfix
+  * #i0029: Remove row class. See: #i0028.
   * #i0028: List view must wrapped with a row class.
 
 6.0.12
