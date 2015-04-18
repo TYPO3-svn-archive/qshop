@@ -5,10 +5,10 @@
   padding-right: 3em;*/
   margin-bottom: 1em;
 }
-.tx-browser-pi1 .category_menu_treeview a {
+#columnscontent .tx-browser-pi1 .category_menu_treeview a {
   font-weight:normal;
 }
-.tx-browser-pi1 .category_menu_treeview a.selected {
+#columnscontent .tx-browser-pi1 .category_menu_treeview a.selected {
   font-weight:bold;
 }
 .tx-powermail a,
