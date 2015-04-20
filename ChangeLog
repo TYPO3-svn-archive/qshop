@@ -1,3 +1,9 @@
+6.0.15
+  15-04-20
+  Improvement
+  * #i0032: YouTube video installation
+            See: typo3conf/ext/quick_shop/Ressources/Public/HTML/Youtube/de/150420_typo3_quick_shop_installation.html
+
 6.0.14
   15-04-18
   Improvement
