@@ -10,8 +10,10 @@ page {
   page.10 {
     subparts {
       columnscontent {
-        select {
-          where = colPos=0 AND (list_type = "browser_pi1" OR CType = "html")
+        20 {
+          select {
+            where = colPos=0 AND (list_type = "browser_pi1" OR CType = "html")
+          }
         }
       }
     }
@@ -23,8 +25,10 @@ page {
   page.10 {
     subparts {
       columnscontent {
-        select {
-          where = colPos=0 AND (list_type = "browser_pi1" OR CType = "html")
+        20 {
+          select {
+            where = colPos=0 AND (list_type = "browser_pi1" OR CType = "html")
+          }
         }
       }
     }

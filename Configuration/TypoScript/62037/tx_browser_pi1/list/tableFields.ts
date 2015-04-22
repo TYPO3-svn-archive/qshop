@@ -8,7 +8,7 @@ plugin.tx_browser_pi1 {
           title = COA
           title {
             stdWrap {
-              wrap = <div class="large-4 medium-4 columns"><ul class="pricing-table">|</ul></div>
+              wrap = <div class="medium-4 columns"><ul class="pricing-table" data-equalizer-watch>|</ul></div>
             }
               // teaser_title
             10 < plugin.tx_browser_pi1.displayList.master_templates.tableFields.header.0.default

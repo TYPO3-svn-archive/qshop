@@ -1,3 +1,10 @@
+6.1.0
+  15-04-22
+  Improvement
+  * #i0033: Update for Caddy 6.1 (mini caddy)
+            * columnscontent is moved from CONTENT to COA
+            See caddy: #66534
+
 6.0.15
   15-04-20
   Improvement

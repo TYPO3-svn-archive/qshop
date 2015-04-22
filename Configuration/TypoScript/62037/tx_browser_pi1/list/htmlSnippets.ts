@@ -22,7 +22,7 @@ plugin.tx_browser_pi1 {
               value (
                 <div class="row">
                   <div id="c###TT_CONTENT.UID###-listview-###MODE###" class="columns listview listview-content listview-###MODE### listview-content-###MODE###">
-                    <div class="row">
+                    <div class="row" data-equalizer>
                       <!-- ###LISTBODY### begin --><!-- ###LISTBODYITEM### begin -->
                       ###TX_QUICKSHOP_PRODUCTS.TITLE###
                       <!-- ###LISTBODYITEM### end --><!-- ###LISTBODY### end -->

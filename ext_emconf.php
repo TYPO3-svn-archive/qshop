@@ -9,7 +9,7 @@ $EM_CONF[$_EXTKEY] = array(
   . 'Manual: http://typo3-quick-shop.de/typo3conf/ext/quick_shop/doc/manual.pdf',
 	'category' => 'plugin',
 	'shy' => 0,
-	'version' => '6.0.15',
+	'version' => '6.1.0',
 	'dependencies' => 'browser,caddy,cps_devlib,cps_tcatree,css_styled_content,powermail,seo_dynamic_tag',
 	'conflicts' => '',
 	'priority' => '',
