@@ -1,6 +1,18 @@
+6.1.1
+  15-08-22
+  Feature
+  * #69258: Backend filter
+
 6.1.0
-  15-04-22
+  15-04-29
   Improvement
+  * #i0034: clearing lightbox: update for Browser 7.0.7
+            See
+            * Configuration/TypoScript
+              * events/61826/tx_browser_pi1/constants.ts
+              * headquarters/501/tx_browser_pi1/constants.txt
+              * news/401/tx_browser_pi1/constants.txt
+              * staff/101/tx_browser_pi1/constants.txt
   * #i0033: Update for Caddy 6.1 (mini caddy)
             * columnscontent is moved from CONTENT to COA
             See caddy: #66534

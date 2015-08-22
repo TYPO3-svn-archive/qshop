@@ -59,6 +59,7 @@ plugin.tx_browser_pi1 {
           path        = uploads/tx_quickshop/
           seo         = tx_quickshop_products.imageseo
           width       = tx_quickshop_products.imagewidth
+          zoom        = tx_quickshop_products.image_zoom
         }
       }
     }

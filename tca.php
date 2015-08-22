@@ -513,7 +513,29 @@ $TCA[ 'tx_quickshop_products' ] = array(
             'JSopenParams' => 'height=350,width=580,status=0,menubar=0,scrollbars=1',
           ),
         ),
-      )
+      ),
+      // #69258, 150821, dwildt, +
+      'config_filter' => array(
+        'type' => 'select',
+        'size' => 1,
+        'MM' => 'tx_quickshop_mm',
+        "MM_match_fields" => array(
+          'table_local' => 'tx_quickshop_products',
+          'table_foreign' => 'tx_quickshop_categories'
+        ),
+        "MM_insert_fields" => array(
+          'table_local' => 'tx_quickshop_products',
+          'table_foreign' => 'tx_quickshop_categories'
+        ),
+        'foreign_table' => 'tx_quickshop_categories',
+        'foreign_table_where' => 'AND tx_quickshop_categories.pid=###CURRENT_PID### ORDER BY tx_quickshop_categories.uid',
+        'items' => array(
+          'empty' => array(
+            '0' => '',
+            '1' => '',
+          ),
+        ),
+      ),
     ),
     'tx_quickshop_dimension' => array(
       'l10n_mode' => 'exclude',
@@ -574,7 +596,29 @@ $TCA[ 'tx_quickshop_products' ] = array(
             'JSopenParams' => 'height=350,width=580,status=0,menubar=0,scrollbars=1',
           ),
         ),
-      )
+      ),
+      // #69258, 150821, dwildt, +
+      'config_filter' => array(
+        'type' => 'select',
+        'size' => 1,
+        'MM' => 'tx_quickshop_mm',
+        "MM_match_fields" => array(
+          'table_local' => 'tx_quickshop_products',
+          'table_foreign' => 'tx_quickshop_dimension'
+        ),
+        "MM_insert_fields" => array(
+          'table_local' => 'tx_quickshop_products',
+          'table_foreign' => 'tx_quickshop_dimension'
+        ),
+        'foreign_table' => 'tx_quickshop_dimension',
+        'foreign_table_where' => 'AND tx_quickshop_dimension.pid=###CURRENT_PID### ORDER BY tx_quickshop_dimension.title',
+        'items' => array(
+          'empty' => array(
+            '0' => '',
+            '1' => '',
+          ),
+        ),
+      ),
     ),
     'tx_quickshop_material' => array(
       'l10n_mode' => 'exclude',
@@ -635,7 +679,29 @@ $TCA[ 'tx_quickshop_products' ] = array(
             'JSopenParams' => 'height=350,width=580,status=0,menubar=0,scrollbars=1',
           ),
         ),
-      )
+      ),
+      // #69258, 150821, dwildt, +
+      'config_filter' => array(
+        'type' => 'select',
+        'size' => 1,
+        'MM' => 'tx_quickshop_mm',
+        "MM_match_fields" => array(
+          'table_local' => 'tx_quickshop_products',
+          'table_foreign' => 'tx_quickshop_material'
+        ),
+        "MM_insert_fields" => array(
+          'table_local' => 'tx_quickshop_products',
+          'table_foreign' => 'tx_quickshop_material'
+        ),
+        'foreign_table' => 'tx_quickshop_material',
+        'foreign_table_where' => 'AND tx_quickshop_material.pid=###CURRENT_PID### ORDER BY tx_quickshop_material.title',
+        'items' => array(
+          'empty' => array(
+            '0' => '',
+            '1' => '',
+          ),
+        ),
+      ),
     ),
     'price' => array(
       'l10n_mode' => 'exclude',
@@ -755,7 +821,29 @@ $TCA[ 'tx_quickshop_products' ] = array(
             'JSopenParams' => 'height=350,width=580,status=0,menubar=0,scrollbars=1',
           ),
         ),
-      )
+      ),
+      // #69258, 150821, dwildt, +
+      'config_filter' => array(
+        'type' => 'select',
+        'size' => 1,
+        'MM' => 'tx_quickshop_mm',
+        "MM_match_fields" => array(
+          'table_local' => 'tx_quickshop_products',
+          'table_foreign' => 'tx_quickshop_shippingcosts'
+        ),
+        "MM_insert_fields" => array(
+          'table_local' => 'tx_quickshop_products',
+          'table_foreign' => 'tx_quickshop_shippingcosts'
+        ),
+        'foreign_table' => 'tx_quickshop_shippingcosts',
+        'foreign_table_where' => 'AND tx_quickshop_shippingcosts.pid=###CURRENT_PID### ORDER BY tx_quickshop_shippingcosts.value',
+        'items' => array(
+          'empty' => array(
+            '0' => '',
+            '1' => '',
+          ),
+        ),
+      ),
     ),
     'image' => array(
       'exclude' => 1,
