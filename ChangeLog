@@ -2,6 +2,8 @@
   15-08-22
   Feature
   * #69258: Backend filter
+  Improvement
+  * #i0035: Dependency on Browser from version 7.2.6
 
 6.1.0
   15-04-29
