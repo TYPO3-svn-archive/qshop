@@ -1,6 +1,6 @@
   // Buy now
-tmp.intoTheCaddy = COA
-tmp.intoTheCaddy {
+temp.intoTheCaddy = COA
+temp.intoTheCaddy {
   inTextRight = COA
   inTextRight {
       // if [in text right]

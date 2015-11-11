@@ -13,7 +13,7 @@ plugin.tx_browser_pi1 {
                 10 = COA
                 10 {
                     // Into the Caddy
-                  10 < tmp.intoTheCaddy.inTextRight
+                  10 < temp.intoTheCaddy.inTextRight
                     // social bookmarks
                   19 = TEXT
                   19 {
@@ -119,7 +119,7 @@ plugin.tx_browser_pi1 {
               }
             }
               // Into the Caddy
-            40 < tmp.intoTheCaddy.belowContent
+            40 < temp.intoTheCaddy.belowContent
           }
         }
       }
