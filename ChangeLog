@@ -1,6 +1,7 @@
 6.1.2
   15-11-11
   Improvement
+  * #i0037: TypoSCript: decimal point for Eglish language is set to .
   * #i0036: TypoScript tmp is moved to temp
 
 6.1.1

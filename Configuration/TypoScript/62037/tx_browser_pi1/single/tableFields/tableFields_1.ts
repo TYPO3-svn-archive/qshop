@@ -30,7 +30,7 @@ plugin.tx_browser_pi1 {
                               stdWrap {
                                 lang {
                                   de = ,
-                                  en = ,
+                                  en = .
                                 }
                               }
                             }

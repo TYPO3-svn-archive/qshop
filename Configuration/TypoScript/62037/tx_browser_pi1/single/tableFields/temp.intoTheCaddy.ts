@@ -24,7 +24,7 @@ temp.intoTheCaddy {
               stdWrap {
                 lang {
                   de = ,
-                  en = ,
+                  en = .
                 }
               }
             }
@@ -116,7 +116,7 @@ temp.intoTheCaddy {
                 stdWrap {
                   lang {
                     de = ,
-                    en = ,
+                    en = .
                   }
                 }
               }
