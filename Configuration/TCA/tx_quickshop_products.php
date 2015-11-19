@@ -585,7 +585,7 @@ $returnArray = array(
         'show_thumbs' => 1,
         'size' => 10,
         'minitems' => 0,
-        'maxitems' => 10,
+        'maxitems' => 20,
       )
     ),
     'imageseo' => array(
