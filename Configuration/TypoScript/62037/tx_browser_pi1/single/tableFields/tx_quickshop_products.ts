@@ -67,6 +67,11 @@ plugin.tx_browser_pi1 {
                     // sku
                   60 = COA
                   60 {
+                    if {
+                      isTrue {
+                        field = tx_quickshop_products.sku
+                      }
+                    }
                       // label
                     10 = TEXT
                     10 {

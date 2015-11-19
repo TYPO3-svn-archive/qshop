@@ -122,7 +122,7 @@ $TYPO3_CONF_VARS['EXTCONF']['realurl']['typo3-quick-shop.de']['postVarSets']['_D
     array(
       'GETvar'      => 'tx_browser_pi1[itemUid]' ,
       'lookUpTable' => array(
-        'table'               => 'tx_greencars_main',
+        'table'               => 'tx_quickshop_products',
         'id_field'            => 'uid',
         'alias_field'         => 'title',
         'addWhereClause'      => ' AND NOT deleted AND NOT hidden',
