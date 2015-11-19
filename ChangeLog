@@ -1,13 +1,16 @@
-6.1.3
+6.2.0
   15-11-18
+  Feature
+  * #i0040: 1st image for list only
   Improvement
-  * #i003): TypoScript: sku will displeayed only, if there is a sku.
+  * #i0041: TCA structure TYPO3 6.x like
+  * #i0039: TypoScript: sku will displeayed only, if there is a sku.
   * #i0038: CSS: .pricing-table .title got !important
 
 6.1.2
   15-11-11
   Improvement
-  * #i0037: TypoSCript: decimal point for Eglish language is set to .
+  * #i0037: TypoScript: decimal point for Eglish language is set to .
   * #i0036: TypoScript tmp is moved to temp
 
 6.1.1

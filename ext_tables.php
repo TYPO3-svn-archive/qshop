@@ -9,7 +9,6 @@ if ( !defined( 'TYPO3_MODE' ) )
 //
 // INDEX
 // Methods for backend workflows
-// TCA for tables
 // Get extension configuration
 // Add static template
 // Add pagetree icons
@@ -19,128 +18,6 @@ if ( !defined( 'TYPO3_MODE' ) )
 
 require_once(t3lib_extMgm::extPath( $_EXTKEY ) . 'lib/userfunc/class.tx_quickshop_userfunc.php' );
 // Methods for backend workflows
-////////////////////////////////////
-//
-// TCA for tables
-// Products
-$TCA[ 'tx_quickshop_products' ] = array(
-  'ctrl' => array(
-    'title' => 'LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_products',
-    'label' => 'title',
-    'label_alt' => 'price',
-    'label_alt_force' => true,
-    'tstamp' => 'tstamp',
-    'crdate' => 'crdate',
-    'cruser_id' => 'cruser_id',
-    'cruser_id' => 'cruser_id',
-    'languageField' => 'sys_language_uid',
-    'transOrigPointerField' => 'l10n_parent',
-    'transOrigDiffSourceField' => 'l10n_diffsource',
-    'default_sortby' => 'ORDER BY title',
-    'delete' => 'deleted',
-    'enablecolumns' => array(
-      'disabled' => 'hidden',
-      'starttime' => 'starttime',
-      'endtime' => 'endtime',
-      'fe_group' => 'fe_group',
-    ),
-    'hideAtCopy' => true,
-    'dividers2tabs' => true,
-    'dynamicConfigFile' => t3lib_extMgm::extPath( $_EXTKEY ) . 'tca.php',
-    'thumbnail' => 'image',
-    'iconfile' => t3lib_extMgm::extRelPath( $_EXTKEY ) . 'ext_icon.gif',
-    'searchFields' => 'sku,title,short,description,'
-    . 'datasheet,'
-    . 'tx_quickshop_categories,tx_quickshop_dimension,tx_quickshop_material,'
-    . 'price,tax,'
-    . 'seo_keywords,seo_description'
-    ,
-    // #69258, 150821, dwildt, 1+
-    'filter' => 'filter_for_all_fields',
-  ),
-);
-// Products
-// Categories
-$TCA[ 'tx_quickshop_categories' ] = array(
-  'ctrl' => array(
-    'title' => 'LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_categories',
-    'label' => 'title',
-    'tstamp' => 'tstamp',
-    'crdate' => 'crdate',
-    'cruser_id' => 'cruser_id',
-    'delete' => 'deleted',
-    'enablecolumns' => array(
-      'disabled' => 'hidden',
-    ),
-    'dynamicConfigFile' => t3lib_extMgm::extPath( $_EXTKEY ) . 'tca.php',
-    'iconfile' => t3lib_extMgm::extRelPath( $_EXTKEY ) . 'ext_icon.gif',
-    'searchFields' => 'title',
-    'treeParentField' => 'uid_parent',
-  ),
-);
-// Categories
-// Dimension
-$TCA[ 'tx_quickshop_dimension' ] = array(
-  'ctrl' => array(
-    'title' => 'LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_dimension',
-    'label' => 'title',
-    'tstamp' => 'tstamp',
-    'crdate' => 'crdate',
-    'cruser_id' => 'cruser_id',
-    'default_sortby' => 'ORDER BY title',
-    'delete' => 'deleted',
-    'enablecolumns' => array(
-      'disabled' => 'hidden',
-    ),
-    'dynamicConfigFile' => t3lib_extMgm::extPath( $_EXTKEY ) . 'tca.php',
-    'iconfile' => t3lib_extMgm::extRelPath( $_EXTKEY ) . 'ext_icon.gif',
-    'searchFields' => 'title',
-  //'treeParentField'   => 'uid_parent',
-  ),
-);
-// Dimension
-// Material
-$TCA[ 'tx_quickshop_material' ] = array(
-  'ctrl' => array(
-    'title' => 'LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_material',
-    'label' => 'title',
-    'tstamp' => 'tstamp',
-    'crdate' => 'crdate',
-    'cruser_id' => 'cruser_id',
-    'default_sortby' => 'ORDER BY title',
-    'delete' => 'deleted',
-    'enablecolumns' => array(
-      'disabled' => 'hidden',
-    ),
-    'dynamicConfigFile' => t3lib_extMgm::extPath( $_EXTKEY ) . 'tca.php',
-    'iconfile' => t3lib_extMgm::extRelPath( $_EXTKEY ) . 'ext_icon.gif',
-    'searchFields' => 'title',
-  //'treeParentField'   => 'uid_parent',
-  ),
-);
-// Material
-// Shippingcosts
-$TCA[ 'tx_quickshop_shippingcosts' ] = array(
-  'ctrl' => array(
-    'title' => 'LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_shippingcosts',
-    'label' => 'value',
-    'label_alt' => 'title',
-    'label_alt_force' => true,
-    'tstamp' => 'tstamp',
-    'crdate' => 'crdate',
-    'cruser_id' => 'cruser_id',
-    'default_sortby' => 'ORDER BY value',
-    'delete' => 'deleted',
-    'enablecolumns' => array(
-      'disabled' => 'hidden',
-    ),
-    'dynamicConfigFile' => t3lib_extMgm::extPath( $_EXTKEY ) . 'tca.php',
-    'iconfile' => t3lib_extMgm::extRelPath( $_EXTKEY ) . 'ext_icon.gif',
-    'searchFields' => 'title',
-  ),
-);
-// Shippingcosts
-// TCA for tables
 ////////////////////////////////////
 //
 // Get extension configuration

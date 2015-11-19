@@ -12,6 +12,7 @@
       <label index="linktosingleview">Details <![CDATA[&raquo;]]></label>
       <label index="marker_my_caddyimgalt">Caddy - your TYPO3 shopping cart</label>
       <label index="marker_my_caddylabel">Into the caddy</label>
+      <label index="palette.image_1stforlistonly">First Image</label>
       <label index="palette.image_accessibility">Search engines and accessibility</label>
       <label index="palette.price">Price and Tax</label>
       <label index="palette.quantity">Purchase Order Quantity</label>
@@ -19,6 +20,7 @@
       <label index="palette.startendtime">Available from ... to ...</label>
       <label index="palette.stockmanagement">Inventory Control</label>
       <label index="phrase_notInStock">Not available at the time</label>
+      <label index="tca_phrase.image_1stforlistonly">For the list view and the margin view only</label>
       <label index="tca_phrase.seo_description">Description for Search Engine Optimisation</label>
       <label index="tca_phrase.seo_keywords">Keywords for Search Engine Optimisation (CSV: comma separated values)</label>
       <label index="tx_quickshop_categories">Quick Shop Category</label>
@@ -82,6 +84,7 @@
       <label index="linktosingleview">Mehr <![CDATA[&raquo;]]></label>
       <label index="marker_my_caddyimgalt">Caddy - Dein TYPO3 Warenkorb</label>
       <label index="marker_my_caddylabel">In den Warenkorb</label>
+      <label index="palette.image_1stforlistonly">Erstes Bild</label>
       <label index="palette.image_accessibility">Suchmaschinen und Barrierefreiheit</label>
       <label index="palette.price">Preis und MWSt.</label>
       <label index="palette.quantity">Bestellmenge</label>
@@ -89,6 +92,7 @@
       <label index="palette.startendtime">Verfügbar von ... bis ...</label>
       <label index="palette.stockmanagement">Lagerverwaltung</label>
       <label index="phrase_notInStock">Zur Zeit nicht verfügbar</label>
+      <label index="tca_phrase.image_1stforlistonly">Exklusiv für die Marginal- und Listenansicht</label>
       <label index="tca_phrase.seo_description">Beschreibung für Suchmaschinen (bis etwa 200 Zeichen)</label>
       <label index="tca_phrase.seo_keywords">Stichworte für Suchmaschinen (drei bis fünf, mit Komma trennen)</label>
       <label index="tx_quickshop_categories">Quick Shop Kategorie</label>

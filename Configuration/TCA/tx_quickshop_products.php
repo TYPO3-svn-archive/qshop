@@ -1,10 +1,11 @@
 <?php
 
-//echo 'GET';
-//var_export( $_GET, false);
-
 if ( !defined( 'TYPO3_MODE' ) )
+{
   die( 'Access denied.' );
+}
+
+$_EXTKEY = 'quick_shop';
 
 ///////////////////////////////////////
 //
@@ -16,314 +17,42 @@ if ( strtolower( substr( $confArr[ 'LLsupport' ], 0, strlen( 'yes' ) ) ) == 'yes
 {
   $bool_LL = TRUE;
 }
-// Localization support
-///////////////////////////////////////
-//
-// tx_quickshop_categories
-// Non localized
-$TCA[ 'tx_quickshop_categories' ] = array(
-  'ctrl' => $TCA[ 'tx_quickshop_categories' ][ 'ctrl' ],
-  'interface' => array(
-    'showRecordFieldList' => 'hidden,title,uid_parent'
-  ),
-  'feInterface' => $TCA[ 'tx_quickshop_categories' ][ 'feInterface' ],
-  'columns' => array(
-    'hidden' => array(
-      'exclude' => 1,
-      'label' => 'LLL:EXT:lang/locallang_general.xml:LGL.hidden',
-      'config' => array(
-        'type' => 'check',
-        'default' => '0'
-      )
+
+$returnArray = array(
+  'ctrl' => array(
+    'title' => 'LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_products',
+    'label' => 'title',
+    'label_alt' => 'price',
+    'label_alt_force' => true,
+    'tstamp' => 'tstamp',
+    'crdate' => 'crdate',
+    'cruser_id' => 'cruser_id',
+    'cruser_id' => 'cruser_id',
+    'languageField' => 'sys_language_uid',
+    'transOrigPointerField' => 'l10n_parent',
+    'transOrigDiffSourceField' => 'l10n_diffsource',
+    'default_sortby' => 'ORDER BY title',
+    'delete' => 'deleted',
+    'enablecolumns' => array(
+      'disabled' => 'hidden',
+      'starttime' => 'starttime',
+      'endtime' => 'endtime',
+      'fe_group' => 'fe_group',
     ),
-    'title' => array(
-      'exclude' => 0,
-      'label' => 'LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_categories.title',
-      'config' => array(
-        'type' => 'input',
-        'size' => '30',
-        'eval' => 'required',
-      )
-    ),
-    'uid_parent' => array(
-      'exclude' => 0,
-      'label' => 'LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_categories.uid_parent',
-      'config' => array(
-        'type' => 'select',
-        'size' => 1,
-        'minitems' => 0,
-        'maxitems' => 2,
-        'trueMaxItems' => 1,
-        'foreign_table' => 'tx_quickshop_categories',
-        'foreign_table_where' => 'AND tx_quickshop_categories.pid=###CURRENT_PID### ORDER BY tx_quickshop_categories.title',
-        'form_type' => 'user',
-        'userFunc' => 'tx_cpstcatree->getTree',
-        'treeView' => 1,
-        'expandable' => 1,
-        'expandFirst' => 0,
-        'expandAll' => 0,
-      ),
-    ),
+    'hideAtCopy' => true,
+    'dividers2tabs' => true,
+    'dynamicConfigFile' => t3lib_extMgm::extPath( $_EXTKEY ) . 'tca.php',
+    'thumbnail' => 'image',
+    'iconfile' => t3lib_extMgm::extRelPath( $_EXTKEY ) . 'ext_icon.gif',
+    'searchFields' => 'sku,title,short,description,'
+    . 'datasheet,'
+    . 'tx_quickshop_categories,tx_quickshop_dimension,tx_quickshop_material,'
+    . 'price,tax,'
+    . 'seo_keywords,seo_description'
+    ,
+    // #69258, 150821, dwildt, 1+
+    'filter' => 'filter_for_all_fields',
   ),
-  'types' => array(
-    '0' => array( 'showitem' => 'hidden;;1;;1-1-1, title;;%2%;;2-2-2, uid_parent' )
-  ),
-  'palettes' => array(
-    '1' => array( 'showitem' => '' ),
-    '2' => array( 'showitem' => '%title_lang_ol%' ),
-  )
-);
-// Non localized
-// Localization support
-if ( $bool_LL )
-{
-  // Add language overlay fields to showRecordFieldList
-  $showRecordFieldList = $TCA[ 'tx_quickshop_categories' ][ 'interface' ][ 'showRecordFieldList' ];
-  $TCA[ 'tx_quickshop_categories' ][ 'interface' ][ 'showRecordFieldList' ] = $showRecordFieldList . ',title_lang_ol';
-  // Add language overlay fields to showRecordFieldList
-  // Add language overlay fields to type
-  $showitem = $TCA[ 'tx_quickshop_categories' ][ 'types' ][ '0' ][ 'showitem' ];
-  $showitem = str_replace( '%2%', '2', $showitem );
-  $TCA[ 'tx_quickshop_categories' ][ 'types' ][ '0' ][ 'showitem' ] = $showitem;
-  // Add language overlay fields to type
-  // Add language overlay fields to palettes
-  $showitem = $TCA[ 'tx_quickshop_categories' ][ 'palettes' ][ '2' ][ 'showitem' ];
-  $TCA[ 'tx_quickshop_categories' ][ 'palettes' ][ '2' ][ 'showitem' ] = str_replace( '%title_lang_ol%', 'title_lang_ol', $showitem );
-  // Add language overlay fields to palettes
-  // Add language overlay fields to columns array
-  $TCA[ 'tx_quickshop_categories' ][ 'columns' ][ 'title_lang_ol' ] = array
-    (
-    'exclude' => 0,
-    'label' => 'LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_categories.title_lang_ol',
-    'config' => array(
-      'type' => 'input',
-      'size' => '30',
-    )
-  );
-  // Add language overlay fields to columns array
-}
-if ( !$bool_LL )
-{
-  // Remove language overlay fields from type
-  $showitem = $TCA[ 'tx_quickshop_categories' ][ 'types' ][ '0' ][ 'showitem' ];
-  $showitem = str_replace( '%2%', '', $showitem );
-  $TCA[ 'tx_quickshop_categories' ][ 'types' ][ '0' ][ 'showitem' ] = $showitem;
-  // Remove language overlay fields from type
-  // Remove language overlay fields from palettes
-  $showitem = $TCA[ 'tx_quickshop_categories' ][ 'palettes' ][ '2' ][ 'showitem' ];
-  $TCA[ 'tx_quickshop_categories' ][ 'palettes' ][ '2' ][ 'showitem' ] = str_replace( '%title_lang_ol%', '', $showitem );
-  // Remove language overlay fields from palettes
-}
-// Localization support
-// tx_quickshop_categories
-///////////////////////////////////////
-//
-// tx_quickshop_dimension
-// Non localized
-$TCA[ 'tx_quickshop_dimension' ] = array(
-  'ctrl' => $TCA[ 'tx_quickshop_dimension' ][ 'ctrl' ],
-  'interface' => array(
-    //'showRecordFieldList' => 'hidden,title,uid_parent'
-    'showRecordFieldList' => 'hidden,title'
-  ),
-  'feInterface' => $TCA[ 'tx_quickshop_dimension' ][ 'feInterface' ],
-  'columns' => array(
-    'hidden' => array(
-      'exclude' => 1,
-      'label' => 'LLL:EXT:lang/locallang_general.xml:LGL.hidden',
-      'config' => array(
-        'type' => 'check',
-        'default' => '0'
-      )
-    ),
-    'title' => array(
-      'exclude' => 0,
-      'label' => 'LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_dimension.title',
-      'config' => array(
-        'type' => 'input',
-        'size' => '30',
-        'eval' => 'required',
-      )
-    ),
-    'uid_parent' => array(
-      'exclude' => 0,
-      'label' => 'LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_dimension.uid_parent',
-      'config' => array(
-        'type' => 'select',
-        'size' => 1,
-        'minitems' => 0,
-        'maxitems' => 2,
-        'trueMaxItems' => 1,
-        'foreign_table' => 'tx_quickshop_dimension',
-        'foreign_table_where' => 'AND tx_quickshop_dimension.pid=###CURRENT_PID### ORDER BY tx_quickshop_dimension.title',
-        'form_type' => 'user',
-        'userFunc' => 'tx_cpstcatree->getTree',
-        'treeView' => 1,
-        'expandable' => 1,
-        'expandFirst' => 0,
-        'expandAll' => 0,
-      ),
-    ),
-  ),
-  'types' => array(
-    //'0' => array('showitem' => 'hidden;;1;;1-1-1, title;;%2%;;2-2-2, uid_parent' )
-    '0' => array( 'showitem' => 'hidden;;1;;1-1-1, title;;%2%;;2-2-2' )
-  ),
-  'palettes' => array(
-    '1' => array( 'showitem' => '' ),
-    '2' => array( 'showitem' => '%title_lang_ol%' ),
-  )
-);
-// Non localized
-// Localization support
-if ( $bool_LL )
-{
-  // Add language overlay fields to showRecordFieldList
-  $showRecordFieldList = $TCA[ 'tx_quickshop_dimension' ][ 'interface' ][ 'showRecordFieldList' ];
-  $TCA[ 'tx_quickshop_dimension' ][ 'interface' ][ 'showRecordFieldList' ] = $showRecordFieldList . ',title_lang_ol';
-  // Add language overlay fields to showRecordFieldList
-  // Add language overlay fields to type
-  $showitem = $TCA[ 'tx_quickshop_dimension' ][ 'types' ][ '0' ][ 'showitem' ];
-  $showitem = str_replace( '%2%', '2', $showitem );
-  $TCA[ 'tx_quickshop_dimension' ][ 'types' ][ '0' ][ 'showitem' ] = $showitem;
-  // Add language overlay fields to type
-  // Add language overlay fields to palettes
-  $showitem = $TCA[ 'tx_quickshop_dimension' ][ 'palettes' ][ '2' ][ 'showitem' ];
-  $TCA[ 'tx_quickshop_dimension' ][ 'palettes' ][ '2' ][ 'showitem' ] = str_replace( '%title_lang_ol%', 'title_lang_ol', $showitem );
-  // Add language overlay fields to palettes
-  // Add language overlay fields to columns array
-  $TCA[ 'tx_quickshop_dimension' ][ 'columns' ][ 'title_lang_ol' ] = array
-    (
-    'exclude' => 0,
-    'label' => 'LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_dimension.title_lang_ol',
-    'config' => array(
-      'type' => 'input',
-      'size' => '30',
-    )
-  );
-  // Add language overlay fields to columns array
-}
-if ( !$bool_LL )
-{
-  // Remove language overlay fields from type
-  $showitem = $TCA[ 'tx_quickshop_dimension' ][ 'types' ][ '0' ][ 'showitem' ];
-  $showitem = str_replace( '%2%', '', $showitem );
-  $TCA[ 'tx_quickshop_dimension' ][ 'types' ][ '0' ][ 'showitem' ] = $showitem;
-  // Remove language overlay fields from type
-  // Remove language overlay fields from palettes
-  $showitem = $TCA[ 'tx_quickshop_dimension' ][ 'palettes' ][ '2' ][ 'showitem' ];
-  $TCA[ 'tx_quickshop_dimension' ][ 'palettes' ][ '2' ][ 'showitem' ] = str_replace( '%title_lang_ol%', '', $showitem );
-  // Remove language overlay fields from palettes
-}
-// Localization support
-// tx_quickshop_dimension
-///////////////////////////////////////
-//
-// tx_quickshop_material
-// Non localized
-$TCA[ 'tx_quickshop_material' ] = array(
-  'ctrl' => $TCA[ 'tx_quickshop_material' ][ 'ctrl' ],
-  'interface' => array(
-    //'showRecordFieldList' => 'hidden,title,uid_parent'
-    'showRecordFieldList' => 'hidden,title'
-  ),
-  'feInterface' => $TCA[ 'tx_quickshop_material' ][ 'feInterface' ],
-  'columns' => array(
-    'hidden' => array(
-      'exclude' => 1,
-      'label' => 'LLL:EXT:lang/locallang_general.xml:LGL.hidden',
-      'config' => array(
-        'type' => 'check',
-        'default' => '0'
-      )
-    ),
-    'title' => array(
-      'exclude' => 0,
-      'label' => 'LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_material.title',
-      'config' => array(
-        'type' => 'input',
-        'size' => '30',
-        'eval' => 'required',
-      )
-    ),
-    'uid_parent' => array(
-      'exclude' => 0,
-      'label' => 'LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_material.uid_parent',
-      'config' => array(
-        'type' => 'select',
-        'size' => 1,
-        'minitems' => 0,
-        'maxitems' => 2,
-        'trueMaxItems' => 1,
-        'foreign_table' => 'tx_quickshop_material',
-        'foreign_table_where' => 'AND tx_quickshop_material.pid=###CURRENT_PID### ORDER BY tx_quickshop_material.title',
-        'form_type' => 'user',
-        'userFunc' => 'tx_cpstcatree->getTree',
-        'treeView' => 1,
-        'expandable' => 1,
-        'expandFirst' => 0,
-        'expandAll' => 0,
-      ),
-    ),
-  ),
-  'types' => array(
-    //'0' => array('showitem' => 'hidden;;1;;1-1-1, title;;%2%;;2-2-2, uid_parent' )
-    '0' => array( 'showitem' => 'hidden;;1;;1-1-1, title;;%2%;;2-2-2' )
-  ),
-  'palettes' => array(
-    '1' => array( 'showitem' => '' ),
-    '2' => array( 'showitem' => '%title_lang_ol%' ),
-  )
-);
-// Non localized
-// Localization support
-if ( $bool_LL )
-{
-  // Add language overlay fields to showRecordFieldList
-  $showRecordFieldList = $TCA[ 'tx_quickshop_material' ][ 'interface' ][ 'showRecordFieldList' ];
-  $TCA[ 'tx_quickshop_material' ][ 'interface' ][ 'showRecordFieldList' ] = $showRecordFieldList . ',title_lang_ol';
-  // Add language overlay fields to showRecordFieldList
-  // Add language overlay fields to type
-  $showitem = $TCA[ 'tx_quickshop_material' ][ 'types' ][ '0' ][ 'showitem' ];
-  $showitem = str_replace( '%2%', '2', $showitem );
-  $TCA[ 'tx_quickshop_material' ][ 'types' ][ '0' ][ 'showitem' ] = $showitem;
-  // Add language overlay fields to type
-  // Add language overlay fields to palettes
-  $showitem = $TCA[ 'tx_quickshop_material' ][ 'palettes' ][ '2' ][ 'showitem' ];
-  $TCA[ 'tx_quickshop_material' ][ 'palettes' ][ '2' ][ 'showitem' ] = str_replace( '%title_lang_ol%', 'title_lang_ol', $showitem );
-  // Add language overlay fields to palettes
-  // Add language overlay fields to columns array
-  $TCA[ 'tx_quickshop_material' ][ 'columns' ][ 'title_lang_ol' ] = array
-    (
-    'exclude' => 0,
-    'label' => 'LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_material.title_lang_ol',
-    'config' => array(
-      'type' => 'input',
-      'size' => '30',
-    )
-  );
-  // Add language overlay fields to columns array
-}
-if ( !$bool_LL )
-{
-  // Remove language overlay fields from type
-  $showitem = $TCA[ 'tx_quickshop_material' ][ 'types' ][ '0' ][ 'showitem' ];
-  $showitem = str_replace( '%2%', '', $showitem );
-  $TCA[ 'tx_quickshop_material' ][ 'types' ][ '0' ][ 'showitem' ] = $showitem;
-  // Remove language overlay fields from type
-  // Remove language overlay fields from palettes
-  $showitem = $TCA[ 'tx_quickshop_material' ][ 'palettes' ][ '2' ][ 'showitem' ];
-  $TCA[ 'tx_quickshop_material' ][ 'palettes' ][ '2' ][ 'showitem' ] = str_replace( '%title_lang_ol%', '', $showitem );
-  // Remove language overlay fields from palettes
-}
-// Localization support
-// tx_quickshop_material
-///////////////////////////////////////
-//
-// tx_quickshop_products
-// Non localized
-$TCA[ 'tx_quickshop_products' ] = array(
-  'ctrl' => $TCA[ 'tx_quickshop_products' ][ 'ctrl' ],
   'interface' => array(
     'showRecordFieldList' => ''
     . 'sku,ean,title,short,description,'
@@ -338,7 +67,6 @@ $TCA[ 'tx_quickshop_products' ] = array(
     . 'hidden,starttime,endtime,fe_group,'
     . 'seo_keywords,seo_description'
   ),
-  'feInterface' => $TCA[ 'tx_quickshop_products' ][ 'feInterface' ],
   'columns' => array(
     'sku' => array(
       'exclude' => 1,
@@ -930,6 +658,14 @@ $TCA[ 'tx_quickshop_products' ] = array(
         'type' => 'check'
       )
     ),
+    'image_1stforlistonly' => array(
+      'exclude' => $bool_exclude_default,
+      'l10n_mode' => 'exclude',
+      'label' => 'LLL:EXT:quick_shop/locallang_db.xml:tca_phrase.image_1stforlistonly',
+      'config' => array(
+        'type' => 'check'
+      ),
+    ),
     'image_link' => array(
       'exclude' => 1,
       'label' => 'LLL:EXT:cms/locallang_ttc.php:image_link',
@@ -1158,6 +894,7 @@ $TCA[ 'tx_quickshop_products' ] = array(
       . 'tx_quickshop_shippingcosts,'
       . '--div--;LLL:EXT:cms/locallang_ttc.xml:tabs.images,'
       . '--palette--;LLL:EXT:cms/locallang_ttc.xml:palette.imagefiles;imagefiles,'
+      . '  --palette--;LLL:EXT:quick_shop/locallang_db.xml:palette.image_1stforlistonly;image_1stforlistonly,'
       . '--palette--;LLL:EXT:quick_shop/locallang_db.xml:palette.image_accessibility;image_accessibility,'
       . '--palette--;LLL:EXT:cms/locallang_ttc.xml:palette.imageblock;imageblock,'
       . '--palette--;LLL:EXT:cms/locallang_ttc.xml:palette.imagelinks;imagelinks,'
@@ -1173,6 +910,10 @@ $TCA[ 'tx_quickshop_products' ] = array(
   ),
   'palettes' => array(
     '1' => array( 'showitem' => '' ),
+    'image_1stforlistonly' => array(
+      'showitem' => 'image_1stforlistonly;LLL:EXT:quick_shop/locallang_db.xml:tca_phrase.image_1stforlistonly,',
+      'canNotCollapse' => 1,
+    ),
     'image_accessibility' => array(
       'showitem' => 'imageseo;LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_products.imageseo,',
       'canNotCollapse' => 1,
@@ -1218,23 +959,23 @@ $TCA[ 'tx_quickshop_products' ] = array(
   )
 );
 
-$TCA[ 'tx_quickshop_products' ][ 'columns' ][ 'cols' ] = $TCA[ 'tt_content' ][ 'columns' ][ 'cols' ];
-$TCA[ 'tx_quickshop_products' ][ 'columns' ][ 'pi_flexform' ] = $TCA[ 'tt_content' ][ 'columns' ][ 'pi_flexform' ];
-unset( $TCA[ 'tx_quickshop_products' ][ 'columns' ][ 'pi_flexform' ][ 'config' ][ 'ds' ] );
-unset( $TCA[ 'tx_quickshop_products' ][ 'columns' ][ 'pi_flexform' ][ 'config' ][ 'ds_pointerField' ] );
-unset( $TCA[ 'tx_quickshop_products' ][ 'columns' ][ 'pi_flexform' ][ 'config' ][ 'search' ] );
-$TCA[ 'tx_quickshop_products' ][ 'columns' ][ 'pi_flexform' ][ 'config' ][ 'ds' ][ 'default' ] = 'FILE:EXT:css_styled_content/flexform_ds.xml';
-$TCA[ 'tx_quickshop_products' ][ 'columns' ][ 'pi_flexform' ][ 'config' ][ 'ds_pointerField' ] = 'title';
+$returnArray[ 'columns' ][ 'cols' ] = $TCA[ 'tt_content' ][ 'columns' ][ 'cols' ];
+$returnArray[ 'columns' ][ 'pi_flexform' ] = $TCA[ 'tt_content' ][ 'columns' ][ 'pi_flexform' ];
+unset( $returnArray[ 'columns' ][ 'pi_flexform' ][ 'config' ][ 'ds' ] );
+unset( $returnArray[ 'columns' ][ 'pi_flexform' ][ 'config' ][ 'ds_pointerField' ] );
+unset( $returnArray[ 'columns' ][ 'pi_flexform' ][ 'config' ][ 'search' ] );
+$returnArray[ 'columns' ][ 'pi_flexform' ][ 'config' ][ 'ds' ][ 'default' ] = 'FILE:EXT:css_styled_content/flexform_ds.xml';
+$returnArray[ 'columns' ][ 'pi_flexform' ][ 'config' ][ 'ds_pointerField' ] = 'title';
 
 // Localization support
 if ( $bool_LL )
 {
   // Add language overlay fields to showRecordFieldList
-  $showRecordFieldList = $TCA[ 'tx_quickshop_products' ][ 'interface' ][ 'showRecordFieldList' ];
+  $showRecordFieldList = $returnArray[ 'interface' ][ 'showRecordFieldList' ];
   $TCA[ 'tx_jobmarket_sectorgroup' ][ 'interface' ][ 'tx_quickshop_products' ] = $showRecordFieldList . ',sys_language_uid,l10n_parent,l10n_diffsource';
   // Add language overlay fields to showRecordFieldList
   // Add localization fields to columns array
-  $TCA[ 'tx_quickshop_products' ][ 'columns' ][ 'sys_language_uid' ] = array
+  $returnArray[ 'columns' ][ 'sys_language_uid' ] = array
     (
     'l10n_mode' => 'exclude',
     'exclude' => 1,
@@ -1249,7 +990,7 @@ if ( $bool_LL )
       )
     )
   );
-  $TCA[ 'tx_quickshop_products' ][ 'columns' ][ 'l10n_parent' ] = array
+  $returnArray[ 'columns' ][ 'l10n_parent' ] = array
     (
     'l10n_mode' => 'exclude',
     'displayCond' => 'FIELD:sys_language_uid:>:0',
@@ -1264,7 +1005,7 @@ if ( $bool_LL )
       'foreign_table_where' => 'AND tx_quickshop_products.pid=###CURRENT_PID### AND tx_quickshop_products.sys_language_uid IN (-1,0)',
     )
   );
-  $TCA[ 'tx_quickshop_products' ][ 'columns' ][ 'l10n_diffsource' ] = array
+  $returnArray[ 'columns' ][ 'l10n_diffsource' ] = array
     (
     'config' => array(
       'type' => 'passthrough'
@@ -1272,96 +1013,5 @@ if ( $bool_LL )
   );
   // Add localization fields to columns array
 }
-// Localization support
-// tx_quickshop_products
-///////////////////////////////////////
-//
-// tx_quickshop_shippingcosts
-// Non localized
-$TCA[ 'tx_quickshop_shippingcosts' ] = array(
-  'ctrl' => $TCA[ 'tx_quickshop_shippingcosts' ][ 'ctrl' ],
-  'interface' => array(
-    //'showRecordFieldList' => 'hidden,title,uid_parent'
-    'showRecordFieldList' => 'hidden,title,value'
-  ),
-  'feInterface' => $TCA[ 'tx_quickshop_shippingcosts' ][ 'feInterface' ],
-  'columns' => array(
-    'hidden' => array(
-      'exclude' => 1,
-      'label' => 'LLL:EXT:lang/locallang_general.xml:LGL.hidden',
-      'config' => array(
-        'type' => 'check',
-        'default' => '0'
-      )
-    ),
-    'title' => array(
-      'exclude' => 0,
-      'label' => 'LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_shippingcosts.title',
-      'config' => array(
-        'type' => 'input',
-        'size' => '30',
-        'eval' => 'required',
-      )
-    ),
-    'value' => array(
-      'exclude' => 0,
-      'label' => 'LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_shippingcosts.value',
-      'config' => array(
-        'type' => 'input',
-        'size' => '30',
-        'eval' => 'required',
-      )
-    ),
-  ),
-  'types' => array(
-    //'0' => array('showitem' => 'hidden;;1;;1-1-1, title;;%2%;;2-2-2, uid_parent' )
-    '0' => array( 'showitem' => 'hidden;;1;;1-1-1, title;;%2%;;2-2-2, value' )
-  ),
-  'palettes' => array(
-    '1' => array( 'showitem' => '' ),
-    '2' => array( 'showitem' => '%title_lang_ol%' ),
-  )
-);
-// Non localized
-// Localization support
-if ( $bool_LL )
-{
-  // Add language overlay fields to showRecordFieldList
-  $showRecordFieldList = $TCA[ 'tx_quickshop_shippingcosts' ][ 'interface' ][ 'showRecordFieldList' ];
-  $TCA[ 'tx_quickshop_shippingcosts' ][ 'interface' ][ 'showRecordFieldList' ] = $showRecordFieldList . ',title_lang_ol';
-  // Add language overlay fields to showRecordFieldList
-  // Add language overlay fields to type
-  $showitem = $TCA[ 'tx_quickshop_shippingcosts' ][ 'types' ][ '0' ][ 'showitem' ];
-  $showitem = str_replace( '%2%', '2', $showitem );
-  $TCA[ 'tx_quickshop_shippingcosts' ][ 'types' ][ '0' ][ 'showitem' ] = $showitem;
-  // Add language overlay fields to type
-  // Add language overlay fields to palettes
-  $showitem = $TCA[ 'tx_quickshop_shippingcosts' ][ 'palettes' ][ '2' ][ 'showitem' ];
-  $TCA[ 'tx_quickshop_shippingcosts' ][ 'palettes' ][ '2' ][ 'showitem' ] = str_replace( '%title_lang_ol%', 'title_lang_ol', $showitem );
-  // Add language overlay fields to palettes
-  // Add language overlay fields to columns array
-  $TCA[ 'tx_quickshop_shippingcosts' ][ 'columns' ][ 'title_lang_ol' ] = array
-    (
-    'exclude' => 0,
-    'label' => 'LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_shippingcosts.title_lang_ol',
-    'config' => array(
-      'type' => 'input',
-      'size' => '30',
-    )
-  );
-  // Add language overlay fields to columns array
-}
-if ( !$bool_LL )
-{
-  // Remove language overlay fields from type
-  $showitem = $TCA[ 'tx_quickshop_shippingcosts' ][ 'types' ][ '0' ][ 'showitem' ];
-  $showitem = str_replace( '%2%', '', $showitem );
-  $TCA[ 'tx_quickshop_shippingcosts' ][ 'types' ][ '0' ][ 'showitem' ] = $showitem;
-  // Remove language overlay fields from type
-  // Remove language overlay fields from palettes
-  $showitem = $TCA[ 'tx_quickshop_shippingcosts' ][ 'palettes' ][ '2' ][ 'showitem' ];
-  $TCA[ 'tx_quickshop_shippingcosts' ][ 'palettes' ][ '2' ][ 'showitem' ] = str_replace( '%title_lang_ol%', '', $showitem );
-  // Remove language overlay fields from palettes
-}
-// Localization support
-// tx_quickshop_shippingcosts
+
+return $returnArray;
