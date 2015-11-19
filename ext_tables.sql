@@ -112,6 +112,7 @@ CREATE TABLE tx_quickshop_products (
   imageorient tinyint(4) unsigned NOT NULL default '0',
   imagecols tinyint(4) unsigned NOT NULL default '0',
   imageborder tinyint(4) unsigned NOT NULL default '0',
+  image_1stforlistonly tinyint(3) unsigned NOT NULL default '0',
   image_frames tinyint(3) unsigned NOT NULL default '0',
   image_link text,
   image_zoom tinyint(3) unsigned NOT NULL default '0',

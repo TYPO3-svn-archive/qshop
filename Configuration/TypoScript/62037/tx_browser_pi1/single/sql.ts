@@ -19,6 +19,7 @@ plugin.tx_browser_pi1 {
           tx_quickshop_products.imageorient,
           tx_quickshop_products.imagecols,
           tx_quickshop_products.imageborder,
+          tx_quickshop_products.image_1stforlistonly,
           tx_quickshop_products.image_frames,
           tx_quickshop_products.image_link,
           tx_quickshop_products.image_zoom,

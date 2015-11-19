@@ -51,15 +51,16 @@ plugin.tx_browser_pi1 {
     singleview {
       image {
         0 {
-          caption     = tx_quickshop_products.caption
-          file        = tx_quickshop_products.image
-          height      = tx_quickshop_products.imageheight
-          imagecols   = tx_quickshop_products.imagecols
-          imageorient = tx_quickshop_products.imageorient
-          path        = uploads/tx_quickshop/
-          seo         = tx_quickshop_products.imageseo
-          width       = tx_quickshop_products.imagewidth
-          zoom        = tx_quickshop_products.image_zoom
+          caption           = tx_quickshop_products.caption
+          file              = tx_quickshop_products.image
+          height            = tx_quickshop_products.imageheight
+          firstForListOnly  = tx_quickshop_products.image_1stforlistonly
+          imagecols         = tx_quickshop_products.imagecols
+          imageorient       = tx_quickshop_products.imageorient
+          path              = uploads/tx_quickshop/
+          seo               = tx_quickshop_products.imageseo
+          width             = tx_quickshop_products.imagewidth
+          zoom              = tx_quickshop_products.image_zoom
         }
       }
     }
