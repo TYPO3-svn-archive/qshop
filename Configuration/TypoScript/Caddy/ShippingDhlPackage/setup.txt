@@ -1,0 +1,40 @@
+plugin.tx_caddy_pi1 {
+  api {
+    options {
+      shipping {
+        options {
+          1 >
+          1 (
+            Produkt:          DHL Paket, versichert bis 500 EUR, in Deutschland,
+            Maximale Groesse: 120x60x60 cm
+            Stand:            01.01.2015
+            URL:              http://www.portokalkulator.de/portokalkulator/std
+)
+          1 {
+            title = Standard
+            extra = by_service_attribute_1_sum
+            extra {
+              1 {
+                value = 0
+                extra = 6.99
+              }
+              2 {
+                value = 5
+                extra = 8.49
+              }
+              3 {
+                value = 10
+                extra = 14.99
+              }
+              4 {
+                value = 31.5
+                extra = 999.999
+              }
+            }
+            //tax = normal
+          }
+        }
+      }
+    }
+  }
+}

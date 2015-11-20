@@ -1,0 +1,8 @@
+plugin.caddy {
+  db {
+    service_attribute_1 = weight
+  }
+  symbol {
+    service_attribute_1_symbol = Kg
+  }
+}
