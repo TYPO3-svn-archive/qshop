@@ -11,7 +11,7 @@ plugin.tx_caddy_pi1 {
             URL:              http://www.portokalkulator.de/portokalkulator/std
 )
           1 {
-            title = Standard
+            title = DHL Paket (nur Deutschland)
             extra = by_service_attribute_1_sum
             extra {
               1 {
