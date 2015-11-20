@@ -1,6 +1,7 @@
 6.2.0
   15-11-20
   Feature
+  * #i0044: weight field for items
   * #i0040: 1st image for list only
   Improvement
   * #i0043: Quick Shop items: tax property got the new item "without"

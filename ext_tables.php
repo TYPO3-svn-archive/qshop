@@ -44,9 +44,10 @@ if ( !empty( $confArr[ 'products_on_standardpages' ] ) )
 //
 // Add static template
 
-t3lib_extMgm::addStaticFile( $_EXTKEY, 'Configuration/TypoScript/62037/', 'Quick Shop [1] Basis' );
-t3lib_extMgm::addStaticFile( $_EXTKEY, 'Configuration/TypoScript/Caddy/', 'Quick Shop [2] + Caddy' );
-t3lib_extMgm::addStaticFile( $_EXTKEY, 'Configuration/TypoScript/Imagecycle/', 'Quick Shop [9] + ImageCycle: no conflict' );
+t3lib_extMgm::addStaticFile( $_EXTKEY, 'Configuration/TypoScript/62037/',                     'Quick Shop [1] Basis' );
+t3lib_extMgm::addStaticFile( $_EXTKEY, 'Configuration/TypoScript/Caddy/',                     'Quick Shop [2] + Caddy' );
+t3lib_extMgm::addStaticFile( $_EXTKEY, 'Configuration/TypoScript/Caddy/ShippingDhlPackage/',  'Quick Shop [2] + Caddy shipping DHL Package in Germany' );
+t3lib_extMgm::addStaticFile( $_EXTKEY, 'Configuration/TypoScript/Imagecycle/',                'Quick Shop [9] + ImageCycle: no conflict' );
 // Add static template
 ////////////////////////////////////////////////////////////////////////////
 //

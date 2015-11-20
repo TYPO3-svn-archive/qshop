@@ -73,6 +73,7 @@
       <label index="tx_quickshop_products.tx_quickshop_material">Material</label>
       <label index="tx_quickshop_products.tx_quickshop_materialEnable">Enabled</label>
       <label index="tx_quickshop_products.tx_quickshop_shippingcosts">Shipping costs</label>
+      <label index="tx_quickshop_products.weight">Weight (Kg)</label>
       <label index="tx_quickshop_shippingcosts">Quick Shop Shipping costs</label>
       <label index="tx_quickshop_shippingcosts.title">Label</label>
       <label index="tx_quickshop_shippingcosts.title_lang_ol">Translations (i.e. fr:Traduction|de:Übersetzung)</label>
@@ -146,6 +147,7 @@
       <label index="tx_quickshop_products.tx_quickshop_material">Material</label>
       <label index="tx_quickshop_products.tx_quickshop_materialEnable">Aktivieren</label>
       <label index="tx_quickshop_products.tx_quickshop_shippingcosts">Versandkosten</label>
+      <label index="tx_quickshop_products.weight">Gewicht (Kg)</label>
       <label index="tx_quickshop_shippingcosts">Quick Shop Versandkosten</label>
       <label index="tx_quickshop_shippingcosts.title">Bezeichnung</label>
       <label index="tx_quickshop_shippingcosts.title_lang_ol">Übersetzungen (z.B. en:Translation|fr:Traduction)</label>

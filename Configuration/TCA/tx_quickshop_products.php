@@ -59,7 +59,7 @@ $returnArray = array(
     . 'teaser_description,teaser_short,teaser_title,'
     . 'datasheet,'
     . 'filterPrompt,tx_quickshop_categories,tx_quickshop_dimension,tx_quickshop_material,'
-    . 'price,tax,stockquantity,stockmanagement,quantity_min,quantity_max,tx_quickshop_shippingcosts,'
+    . 'price,tax,weight,stockquantity,stockmanagement,quantity_min,quantity_max,tx_quickshop_shippingcosts,'
     . 'image,imagewidth,imageheight,imageorient,imagecols,'
     . 'imageborder,image_frames,image_link,image_zoom,'
     . 'image_noRows,image_effects,image_compression,imageseo,'
@@ -455,6 +455,16 @@ $returnArray = array(
         'size' => 1,
         'maxitems' => 1,
         'eval' => 'required',
+      )
+    ),
+    'weight' => array(
+      'l10n_mode' => 'exclude',
+      'exclude' => 0,
+      'label' => 'LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_products.weight',
+      'config' => array(
+        'type' => 'input',
+        'size' => '10',
+        'eval' => 'double2,nospace',
       )
     ),
     'stockmanagement' => array(
@@ -880,32 +890,33 @@ $returnArray = array(
     '0' => array(
       'showitem' => null
       . '--div--;LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_products.div.product,'
-      . '--palette--;LLL:EXT:quick_shop/locallang_db.xml:palette.skuean;skuean,'
-      . 'title;;;;2-2-2, short;;;;3-3-3, description;;;richtext[]:rte_transform[mode=ts],'
+      . '  --palette--;LLL:EXT:quick_shop/locallang_db.xml:palette.skuean;skuean,'
+      . '  title;;;;2-2-2, short;;;;3-3-3, description;;;richtext[]:rte_transform[mode=ts],'
       . '--div--;LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_products.div_teaser,'
       . '  teaser_title,teaser_short,teaser_description,'
       . '--div--;LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_products.div.datasheet,'
-      . 'layout;;10;;3-3-3, cols, datasheet;;9;nowrap:wizards[table], pi_flexform,'
+      . '  layout;;10;;3-3-3, cols, datasheet;;9;nowrap:wizards[table], pi_flexform,'
       . '--div--;LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_products.div.filter,'
-      . 'filterPrompt,tx_quickshop_categories,tx_quickshop_dimension,tx_quickshop_material,'
+      . '  filterPrompt,tx_quickshop_categories,tx_quickshop_dimension,tx_quickshop_material,'
       . '--div--;LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_products.div.price_quantity,'
-      . '--palette--;LLL:EXT:quick_shop/locallang_db.xml:palette.price;price,'
-      . '--palette--;LLL:EXT:quick_shop/locallang_db.xml:palette.stockmanagement;stockmanagement,'
-      . '--palette--;LLL:EXT:quick_shop/locallang_db.xml:palette.quantity;quantity,'
-      . 'tx_quickshop_shippingcosts,'
+      . '  --palette--;LLL:EXT:quick_shop/locallang_db.xml:palette.price;price,'
+      . '  weight,'
+      . '  --palette--;LLL:EXT:quick_shop/locallang_db.xml:palette.stockmanagement;stockmanagement,'
+      . '  --palette--;LLL:EXT:quick_shop/locallang_db.xml:palette.quantity;quantity,'
+      . '  tx_quickshop_shippingcosts,'
       . '--div--;LLL:EXT:cms/locallang_ttc.xml:tabs.images,'
-      . '--palette--;LLL:EXT:cms/locallang_ttc.xml:palette.imagefiles;imagefiles,'
+      . '  --palette--;LLL:EXT:cms/locallang_ttc.xml:palette.imagefiles;imagefiles,'
       . '  --palette--;LLL:EXT:quick_shop/locallang_db.xml:palette.image_1stforlistonly;image_1stforlistonly,'
-      . '--palette--;LLL:EXT:quick_shop/locallang_db.xml:palette.image_accessibility;image_accessibility,'
-      . '--palette--;LLL:EXT:cms/locallang_ttc.xml:palette.imageblock;imageblock,'
-      . '--palette--;LLL:EXT:cms/locallang_ttc.xml:palette.imagelinks;imagelinks,'
-      . '--palette--;LLL:EXT:cms/locallang_ttc.xml:palette.image_settings;image_settings,'
+      . '  --palette--;LLL:EXT:quick_shop/locallang_db.xml:palette.image_accessibility;image_accessibility,'
+      . '  --palette--;LLL:EXT:cms/locallang_ttc.xml:palette.imageblock;imageblock,'
+      . '  --palette--;LLL:EXT:cms/locallang_ttc.xml:palette.imagelinks;imagelinks,'
+      . '  --palette--;LLL:EXT:cms/locallang_ttc.xml:palette.image_settings;image_settings,'
       . '--div--;LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_products.div.control,'
-      . 'hidden,'
-      . '--palette--;LLL:EXT:quick_shop/locallang_db.xml:palette.startendtime;startendtime,'
-      . 'fe_group,'
+      . '  hidden,'
+      . '  --palette--;LLL:EXT:quick_shop/locallang_db.xml:palette.startendtime;startendtime,'
+      . '  fe_group,'
       . '--div--;LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_products.div.seo,'
-      . 'seo_keywords, seo_description,'
+      . '  seo_keywords, seo_description,'
     ,
     ),
   ),
