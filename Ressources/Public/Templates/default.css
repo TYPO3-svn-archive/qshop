@@ -1,8 +1,8 @@
 /* QuickShop Treeview */
 
 .tx-browser-pi1 .category_menu_treeview {
-/*  float: left;
-  padding-right: 3em;*/
+  /*  float: left;
+    padding-right: 3em;*/
   margin-bottom: 1em;
 }
 #columnscontent .tx-browser-pi1 .category_menu_treeview a {
@@ -25,9 +25,9 @@
   border: 1px solid #CCC;
   /*border-radius: 6px 6px 6px 6px;*/
   padding: 0.4em 0;
-/*  position: relative;
-  top: 1em;
-  z-index: 1;*/
+  /*  position: relative;
+    top: 1em;
+    z-index: 1;*/
 }
 
 /* QuickShop list and single views */
@@ -47,11 +47,11 @@
   float:left;
 }
 .tx-browser-pi1 .listview .notInStock {
-  background: none repeat scroll 0 0 #FF0000;
-  color: #FFFFFF;
+  background-color: darkred;
+  color: #FFF;
   font-size: 0.8em;
-  font-weight: bold;
-  padding: 0.1em 0.2em;
+  padding: .9875em 0.2em;
+  text-align: center;
 }
 .tx-browser-pi1 .listview .short {
   font-weight:normal;
@@ -137,7 +137,7 @@
 .tx-browser-pi1 table.contenttable td.td-last,
 .tx-browser-pi1 table.contenttable th.td-last {
   border-right: 0;
-/*  padding:0;*/
+  /*  padding:0;*/
 }
 
 
