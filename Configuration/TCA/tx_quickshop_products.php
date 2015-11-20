@@ -450,6 +450,7 @@ $returnArray = array(
         'items' => array(
           array( 'LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_products.tax.I.0', '1' ),
           array( 'LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_products.tax.I.1', '2' ),
+          array( 'LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_products.tax.I.2', '0' ),
         ),
         'size' => 1,
         'maxitems' => 1,

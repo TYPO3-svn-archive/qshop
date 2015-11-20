@@ -58,9 +58,10 @@
       <label index="tx_quickshop_products.stockmanagement">Enabled</label>
       <label index="tx_quickshop_products.stockquantity">Quantity in stock</label>
       <label index="tx_quickshop_products.sku">SKU (stockkeeping unit)</label>
+      <label index="tx_quickshop_products.tax">Tax included</label>
       <label index="tx_quickshop_products.tax.I.0">Reduced</label>
       <label index="tx_quickshop_products.tax.I.1">Normal</label>
-      <label index="tx_quickshop_products.tax">Tax included</label>
+      <label index="tx_quickshop_products.tax.I.2">Without</label>
       <label index="tx_quickshop_products.teaser_description">Description (in list views)</label>
       <label index="tx_quickshop_products.teaser_short">Short (in list views)</label>
       <label index="tx_quickshop_products.teaser_title">Item label (in list views)</label>
@@ -130,9 +131,10 @@
       <label index="tx_quickshop_products.sku">Lagerhaltungsnummer (SKU)</label>
       <label index="tx_quickshop_products.stockmanagement">Aktiv</label>
       <label index="tx_quickshop_products.stockquantity">Menge im Lager</label>
+      <label index="tx_quickshop_products.tax">inkl. MwSt.</label>
       <label index="tx_quickshop_products.tax.I.0">Ermäßigt</label>
       <label index="tx_quickshop_products.tax.I.1">Normal</label>
-      <label index="tx_quickshop_products.tax">inkl. MwSt.</label>
+      <label index="tx_quickshop_products.tax.I.2">Ohne</label>
       <label index="tx_quickshop_products.teaser_description">Beschreibung (in list views)</label>
       <label index="tx_quickshop_products.teaser_short">Kurzbeschreibung (in list views)</label>
       <label index="tx_quickshop_products.teaser_title">Artikelbezeichnung (in list views)</label>
