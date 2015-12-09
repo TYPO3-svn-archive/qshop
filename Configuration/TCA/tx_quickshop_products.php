@@ -41,7 +41,6 @@ $returnArray = array(
     ),
     'hideAtCopy' => true,
     'dividers2tabs' => true,
-    'dynamicConfigFile' => t3lib_extMgm::extPath( $_EXTKEY ) . 'tca.php',
     'thumbnail' => 'image',
     'iconfile' => t3lib_extMgm::extRelPath( $_EXTKEY ) . 'ext_icon.gif',
     'searchFields' => 'sku,title,short,description,'
