@@ -1,3 +1,17 @@
+6.2.3
+  16-01-01
+  Improvement
+  * #i0048: Initial extension linkhandler is removed
+  * #i0047: Update cps_tcatree from 0.4.2 -> 0.4.3
+
+6.2.2
+  15-12-19
+  Bugfix
+  * #i0046: SQL bug in case of an andWhere category statement and localisation (see #i0214 at TYPO3 Browser)
+            Workaround:
+            * The l10n_mode property in the TCA of the category fields in tx_quickshop_products
+              is moved from 'l10n_mode' => 'exclude' to 'l10n_mode' => 'mergeIfNotBlank'
+
 6.2.1
   15-12-09
   Improvement
@@ -6,6 +20,7 @@
 6.2.0
   15-11-20
   Feature
+  * #i0045: weight field for items
   * #i0044: weight field for items
   * #i0040: 1st image for list only
   Improvement
