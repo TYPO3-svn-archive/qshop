@@ -20,7 +20,7 @@ if ( strtolower( substr( $confArr[ 'LLsupport' ], 0, strlen( 'yes' ) ) ) == 'yes
 // Localization support
 $returnArray = array(
   'ctrl' => array(
-    'title' => 'LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_dimension',
+    'title' => 'LLL:EXT:quick_shop/Ressources/Private/Language/locallang_db.xml:tx_quickshop_dimension',
     'label' => 'title',
     'tstamp' => 'tstamp',
     'crdate' => 'crdate',
@@ -49,7 +49,7 @@ $returnArray = array(
     ),
     'title' => array(
       'exclude' => 0,
-      'label' => 'LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_dimension.title',
+      'label' => 'LLL:EXT:quick_shop/Ressources/Private/Language/locallang_db.xml:tx_quickshop_dimension.title',
       'config' => array(
         'type' => 'input',
         'size' => '30',
@@ -58,7 +58,7 @@ $returnArray = array(
     ),
     'uid_parent' => array(
       'exclude' => 0,
-      'label' => 'LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_dimension.uid_parent',
+      'label' => 'LLL:EXT:quick_shop/Ressources/Private/Language/locallang_db.xml:tx_quickshop_dimension.uid_parent',
       'config' => array(
         'type' => 'select',
         'size' => 1,
@@ -106,7 +106,7 @@ if ( $bool_LL )
   $returnArray[ 'columns' ][ 'title_lang_ol' ] = array
     (
     'exclude' => 0,
-    'label' => 'LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_dimension.title_lang_ol',
+    'label' => 'LLL:EXT:quick_shop/Ressources/Private/Language/locallang_db.xml:tx_quickshop_dimension.title_lang_ol',
     'config' => array(
       'type' => 'input',
       'size' => '30',

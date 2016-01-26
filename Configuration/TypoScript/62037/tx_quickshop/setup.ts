@@ -58,10 +58,37 @@ plugin.tx_quickshop.templates.form {
           field = tx_quickshop_products.stockquantity
         }
       }
+      10 = CASE
+      10{
+        key {
+          field = tx_quickshop_products.stockprompt
+        }
+        default = TEXT
+        default {
+          data = LLL:EXT:quick_shop/Ressources/Private/Language/locallang_db.xml:tx_quickshop_products.stockprompt.selled
+          wrap = <div class="notInStock selled">|</div>
+        }
+        booked = TEXT
+        booked {
+          data = LLL:EXT:quick_shop/Ressources/Private/Language/locallang_db.xml:tx_quickshop_products.stockprompt.booked
+          wrap = <div class="notInStock booked">|</div>
+        }
+        notavailable = TEXT
+        notavailable {
+          data = LLL:EXT:quick_shop/Ressources/Private/Language/locallang_db.xml:tx_quickshop_products.stockprompt.notavailable
+          wrap = <div class="notInStock notavailable">|</div>
+        }
+        refit = TEXT
+        refit {
+          data = LLL:EXT:quick_shop/Ressources/Private/Language/locallang_db.xml:tx_quickshop_products.stockprompt.refit
+          wrap = <div class="notInStock refit">|</div>
+        }
+        selled < .default
+      }
         // prompt: not available
-      10 = TEXT
-      10 {
-        data = LLL:EXT:quick_shop/locallang_db.xml:phrase_notInStock
+      XXX10 = TEXT
+      XXX10 {
+        data = LLL:EXT:quick_shop/Ressources/Private/Language/locallang_db.xml:phrase_notInStock
         wrap = <div class="notInStock">|</div>
       }
     }

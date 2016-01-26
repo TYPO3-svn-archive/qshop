@@ -20,7 +20,7 @@ if ( strtolower( substr( $confArr[ 'LLsupport' ], 0, strlen( 'yes' ) ) ) == 'yes
 
 $returnArray = array(
   'ctrl' => array(
-    'title' => 'LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_products',
+    'title' => 'LLL:EXT:quick_shop/Ressources/Private/Language/locallang_db.xml:tx_quickshop_products',
     'label' => 'title',
     'label_alt' => 'price',
     'label_alt_force' => true,
@@ -58,7 +58,7 @@ $returnArray = array(
     . 'teaser_description,teaser_short,teaser_title,'
     . 'datasheet,'
     . 'filterPrompt,tx_quickshop_categories,tx_quickshop_dimension,tx_quickshop_material,'
-    . 'price,tax,weight,stockquantity,stockmanagement,quantity_min,quantity_max,tx_quickshop_shippingcosts,'
+    . 'price,tax,weight,stockmanagement,stockquantity,stockprompt,quantity_min,quantity_max,tx_quickshop_shippingcosts,'
     . 'image,imagewidth,imageheight,imageorient,imagecols,'
     . 'imageborder,image_frames,image_link,image_zoom,'
     . 'image_noRows,image_effects,image_compression,imageseo,'
@@ -69,7 +69,7 @@ $returnArray = array(
   'columns' => array(
     'sku' => array(
       'exclude' => 1,
-      'label' => 'LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_products.sku',
+      'label' => 'LLL:EXT:quick_shop/Ressources/Private/Language/locallang_db.xml:tx_quickshop_products.sku',
       'config' => array(
         'type' => 'input',
         'size' => '30',
@@ -78,7 +78,7 @@ $returnArray = array(
     ),
     'ean' => array(
       'exclude' => 1,
-      'label' => 'LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_products.ean',
+      'label' => 'LLL:EXT:quick_shop/Ressources/Private/Language/locallang_db.xml:tx_quickshop_products.ean',
       'config' => array(
         'type' => 'input',
         'size' => '30',
@@ -87,7 +87,7 @@ $returnArray = array(
     ),
     'title' => array(
       'exclude' => 0,
-      'label' => 'LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_products.title',
+      'label' => 'LLL:EXT:quick_shop/Ressources/Private/Language/locallang_db.xml:tx_quickshop_products.title',
       'config' => array(
         'type' => 'input',
         'size' => '30',
@@ -96,7 +96,7 @@ $returnArray = array(
     ),
     'short' => array(
       'exclude' => 1,
-      'label' => 'LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_products.short',
+      'label' => 'LLL:EXT:quick_shop/Ressources/Private/Language/locallang_db.xml:tx_quickshop_products.short',
       'config' => array(
         'type' => 'text',
         'cols' => '30',
@@ -105,7 +105,7 @@ $returnArray = array(
     ),
     'teaser_description' => array(
       'exclude' => 0,
-      'label' => 'LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_products.teaser_description',
+      'label' => 'LLL:EXT:quick_shop/Ressources/Private/Language/locallang_db.xml:tx_quickshop_products.teaser_description',
       'config' => array(
         'type' => 'text',
         'cols' => '30',
@@ -114,7 +114,7 @@ $returnArray = array(
     ),
     'teaser_short' => array(
       'exclude' => 0,
-      'label' => 'LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_products.teaser_short',
+      'label' => 'LLL:EXT:quick_shop/Ressources/Private/Language/locallang_db.xml:tx_quickshop_products.teaser_short',
       'config' => array(
         'type' => 'input',
         'size' => '30',
@@ -123,7 +123,7 @@ $returnArray = array(
     ),
     'teaser_title' => array(
       'exclude' => 1,
-      'label' => 'LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_products.teaser_title',
+      'label' => 'LLL:EXT:quick_shop/Ressources/Private/Language/locallang_db.xml:tx_quickshop_products.teaser_title',
       'config' => array(
         'type' => 'input',
         'size' => '30',
@@ -132,7 +132,7 @@ $returnArray = array(
     ),
     'datasheet' => array(
       'exclude' => 1,
-      'label' => 'LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_products.datasheet',
+      'label' => 'LLL:EXT:quick_shop/Ressources/Private/Language/locallang_db.xml:tx_quickshop_products.datasheet',
       'config' => array(
         'type' => 'text',
         'cols' => '30',
@@ -153,7 +153,7 @@ $returnArray = array(
     ),
     'description' => array(
       'exclude' => 0,
-      'label' => 'LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_products.description',
+      'label' => 'LLL:EXT:quick_shop/Ressources/Private/Language/locallang_db.xml:tx_quickshop_products.description',
       'config' => array(
         'type' => 'text',
         'cols' => '30',
@@ -175,7 +175,7 @@ $returnArray = array(
     'filterPrompt' => array(
       'l10n_mode' => 'exclude',
       'exclude' => 1,
-      'label' => 'LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_products.filterPrompt',
+      'label' => 'LLL:EXT:quick_shop/Ressources/Private/Language/locallang_db.xml:tx_quickshop_products.filterPrompt',
       'config' => array(
         'type' => 'user',
         'userFunc' => 'tx_quickshop_userfunc->tcaFilterPrompt',
@@ -184,7 +184,7 @@ $returnArray = array(
     'tx_quickshop_categories' => array(
       'exclude' => 1,
       'l10n_mode' => 'mergeIfNotBlank',
-      'label' => 'LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_products.tx_quickshop_categories',
+      'label' => 'LLL:EXT:quick_shop/Ressources/Private/Language/locallang_db.xml:tx_quickshop_products.tx_quickshop_categories',
       'config' => array(
         'type' => 'select',
         'size' => 10,
@@ -267,7 +267,7 @@ $returnArray = array(
     'tx_quickshop_dimension' => array(
       'exclude' => 1,
       'l10n_mode' => 'mergeIfNotBlank',
-      'label' => 'LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_products.tx_quickshop_dimension',
+      'label' => 'LLL:EXT:quick_shop/Ressources/Private/Language/locallang_db.xml:tx_quickshop_products.tx_quickshop_dimension',
       'config' => array(
         'type' => 'select',
         'size' => 10,
@@ -350,7 +350,7 @@ $returnArray = array(
     'tx_quickshop_material' => array(
       'exclude' => 1,
       'l10n_mode' => 'mergeIfNotBlank',
-      'label' => 'LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_products.tx_quickshop_material',
+      'label' => 'LLL:EXT:quick_shop/Ressources/Private/Language/locallang_db.xml:tx_quickshop_products.tx_quickshop_material',
       'config' => array(
         'type' => 'select',
         'size' => 10,
@@ -433,7 +433,7 @@ $returnArray = array(
     'price' => array(
       'l10n_mode' => 'exclude',
       'exclude' => 0,
-      'label' => 'LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_products.price',
+      'label' => 'LLL:EXT:quick_shop/Ressources/Private/Language/locallang_db.xml:tx_quickshop_products.price',
       'config' => array(
         'type' => 'input',
         'size' => '30',
@@ -443,13 +443,13 @@ $returnArray = array(
     'tax' => array(
       'l10n_mode' => 'exclude',
       'exclude' => 0,
-      'label' => 'LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_products.tax',
+      'label' => 'LLL:EXT:quick_shop/Ressources/Private/Language/locallang_db.xml:tx_quickshop_products.tax',
       'config' => array(
         'type' => 'select',
         'items' => array(
-          array( 'LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_products.tax.I.0', '1' ),
-          array( 'LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_products.tax.I.1', '2' ),
-          array( 'LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_products.tax.I.2', '0' ),
+          array( 'LLL:EXT:quick_shop/Ressources/Private/Language/locallang_db.xml:tx_quickshop_products.tax.I.0', '1' ),
+          array( 'LLL:EXT:quick_shop/Ressources/Private/Language/locallang_db.xml:tx_quickshop_products.tax.I.1', '2' ),
+          array( 'LLL:EXT:quick_shop/Ressources/Private/Language/locallang_db.xml:tx_quickshop_products.tax.I.2', '0' ),
         ),
         'size' => 1,
         'maxitems' => 1,
@@ -459,7 +459,7 @@ $returnArray = array(
     'weight' => array(
       'l10n_mode' => 'exclude',
       'exclude' => 0,
-      'label' => 'LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_products.weight',
+      'label' => 'LLL:EXT:quick_shop/Ressources/Private/Language/locallang_db.xml:tx_quickshop_products.weight',
       'config' => array(
         'type' => 'input',
         'size' => '10',
@@ -469,7 +469,7 @@ $returnArray = array(
     'stockmanagement' => array(
       'l10n_mode' => 'exclude',
       'exclude' => 1,
-      'label' => 'LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_products.stockmanagement',
+      'label' => 'LLL:EXT:quick_shop/Ressources/Private/Language/locallang_db.xml:tx_quickshop_products.stockmanagement',
       'config' => array(
         'type' => 'check',
         'default' => 0,
@@ -478,7 +478,7 @@ $returnArray = array(
     'stockquantity' => array(
       'l10n_mode' => 'exclude',
       'exclude' => 1,
-      'label' => 'LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_products.stockquantity',
+      'label' => 'LLL:EXT:quick_shop/Ressources/Private/Language/locallang_db.xml:tx_quickshop_products.stockquantity',
       'config' => array(
         'type' => 'input',
         'size' => '10',
@@ -486,10 +486,28 @@ $returnArray = array(
         'default' => 1
       )
     ),
+    'stockprompt' => array(
+      'l10n_mode' => 'exclude',
+      'exclude' => 0,
+      'label' => 'LLL:EXT:quick_shop/Ressources/Private/Language/locallang_db.xml:tx_quickshop_products.stockprompt',
+      'config' => array(
+        'type' => 'select',
+        'items' => array(
+          array( 'LLL:EXT:quick_shop/Ressources/Private/Language/locallang_db.xml:tx_quickshop_products.stockprompt.booked', 'booked' ),
+          array( 'LLL:EXT:quick_shop/Ressources/Private/Language/locallang_db.xml:tx_quickshop_products.stockprompt.notavailable', 'notavailable' ),
+          array( 'LLL:EXT:quick_shop/Ressources/Private/Language/locallang_db.xml:tx_quickshop_products.stockprompt.refit', 'refit' ),
+          array( 'LLL:EXT:quick_shop/Ressources/Private/Language/locallang_db.xml:tx_quickshop_products.stockprompt.selled', 'selled' ),
+        ),
+        'default' => 'selled',
+        'size' => 1,
+        'maxitems' => 1,
+        'eval' => 'required',
+      )
+    ),
     'quantity_min' => array(
       'l10n_mode' => 'exclude',
       'exclude' => 1,
-      'label' => 'LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_products.quantity_min',
+      'label' => 'LLL:EXT:quick_shop/Ressources/Private/Language/locallang_db.xml:tx_quickshop_products.quantity_min',
       'config' => array(
         'type' => 'input',
         'size' => '10',
@@ -499,7 +517,7 @@ $returnArray = array(
     'quantity_max' => array(
       'l10n_mode' => 'exclude',
       'exclude' => 1,
-      'label' => 'LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_products.quantity_max',
+      'label' => 'LLL:EXT:quick_shop/Ressources/Private/Language/locallang_db.xml:tx_quickshop_products.quantity_max',
       'config' => array(
         'type' => 'input',
         'size' => '10',
@@ -509,7 +527,7 @@ $returnArray = array(
     'tx_quickshop_shippingcosts' => array(
       'exclude' => 1,
       'l10n_mode' => 'mergeIfNotBlank',
-      'label' => 'LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_products.tx_quickshop_shippingcosts',
+      'label' => 'LLL:EXT:quick_shop/Ressources/Private/Language/locallang_db.xml:tx_quickshop_products.tx_quickshop_shippingcosts',
       'config' => array(
         'type' => 'select',
         'size' => 10,
@@ -585,7 +603,7 @@ $returnArray = array(
     ),
     'image' => array(
       'exclude' => 1,
-      'label' => 'LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_products.image',
+      'label' => 'LLL:EXT:quick_shop/Ressources/Private/Language/locallang_db.xml:tx_quickshop_products.image',
       'config' => array(
         'type' => 'group',
         'internal_type' => 'file',
@@ -600,7 +618,7 @@ $returnArray = array(
     ),
     'imageseo' => array(
       'exclude' => 1,
-      'label' => 'LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_products.imageseo',
+      'label' => 'LLL:EXT:quick_shop/Ressources/Private/Language/locallang_db.xml:tx_quickshop_products.imageseo',
       'config' => array(
         'type' => 'text',
         'cols' => '30',
@@ -671,7 +689,7 @@ $returnArray = array(
     'image_1stforlistonly' => array(
       'exclude' => $bool_exclude_default,
       'l10n_mode' => 'exclude',
-      'label' => 'LLL:EXT:quick_shop/locallang_db.xml:tca_phrase.image_1stforlistonly',
+      'label' => 'LLL:EXT:quick_shop/Ressources/Private/Language/locallang_db.xml:tca_phrase.image_1stforlistonly',
       'config' => array(
         'type' => 'check'
       ),
@@ -791,7 +809,7 @@ $returnArray = array(
     ),
     'caption' => array(
       'exclude' => 1,
-      'label' => 'LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_products.caption',
+      'label' => 'LLL:EXT:quick_shop/Ressources/Private/Language/locallang_db.xml:tx_quickshop_products.caption',
       'config' => array(
         'type' => 'text',
         'cols' => '30',
@@ -866,7 +884,7 @@ $returnArray = array(
     ),
     'seo_keywords' => array(
       'exclude' => 1,
-      'label' => 'LLL:EXT:quick_shop/locallang_db.xml:tca_phrase.seo_keywords',
+      'label' => 'LLL:EXT:quick_shop/Ressources/Private/Language/locallang_db.xml:tca_phrase.seo_keywords',
       'l10n_mode' => 'prefixLangTitle',
       'config' => array(
         'type' => 'input',
@@ -876,7 +894,7 @@ $returnArray = array(
     ),
     'seo_description' => array(
       'exclude' => 1,
-      'label' => 'LLL:EXT:quick_shop/locallang_db.xml:tca_phrase.seo_description',
+      'label' => 'LLL:EXT:quick_shop/Ressources/Private/Language/locallang_db.xml:tca_phrase.seo_description',
       'l10n_mode' => 'prefixLangTitle',
       'config' => array(
         'type' => 'text',
@@ -888,33 +906,33 @@ $returnArray = array(
   'types' => array(
     '0' => array(
       'showitem' => null
-      . '--div--;LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_products.div.product,'
-      . '  --palette--;LLL:EXT:quick_shop/locallang_db.xml:palette.skuean;skuean,'
+      . '--div--;LLL:EXT:quick_shop/Ressources/Private/Language/locallang_db.xml:tx_quickshop_products.div.product,'
+      . '  --palette--;LLL:EXT:quick_shop/Ressources/Private/Language/locallang_db.xml:palette.skuean;skuean,'
       . '  title;;;;2-2-2, short;;;;3-3-3, description;;;richtext[]:rte_transform[mode=ts],'
-      . '--div--;LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_products.div_teaser,'
+      . '--div--;LLL:EXT:quick_shop/Ressources/Private/Language/locallang_db.xml:tx_quickshop_products.div_teaser,'
       . '  teaser_title,teaser_short,teaser_description,'
-      . '--div--;LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_products.div.datasheet,'
+      . '--div--;LLL:EXT:quick_shop/Ressources/Private/Language/locallang_db.xml:tx_quickshop_products.div.datasheet,'
       . '  layout;;10;;3-3-3, cols, datasheet;;9;nowrap:wizards[table], pi_flexform,'
-      . '--div--;LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_products.div.filter,'
+      . '--div--;LLL:EXT:quick_shop/Ressources/Private/Language/locallang_db.xml:tx_quickshop_products.div.filter,'
       . '  filterPrompt,tx_quickshop_categories,tx_quickshop_dimension,tx_quickshop_material,'
-      . '--div--;LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_products.div.price_quantity,'
-      . '  --palette--;LLL:EXT:quick_shop/locallang_db.xml:palette.price;price,'
+      . '--div--;LLL:EXT:quick_shop/Ressources/Private/Language/locallang_db.xml:tx_quickshop_products.div.price_quantity,'
+      . '  --palette--;LLL:EXT:quick_shop/Ressources/Private/Language/locallang_db.xml:palette.price;price,'
       . '  weight,'
-      . '  --palette--;LLL:EXT:quick_shop/locallang_db.xml:palette.stockmanagement;stockmanagement,'
-      . '  --palette--;LLL:EXT:quick_shop/locallang_db.xml:palette.quantity;quantity,'
+      . '  --palette--;LLL:EXT:quick_shop/Ressources/Private/Language/locallang_db.xml:palette.stockmanagement;stockmanagement,'
+      . '  --palette--;LLL:EXT:quick_shop/Ressources/Private/Language/locallang_db.xml:palette.quantity;quantity,'
       . '  tx_quickshop_shippingcosts,'
       . '--div--;LLL:EXT:cms/locallang_ttc.xml:tabs.images,'
       . '  --palette--;LLL:EXT:cms/locallang_ttc.xml:palette.imagefiles;imagefiles,'
-      . '  --palette--;LLL:EXT:quick_shop/locallang_db.xml:palette.image_1stforlistonly;image_1stforlistonly,'
-      . '  --palette--;LLL:EXT:quick_shop/locallang_db.xml:palette.image_accessibility;image_accessibility,'
+      . '  --palette--;LLL:EXT:quick_shop/Ressources/Private/Language/locallang_db.xml:palette.image_1stforlistonly;image_1stforlistonly,'
+      . '  --palette--;LLL:EXT:quick_shop/Ressources/Private/Language/locallang_db.xml:palette.image_accessibility;image_accessibility,'
       . '  --palette--;LLL:EXT:cms/locallang_ttc.xml:palette.imageblock;imageblock,'
       . '  --palette--;LLL:EXT:cms/locallang_ttc.xml:palette.imagelinks;imagelinks,'
       . '  --palette--;LLL:EXT:cms/locallang_ttc.xml:palette.image_settings;image_settings,'
-      . '--div--;LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_products.div.control,'
+      . '--div--;LLL:EXT:quick_shop/Ressources/Private/Language/locallang_db.xml:tx_quickshop_products.div.control,'
       . '  hidden,'
-      . '  --palette--;LLL:EXT:quick_shop/locallang_db.xml:palette.startendtime;startendtime,'
+      . '  --palette--;LLL:EXT:quick_shop/Ressources/Private/Language/locallang_db.xml:palette.startendtime;startendtime,'
       . '  fe_group,'
-      . '--div--;LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_products.div.seo,'
+      . '--div--;LLL:EXT:quick_shop/Ressources/Private/Language/locallang_db.xml:tx_quickshop_products.div.seo,'
       . '  seo_keywords, seo_description,'
     ,
     ),
@@ -922,11 +940,11 @@ $returnArray = array(
   'palettes' => array(
     '1' => array( 'showitem' => '' ),
     'image_1stforlistonly' => array(
-      'showitem' => 'image_1stforlistonly;LLL:EXT:quick_shop/locallang_db.xml:tca_phrase.image_1stforlistonly,',
+      'showitem' => 'image_1stforlistonly;LLL:EXT:quick_shop/Ressources/Private/Language/locallang_db.xml:tca_phrase.image_1stforlistonly,',
       'canNotCollapse' => 1,
     ),
     'image_accessibility' => array(
-      'showitem' => 'imageseo;LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_products.imageseo,',
+      'showitem' => 'imageseo;LLL:EXT:quick_shop/Ressources/Private/Language/locallang_db.xml:tx_quickshop_products.imageseo,',
       'canNotCollapse' => 1,
     ),
     'imageblock' => array(
@@ -948,15 +966,15 @@ $returnArray = array(
       'canNotCollapse' => 1,
     ),
     'price' => array(
-      'showitem' => 'price;LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_products.price,tax;LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_products.tax,',
+      'showitem' => 'price;LLL:EXT:quick_shop/Ressources/Private/Language/locallang_db.xml:tx_quickshop_products.price,tax;LLL:EXT:quick_shop/Ressources/Private/Language/locallang_db.xml:tx_quickshop_products.tax,',
       'canNotCollapse' => 1,
     ),
     'quantity' => array(
-      'showitem' => 'quantity_min;LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_products.quantity_min,quantity_max;LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_products.quantity_max,',
+      'showitem' => 'quantity_min;LLL:EXT:quick_shop/Ressources/Private/Language/locallang_db.xml:tx_quickshop_products.quantity_min,quantity_max;LLL:EXT:quick_shop/Ressources/Private/Language/locallang_db.xml:tx_quickshop_products.quantity_max,',
       'canNotCollapse' => 1,
     ),
     'skuean' => array(
-      'showitem' => 'sku;LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_products.sku,ean;LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_products.ean,',
+      'showitem' => 'sku;LLL:EXT:quick_shop/Ressources/Private/Language/locallang_db.xml:tx_quickshop_products.sku,ean;LLL:EXT:quick_shop/Ressources/Private/Language/locallang_db.xml:tx_quickshop_products.ean,',
       'canNotCollapse' => 1,
     ),
     'startendtime' => array(
@@ -964,7 +982,11 @@ $returnArray = array(
       'canNotCollapse' => 1,
     ),
     'stockmanagement' => array(
-      'showitem' => 'stockmanagement;LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_products.stockmanagement,stockquantity;LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_products.stockquantity,',
+      'showitem' => ''
+      . 'stockmanagement;LLL:EXT:quick_shop/Ressources/Private/Language/locallang_db.xml:tx_quickshop_products.stockmanagement,'
+      . 'stockquantity;LLL:EXT:quick_shop/Ressources/Private/Language/locallang_db.xml:tx_quickshop_products.stockquantity,'
+      . 'stockprompt;LLL:EXT:quick_shop/Ressources/Private/Language/locallang_db.xml:tx_quickshop_products.stockprompt,'
+      ,
       'canNotCollapse' => 1,
     ),
   )

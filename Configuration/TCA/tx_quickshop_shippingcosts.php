@@ -21,7 +21,7 @@ if ( strtolower( substr( $confArr[ 'LLsupport' ], 0, strlen( 'yes' ) ) ) == 'yes
 
 $returnArray = array(
   'ctrl' => array(
-    'title' => 'LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_shippingcosts',
+    'title' => 'LLL:EXT:quick_shop/Ressources/Private/Language/locallang_db.xml:tx_quickshop_shippingcosts',
     'label' => 'value',
     'label_alt' => 'title',
     'label_alt_force' => true,
@@ -51,7 +51,7 @@ $returnArray = array(
     ),
     'title' => array(
       'exclude' => 0,
-      'label' => 'LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_shippingcosts.title',
+      'label' => 'LLL:EXT:quick_shop/Ressources/Private/Language/locallang_db.xml:tx_quickshop_shippingcosts.title',
       'config' => array(
         'type' => 'input',
         'size' => '30',
@@ -60,7 +60,7 @@ $returnArray = array(
     ),
     'value' => array(
       'exclude' => 0,
-      'label' => 'LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_shippingcosts.value',
+      'label' => 'LLL:EXT:quick_shop/Ressources/Private/Language/locallang_db.xml:tx_quickshop_shippingcosts.value',
       'config' => array(
         'type' => 'input',
         'size' => '30',
@@ -98,7 +98,7 @@ if ( $bool_LL )
   $returnArray[ 'columns' ][ 'title_lang_ol' ] = array
     (
     'exclude' => 0,
-    'label' => 'LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_shippingcosts.title_lang_ol',
+    'label' => 'LLL:EXT:quick_shop/Ressources/Private/Language/locallang_db.xml:tx_quickshop_shippingcosts.title_lang_ol',
     'config' => array(
       'type' => 'input',
       'size' => '30',

@@ -37,6 +37,7 @@ plugin.tx_browser_pi1 {
 
           tx_quickshop_products.stockmanagement,
           tx_quickshop_products.stockquantity,
+          tx_quickshop_products.stockprompt,
           tx_quickshop_products.tstamp,
 
           tx_quickshop_categories.title,

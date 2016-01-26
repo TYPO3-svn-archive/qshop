@@ -57,6 +57,11 @@
       <label index="tx_quickshop_products.short">Short</label>
       <label index="tx_quickshop_products.stockmanagement">Enabled</label>
       <label index="tx_quickshop_products.stockquantity">Quantity in stock</label>
+      <label index="tx_quickshop_products.stockprompt">Prompt in case of an empty stock</label>
+      <label index="tx_quickshop_products.stockprompt.booked">Booked</label>
+      <label index="tx_quickshop_products.stockprompt.notavailable">Isn't available</label>
+      <label index="tx_quickshop_products.stockprompt.refit">Will refited</label>
+      <label index="tx_quickshop_products.stockprompt.selled">Is sold</label>
       <label index="tx_quickshop_products.sku">SKU (stockkeeping unit)</label>
       <label index="tx_quickshop_products.tax">Tax included</label>
       <label index="tx_quickshop_products.tax.I.0">Reduced</label>
@@ -132,6 +137,11 @@
       <label index="tx_quickshop_products.sku">Lagerhaltungsnummer (SKU)</label>
       <label index="tx_quickshop_products.stockmanagement">Aktiv</label>
       <label index="tx_quickshop_products.stockquantity">Menge im Lager</label>
+      <label index="tx_quickshop_products.stockprompt">Meldung bei leerem Lager</label>
+      <label index="tx_quickshop_products.stockprompt.booked">Reserviert</label>
+      <label index="tx_quickshop_products.stockprompt.notavailable">Nicht verfügbar</label>
+      <label index="tx_quickshop_products.stockprompt.refit">Wird überholt</label>
+      <label index="tx_quickshop_products.stockprompt.selled">Verkauft</label>
       <label index="tx_quickshop_products.tax">inkl. MwSt.</label>
       <label index="tx_quickshop_products.tax.I.0">Ermäßigt</label>
       <label index="tx_quickshop_products.tax.I.1">Normal</label>

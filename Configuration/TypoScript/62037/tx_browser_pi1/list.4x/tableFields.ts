@@ -16,7 +16,7 @@ plugin.tx_browser_pi1 {
               }
               useCacheHash = 1
               title {
-                data = LLL:EXT:quick_shop/locallang_db.xml:linktosingleview
+                data = LLL:EXT:quick_shop/Ressources/Private/Language/locallang_db.xml:linktosingleview
               }
             }
             wrap  = <h2 class="title">|</h2>
@@ -32,7 +32,7 @@ plugin.tx_browser_pi1 {
               // detail
             20 = TEXT
             20 {
-              data = LLL:EXT:quick_shop/locallang_db.xml:linktosingleview
+              data = LLL:EXT:quick_shop/Ressources/Private/Language/locallang_db.xml:linktosingleview
               typolink {
                 parameter         = {$plugin.quick_shop.pages.shop} - linktosingle
                 additionalParams {
@@ -41,7 +41,7 @@ plugin.tx_browser_pi1 {
                 }
                 useCacheHash = 1
                 title {
-                  data = LLL:EXT:quick_shop/locallang_db.xml:linktosingleview
+                  data = LLL:EXT:quick_shop/Ressources/Private/Language/locallang_db.xml:linktosingleview
                 }
               }
               noTrimWrap = | ||

@@ -75,7 +75,7 @@ plugin.tx_browser_pi1 {
                       // label
                     10 = TEXT
                     10 {
-                      data        = LLL:EXT:quick_shop/locallang_db.xml:tx_quickshop_products.sku
+                      data        = LLL:EXT:quick_shop/Ressources/Private/Language/locallang_db.xml:tx_quickshop_products.sku
                       noTrimWrap  = ||: |
                     }
                       // value
