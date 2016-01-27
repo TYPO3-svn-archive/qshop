@@ -32,7 +32,7 @@
   * #i0043: Quick Shop items: tax property got the new item "without"
   * #i0042: Maximum images per product are increased from 10 to 20
   * #i0041: TCA structure TYPO3 6.x like
-  * #i0039: TypoScript: sku will displeayed only, if there is a sku.
+  * #i0039: TypoScript: sku will displayed only, if there is a sku.
   * #i0038: CSS: .pricing-table .title got !important
 
 6.1.2
