@@ -26,26 +26,47 @@ temp.intoTheCaddy {
         wrap = <span class="show-for-small-only">|</span>
       }
         // price
-      20 = TEXT
+      20 = CASE
       20 {
-        field = tx_quickshop_products.price
-        stdWrap {
-          numberFormat {
-            decimals = 2
-            dec_point {
-              cObject = TEXT
-              cObject {
-                value = .
-                stdWrap {
-                  lang {
-                    de = ,
-                    en = .
+        key {
+          field = tx_quickshop_products.stockprompt
+        }
+          // prompt the price like 999,00 €
+        default = TEXT
+        default {
+          field = tx_quickshop_products.price
+          stdWrap {
+            numberFormat {
+              decimals = 2
+              dec_point {
+                cObject = TEXT
+                cObject {
+                  value = .
+                  stdWrap {
+                    lang {
+                      de = ,
+                      en = .
+                    }
                   }
                 }
               }
             }
+            noTrimWrap = || &euro;|
           }
-          noTrimWrap = || &euro; |
+        }
+          // prompt the price like ---,-- €
+        application = TEXT
+        application {
+          value = ---.--
+          lang {
+            de = ---,--
+            en = ---.--
+          }
+          noTrimWrap = || &euro;|
+        }
+        stdWrap {
+          wrap  = <li class="price">|</li>
+          //typolink < plugin.tx_browser_pi1.displayList.master_templates.tableFields.typolinks.0.default
         }
       }
         // <br /> show-for-small-only
@@ -119,28 +140,47 @@ temp.intoTheCaddy {
     }
     wrap = <div style="float:right;padding:0 0 1em 1em;width:40%;"><ul class="pricing-table">|</ul></div>
       // price
-    10 = TEXT
+    10 = CASE
     10 {
-      field = tx_quickshop_products.price
-      stdWrap {
-        numberFormat {
-          decimals = 2
-          dec_point {
-            cObject = TEXT
-            cObject {
-              value = .
-              stdWrap {
-                lang {
-                  de = ,
-                  en = .
+      key {
+        field = tx_quickshop_products.stockprompt
+      }
+        // prompt the price like 999,00 €
+      default = TEXT
+      default {
+        field = tx_quickshop_products.price
+        stdWrap {
+          numberFormat {
+            decimals = 2
+            dec_point {
+              cObject = TEXT
+              cObject {
+                value = .
+                stdWrap {
+                  lang {
+                    de = ,
+                    en = .
+                  }
                 }
               }
             }
           }
+          noTrimWrap = || &euro;|
+        }
+      }
+        // prompt the price like ---,-- €
+      application = TEXT
+      application {
+        value = ---.--
+        lang {
+          de = ---,--
+          en = ---.--
         }
         noTrimWrap = || &euro;|
       }
-      wrap  = <li class="price" style="font-weight:bold">|</li>
+      stdWrap {
+        wrap  = <li class="price">|</li>
+      }
     }
       // tax, my_shipping_note
     30 = COA

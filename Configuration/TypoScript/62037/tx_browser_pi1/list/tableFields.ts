@@ -59,28 +59,48 @@ plugin.tx_browser_pi1 {
               wrap = <li class="bullet-item">|</li>
             }
               // price
-            50 < plugin.tx_browser_pi1.displayList.master_templates.tableFields.header.0.default
+            50 = CASE
             50 {
-              field = tx_quickshop_products.price
-              stdWrap {
-                numberFormat {
-                  decimals = 2
-                  dec_point {
-                    cObject = TEXT
-                    cObject {
-                      value = .
-                      stdWrap {
-                        lang {
-                          de = ,
-                          en = .
+              key {
+                field = tx_quickshop_products.stockprompt
+              }
+                // prompt the price like 999,00 €
+              default = TEXT
+              default {
+                field = tx_quickshop_products.price
+                stdWrap {
+                  numberFormat {
+                    decimals = 2
+                    dec_point {
+                      cObject = TEXT
+                      cObject {
+                        value = .
+                        stdWrap {
+                          lang {
+                            de = ,
+                            en = .
+                          }
                         }
                       }
                     }
                   }
+                  noTrimWrap = || &euro;|
+                }
+              }
+                // prompt the price like ---,-- €
+              application = TEXT
+              application {
+                value = ---.--
+                lang {
+                  de = ---,--
+                  en = ---.--
                 }
                 noTrimWrap = || &euro;|
               }
-              wrap  = <li class="price">|</li>
+              stdWrap {
+                wrap  = <li class="price">|</li>
+                typolink < plugin.tx_browser_pi1.displayList.master_templates.tableFields.typolinks.0.default
+              }
             }
               // tax
             60 < plugin.tx_quickshop.templates.tax

@@ -493,7 +493,9 @@ $returnArray = array(
       'config' => array(
         'type' => 'select',
         'items' => array(
+          array( 'LLL:EXT:quick_shop/Ressources/Private/Language/locallang_db.xml:tx_quickshop_products.stockprompt.application', 'application' ),
           array( 'LLL:EXT:quick_shop/Ressources/Private/Language/locallang_db.xml:tx_quickshop_products.stockprompt.booked', 'booked' ),
+          array( 'LLL:EXT:quick_shop/Ressources/Private/Language/locallang_db.xml:tx_quickshop_products.stockprompt.negotiation', 'negotiation' ),
           array( 'LLL:EXT:quick_shop/Ressources/Private/Language/locallang_db.xml:tx_quickshop_products.stockprompt.notavailable', 'notavailable' ),
           array( 'LLL:EXT:quick_shop/Ressources/Private/Language/locallang_db.xml:tx_quickshop_products.stockprompt.refit', 'refit' ),
           array( 'LLL:EXT:quick_shop/Ressources/Private/Language/locallang_db.xml:tx_quickshop_products.stockprompt.selled', 'selled' ),

@@ -59,7 +59,7 @@ plugin.tx_quickshop.templates.form {
         }
       }
       10 = CASE
-      10{
+      10 {
         key {
           field = tx_quickshop_products.stockprompt
         }
@@ -68,10 +68,20 @@ plugin.tx_quickshop.templates.form {
           data = LLL:EXT:quick_shop/Ressources/Private/Language/locallang_db.xml:tx_quickshop_products.stockprompt.selled
           wrap = <div class="notInStock selled">|</div>
         }
+        application = TEXT
+        application {
+          data = LLL:EXT:quick_shop/Ressources/Private/Language/locallang_db.xml:tx_quickshop_products.stockprompt.application
+          wrap = <div class="notInStock application">|</div>
+        }
         booked = TEXT
         booked {
           data = LLL:EXT:quick_shop/Ressources/Private/Language/locallang_db.xml:tx_quickshop_products.stockprompt.booked
           wrap = <div class="notInStock booked">|</div>
+        }
+        negotiation = TEXT
+        negotiation {
+          data = LLL:EXT:quick_shop/Ressources/Private/Language/locallang_db.xml:tx_quickshop_products.stockprompt.negotiation
+          wrap = <div class="notInStock negotiation">|</div>
         }
         notavailable = TEXT
         notavailable {

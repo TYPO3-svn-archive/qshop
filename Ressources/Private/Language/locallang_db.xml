@@ -52,13 +52,16 @@
       <label index="tx_quickshop_products.image">Image</label>
       <label index="tx_quickshop_products.imageseo">Description for search engines (SEO)</label>
       <label index="tx_quickshop_products.price">Gross price</label>
+      <label index="tx_quickshop_products.priceprompt">Price prompt</label>
       <label index="tx_quickshop_products.quantity_min">Minimum order quantity</label>
       <label index="tx_quickshop_products.quantity_max">Maximum order quantity</label>
       <label index="tx_quickshop_products.short">Short</label>
       <label index="tx_quickshop_products.stockmanagement">Enabled</label>
       <label index="tx_quickshop_products.stockquantity">Quantity in stock</label>
       <label index="tx_quickshop_products.stockprompt">Prompt in case of an empty stock</label>
+      <label index="tx_quickshop_products.stockprompt.application">Price on application</label>
       <label index="tx_quickshop_products.stockprompt.booked">Booked</label>
+      <label index="tx_quickshop_products.stockprompt.negotiation">Basis for negotiation</label>
       <label index="tx_quickshop_products.stockprompt.notavailable">Isn't available</label>
       <label index="tx_quickshop_products.stockprompt.refit">Will refited</label>
       <label index="tx_quickshop_products.stockprompt.selled">Is sold</label>
@@ -138,7 +141,9 @@
       <label index="tx_quickshop_products.stockmanagement">Aktiv</label>
       <label index="tx_quickshop_products.stockquantity">Menge im Lager</label>
       <label index="tx_quickshop_products.stockprompt">Meldung bei leerem Lager</label>
+      <label index="tx_quickshop_products.stockprompt.application">Preis auf Anfrage</label>
       <label index="tx_quickshop_products.stockprompt.booked">Reserviert</label>
+      <label index="tx_quickshop_products.stockprompt.negotiation">Verhandlungsbasis</label>
       <label index="tx_quickshop_products.stockprompt.notavailable">Nicht verfügbar</label>
       <label index="tx_quickshop_products.stockprompt.refit">Wird überholt</label>
       <label index="tx_quickshop_products.stockprompt.selled">Verkauft</label>
