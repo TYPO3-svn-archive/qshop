@@ -8,7 +8,7 @@ plugin.tx_browser_pi1 {
             filter = TEXT
             filter {
               value (
-                <div class="filter">
+                <div class="row filter">
                   ###TX_QUICKSHOP_CATEGORIES.TITLE###
                   ###TX_QUICKSHOP_DIMENSION.TITLE###
                   ###TX_QUICKSHOP_MATERIAL.TITLE###
